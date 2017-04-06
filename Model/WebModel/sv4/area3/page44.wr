@@ -1,0 +1,51 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area3#page44" name="Dettagli orario" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="315" gr:y="600">
+  <ContentUnits>
+    <EntryUnit id="sv4#area3#page44#enu27" name="Dettagli orario" gr:x="0" gr:y="0" entity="ent15" fieldOrder="sv4#area3#page44#enu27#fld124" linkOrder="sv4#area3#page44#enu27#ln132 sv4#area3#page44#enu27#ln133">
+      <Field id="sv4#area3#page44#enu27#fld124" name="Ora" type="time" modifiable="true" attribute="ent15#att66"/>
+      <Link id="sv4#area3#page44#enu27#ln132" name="Salva modifiche" to="sv4#opg19#mfu18" type="normal" validate="true">
+        <LinkParameter id="sv4#area3#page44#enu27#ln132#par660" name="Key [oid]_KeyCondition53 [oid]" source="key.ent15#att65" target="sv4#opg19#mfu18#su92#kcond53.ent15#att65"/>
+        <LinkParameter id="sv4#area3#page44#enu27#ln132#par661" name="Ora_ora" source="sv4#area3#page44#enu27#fld124" target="sv4#opg19#mfu18.ent15#att66"/>
+        <LinkParameter id="sv4#area3#page44#enu27#ln132#par662" name="Orario Object_Orario Object" source="entityBean" target="sv4#opg19#mfu18.entityBeans"/>
+      </Link>
+      <Link id="sv4#area3#page44#enu27#ln133" name="Elimina orario" to="sv4#opg19#dlu21" type="normal" validate="true">
+        <LinkParameter id="sv4#area3#page44#enu27#ln133#par663" name="Key [oid]_KeyCondition54 [oid]" source="key.ent15#att65" target="sv4#opg19#dlu21#su93#kcond54.ent15#att65"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area3#page44#enu27">
+          <layout:Field field="sv4#area3#page44#enu27#fld124"/>
+          <layout:Link link="sv4#area3#page44#enu27#ln132"/>
+          <layout:Link link="sv4#area3#page44#enu27#ln133"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

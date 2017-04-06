@@ -1,0 +1,81 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area4#page24" name="Inserisci annuncio" layout:pageLayout="BootstrapStyle/Empty" gr:x="275" gr:y="140" ignoreMasterPage="true">
+  <ContentUnits>
+    <EntryUnit id="sv1#area4#page24#enu8" name="Inserisci annuncio" gr:x="0" gr:y="0" entity="ent10" fieldOrder="sv1#area4#page24#enu8#fld69 sv1#area4#page24#enu8#fld55 sv1#area4#page24#enu8#fld53 sv1#area4#page24#enu8#fld59 sv1#area4#page24#enu8#fld90 sv1#area4#page24#enu8#fld65 sv1#area4#page24#enu8#fld66 sv1#area4#page24#enu8#fld67 sv1#area4#page24#enu8#fld68" gr:showAllParts="false" linkOrder="sv1#area4#page24#enu8#ln69">
+      <Field id="sv1#area4#page24#enu8#fld53" name="Prezzo" type="float" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area4#page24#enu8#fld53#mnd4" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area4#page24#enu8#fld55" name="Foto" type="blob" modifiable="true" contentType="image">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area4#page24#enu8#fld55#mnd5" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area4#page24#enu8#fld59" name="Kilometri" type="integer" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area4#page24#enu8#fld59#mnd15" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area4#page24#enu8#fld65" name="Alimentazione" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area4#page24#enu8#fld65#mnd42" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area4#page24#enu8#fld66" name="Cilindrata" type="integer" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area4#page24#enu8#fld66#mnd43" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area4#page24#enu8#fld67" name="Porte" type="integer" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area4#page24#enu8#fld67#mnd44" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area4#page24#enu8#fld68" name="Descrizione" type="text" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area4#page24#enu8#fld68#mnd45" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area4#page24#enu8#fld69" name="Nome" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area4#page24#enu8#fld69#mnd46" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Link id="sv1#area4#page24#enu8#ln69" name="Inserisci annuncio" to="sv1#opg12#cru6" type="normal" validate="true"/>
+      <Field id="sv1#area4#page24#enu8#fld90" name="Anno di immatricolazione" type="date" modifiable="true" attribute="ent10#att41">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area4#page24#enu8#fld90#mnd60" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page24#enu8">
+          <layout:Link link="sv1#area4#page24#enu8#ln69"/>
+          <layout:Field field="sv1#area4#page24#enu8#fld69"/>
+          <layout:Field field="sv1#area4#page24#enu8#fld55"/>
+          <layout:Field field="sv1#area4#page24#enu8#fld53"/>
+          <layout:Field field="sv1#area4#page24#enu8#fld59"/>
+          <layout:Field field="sv1#area4#page24#enu8#fld90"/>
+          <layout:Field field="sv1#area4#page24#enu8#fld65"/>
+          <layout:Field field="sv1#area4#page24#enu8#fld66"/>
+          <layout:Field field="sv1#area4#page24#enu8#fld67"/>
+          <layout:Field field="sv1#area4#page24#enu8#fld68"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

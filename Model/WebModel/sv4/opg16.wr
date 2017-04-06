@@ -1,0 +1,160 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="690" gr:y="805" id="sv4#opg16" name="Gestione appuntamenti" transaction="true">
+  <OperationUnits>
+    <IsNotNullUnit id="sv4#opg16#inn4" name="Is Not Null" gr:x="40" gr:y="150">
+      <KOLink id="sv4#opg16#inn4#kln12" name="KOFlow5" to="sv4#opg16#cru16">
+        <LinkParameter id="sv4#opg16#inn4#kln12#par550" name="Appuntamento Object_PASSING_Appuntamento Object" sourceLinkParameter="sv4#opg16#seu39#oln95#par544" target="sv4#opg16#cru16.entityBeans"/>
+        <LinkParameter id="sv4#opg16#inn4#kln12#par551" name="Data_PASSING_data_intervento" sourceLinkParameter="sv4#opg16#seu39#oln95#par545" target="sv4#opg16#cru16.ent2#att13"/>
+        <LinkParameter id="sv4#opg16#inn4#kln12#par552" name="Descrizione_PASSING_descrizione" sourceLinkParameter="sv4#opg16#seu39#oln95#par546" target="sv4#opg16#cru16.ent2#att14"/>
+        <LinkParameter id="sv4#opg16#inn4#kln12#par553" name="Tipologia_PASSING_Intervento.oid(AppuntamentoToIntervento)" sourceLinkParameter="sv4#opg16#seu39#oln95#par548" target="sv4#opg16#cru16.rel10#role19.ent8#att31"/>
+        <LinkParameter id="sv4#opg16#inn4#kln12#par554" name="Ora_PASSING_Orario.oid(AppuntamentoToOrario)" sourceLinkParameter="sv4#opg16#seu39#oln95#par547" target="sv4#opg16#cru16.rel17#role33.ent15#att65"/>
+        <LinkParameter id="sv4#opg16#inn4#kln12#par555" name="Tipologia_PASSING_Tipologia.oid(AppuntamentoToTipologia)" sourceLinkParameter="sv4#opg16#seu39#oln95#par548" target="sv4#opg16#cru16.rel7#role14.ent3#att15"/>
+        <LinkParameter id="sv4#opg16#inn4#kln12#par556" name="Utente_PASSING_Utente.oid(AppuntamentoToUtente)" sourceLinkParameter="sv4#opg16#seu39#oln95#par549" target="sv4#opg16#cru16.rel6#role12.userOID"/>
+        <LinkParameter id="sv4#opg16#inn4#kln12#par560" name="Tipologia_PASSING" sourceLinkParameter="sv4#opg16#seu39#oln95#par548" passing="true"/>
+        <LinkParameter id="sv4#opg16#inn4#kln12#par561" name="Utente_PASSING" sourceLinkParameter="sv4#opg16#seu39#oln95#par549" passing="true"/>
+      </KOLink>
+      <OKLink id="sv4#opg16#inn4#oln99" name="OKFlow99" to="sv4#area3#page41"/>
+    </IsNotNullUnit>
+    <SelectorUnit id="sv4#opg16#seu39" name="AppData&amp;Ora" gr:x="15" gr:y="5" entity="ent2" distinctAttributes="ent2#att12 ent2#att13 ent2#att14">
+      <Selector id="sv4#opg16#seu39#su82" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv4#opg16#seu39#su82#acond41" name="data" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att13"/>
+        <AttributesCondition id="sv4#opg16#seu39#su82#acond42" name="ora" predicate="eq" booleanOperator="or" implied="false" attributes="rel17#role33.ent15#att65"/>
+      </Selector>
+      <OKLink id="sv4#opg16#seu39#oln95" name="OKFlow19" to="sv4#opg16#inn4">
+        <LinkParameter id="sv4#opg16#seu39#oln95#par518" name="oid_Input" source="ent2#att12Array" target="sv4#opg16#inn4.isnotnull"/>
+        <LinkParameter id="sv4#opg16#seu39#oln95#par544" name="Appuntamento Object_PASSING" sourceLinkParameter="sv4#area3#page41#enu24#ln113#par538" passing="true"/>
+        <LinkParameter id="sv4#opg16#seu39#oln95#par545" name="Data_PASSING" sourceLinkParameter="sv4#area3#page41#enu24#ln113#par539" passing="true"/>
+        <LinkParameter id="sv4#opg16#seu39#oln95#par546" name="Descrizione_PASSING" sourceLinkParameter="sv4#area3#page41#enu24#ln113#par540" passing="true"/>
+        <LinkParameter id="sv4#opg16#seu39#oln95#par547" name="Ora_PASSING" sourceLinkParameter="sv4#area3#page41#enu24#ln113#par541" passing="true"/>
+        <LinkParameter id="sv4#opg16#seu39#oln95#par548" name="Tipologia_PASSING" sourceLinkParameter="sv4#area3#page41#enu24#ln113#par542" passing="true"/>
+        <LinkParameter id="sv4#opg16#seu39#oln95#par549" name="Utente_PASSING" sourceLinkParameter="sv4#area3#page41#enu24#ln113#par543" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <CreateUnit id="sv4#opg16#cru16" name="Create appuntamento" gr:x="5" gr:y="255" entity="ent2">
+      <OKLink id="sv4#opg16#cru16#oln97" name="OKFlow13" to="sv4#opg16#dfu6">
+        <LinkParameter id="sv4#opg16#cru16#oln97#par524" name="data_intervento_Date(s)" source="ent2#att13Array" target="sv4#opg16#dfu6.dateArray"/>
+        <LinkParameter id="sv4#opg16#cru16#oln97#par525" name="7_Number(s) Of Days" target="sv4#opg16#dfu6.numberOfDaysArray" sourceValue="7"/>
+        <LinkParameter id="sv4#opg16#cru16#oln97#par529" name="oid_PASSING" source="ent2#att12Array" passing="true"/>
+        <LinkParameter id="sv4#opg16#cru16#oln97#par558" name="descrizione_PASSING" source="ent2#att14Array" passing="true"/>
+        <LinkParameter id="sv4#opg16#cru16#oln97#par562" name="Tipologia_PASSING" sourceLinkParameter="sv4#opg16#inn4#kln12#par560" passing="true"/>
+        <LinkParameter id="sv4#opg16#cru16#oln97#par563" name="Utente_PASSING" sourceLinkParameter="sv4#opg16#inn4#kln12#par561" passing="true"/>
+      </OKLink>
+    </CreateUnit>
+    <CreateUnit id="sv4#opg16#cru17" name="Create notifica" gr:x="25" gr:y="490" entity="ent4">
+      <OKLink id="sv4#opg16#cru17#oln100" name="OKFlow100" to="sv4#area3#page41"/>
+    </CreateUnit>
+    <DatesFunctionUnit id="sv4#opg16#dfu6" name="Data notifica" gr:x="20" gr:y="375" mode="removeDaysFromDate(s)">
+      <OKLink id="sv4#opg16#dfu6#oln98" name="OKFlow16" to="sv4#opg16#cru17">
+        <LinkParameter id="sv4#opg16#dfu6#oln98#par530" name="Result Date(s)_data_notifica" source="resultDates" target="sv4#opg16#cru17.ent4#att19"/>
+        <LinkParameter id="sv4#opg16#dfu6#oln98#par532" name="oid_PASSING_Appuntamento.oid(NotificaToAppuntamento)" sourceLinkParameter="sv4#opg16#cru16#oln97#par529" target="sv4#opg16#cru17.rel8#role16.ent2#att12"/>
+        <LinkParameter id="sv4#opg16#dfu6#oln98#par533" name="1_stato" target="sv4#opg16#cru17.ent4#att28" sourceValue="1"/>
+        <LinkParameter id="sv4#opg16#dfu6#oln98#par559" name="descrizione_PASSING_descrizione" sourceLinkParameter="sv4#opg16#cru16#oln97#par558" target="sv4#opg16#cru17.ent4#att20"/>
+        <LinkParameter id="sv4#opg16#dfu6#oln98#par564" name="Tipologia_PASSING_Tipologia.oid(NotificaToTipologia)" sourceLinkParameter="sv4#opg16#cru16#oln97#par562" target="sv4#opg16#cru17.rel16#role31.ent3#att15"/>
+        <LinkParameter id="sv4#opg16#dfu6#oln98#par565" name="Utente_PASSING_Utente.oid(NotificaToUtente)" sourceLinkParameter="sv4#opg16#cru16#oln97#par563" target="sv4#opg16#cru17.rel14#role28.userOID"/>
+      </OKLink>
+    </DatesFunctionUnit>
+    <SelectorUnit id="sv4#opg16#seu40" name="Notifica" gr:x="225" gr:y="425" entity="ent4">
+      <Selector id="sv4#opg16#seu40#su83" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#opg16#seu40#su83#rcond9" name="appuntamento2notifica" predicate="in" implied="false" role="rel8#role15"/>
+      </Selector>
+      <OKLink id="sv4#opg16#seu40#oln101" name="OKFlow38" to="sv4#opg16#dfu7">
+        <LinkParameter id="sv4#opg16#seu40#oln101#par568" name="oid_PASSING" source="ent4#att18Array" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <DatesFunctionUnit id="sv4#opg16#dfu7" name="Data notifica" gr:x="225" gr:y="570" mode="removeDaysFromDate(s)" numberOfDays="7">
+      <OKLink id="sv4#opg16#dfu7#oln102" name="OKFlow39" to="sv4#opg16#mfu15">
+        <LinkParameter id="sv4#opg16#dfu7#oln102#par575" name="Result Date(s)_data_notifica" source="resultDates" target="sv4#opg16#mfu15.ent4#att19"/>
+        <LinkParameter id="sv4#opg16#dfu7#oln102#par577" name="oid_PASSING_KeyCondition19 [oid]" sourceLinkParameter="sv4#opg16#seu40#oln101#par568" target="sv4#opg16#mfu15#su84#kcond43.ent4#att18"/>
+      </OKLink>
+    </DatesFunctionUnit>
+    <ModifyUnit id="sv4#opg16#mfu15" name="Edit notifica" gr:x="240" gr:y="690" entity="ent4">
+      <Selector id="sv4#opg16#mfu15#su84" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#opg16#mfu15#su84#kcond43" name="KeyCondition19" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#opg16#mfu15#oln103" name="OKFlow40" to="sv4#opg16#mfu16"/>
+    </ModifyUnit>
+    <ModifyUnit id="sv4#opg16#mfu16" name="Edit appuntamento" gr:x="220" gr:y="835" entity="ent2">
+      <Selector id="sv4#opg16#mfu16#su85" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#opg16#mfu16#su85#kcond45" name="KeyCondition7" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#opg16#mfu16#oln105" name="OKFlow105" to="sv4#area3#page41"/>
+    </ModifyUnit>
+    <ParameterCollectorUnit gr:x="210" gr:y="0" id="sv4#opg16#pcu1" name="Parameter Collector" linkOrder="sv4#opg16#pcu1#ln115 sv4#opg16#pcu1#ln117 sv4#opg16#pcu1#ln119 sv4#opg16#pcu1#ln123">
+      <CollectorParameter id="sv4#opg16#pcu1#pcp1" name="id_utente"/>
+      <CollectorParameter id="sv4#opg16#pcu1#pcp4" name="data"/>
+      <CollectorParameter id="sv4#opg16#pcu1#pcp13" name="id_orario"/>
+      <CollectorParameter id="sv4#opg16#pcu1#pcp14" name="id_tipologia"/>
+      <CollectorParameter id="sv4#opg16#pcu1#pcp15" name="descrizione"/>
+      <CollectorParameter id="sv4#opg16#pcu1#pcp20" name="id_appuntamento"/>
+      <OKLink id="sv4#opg16#pcu1#oln104" name="OKFlow104" to="sv4#opg16#seu42">
+        <LinkParameter id="sv4#opg16#pcu1#oln104#par639" name="data_data" source="sv4#opg16#pcu1#pcp4" target="sv4#opg16#seu42#su89#acond43"/>
+        <LinkParameter id="sv4#opg16#pcu1#oln104#par640" name="id_orario_ora" source="sv4#opg16#pcu1#pcp13" target="sv4#opg16#seu42#su89#acond44"/>
+      </OKLink>
+      <Link id="sv4#opg16#pcu1#ln115" name="Flow115" to="sv4#opg16#dfu7" type="transport" validate="true" gr:bendpoints="88,152,93,-113">
+        <LinkParameter id="sv4#opg16#pcu1#ln115#par613" name="data_Date(s)" source="sv4#opg16#pcu1#pcp4" target="sv4#opg16#dfu7.dateArray"/>
+      </Link>
+      <Link id="sv4#opg16#pcu1#ln117" name="Flow117" to="sv4#opg16#mfu15" type="transport" validate="true" gr:bendpoints="126,143,131,-252">
+        <LinkParameter id="sv4#opg16#pcu1#ln117#par614" name="id_appuntamento_Appuntamento.oid(NotificaToAppuntamento)" source="sv4#opg16#pcu1#pcp20" target="sv4#opg16#mfu15.rel8#role16.ent2#att12"/>
+        <LinkParameter id="sv4#opg16#pcu1#ln117#par615" name="descrizione_descrizione" source="sv4#opg16#pcu1#pcp15" target="sv4#opg16#mfu15.ent4#att20"/>
+        <LinkParameter id="sv4#opg16#pcu1#ln117#par616" name="1_stato" sourceValue="1" target="sv4#opg16#mfu15.ent4#att28"/>
+        <LinkParameter id="sv4#opg16#pcu1#ln117#par617" name="id_tipologia_Tipologia.oid(NotificaToTipologia)" source="sv4#opg16#pcu1#pcp14" target="sv4#opg16#mfu15.rel16#role31.ent3#att15"/>
+        <LinkParameter id="sv4#opg16#pcu1#ln117#par618" name="id_utente_Utente.oid(NotificaToUtente)" source="sv4#opg16#pcu1#pcp1" target="sv4#opg16#mfu15.rel14#role28.userOID"/>
+      </Link>
+      <Link id="sv4#opg16#pcu1#ln119" name="Flow119" to="sv4#opg16#mfu16" type="transport" validate="true" gr:bendpoints="151,133,156,-407">
+        <LinkParameter id="sv4#opg16#pcu1#ln119#par619" name="data_data_intervento" source="sv4#opg16#pcu1#pcp4" target="sv4#opg16#mfu16.ent2#att13"/>
+        <LinkParameter id="sv4#opg16#pcu1#ln119#par620" name="descrizione_descrizione" source="sv4#opg16#pcu1#pcp15" target="sv4#opg16#mfu16.ent2#att14"/>
+        <LinkParameter id="sv4#opg16#pcu1#ln119#par621" name="id_appuntamento_KeyCondition7 [oid]" source="sv4#opg16#pcu1#pcp20" target="sv4#opg16#mfu16#su85#kcond45.ent2#att12"/>
+        <LinkParameter id="sv4#opg16#pcu1#ln119#par622" name="id_orario_Orario.oid(AppuntamentoToOrario)" source="sv4#opg16#pcu1#pcp13" target="sv4#opg16#mfu16.rel17#role33.ent15#att65"/>
+        <LinkParameter id="sv4#opg16#pcu1#ln119#par623" name="id_tipologia_Tipologia.oid(AppuntamentoToTipologia)" source="sv4#opg16#pcu1#pcp14" target="sv4#opg16#mfu16.rel7#role14.ent3#att15"/>
+        <LinkParameter id="sv4#opg16#pcu1#ln119#par624" name="id_utente_Utente.oid(AppuntamentoToUtente)" source="sv4#opg16#pcu1#pcp1" target="sv4#opg16#mfu16.rel6#role12.userOID"/>
+      </Link>
+      <Link id="sv4#opg16#pcu1#ln123" name="Flow123" to="sv4#opg16#seu40" type="transport" validate="true" gr:bendpoints="66,300,61,-115">
+        <LinkParameter id="sv4#opg16#pcu1#ln123#par641" name="id_appuntamento_appuntamento2notifica [oid]" source="sv4#opg16#pcu1#pcp20" target="sv4#opg16#seu40#su83#rcond9.ent2#att12"/>
+      </Link>
+    </ParameterCollectorUnit>
+    <DeleteUnit id="sv4#opg16#dlu18" name="Delete notifica" gr:x="460" gr:y="125" entity="ent4">
+      <Selector id="sv4#opg16#dlu18#su86" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#opg16#dlu18#su86#kcond49" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#opg16#dlu18#oln106" name="OKFlow29" to="sv4#opg16#dlu19">
+        <LinkParameter id="sv4#opg16#dlu18#oln106#par631" name="Key [oid]_PASSING_KeyCondition8 [oid]" sourceLinkParameter="sv4#opg16#seu41#oln107#par630" target="sv4#opg16#dlu19#su87#kcond50.ent2#att12"/>
+      </OKLink>
+    </DeleteUnit>
+    <DeleteUnit id="sv4#opg16#dlu19" name="Delete appuntamento" gr:x="435" gr:y="245" entity="ent2">
+      <Selector id="sv4#opg16#dlu19#su87" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#opg16#dlu19#su87#kcond50" name="KeyCondition8" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#opg16#dlu19#oln108" name="OKFlow108" to="sv4#area3#page41"/>
+    </DeleteUnit>
+    <SelectorUnit id="sv4#opg16#seu41" name="Notifica" gr:x="445" gr:y="5" entity="ent4">
+      <Selector id="sv4#opg16#seu41#su88" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#opg16#seu41#su88#rcond14" name="appuntamento2notifica" predicate="in" implied="false" role="rel8#role15"/>
+      </Selector>
+      <OKLink id="sv4#opg16#seu41#oln107" name="OKFlow27" to="sv4#opg16#dlu18">
+        <LinkParameter id="sv4#opg16#seu41#oln107#par626" name="oid_KeyCondition10 [oid]" source="ent4#att18Array" target="sv4#opg16#dlu18#su86#kcond49.ent4#att18"/>
+        <LinkParameter id="sv4#opg16#seu41#oln107#par630" name="Key [oid]_PASSING" sourceLinkParameter="sv4#area3#page42#enu25#ln120#par629" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit id="sv4#opg16#inn7" name="Is Not Null" gr:x="240" gr:y="315">
+      <KOLink id="sv4#opg16#inn7#kln13" name="KOFlow13" to="sv4#opg16#seu40"/>
+      <OKLink id="sv4#opg16#inn7#oln110" name="OKFlow110" to="sv4#area3#page41"/>
+    </IsNotNullUnit>
+    <SelectorUnit id="sv4#opg16#seu42" name="AppData&amp;Ora" gr:x="215" gr:y="170" entity="ent2" distinctAttributes="ent2#att12 ent2#att13 ent2#att14">
+      <Selector id="sv4#opg16#seu42#su89" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv4#opg16#seu42#su89#acond43" name="data" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att13"/>
+        <AttributesCondition id="sv4#opg16#seu42#su89#acond44" name="ora" predicate="eq" booleanOperator="or" implied="false" attributes="rel17#role33.ent15#att65"/>
+      </Selector>
+      <OKLink id="sv4#opg16#seu42#oln109" name="OKFlow19" to="sv4#opg16#inn7">
+        <LinkParameter id="sv4#opg16#seu42#oln109#par632" name="oid_Input" source="ent2#att12Array" target="sv4#opg16#inn7.isnotnull"/>
+        <LinkParameter id="sv4#opg16#seu42#oln109#par633" name="Appuntamento Object_PASSING" sourceLinkParameter="sv4#area3#page41#enu24#ln113#par538" passing="true"/>
+        <LinkParameter id="sv4#opg16#seu42#oln109#par634" name="Data_PASSING" sourceLinkParameter="sv4#area3#page41#enu24#ln113#par539" passing="true"/>
+        <LinkParameter id="sv4#opg16#seu42#oln109#par635" name="Descrizione_PASSING" sourceLinkParameter="sv4#area3#page41#enu24#ln113#par540" passing="true"/>
+        <LinkParameter id="sv4#opg16#seu42#oln109#par636" name="Ora_PASSING" sourceLinkParameter="sv4#area3#page41#enu24#ln113#par541" passing="true"/>
+        <LinkParameter id="sv4#opg16#seu42#oln109#par637" name="Tipologia_PASSING" sourceLinkParameter="sv4#area3#page41#enu24#ln113#par542" passing="true"/>
+        <LinkParameter id="sv4#opg16#seu42#oln109#par638" name="Utente_PASSING" sourceLinkParameter="sv4#area3#page41#enu24#ln113#par543" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <CreateUnit gr:x="0" gr:y="700" id="sv4#opg16#cru20" name="InserisciIntervento" entity="ent8">
+      <OKLink id="sv4#opg16#cru20#oln118" name="OKFlow118" to="sv4#area3#page41" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
+</OperationGroup>

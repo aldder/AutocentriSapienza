@@ -1,0 +1,54 @@
+<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#mpage1" name="MasterPage" gr:x="800" gr:y="10">
+  <ContentUnits>
+    <DataUnit id="sv4#mpage1#dau3" name="UtenteCorrente" linkOrder="sv4#mpage1#dau3#ln10" gr:x="5" gr:y="0" entity="User" displayAttributes="userName">
+      <Selector id="sv4#mpage1#dau3#su8" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#mpage1#dau3#su8#kcond5" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#mpage1#dau3#ln10" name="Logout" to="sv4#lou1" type="normal" validate="true"/>
+    </DataUnit>
+    <DataUnit id="sv4#mpage1#dau4" name="GruppoCorrente" gr:x="150" gr:y="0" entity="Group" displayAttributes="groupName">
+      <Selector id="sv4#mpage1#dau4#su9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#mpage1#dau4#su9#kcond6" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <MultiMessageUnit id="sv4#mpage1#mssu5" name="MessaggioKO" gr:x="0" gr:y="105"/>
+    <MultiMessageUnit id="sv4#mpage1#mssu6" name="MessaggioOK" gr:x="125" gr:y="105"/>
+    <GetUnit id="sv4#mpage1#gtu2" name="utente" landmark="false" gr:x="345" gr:y="55" contextParameters="GroupCtxParam UserCtxParam">
+      <Link id="sv4#mpage1#gtu2#ln11" name="Flow23" to="sv4#mpage1#dau3" type="transport" validate="true">
+        <LinkParameter id="sv4#mpage1#gtu2#ln11#par19" name="UserCtxParam.oid_KeyCondition4 [oid]" source="sv4#mpage1#gtu2.UserCtxParam" target="sv4#mpage1#dau3#su8#kcond5.userOID"/>
+      </Link>
+      <Link id="sv4#mpage1#gtu2#ln13" name="Flow26" to="sv4#mpage1#dau4" type="transport" validate="true">
+        <LinkParameter id="sv4#mpage1#gtu2#ln13#par22" name="GroupCtxParam.oid_KeyCondition5 [oid]" source="sv1#gtu19.GroupCtxParam" target="sv4#mpage1#dau4#su9#kcond6.groupOID"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:CustomLocation name="User">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell label="utente">
+          <layout:Unit unitId="sv4#mpage1#dau4" layout:frameLayout="None" layout:unitLayout="BootstrapStyle/User" layout:unitVisibilityCondition="cexpr1">
+            <layout:Attribute attribute="groupName"/>
+          </layout:Unit>
+          <layout:Unit unitId="sv4#mpage1#dau3" layout:frameLayout="None" layout:unitLayout="BootstrapStyle/User" layout:unitVisibilityCondition="cexpr1">
+            <layout:Attribute attribute="userName"/>
+            <layout:Link link="sv4#mpage1#dau3#ln10"/>
+          </layout:Unit>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <layout:CustomLocation name="Top">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Unit unitId="sv4#mpage1#mssu6">
+            <layout:LayoutParameter name="messageType" value="success" type="unit"/>
+          </layout:Unit>
+          <layout:Unit unitId="sv4#mpage1#mssu5">
+            <layout:LayoutParameter name="messageType" value="warning" type="unit"/>
+          </layout:Unit>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+</MasterPage>

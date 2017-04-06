@@ -1,0 +1,37 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="335" gr:y="1080" id="sv4#area3#page47" name="Presa in consegna" layout:pageLayout="AdminLTE/Empty" ignoreMasterPage="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv4#area3#page47#pwu20" name="Autovetture clienti" sortable="true" checkable="false" useCountQuery="false" entity="ent11" displayAttributes="ent11#att52 ent11#att53 ent11#att54 ent11#att57" linkOrder="sv4#area3#page47#pwu20#ln141">
+      <Link id="sv4#area3#page47#pwu20#ln141" name="Seleziona" to="sv4#opg16#cru20" type="normal" validate="true">
+        <LinkParameter id="sv4#area3#page47#pwu20#ln141#par699" name="Key [oid]_PASSING_Appuntamento.oid(InterventoToAppuntamento)" sourceLinkParameter="sv4#area3#page42#enu25#ln138#par676" target="sv4#opg16#cru20.rel10#role20.ent2#att12"/>
+        <LinkParameter id="sv4#area3#page47#pwu20#ln141#par700" name="oid_Autovetture_Clienti.oid(InterventoToAutovetture_Clienti)" source="data[].ent11#att51" target="sv4#opg16#cru20.rel11#role22.ent11#att51"/>
+        <LinkParameter id="sv4#area3#page47#pwu20#ln141#par701" name="Data_PASSING_data" sourceLinkParameter="sv4#area3#page42#enu25#ln138#par674" target="sv4#opg16#cru20.ent8#att32"/>
+        <LinkParameter id="sv4#area3#page47#pwu20#ln141#par702" name="Descrizione_PASSING_descrizione" sourceLinkParameter="sv4#area3#page42#enu25#ln138#par675" target="sv4#opg16#cru20.ent8#att55"/>
+        <LinkParameter id="sv4#area3#page47#pwu20#ln141#par704" name="In corso_stato" sourceValue="In corso" target="sv4#opg16#cru20.ent8#att33"/>
+      </Link>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area3#page47#pwu20">
+          <layout:Attribute attribute="ent11#att52"/>
+          <layout:Attribute attribute="ent11#att53"/>
+          <layout:Attribute attribute="ent11#att54"/>
+          <layout:Attribute attribute="ent11#att57"/>
+          <layout:Link link="sv4#area3#page47#pwu20#ln141"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

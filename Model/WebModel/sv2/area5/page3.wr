@@ -1,0 +1,172 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="105" id="sv2#area5#page3" name="Gestione Utenti" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="300" gr:y="0" id="sv2#area5#page3#enu1" name="Inserisci utente" entity="User" linkOrder="sv2#area5#page3#enu1#ln9">
+      <Link id="sv2#area5#page3#enu1#ln9" name="Inserisci" to="sv2#opg2#cru2" type="normal" validate="true">
+        <LinkParameter id="sv2#area5#page3#enu1#ln9#par24" name="email_email" source="sv2#area5#page3#enu1#fld5" target="sv2#opg2#cru2.email"/>
+        <LinkParameter id="sv2#area5#page3#enu1#ln9#par28" name="defaultGroup_Group.oid(defaultGroup)" source="sv2#area5#page3#enu1#sfld1" target="sv2#opg2#cru2.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="sv2#area5#page3#enu1#ln9#par29" name="groups_Group.oid(groups)" source="sv2#area5#page3#enu1#sfld1" target="sv2#opg2#cru2.User2Group.groupOID"/>
+        <LinkParameter id="sv2#area5#page3#enu1#ln9#par30" name="nome_utente_nome_utente" source="sv2#area5#page3#enu1#fld3" target="sv2#opg2#cru2.userName"/>
+        <LinkParameter id="sv2#area5#page3#enu1#ln9#par31" name="Key [oid]_oid" source="key.userOID" target="sv2#opg2#cru2.userOID"/>
+        <LinkParameter id="sv2#area5#page3#enu1#ln9#par32" name="password_password" source="sv2#area5#page3#enu1#fld4" target="sv2#opg2#cru2.password"/>
+        <LinkParameter id="sv2#area5#page3#enu1#ln9#par33" name="Utente Object_Utente Object" source="entityBean" target="sv2#opg2#cru2.entityBeans"/>
+      </Link>
+      <Field id="sv2#area5#page3#enu1#fld3" name="Nome Utente" type="string" modifiable="true" attribute="userName">
+        <VRules>
+          <MandatoryValidationRule id="sv2#area5#page3#enu1#fld3#mnd8" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <CollectionValidationRule id="sv2#area5#page3#enu1#fld3#clc3" name="Unique" predicate="notIn" entity="User" attribute="userName" errorMessage="valore non valido"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#area5#page3#enu1#fld4" name="Password" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <MandatoryValidationRule id="sv2#area5#page3#enu1#fld4#mnd9" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#area5#page3#enu1#fld5" name="Email" type="string" modifiable="true" attribute="email">
+        <VRules>
+          <MandatoryValidationRule id="sv2#area5#page3#enu1#fld5#mnd6" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <EMailValidationRule id="sv2#area5#page3#enu1#fld5#email2" name="EMail" errorMessage="formato non valido"/>
+          <CollectionValidationRule id="sv2#area5#page3#enu1#fld5#clc4" name="Unique" predicate="notIn" entity="User" attribute="email" errorMessage="valore non valido"/>
+        </VRules>
+      </Field>
+      <SelectionField id="sv2#area5#page3#enu1#sfld1" name="Gruppo" type="string" role="User2DefaultGroup">
+        <VRules>
+          <MandatoryValidationRule id="sv2#area5#page3#enu1#sfld1#mnd7" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </SelectionField>
+    </EntryUnit>
+    <SelectorUnit gr:x="120" gr:y="0" id="sv2#area5#page3#seu1" name="SelectorGruppi" entity="Group" distinctAttributes="groupName groupOID">
+      <Link id="sv2#area5#page3#seu1#ln14" name="Flow14" to="sv2#area5#page3#enu1" type="transport" validate="true">
+        <LinkParameter id="sv2#area5#page3#seu1#ln14#par36" name="groupName_defaultGroup [label]" source="groupNameArray" target="sv2#area5#page3#enu1#sfld1_label"/>
+        <LinkParameter id="sv2#area5#page3#seu1#ln14#par37" name="oid_defaultGroup [output]" source="groupOIDArray" target="sv2#area5#page3#enu1#sfld1_output"/>
+      </Link>
+      <Link id="sv2#area5#page3#seu1#ln40" name="Flow40" to="sv2#area5#page3#enu10" type="transport" validate="true">
+        <LinkParameter id="sv2#area5#page3#seu1#ln40#par78" name="groupName_groups [label]" source="groupNameArray" target="sv2#area5#page3#enu10#msfld16_label"/>
+        <LinkParameter id="sv2#area5#page3#seu1#ln40#par79" name="oid_groups [output]" source="groupOIDArray" target="sv2#area5#page3#enu10#msfld16_output"/>
+      </Link>
+    </SelectorUnit>
+    <PowerIndexUnit gr:x="145" gr:y="105" id="sv2#area5#page3#pwu1" name="Utenti" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userOID userName email password" linkOrder="sv2#area5#page3#pwu1#ln27" blockFactor="10">
+      <Link id="sv2#area5#page3#pwu1#ln27" name="Visualizza" to="sv2#area5#page4#enu2" type="normal" validate="true" ajaxOpenWindow="true" ajaxWindowUseTitle="false" ajaxWindowWidth="600" ajaxWindowHeight="400" ajaxWindowAutoResizing="false" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxEnabled="true">
+        <LinkParameter id="sv2#area5#page3#pwu1#ln27#par60" name="oid_Key Condition [oid]" source="data[].userOID" target="sv2#area5#page4#enu2.userOID"/>
+      </Link>
+      <DefaultSortAttribute attribute="userOID" order="ascending"/>
+      <DefaultSortAttribute attribute="userName" order="ascending"/>
+      <DefaultSortAttribute attribute="email" order="ascending"/>
+      <SortAttribute attribute="userOID" order="ascending"/>
+      <SortAttribute attribute="userName" order="ascending"/>
+      <SortAttribute attribute="email" order="ascending"/>
+      <Selector id="sv2#area5#page3#pwu1#su12" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area5#page3#pwu1#su12#rcond3" name="gruppo" predicate="in" implied="true" role="Group2User"/>
+      </Selector>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="0" gr:y="5" id="sv2#area5#page3#enu10" name="Filtri" linkOrder="sv2#area5#page3#enu10#ln29" entity="User">
+      <MultiSelectionField id="sv2#area5#page3#enu10#msfld16" type="string" name="Gruppi" role="User2Group"/>
+      <Link id="sv2#area5#page3#enu10#ln29" name="Seleziona" to="sv2#area5#page3#pwu1" type="normal" validate="true" ajaxEnabled="true">
+        <LinkParameter id="sv2#area5#page3#enu10#ln29#par145" name="Gruppi_gruppo [oid]" source="sv2#area5#page3#enu10#msfld16" target="sv2#area5#page3#pwu1#su12#rcond3.groupOID"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area5#page3#enu1">
+          <layout:Link link="sv2#area5#page3#enu1#ln9"/>
+          <layout:Field field="sv2#area5#page3#enu1#fld3"/>
+          <layout:Field field="sv2#area5#page3#enu1#fld4"/>
+          <layout:Field field="sv2#area5#page3#enu1#fld5"/>
+          <layout:Field field="sv2#area5#page3#enu1#sfld1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="4">
+        <layout:Unit unitId="sv2#area5#page3#enu10">
+          <layout:Field field="sv2#area5#page3#enu10#msfld16"/>
+          <layout:Link link="sv2#area5#page3#enu10#ln29"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="8">
+        <layout:Unit unitId="sv2#area5#page3#pwu1">
+          <layout:Attribute attribute="userOID" label="Codice"/>
+          <layout:Attribute attribute="userName" label="Nome Utente"/>
+          <layout:Attribute attribute="email" label="Email"/>
+          <layout:Attribute attribute="password" label="Password"/>
+          <layout:Link link="sv2#area5#page3#pwu1#ln27"/>
+          <layout:Link link="sv2#area5#page3#pwu1userOID"/>
+          <layout:Link link="sv2#area5#page3#pwu1userName"/>
+          <layout:Link link="sv2#area5#page3#pwu1email"/>
+          <layout:Link link="sv2#area5#page3#pwu1First"/>
+          <layout:Link link="sv2#area5#page3#pwu1Previous"/>
+          <layout:Link link="sv2#area5#page3#pwu1Block"/>
+          <layout:Link link="sv2#area5#page3#pwu1Next"/>
+          <layout:Link link="sv2#area5#page3#pwu1Last"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="multi-selection-field-rendering" value="checkbox vertical" type="field"/>
+  <layout:LayoutParameter name="select-all-links" value="false" type="field"/>
+  <layout:LayoutParameter name="mandatory-fields" value="true" type="field"/>
+</Page>

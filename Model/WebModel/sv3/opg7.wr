@@ -1,0 +1,30 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="885" gr:y="615" id="sv3#opg7" name="Eliminazione autovettura" transaction="true">
+  <OperationUnits>
+    <DeleteUnit gr:x="390" gr:y="0" id="sv3#opg7#dlu2" name="Cancellazione" entity="ent1">
+      <Selector id="sv3#opg7#dlu2#su15" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#opg7#dlu2#su15#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#opg7#dlu2#oln34" name="OKFlow29" to="sv3#area2#page6"/>
+      <Link id="sv3#opg7#dlu2#ln31" name="Flow185" to="sv3#mpage11#mssu29" type="transport" validate="true">
+        <LinkParameter id="sv3#opg7#dlu2#ln31#par103" name="L'autovettura selezionata &#232; stata rimossa con successo._Shown Messages" target="sv3#mpage11#mssu29.shownMessages" sourceValue="L'autovettura selezionata &#232; stata rimossa con successo."/>
+      </Link>
+    </DeleteUnit>
+    <DeleteUnit gr:x="0" gr:y="0" id="sv3#opg7#dlu8" name="Cancellazione preferiti" entity="ent5">
+      <Selector id="sv3#opg7#dlu8#su69" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#opg7#dlu8#su69#rcond10" name="autovettura2preferito" predicate="in" implied="false" role="rel3#role6"/>
+      </Selector>
+      <OKLink id="sv3#opg7#dlu8#oln28" name="OKFlow28" to="sv3#opg7#dlu9">
+        <LinkParameter id="sv3#opg7#dlu8#oln28#par100" name="Key [oid]_PASSING_autovettura2acquisto [oid]" sourceLinkParameter="sv3#area2#page9#enu14#ln53#par84" target="sv3#opg7#dlu9#su70#rcond11.ent1#att1"/>
+        <LinkParameter id="sv3#opg7#dlu8#oln28#par101" name="Key [oid]_PASSING" sourceLinkParameter="sv3#area2#page9#enu14#ln53#par84" passing="true"/>
+      </OKLink>
+    </DeleteUnit>
+    <DeleteUnit gr:x="190" gr:y="0" id="sv3#opg7#dlu9" name="Cancellazione acquistiP" entity="ent6">
+      <Selector id="sv3#opg7#dlu9#su70" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#opg7#dlu9#su70#rcond11" name="autovettura2acquisto" predicate="in" implied="false" role="rel4#role8"/>
+      </Selector>
+      <OKLink id="sv3#opg7#dlu9#oln35" name="OKFlow35" to="sv3#opg7#dlu2">
+        <LinkParameter id="sv3#opg7#dlu9#oln35#par102" name="Key [oid]_PASSING_KeyCondition14 [oid]" sourceLinkParameter="sv3#opg7#dlu8#oln28#par101" target="sv3#opg7#dlu2#su15#kcond14.ent1#att1"/>
+      </OKLink>
+    </DeleteUnit>
+  </OperationUnits>
+</OperationGroup>

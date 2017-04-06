@@ -1,0 +1,87 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="335" gr:y="1315" id="sv3#area2#page38" name="Seleziona autovettura" ajaxEnabled="false" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="70" id="sv3#area2#page38#pwu12" name="Seleziona l'autovettura" sortable="true" checkable="false" useCountQuery="false" entity="ent1" blockFactor="10" displayAttributes="ent1#att1 ent1#att46 ent1#att2 ent1#att5 ent1#att4 ent1#att6" linkOrder="sv3#area2#page38#pwu12#ln94">
+      <Link id="sv3#area2#page38#pwu12#ln94" name="Seleziona" to="sv3#area2#page28#enu19" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxReplaceWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="700" ajaxWindowClosable="true" ajaxWindowModal="true">
+        <LinkParameter id="sv3#area2#page38#pwu12#ln94#par383" name="oid_Codice autovettura" source="data[].ent1#att1" target="sv3#area2#page28#enu19#fld101_slot"/>
+        <LinkParameter id="sv3#area2#page38#pwu12#ln94#par384" name="nome_Autovettura" source="data[].ent1#att46" target="sv3#area2#page28#enu19#fld100_slot"/>
+        <LinkParameter id="sv3#area2#page38#pwu12#ln94#par54" name="prezzo_prezzo" source="data[].ent1#att2" target="sv3#area2#page28#enu19#fld96_slot"/>
+      </Link>
+      <Selector id="sv3#area2#page38#pwu12#su35" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area2#page38#pwu12#su35#acond22" name="nome" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att46" ignoreCase="true"/>
+        <AttributesCondition id="sv3#area2#page38#pwu12#su35#acond32" name="disponibilita" predicate="gteq" booleanOperator="or" implied="false" attributes="ent1#att5" value="1"/>
+      </Selector>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#area2#page38#enu5" name="Autovettura" linkOrder="sv3#area2#page38#enu5#ln63 sv3#area2#page38#enu5#ln68">
+      <Field id="sv3#area2#page38#enu5#fld18" name="Autovettura" type="string" modifiable="true" ajaxAutocompleteEnabled="true" ajaxAutocompleteLink="sv3#area2#page38#enu5#ln63" ajaxAutocompleteIndicator="true" ajaxAutocompleteMinChars="2"/>
+      <Link id="sv3#area2#page38#enu5#ln63" name="Flow63" to="sv3#area2#page37#inu4" type="normal" validate="true" ajaxEnabled="true">
+        <LinkParameter id="sv3#area2#page38#enu5#ln63#par4" name="Autovettura_nome" source="sv3#area2#page38#enu5#fld18" target="sv3#area2#page37#inu4#su49#acond29"/>
+      </Link>
+      <Link id="sv3#area2#page38#enu5#ln68" name="Cerca" to="sv3#area2#page38#pwu12" type="normal" validate="true">
+        <LinkParameter id="sv3#area2#page38#enu5#ln68#par5" name="Autovettura_nome" source="sv3#area2#page38#enu5#fld18" target="sv3#area2#page38#pwu12#su35#acond22"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="9">
+        <layout:Field unitId="sv3#area2#page38#enu5" mode="full" field="sv3#area2#page38#enu5#fld18"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3">
+        <layout:Link unitId="sv3#area2#page38#enu5" link="sv3#area2#page38#enu5#ln68"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area2#page38#pwu12">
+          <layout:Link link="sv3#area2#page38#pwu12#ln94"/>
+          <layout:Link link="sv3#area2#page38#pwu12First"/>
+          <layout:Link link="sv3#area2#page38#pwu12Previous"/>
+          <layout:Link link="sv3#area2#page38#pwu12Block"/>
+          <layout:Link link="sv3#area2#page38#pwu12Next"/>
+          <layout:Link link="sv3#area2#page38#pwu12Last"/>
+          <layout:Attribute attribute="ent1#att1"/>
+          <layout:Attribute attribute="ent1#att46"/>
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Attribute attribute="ent1#att6"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

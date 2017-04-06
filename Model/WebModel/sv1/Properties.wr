@@ -1,0 +1,39 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="HomeView" landmarks="sv1#area1 sv1#area4" localized="false" homePage="sv1#area1#page5">
+  <OperationUnits>
+    <LoginUnit gr:x="450" gr:y="165" id="sv1#lgu3" name="Login">
+      <KOLink id="sv1#lgu3#kln2" name="KOFlow2" to="sv1#area1#page5#mssu1">
+        <LinkParameter id="sv1#lgu3#kln2#par1" name="Username o Password errati!_Shown Messages" sourceValue="Username o Password errati!" target="sv1#area1#page5#mssu1.shownMessages"/>
+      </KOLink>
+    </LoginUnit>
+    <LogoutUnit id="sv1#lou5" name="Logout" gr:x="605" gr:y="395" siteView="sv1"/>
+    <GetUnit id="sv1#gtu19" name="utente" landmark="false" gr:x="595" gr:y="1000" contextParameters="UserCtxParam" linkOrder="ln7 ln44">
+      <Link id="sv1#gtu19#ln116" name="Flow46" to="sv1#opg9#seu15" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu19#ln116#par356" name="UserCtxParam.oid_utente2acquisto [oid]" source="sv1#gtu19.UserCtxParam" target="sv1#opg9#seu15#su29#rcond13.userOID"/>
+      </Link>
+      <Link id="sv1#gtu19#ln118" name="Flow48" to="sv1#opg11#seu5" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu19#ln118#par239" name="UserCtxParam.oid_utente [oid]" source="sv1#gtu19.UserCtxParam" target="sv1#opg11#seu5#su3#rcond4.userOID"/>
+      </Link>
+      <Link id="sv1#gtu19#ln121" name="Flow70" to="sv1#opg12#cru6" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu19#ln121#par242" name="UserCtxParam.oid_Utente.oid(AnnuncioToUtente)" source="sv1#gtu19.UserCtxParam" target="sv1#opg12#cru6.rel13#role26.userOID"/>
+      </Link>
+      <Link id="sv1#gtu19#ln122" name="Flow74" to="sv1#opg12#mfu3" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu19#ln122#par243" name="UserCtxParam.oid_Utente.oid(AnnuncioToUtente)" source="sv1#gtu19.UserCtxParam" target="sv1#opg12#mfu3.rel13#role26.userOID"/>
+      </Link>
+      <Link id="sv1#gtu19#ln136" name="Flow47" to="sv1#opg11#cru5" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu19#ln136#par258" name="UserCtxParam.oid_Utente.oid(PreferitoToUtente)" source="sv1#gtu19.UserCtxParam" target="sv1#opg11#cru5.rel1#role1.userOID"/>
+      </Link>
+      <Link id="sv1#gtu19#ln174" name="Flow174" to="sv1#opg9#seu8" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu19#ln174#par303" name="UserCtxParam.oid_utente2acquisto [oid]" source="sv1#gtu19.UserCtxParam" target="sv1#opg9#seu8#su62#rcond25.userOID"/>
+      </Link>
+      <Link id="sv1#gtu19#ln7" name="Flow7" to="sv1#opg4#cru8" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu19#ln7#par12" name="UserCtxParam.oid_Utente.oid(AppuntamentoToUtente)" source="sv1#gtu19.UserCtxParam" target="sv1#opg4#cru8.rel6#role12.userOID"/>
+        <LinkParameter id="sv1#gtu19#ln7#par69" name="UserCtxParam.oid_PASSING" source="sv1#gtu19.UserCtxParam" passing="true"/>
+      </Link>
+      <Link id="sv1#gtu19#ln44" name="Flow44" to="sv1#opg4#mfu7" type="transport" validate="true">
+        <LinkParameter id="sv1#gtu19#ln44#par291" name="UserCtxParam.oid_PASSING" source="sv1#gtu19.UserCtxParam" passing="true"/>
+        <LinkParameter id="sv1#gtu19#ln44#par456" name="UserCtxParam.oid_Utente.oid(NotificaToUtente)" source="sv1#gtu19.UserCtxParam" target="sv1#opg4#mfu7.rel14#role28.userOID"/>
+      </Link>
+    </GetUnit>
+  </OperationUnits>
+  <layout:LayoutParameter name="link-style" value="button" type="link"/>
+</SiteView>

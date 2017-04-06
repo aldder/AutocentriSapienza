@@ -1,0 +1,12 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1170" gr:y="110" id="sv1#opg10" name="Modifica Utente" transaction="true">
+  <OperationUnits>
+    <ModifyUnit id="sv1#opg10#mfu4" name="Modifica" gr:x="0" gr:y="0" entity="User">
+      <Selector id="sv1#opg10#mfu4#su14" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#opg10#mfu4#su14#kcond11" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#opg10#mfu4#ln82" name="Flow82" to="sv1#mpage2#mssu15" type="transport" validate="true">
+        <LinkParameter id="sv1#opg10#mfu4#ln82#par204" name="La password &#232; stata modificata con successo._Shown Messages" sourceValue="La password &#232; stata modificata con successo." target="sv1#mpage2#mssu15.shownMessages"/>
+      </Link>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationGroup>

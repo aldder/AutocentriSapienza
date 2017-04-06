@@ -1,0 +1,28 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="840" gr:y="650" id="sv1#opg12" name="Gestione annunci" transaction="true">
+  <OperationUnits>
+    <CreateUnit gr:x="0" gr:y="0" id="sv1#opg12#cru6" name="Inserimento" entity="ent10">
+      <OKLink id="sv1#opg12#cru6#oln21" name="OKFlow21" to="sv1#area4#page15"/>
+      <Link id="sv1#opg12#cru6#ln78" name="Flow78" to="sv1#mpage2#mssu15" type="transport" validate="true">
+        <LinkParameter id="sv1#opg12#cru6#ln78#par200" name="L'annuncio di vendita &#232; stato inserito con successo._Shown Messages" sourceValue="L'annuncio di vendita &#232; stato inserito con successo." target="sv1#mpage2#mssu15.shownMessages"/>
+      </Link>
+    </CreateUnit>
+    <DeleteUnit gr:x="310" gr:y="0" id="sv1#opg12#dlu5" name="Cancellazione" entity="ent10">
+      <Selector id="sv1#opg12#dlu5#su25" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#opg12#dlu5#su25#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#opg12#dlu5#oln22" name="OKFlow22" to="sv1#area4#page15"/>
+      <Link id="sv1#opg12#dlu5#ln79" name="Flow79" to="sv1#mpage2#mssu15" type="transport" validate="true">
+        <LinkParameter id="sv1#opg12#dlu5#ln79#par201" name="L'annuncio selezionato &#232; stato rimosso con successo._Shown Messages" sourceValue="L'annuncio selezionato &#232; stato rimosso con successo." target="sv1#mpage2#mssu15.shownMessages"/>
+      </Link>
+    </DeleteUnit>
+    <ModifyUnit gr:x="170" gr:y="0" id="sv1#opg12#mfu3" name="Modifica" entity="ent10">
+      <Selector id="sv1#opg12#mfu3#su26" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#opg12#mfu3#su26#kcond17" name="KeyCondition17" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#opg12#mfu3#oln20" name="OKFlow20" to="sv1#area4#page15"/>
+      <Link id="sv1#opg12#mfu3#ln77" name="Flow77" to="sv1#mpage2#mssu15" type="transport" validate="true">
+        <LinkParameter id="sv1#opg12#mfu3#ln77#par199" name="Le modifiche effettuate sono state salvate con successo._Shown Messages" sourceValue="Le modifiche effettuate sono state salvate con successo." target="sv1#mpage2#mssu15.shownMessages"/>
+      </Link>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationGroup>

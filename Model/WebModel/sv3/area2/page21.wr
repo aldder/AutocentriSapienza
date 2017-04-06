@@ -1,0 +1,91 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="35" gr:y="1315" id="sv3#area2#page21" name="Storico Acquisti" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#area2#page21#pwu9" name="Storico acquisti" sortable="true" checkable="false" useCountQuery="false" entity="ent7" displayAttributes="ent7#att24 ent7#att56 ent7#att48 ent7#att59 rel12#role23.userName rel9#role18.ent1#att46" linkOrder="sv3#area2#page21#pwu9#ln106">
+      <SortAttribute attribute="rel12#role23.userName" order="ascending"/>
+      <SortAttribute attribute="rel9#role18.ent1#att46" order="ascending"/>
+      <SortAttribute attribute="ent7#att24" order="ascending"/>
+      <SortAttribute attribute="ent7#att56" order="ascending"/>
+      <SortAttribute attribute="ent7#att48" order="ascending"/>
+      <SortAttribute attribute="ent7#att59" order="ascending"/>
+      <Link id="sv3#area2#page21#pwu9#ln106" name="Visualizza" to="sv3#area2#page26#enu20" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="700" ajaxWindowClosable="true" ajaxWindowModal="true">
+        <LinkParameter id="sv3#area2#page21#pwu9#ln106#par479" name="Storico_AcquistoToAutovettura.oid_Autovettura - Preselection" source="data[].rel9#role18_ent1#att1" target="sv3#area2#page26#enu20#sfld8_presel"/>
+        <LinkParameter id="sv3#area2#page21#pwu9#ln106#par480" name="oid_Key Condition [oid]" source="data[].ent7#att24" target="sv3#area2#page26#enu20.ent7#att24"/>
+        <LinkParameter id="sv3#area2#page21#pwu9#ln106#par481" name="Storico_AcquistoToUtente.oid_Utente - Preselection" source="data[].rel12#role23_userOID" target="sv3#area2#page26#enu20#sfld11_presel"/>
+      </Link>
+      <DefaultSortAttribute attribute="ent7#att24" order="ascending"/>
+      <DefaultSortAttribute attribute="ent7#att48" order="ascending"/>
+      <DefaultSortAttribute attribute="rel9#role18.ent1#att46" order="ascending"/>
+      <DefaultSortAttribute attribute="ent7#att56" order="ascending"/>
+      <DefaultSortAttribute attribute="rel12#role23.userName" order="ascending"/>
+      <DefaultSortAttribute attribute="ent7#att59" order="ascending"/>
+    </PowerIndexUnit>
+    <MultiMessageUnit gr:x="160" gr:y="0" id="sv3#area2#page21#mssu8" name="Inserisci" linkOrder="sv3#area2#page21#mssu8#ln86">
+      <Link id="sv3#area2#page21#mssu8#ln86" name="Inserisci" to="sv3#area2#page38" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="700" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxReplaceWindow="false" ajaxWindowShowEffect="Effect.BlindDown"/>
+      <Message xml:space="preserve">Clicca per inserire un nuovo acquisto.</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area2#page21#mssu8">
+          <layout:Link link="sv3#area2#page21#mssu8#ln86"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area2#page21#pwu9">
+          <layout:Attribute attribute="ent7#att24"/>
+          <layout:Attribute attribute="ent7#att56"/>
+          <layout:Attribute attribute="ent7#att48"/>
+          <layout:Attribute attribute="ent7#att59"/>
+          <layout:Attribute attribute="rel12#role23.userName"/>
+          <layout:Attribute attribute="rel9#role18.ent1#att46"/>
+          <layout:Link link="sv3#area2#page21#pwu9#ln106"/>
+          <layout:Link link="sv3#area2#page21#pwu9rel12#role23$userName"/>
+          <layout:Link link="sv3#area2#page21#pwu9rel9#role18$ent1#att46"/>
+          <layout:Link link="sv3#area2#page21#pwu9ent7#att24"/>
+          <layout:Link link="sv3#area2#page21#pwu9ent7#att56"/>
+          <layout:Link link="sv3#area2#page21#pwu9ent7#att48"/>
+          <layout:Link link="sv3#area2#page21#pwu9ent7#att59"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

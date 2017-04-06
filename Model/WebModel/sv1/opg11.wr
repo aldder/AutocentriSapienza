@@ -1,0 +1,28 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="845" gr:y="860" id="sv1#opg11" name="Gestione preferiti" transaction="true">
+  <OperationUnits>
+    <CreateUnit gr:x="0" gr:y="5" id="sv1#opg11#cru5" name="Inserimento" entity="ent5" skipBlankRecords="true" notBlankAttributes="ent5#att21 ent5#att22">
+      <OKLink id="sv1#opg11#cru5#oln24" name="OKFlow24" to="sv1#area1#page5"/>
+      <Link id="sv1#opg11#cru5#ln81" name="Flow81" to="sv1#mpage2#mssu15" type="transport" validate="true">
+        <LinkParameter id="sv1#opg11#cru5#ln81#par203" name="L'autovettura selezionata &#232; stata aggiunta nei prodotti preferiti._Shown Messages" sourceValue="L'autovettura selezionata &#232; stata aggiunta nei prodotti preferiti." target="sv1#mpage2#mssu15.shownMessages"/>
+      </Link>
+    </CreateUnit>
+    <DeleteUnit gr:x="140" gr:y="5" id="sv1#opg11#dlu4" name="Cancellazione" entity="ent5">
+      <Selector id="sv1#opg11#dlu4#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#opg11#dlu4#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#opg11#dlu4#ln83" name="Flow83" to="sv1#mpage2#mssu15" type="transport" validate="true">
+        <LinkParameter id="sv1#opg11#dlu4#ln83#par205" name="L'autovettura selezionata &#232; stata rimossa dai preferiti._Shown Messages" sourceValue="L'autovettura selezionata &#232; stata rimossa dai preferiti." target="sv1#mpage2#mssu15.shownMessages"/>
+      </Link>
+      <OKLink id="sv1#opg11#dlu4#oln25" name="OKFlow25" to="sv1#area4#page17"/>
+    </DeleteUnit>
+    <SelectorUnit gr:x="300" gr:y="0" id="sv1#opg11#seu5" name="Preferiti" entity="ent5">
+      <Selector id="sv1#opg11#seu5#su3" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#opg11#seu5#su3#rcond2" name="autovettura" predicate="in" implied="false" role="rel3#role6"/>
+        <RelationshipRoleCondition id="sv1#opg11#seu5#su3#rcond4" name="utente" predicate="in" implied="false" role="rel1#role2"/>
+      </Selector>
+      <OKLink id="sv1#opg11#seu5#oln17" name="OKFlow17" to="sv1#opg11#dlu4">
+        <LinkParameter id="sv1#opg11#seu5#oln17#par147" name="oid_KeyCondition1 [oid]" source="ent5#att21Array" target="sv1#opg11#dlu4#su1#kcond1.ent5#att21"/>
+      </OKLink>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationGroup>

@@ -1,0 +1,19 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="705" gr:y="255" id="sv4#opg3" name="Gestione tipologie" transaction="true">
+  <OperationUnits>
+    <CreateUnit gr:x="0" gr:y="5" id="sv4#opg3#cru7" name="Inserimento" entity="ent3">
+      <OKLink id="sv4#opg3#cru7#oln7" name="OKFlow7" to="sv4#area3#page33" gr:bendpoints="-93,33,457,118"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="165" gr:y="5" id="sv4#opg3#mfu1" name="Modifica" entity="ent3">
+      <Selector id="sv4#opg3#mfu1#su6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#opg3#mfu1#su6#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#opg3#mfu1#oln11" name="OKFlow11" to="sv4#area3#page33" gr:bendpoints="-154,83,551,173"/>
+    </ModifyUnit>
+    <DeleteUnit gr:x="325" gr:y="0" id="sv4#opg3#dlu1" name="Cancellazione" entity="ent3">
+      <Selector id="sv4#opg3#dlu1#su7" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#opg3#dlu1#su7#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#opg3#dlu1#oln12" name="OKFlow12" to="sv4#area3#page33" gr:bendpoints="-322,124,558,209"/>
+    </DeleteUnit>
+  </OperationUnits>
+</OperationGroup>

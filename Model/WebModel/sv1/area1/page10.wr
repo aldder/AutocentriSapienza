@@ -1,0 +1,62 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="395" gr:y="245" id="sv1#area1#page10" name="Registrazione" layout:pageLayout="BootstrapStyle/Empty" ignoreMasterPage="true">
+  <ContentUnits>
+    <EntryUnit id="sv1#area1#page10#enu16" name="Registrazione" linkOrder="sv1#area1#page10#enu16#ln58" gr:x="0" gr:y="0" entity="User" fieldOrder="sv1#area1#page10#enu16#fld61 sv1#area1#page10#enu16#fld62 sv1#area1#page10#enu16#fld63 sv1#area1#page10#enu16#fld64">
+      <Field id="sv1#area1#page10#enu16#fld61" name="Nome Utente" type="string" modifiable="true" attribute="userName">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area1#page10#enu16#fld61#mnd39" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <CollectionValidationRule id="sv1#area1#page10#enu16#fld61#clc7" name="Unique" predicate="notIn" entity="User" attribute="userName" errorMessage="valore non valido"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area1#page10#enu16#fld62" name="Email" type="string" modifiable="true" attribute="email">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area1#page10#enu16#fld62#mnd40" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <EMailValidationRule id="sv1#area1#page10#enu16#fld62#email5" name="EMail" errorMessage="formato non corretto"/>
+          <CollectionValidationRule id="sv1#area1#page10#enu16#fld62#clc8" name="Unique" predicate="notIn" entity="User" attribute="email" errorMessage="valore non valido"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area1#page10#enu16#fld63" name="Password" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area1#page10#enu16#fld63#mnd41" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area1#page10#enu16#fld64" name="Conferma Password" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <CompareValidationRule id="sv1#area1#page10#enu16#fld64#cmp1" name="Compare" predicate="eq" valueField="sv1#area1#page10#enu16#fld63" errorMessage="la password non coincide"/>
+        </VRules>
+      </Field>
+      <Link id="sv1#area1#page10#enu16#ln58" name="Registrati" to="sv1#opg1#cru1" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page10#enu16#ln58#par110" name="Email_email" source="sv1#area1#page10#enu16#fld62" target="sv1#opg1#cru1.email"/>
+        <LinkParameter id="sv1#area1#page10#enu16#ln58#par111" name="4_Group.oid(defaultGroup)" target="sv1#opg1#cru1.User2DefaultGroup.groupOID" sourceValue="4"/>
+        <LinkParameter id="sv1#area1#page10#enu16#ln58#par112" name="4_Group.oid(groups)" target="sv1#opg1#cru1.User2Group.groupOID" blank="true"/>
+        <LinkParameter id="sv1#area1#page10#enu16#ln58#par113" name="Nome Utente_nome_utente" source="sv1#area1#page10#enu16#fld61" target="sv1#opg1#cru1.userName"/>
+        <LinkParameter id="sv1#area1#page10#enu16#ln58#par114" name="Key [oid]_oid" source="key.userOID" target="sv1#opg1#cru1.userOID"/>
+        <LinkParameter id="sv1#area1#page10#enu16#ln58#par115" name="Password_password" source="sv1#area1#page10#enu16#fld63" target="sv1#opg1#cru1.password"/>
+        <LinkParameter id="sv1#area1#page10#enu16#ln58#par116" name="Utente Object_Utente Object" source="entityBean" target="sv1#opg1#cru1.entityBeans"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page10#enu16">
+          <layout:Field field="sv1#area1#page10#enu16#fld61"/>
+          <layout:Field field="sv1#area1#page10#enu16#fld62"/>
+          <layout:Field field="sv1#area1#page10#enu16#fld63"/>
+          <layout:Field field="sv1#area1#page10#enu16#fld64"/>
+          <layout:Link link="sv1#area1#page10#enu16#ln58"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

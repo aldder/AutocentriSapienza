@@ -1,0 +1,77 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="20" gr:y="1555" id="sv1#area4#page22" name="Le tue notifiche" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="145" gr:y="0" id="sv1#area4#page22#pwu10" name="Le tue notifiche" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att19 rel8#role16.ent2#att13 rel16#role31.ent3#att16 rel15#role30.ent7#att56 ent4#att28" linkOrder="sv1#area4#page22#pwu10#ln55 sv1#area4#page22#pwu10#ln54">
+      <SortAttribute attribute="ent4#att18" order="ascending"/>
+      <SortAttribute attribute="ent4#att19" order="ascending"/>
+      <SortAttribute attribute="ent4#att28" order="ascending"/>
+      <SortAttribute attribute="rel15#role30.ent7#att56" order="ascending"/>
+      <SortAttribute attribute="rel8#role16.ent2#att13" order="ascending"/>
+      <DefaultSortAttribute attribute="ent4#att18" order="ascending"/>
+      <DefaultSortAttribute attribute="ent4#att19" order="ascending"/>
+      <DefaultSortAttribute attribute="ent4#att28" order="ascending"/>
+      <DefaultSortAttribute attribute="rel15#role30.ent7#att56" order="ascending"/>
+      <DefaultSortAttribute attribute="rel8#role16.ent2#att13" order="ascending"/>
+      <Link id="sv1#area4#page22#pwu10#ln54" name="Disattiva" to="sv1#opg8#mfu9" type="normal" validate="true" gr:bendpoints="80,73,69,-96">
+        <LinkParameter id="sv1#area4#page22#pwu10#ln54#par61" name="oid_KeyCondition9 [oid]" source="data[].ent4#att18" target="sv1#opg8#mfu9#su34#kcond20.ent4#att18"/>
+        <LinkParameter id="sv1#area4#page22#pwu10#ln54#par63" name="0_stato" sourceValue="0" target="sv1#opg8#mfu9.ent4#att28"/>
+      </Link>
+      <Link id="sv1#area4#page22#pwu10#ln55" name="Attiva" to="sv1#opg8#mfu9" type="normal" validate="true">
+        <LinkParameter id="sv1#area4#page22#pwu10#ln55#par62" name="oid_KeyCondition9 [oid]" source="data[].ent4#att18" target="sv1#opg8#mfu9#su34#kcond20.ent4#att18"/>
+        <LinkParameter id="sv1#area4#page22#pwu10#ln55#par64" name="1_stato" sourceValue="1" target="sv1#opg8#mfu9.ent4#att28"/>
+      </Link>
+      <Selector id="sv1#area4#page22#pwu10#su45" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area4#page22#pwu10#su45#rcond17" name="utente2notifica" predicate="in" implied="false" role="rel14#role27"/>
+      </Selector>
+    </PowerIndexUnit>
+    <GetUnit gr:x="0" gr:y="5" id="sv1#area4#page22#gtu4" name="utente" contextParameters="UserCtxParam">
+      <Link id="sv1#area4#page22#gtu4#ln48" name="Flow48" to="sv1#area4#page22#pwu10" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page22#gtu4#ln48#par458" name="UserCtxParam.oid_utente2notifica [oid]" source="sv1#area4#page22#gtu4.UserCtxParam" target="sv1#area4#page22#pwu10#su45#rcond17.userOID"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page22#pwu10">
+          <layout:Attribute attribute="ent4#att19" label="Data notifica"/>
+          <layout:Attribute attribute="rel8#role16.ent2#att13" label="Data appuntamento"/>
+          <layout:Attribute attribute="rel16#role31.ent3#att16" label="Tipologia"/>
+          <layout:Attribute attribute="rel15#role30.ent7#att56" label="Targa auto"/>
+          <layout:Attribute attribute="ent4#att28" label="Invio notifica"/>
+          <layout:Link link="sv1#area4#page22#pwu10#ln55" layout:linkVisibilityConditionNegated="true" layout:linkDisableConditionVariable="sv1#area4#page22#var2"/>
+          <layout:Link link="sv1#area4#page22#pwu10#ln54" layout:linkDisableConditionVariable="sv1#area4#page22#var2" layout:linkDisableConditionNegated="true"/>
+          <layout:Link link="sv1#area4#page22#pwu10ent4#att19"/>
+          <layout:Link link="sv1#area4#page22#pwu10ent4#att28"/>
+          <layout:Link link="sv1#area4#page22#pwu10rel15#role30$ent7#att56"/>
+          <layout:Link link="sv1#area4#page22#pwu10rel8#role16$ent2#att13"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Variable id="sv1#area4#page22#var2" name="isActive" type="boolean" unitId="sv1#area4#page22#pwu10" parameter="data[].ent4#att28"/>
+</Page>

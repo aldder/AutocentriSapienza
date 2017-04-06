@@ -1,0 +1,76 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="140" gr:y="1175" id="sv1#opg9" name="Gestione acquisti" transaction="true">
+  <OperationUnits>
+    <CreateUnit gr:x="0" gr:y="265" id="sv1#opg9#cru4" name="Inserimento" entity="ent6" skipBlankRecords="true" notBlankAttributes="ent6#att23 ent6#att25">
+      <OKLink id="sv1#opg9#cru4#oln23" name="OKFlow23" to="sv1#area1#page5" automaticCoupling="true"/>
+      <Link id="sv1#opg9#cru4#ln80" name="Flow80" to="sv1#mpage2#mssu15" type="transport" validate="true">
+        <LinkParameter id="sv1#opg9#cru4#ln80#par202" name="Grazie per aver acquistato l'autovettura. A breve sar&#224; contattato da un nostro amministratore alle vendite per completare la procedura d'acquisto._Shown Messages" sourceValue="Grazie per aver acquistato l'autovettura. A breve sar&#224; contattato da un nostro amministratore alle vendite per completare la procedura d'acquisto." target="sv1#mpage2#mssu15.shownMessages"/>
+      </Link>
+    </CreateUnit>
+    <DeleteUnit gr:x="390" gr:y="160" id="sv1#opg9#dlu6" name="Cancellazione" entity="ent6" linkOrder="ln176">
+      <Selector id="sv1#opg9#dlu6#su61" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#opg9#dlu6#su61#kcond39" name="KeyCondition39" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#opg9#dlu6#oln31" name="OKFlow31" to="sv1#area4#page18"/>
+      <Link id="sv1#opg9#dlu6#ln176" name="Flow176" to="sv1#mpage2#mssu15" type="transport" validate="true">
+        <LinkParameter id="sv1#opg9#dlu6#ln176#par306" name="L'autovettura selezionata &#232; stata rimossa dagli acquisti._Shown Messages" sourceValue="L'autovettura selezionata &#232; stata rimossa dagli acquisti." target="sv1#mpage2#mssu15.shownMessages"/>
+      </Link>
+    </DeleteUnit>
+    <SelectorUnit gr:x="365" gr:y="5" id="sv1#opg9#seu8" name="Acquisti pendenti" entity="ent6">
+      <Selector id="sv1#opg9#seu8#su62" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#opg9#seu8#su62#rcond24" name="autovettura2acquisto" predicate="in" implied="false" role="rel4#role8"/>
+        <RelationshipRoleCondition id="sv1#opg9#seu8#su62#rcond25" name="utente2acquisto" predicate="in" implied="false" role="rel2#role3"/>
+      </Selector>
+      <OKLink id="sv1#opg9#seu8#oln30" name="OKFlow30" to="sv1#opg9#dlu6">
+        <LinkParameter id="sv1#opg9#seu8#oln30#par305" name="oid_KeyCondition39 [oid]" source="ent6#att23Array" target="sv1#opg9#dlu6#su61#kcond39.ent6#att23"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit gr:x="95" gr:y="0" id="sv1#opg9#seu15" name="Acquisto" entity="ent6">
+      <Selector id="sv1#opg9#seu15#su29" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#opg9#seu15#su29#rcond12" name="autovettura2acquisto" predicate="in" implied="false" role="rel4#role8"/>
+        <RelationshipRoleCondition id="sv1#opg9#seu15#su29#rcond13" name="utente2acquisto" predicate="in" implied="false" role="rel2#role3"/>
+      </Selector>
+      <OKLink id="sv1#opg9#seu15#oln36" name="OKFlow36" to="sv1#opg9#inn3">
+        <LinkParameter id="sv1#opg9#seu15#oln36#par104" name="_Input" target="sv1#opg9#inn3.isnotnull" source="ent6#att23Array"/>
+        <LinkParameter id="sv1#opg9#seu15#oln36#par157" name="quantita_PASSING" source="ent6#att39Array" passing="true"/>
+        <LinkParameter id="sv1#opg9#seu15#oln36#par334" name="notifica_PASSING" source="ent6#att25Array" passing="true"/>
+        <LinkParameter id="sv1#opg9#seu15#oln36#par338" name="oid_PASSING" source="ent6#att23Array" passing="true"/>
+        <LinkParameter id="sv1#opg9#seu15#oln36#par341" name="Acquisto_PendenteToAutovettura.oid_PASSING" source="rel4#role7_ent1#att1Array" passing="true"/>
+        <LinkParameter id="sv1#opg9#seu15#oln36#par344" name="Acquisto_PendenteToUtente.oid_PASSING" source="rel2#role4_userOIDArray" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="130" gr:y="155" id="sv1#opg9#inn3" name="Is Not Null">
+      <KOLink id="sv1#opg9#inn3#kln7" name="KOFlow7" to="sv1#opg9#cru4">
+        <LinkParameter id="sv1#opg9#inn3#kln7#par219" name="1_notifica" sourceValue="1" target="sv1#opg9#cru4.ent6#att25"/>
+        <LinkParameter id="sv1#opg9#inn3#kln7#par237" name="quantita_PASSING_quantita" target="sv1#opg9#cru4.ent6#att39" sourceValue="1"/>
+        <LinkParameter id="sv1#opg9#inn3#kln7#par347" name="Acquisto_PendenteToAutovettura.oid_PASSING_Autovettura.oid(Acquisto_PendenteToAutovettura)" sourceLinkParameter="sv1#opg9#seu15#oln36#par341" target="sv1#opg9#cru4.rel4#role7.ent1#att1"/>
+        <LinkParameter id="sv1#opg9#inn3#kln7#par348" name="Acquisto_PendenteToUtente.oid_PASSING_Utente.oid(Acquisto_PendenteToUtente)" sourceLinkParameter="sv1#opg9#seu15#oln36#par344" target="sv1#opg9#cru4.rel2#role4.userOID"/>
+      </KOLink>
+      <OKLink id="sv1#opg9#inn3#oln42" name="OKFlow42" to="sv1#opg9#mathu1">
+        <LinkParameter id="sv1#opg9#inn3#oln42#par335" name="notifica_PASSING" sourceLinkParameter="sv1#opg9#seu15#oln36#par334" passing="true"/>
+        <LinkParameter id="sv1#opg9#inn3#oln42#par337" name="quantita_PASSING_quantita" sourceLinkParameter="sv1#opg9#seu15#oln36#par157" target="sv1#opg9#mathu1#mathv1"/>
+        <LinkParameter id="sv1#opg9#inn3#oln42#par339" name="oid_PASSING" sourceLinkParameter="sv1#opg9#seu15#oln36#par338" passing="true"/>
+        <LinkParameter id="sv1#opg9#inn3#oln42#par349" name="Acquisto_PendenteToAutovettura.oid_PASSING" sourceLinkParameter="sv1#opg9#seu15#oln36#par341" passing="true"/>
+        <LinkParameter id="sv1#opg9#inn3#oln42#par350" name="Acquisto_PendenteToUtente.oid_PASSING" sourceLinkParameter="sv1#opg9#seu15#oln36#par344" passing="true"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <ModifyUnit gr:x="200" gr:y="395" id="sv1#opg9#mfu8" name="Modifica" entity="ent6">
+      <Selector id="sv1#opg9#mfu8#su30" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#opg9#mfu8#su30#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv1#opg9#mfu8#oln43" name="OKFlow43" to="sv1#area1#page5"/>
+      <Link id="sv1#opg9#mfu8#ln5" name="Flow5" to="sv1#mpage2#mssu15" type="transport" validate="true">
+        <LinkParameter id="sv1#opg9#mfu8#ln5#par327" name="L'autovettura era gi&#224; presente nel carrello. La quantit&#224; &#232; stata incrementata._Shown Messages" sourceValue="L'autovettura era gi&#224; presente nel carrello. La quantit&#224; &#232; stata incrementata." target="sv1#mpage2#mssu15.shownMessages"/>
+      </Link>
+    </ModifyUnit>
+    <MathUnit gr:x="205" gr:y="270" id="sv1#opg9#mathu1" name="incrQuantita" resultType="integer" defaultExpression="quantita + 1">
+      <OKLink id="sv1#opg9#mathu1#oln44" name="OKFlow44" to="sv1#opg9#mfu8">
+        <LinkParameter id="sv1#opg9#mathu1#oln44#par332" name="Result_quantita" source="result" target="sv1#opg9#mfu8.ent6#att39"/>
+        <LinkParameter id="sv1#opg9#mathu1#oln44#par336" name="notifica_PASSING_notifica" sourceLinkParameter="sv1#opg9#inn3#oln42#par335" target="sv1#opg9#mfu8.ent6#att25"/>
+        <LinkParameter id="sv1#opg9#mathu1#oln44#par340" name="oid_PASSING_KeyCondition2 [oid]" sourceLinkParameter="sv1#opg9#inn3#oln42#par339" target="sv1#opg9#mfu8#su30#kcond2.ent6#att23"/>
+        <LinkParameter id="sv1#opg9#mathu1#oln44#par351" name="Acquisto_PendenteToAutovettura.oid_PASSING_Autovettura.oid(Acquisto_PendenteToAutovettura)" sourceLinkParameter="sv1#opg9#inn3#oln42#par349" target="sv1#opg9#mfu8.rel4#role7.ent1#att1"/>
+        <LinkParameter id="sv1#opg9#mathu1#oln44#par352" name="Acquisto_PendenteToUtente.oid_PASSING_Utente.oid(Acquisto_PendenteToUtente)" sourceLinkParameter="sv1#opg9#inn3#oln42#par350" target="sv1#opg9#mfu8.rel2#role4.userOID"/>
+      </OKLink>
+      <MathVariable id="sv1#opg9#mathu1#mathv1" name="quantita"/>
+    </MathUnit>
+  </OperationUnits>
+</OperationGroup>

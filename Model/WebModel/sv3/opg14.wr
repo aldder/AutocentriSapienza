@@ -1,0 +1,173 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="900" gr:y="1470" id="sv3#opg14" name="Gestione storico" transaction="true">
+  <OperationUnits>
+    <SelectorUnit gr:x="5" gr:y="115" id="sv3#opg14#seu18" name="SelectUtente" entity="User" linkOrder="ln88">
+      <Selector id="sv3#opg14#seu18#su52" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#opg14#seu18#su52#acond31" name="nome" predicate="eq" booleanOperator="or" implied="false" attributes="userName"/>
+      </Selector>
+      <OKLink id="sv3#opg14#seu18#oln74" name="OKFlow74" to="sv3#opg14#cru12">
+        <LinkParameter id="sv3#opg14#seu18#oln74#par381" name="Codice autovettura_PASSING_Autovettura.oid(Storico_AcquistoToAutovettura)" sourceLinkParameter="sv3#area2#page28#enu19#ln76#par376" target="sv3#opg14#cru12.rel9#role18.ent1#att1"/>
+        <LinkParameter id="sv3#opg14#seu18#oln74#par382" name="data_PASSING_data" sourceLinkParameter="sv3#area2#page28#enu19#ln76#par377" target="sv3#opg14#cru12.ent7#att48"/>
+        <LinkParameter id="sv3#opg14#seu18#oln74#par385" name="descrizione_PASSING_descrizione" sourceLinkParameter="sv3#area2#page28#enu19#ln76#par378" target="sv3#opg14#cru12.ent7#att60"/>
+        <LinkParameter id="sv3#opg14#seu18#oln74#par386" name="prezzo_PASSING_prezzo" sourceLinkParameter="sv3#area2#page28#enu19#ln76#par379" target="sv3#opg14#cru12.ent7#att59"/>
+        <LinkParameter id="sv3#opg14#seu18#oln74#par387" name="targa_PASSING_targa" sourceLinkParameter="sv3#area2#page28#enu19#ln76#par380" target="sv3#opg14#cru12.ent7#att56"/>
+        <LinkParameter id="sv3#opg14#seu18#oln74#par388" name="oid_Utente.oid(Storico_AcquistoToUtente)" source="userOIDArray" target="sv3#opg14#cru12.rel12#role23.userOID"/>
+        <LinkParameter id="sv3#opg14#seu18#oln74#par389" name="Codice autovettura_PASSING" sourceLinkParameter="sv3#area2#page28#enu19#ln76#par376" passing="true"/>
+      </OKLink>
+      <Link id="sv3#opg14#seu18#ln88" name="Flow88" to="sv3#opg14#cru13" type="transport" validate="true" gr:bendpoints="137,137,-793,72;845,137,-85,72">
+        <LinkParameter id="sv3#opg14#seu18#ln88#par395" name="oid_Utente.oid(NotificaToUtente)" source="userOIDArray" target="sv3#opg14#cru13.rel14#role28.userOID"/>
+      </Link>
+    </SelectorUnit>
+    <MathUnit id="sv3#opg14#mathu5" name="decrDisponibilita" gr:x="460" gr:y="0" resultType="integer" defaultExpression="disponibilita - 1">
+      <MathVariable id="sv3#opg14#mathu5#mathv5" name="disponibilita"/>
+      <OKLink id="sv3#opg14#mathu5#oln48" name="OKFlow51" to="sv3#opg14#mfu11">
+        <LinkParameter id="sv3#opg14#mathu5#oln48#par55" name="Result_disponibilit&#224;" source="result" target="sv3#opg14#mfu11.ent1#att5"/>
+        <LinkParameter id="sv3#opg14#mathu5#oln48#par393" name="oid_PASSING_KeyCondition22 [oid]" sourceLinkParameter="sv3#opg14#seu23#oln75#par392" target="sv3#opg14#mfu11#su36#kcond21.ent1#att1"/>
+      </OKLink>
+    </MathUnit>
+    <ModifyUnit id="sv3#opg14#mfu11" name="ModificaDisponibilita" gr:x="450" gr:y="110" entity="ent1">
+      <Selector id="sv3#opg14#mfu11#su36" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#opg14#mfu11#su36#kcond21" name="KeyCondition22" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#opg14#mfu11#oln76" name="OKFlow76" to="sv3#opg14#seu21"/>
+    </ModifyUnit>
+    <CreateUnit id="sv3#opg14#cru12" name="InserisciStorico" gr:x="150" gr:y="120" entity="ent7" linkOrder="ln85 ln89">
+      <OKLink id="sv3#opg14#cru12#oln49" name="OKFlow50" to="sv3#opg14#seu23">
+        <LinkParameter id="sv3#opg14#cru12#oln49#par390" name="Codice autovettura_PASSING_oid [oid]" sourceLinkParameter="sv3#opg14#seu18#oln74#par389" target="sv3#opg14#seu23#su53#kcond30.ent1#att1"/>
+      </OKLink>
+      <Link id="sv3#opg14#cru12#ln85" name="Flow85" to="sv3#opg14#cru13" type="transport" validate="true" gr:bendpoints="62,103,-713,38;679,103,-96,38">
+        <LinkParameter id="sv3#opg14#cru12#ln85#par394" name="oid_Storico_Acquisto.oid(NotificaToStorico_Acquisto)" source="ent7#att24Array" target="sv3#opg14#cru13.rel15#role30.ent7#att24"/>
+      </Link>
+      <Link id="sv3#opg14#cru12#ln89" name="Flow89" to="sv3#opg14#dfu3" type="transport" validate="true" gr:bendpoints="95,-181,-900,-66;864,-182,-131,-67">
+        <LinkParameter id="sv3#opg14#cru12#ln89#par396" name="data_Date(s)" source="ent7#att48Array" target="sv3#opg14#dfu3.dateArray"/>
+      </Link>
+    </CreateUnit>
+    <DatesFunctionUnit id="sv3#opg14#dfu3" name="addTime" gr:x="1150" gr:y="10" mode="addDaysToDate(s)">
+      <OKLink id="sv3#opg14#dfu3#oln52" name="OKFlow64" to="sv3#opg14#cru13">
+        <LinkParameter id="sv3#opg14#dfu3#oln52#par70" name="Result Date(s)_data_notifica" source="resultDates" target="sv3#opg14#cru13.ent4#att19"/>
+        <LinkParameter id="sv3#opg14#dfu3#oln52#par72" name="Notifica automatica._descrizione" target="sv3#opg14#cru13.ent4#att20" sourceValue="Notifica automatica."/>
+        <LinkParameter id="sv3#opg14#dfu3#oln52#par74" name="1_stato" target="sv3#opg14#cru13.ent4#att28" sourceValue="1"/>
+        <LinkParameter id="sv3#opg14#dfu3#oln52#par77" name="Next Element_PASSING_Tipologia.oid(NotificaToTipologia)" sourceLinkParameter="sv3#opg14#mathu7#oln72#par224" target="sv3#opg14#cru13.rel16#role31.ent3#att15"/>
+      </OKLink>
+    </DatesFunctionUnit>
+    <SelectorUnit id="sv3#opg14#seu21" name="TipoInterventi" gr:x="690" gr:y="130" entity="ent3">
+      <Selector id="sv3#opg14#seu21#su37" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#opg14#seu21#su37#acond30" name="ripetizione" predicate="neq" booleanOperator="or" implied="false" attributes="ent3#att17" value="0"/>
+      </Selector>
+      <OKLink id="sv3#opg14#seu21#oln57" name="OKFlow61" to="sv3#opg14#lpu2">
+        <LinkParameter id="sv3#opg14#seu21#oln57#par80" name="oid_Input Array" source="ent3#att15Array" target="sv3#opg14#lpu2.array"/>
+      </OKLink>
+    </SelectorUnit>
+    <CreateUnit id="sv3#opg14#cru13" name="InserisciNotifica" gr:x="925" gr:y="185" entity="ent4">
+      <OKLink id="sv3#opg14#cru13#oln58" name="OKFlow65" to="sv3#opg14#lpu2"/>
+    </CreateUnit>
+    <SelectorUnit id="sv3#opg14#seu22" name="getRipetizione" gr:x="830" gr:y="5" entity="ent3">
+      <Selector id="sv3#opg14#seu22#su51" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#opg14#seu22#su51#kcond23" name="oid" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#opg14#seu22#oln71" name="OKFlow46" to="sv3#opg14#mathu7">
+        <LinkParameter id="sv3#opg14#seu22#oln71#par81" name="ripetizione_mesi" source="ent3#att17Array" target="sv3#opg14#mathu7#mathv7"/>
+        <LinkParameter id="sv3#opg14#seu22#oln71#par82" name="Next Element_PASSING" sourceLinkParameter="sv3#opg14#lpu2#oln73#par324" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <MathUnit id="sv3#opg14#mathu7" name="MonthsToDays" gr:x="995" gr:y="10" resultType="integer" defaultExpression="(mesi - 1) * 30">
+      <MathVariable id="sv3#opg14#mathu7#mathv7" name="mesi"/>
+      <OKLink id="sv3#opg14#mathu7#oln72" name="OKFlow63" to="sv3#opg14#dfu3">
+        <LinkParameter id="sv3#opg14#mathu7#oln72#par129" name="Result_Number(s) Of Days" source="result" target="sv3#opg14#dfu3.numberOfDaysArray"/>
+        <LinkParameter id="sv3#opg14#mathu7#oln72#par224" name="Next Element_PASSING" sourceLinkParameter="sv3#opg14#seu22#oln71#par82" passing="true"/>
+      </OKLink>
+    </MathUnit>
+    <LoopUnit id="sv3#opg14#lpu2" name="Loop" gr:x="710" gr:y="20">
+      <OKLink id="sv3#opg14#lpu2#oln73" name="OKFlow62" to="sv3#opg14#seu22" code="next">
+        <LinkParameter id="sv3#opg14#lpu2#oln73#par324" name="Next Element_PASSING" source="next" passing="true"/>
+        <LinkParameter id="sv3#opg14#lpu2#oln73#par326" name="Next Element_oid [oid]" source="next" target="sv3#opg14#seu22#su51#kcond23.ent3#att15"/>
+      </OKLink>
+      <OKLink id="sv3#opg14#lpu2#oln77" name="OKFlow77" to="sv3#area2#page21" gr:bendpoints="-54,-65,1431,85" code="end"/>
+    </LoopUnit>
+    <SelectorUnit gr:x="290" gr:y="110" id="sv3#opg14#seu23" name="SelectAutovettura" entity="ent1">
+      <Selector id="sv3#opg14#seu23#su53" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#opg14#seu23#su53#kcond30" name="oid" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#opg14#seu23#oln75" name="OKFlow75" to="sv3#opg14#mathu5">
+        <LinkParameter id="sv3#opg14#seu23#oln75#par391" name="disponibilit&#224;_disponibilita" source="ent1#att5Array" target="sv3#opg14#mathu5#mathv5"/>
+        <LinkParameter id="sv3#opg14#seu23#oln75#par392" name="oid_PASSING" source="ent1#att1Array" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <ModifyUnit gr:x="0" gr:y="400" id="sv3#opg14#mfu14" name="ModificaStorico" entity="ent7" linkOrder="ln92 ln93">
+      <Selector id="sv3#opg14#mfu14#su54" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#opg14#mfu14#su54#kcond32" name="KeyCondition32" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#opg14#mfu14#oln78" name="OKFlow78" to="sv3#opg14#dlu11">
+        <LinkParameter id="sv3#opg14#mfu14#oln78#par417" name="oid_storico" source="ent7#att24Array" target="sv3#opg14#dlu11#su59#acond33"/>
+      </OKLink>
+      <Link id="sv3#opg14#mfu14#ln92" name="Flow92" to="sv3#opg14#cru11" type="transport" validate="true" gr:bendpoints="315,165,-425,5">
+        <LinkParameter id="sv3#opg14#mfu14#ln92#par430" name="oid_Storico_Acquisto.oid(NotificaToStorico_Acquisto)" source="ent7#att24Array" target="sv3#opg14#cru11.rel15#role30.ent7#att24"/>
+        <LinkParameter id="sv3#opg14#mfu14#ln92#par431" name="Utente_PASSING_Utente.oid(NotificaToUtente)" sourceLinkParameter="sv3#area2#page26#enu20#ln91#par429" target="sv3#opg14#cru11.rel14#role28.userOID"/>
+      </Link>
+      <Link id="sv3#opg14#mfu14#ln93" name="Flow93" to="sv3#opg14#dfu4" type="transport" validate="true" gr:bendpoints="130,-95,-830,-75;827,-93,-133,-73">
+        <LinkParameter id="sv3#opg14#mfu14#ln93#par433" name="Data_PASSING_Date(s)" sourceLinkParameter="sv3#area2#page26#enu20#ln91#par432" target="sv3#opg14#dfu4.dateArray"/>
+      </Link>
+    </ModifyUnit>
+    <DeleteUnit gr:x="225" gr:y="400" id="sv3#opg14#dlu11" name="EliminaNotifiche" entity="ent4">
+      <Selector id="sv3#opg14#dlu11#su59" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#opg14#dlu11#su59#acond33" name="storico" predicate="eq" booleanOperator="or" implied="false" attributes="rel15#role30.ent7#att24"/>
+      </Selector>
+      <OKLink id="sv3#opg14#dlu11#oln85" name="OKFlow85" to="sv3#opg14#seu24"/>
+    </DeleteUnit>
+    <DatesFunctionUnit id="sv3#opg14#dfu4" name="addTime" gr:x="965" gr:y="390" mode="addDaysToDate(s)">
+      <OKLink id="sv3#opg14#dfu4#oln79" name="OKFlow64" to="sv3#opg14#cru11">
+        <LinkParameter id="sv3#opg14#dfu4#oln79#par418" name="Result Date(s)_data_notifica" source="resultDates" target="sv3#opg14#cru11.ent4#att19"/>
+        <LinkParameter id="sv3#opg14#dfu4#oln79#par419" name="Notifica automatica._descrizione" target="sv3#opg14#cru11.ent4#att20" sourceValue="Notifica automatica."/>
+        <LinkParameter id="sv3#opg14#dfu4#oln79#par420" name="1_stato" target="sv3#opg14#cru11.ent4#att28" sourceValue="1"/>
+        <LinkParameter id="sv3#opg14#dfu4#oln79#par421" name="Next Element_PASSING_Tipologia.oid(NotificaToTipologia)" sourceLinkParameter="sv3#opg14#mathu8#oln80#par423" target="sv3#opg14#cru11.rel16#role31.ent3#att15"/>
+      </OKLink>
+    </DatesFunctionUnit>
+    <MathUnit id="sv3#opg14#mathu8" name="MonthsToDays" gr:x="810" gr:y="390" resultType="integer" defaultExpression="(mesi - 1) * 30">
+      <MathVariable id="sv3#opg14#mathu8#mathv8" name="mesi"/>
+      <OKLink id="sv3#opg14#mathu8#oln80" name="OKFlow63" to="sv3#opg14#dfu4">
+        <LinkParameter id="sv3#opg14#mathu8#oln80#par422" name="Result_Number(s) Of Days" source="result" target="sv3#opg14#dfu4.numberOfDaysArray"/>
+        <LinkParameter id="sv3#opg14#mathu8#oln80#par423" name="Next Element_PASSING" sourceLinkParameter="sv3#opg14#seu25#oln84#par428" passing="true"/>
+      </OKLink>
+    </MathUnit>
+    <SelectorUnit id="sv3#opg14#seu24" name="TipoInterventi" gr:x="505" gr:y="510" entity="ent3">
+      <Selector id="sv3#opg14#seu24#su65" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#opg14#seu24#su65#acond34" name="ripetizione" predicate="neq" booleanOperator="or" implied="false" attributes="ent3#att17" value="0"/>
+      </Selector>
+      <OKLink id="sv3#opg14#seu24#oln81" name="OKFlow61" to="sv3#opg14#lpu3">
+        <LinkParameter id="sv3#opg14#seu24#oln81#par424" name="oid_Input Array" source="ent3#att15Array" target="sv3#opg14#lpu3.array"/>
+      </OKLink>
+    </SelectorUnit>
+    <CreateUnit id="sv3#opg14#cru11" name="InserisciNotifica" gr:x="740" gr:y="565" entity="ent4">
+      <OKLink id="sv3#opg14#cru11#oln82" name="OKFlow65" to="sv3#opg14#lpu3"/>
+    </CreateUnit>
+    <LoopUnit id="sv3#opg14#lpu3" name="Loop" gr:x="525" gr:y="400">
+      <OKLink id="sv3#opg14#lpu3#oln83" name="OKFlow62" to="sv3#opg14#seu25" code="next">
+        <LinkParameter id="sv3#opg14#lpu3#oln83#par425" name="Next Element_PASSING" source="next" passing="true"/>
+        <LinkParameter id="sv3#opg14#lpu3#oln83#par426" name="Next Element_oid [oid]" source="next" target="sv3#opg14#seu25#su66#kcond42.ent3#att15"/>
+      </OKLink>
+      <OKLink id="sv3#opg14#lpu3#oln86" name="OKFlow86" to="sv3#area2#page21" code="end"/>
+    </LoopUnit>
+    <SelectorUnit id="sv3#opg14#seu25" name="getRipetizione" gr:x="645" gr:y="385" entity="ent3">
+      <Selector id="sv3#opg14#seu25#su66" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#opg14#seu25#su66#kcond42" name="oid" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#opg14#seu25#oln84" name="OKFlow46" to="sv3#opg14#mathu8">
+        <LinkParameter id="sv3#opg14#seu25#oln84#par427" name="ripetizione_mesi" source="ent3#att17Array" target="sv3#opg14#mathu8#mathv8"/>
+        <LinkParameter id="sv3#opg14#seu25#oln84#par428" name="Next Element_PASSING" sourceLinkParameter="sv3#opg14#lpu3#oln83#par425" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <DeleteUnit gr:x="10" gr:y="655" id="sv3#opg14#dlu14" name="EliminaNotifiche" entity="ent4">
+      <Selector id="sv3#opg14#dlu14#su73" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#opg14#dlu14#su73#acond36" name="storico" predicate="eq" booleanOperator="or" implied="false" attributes="rel15#role30.ent7#att24"/>
+      </Selector>
+      <OKLink id="sv3#opg14#dlu14#oln88" name="OKFlow88" to="sv3#opg14#dlu15">
+        <LinkParameter id="sv3#opg14#dlu14#oln88#par484" name="Key [oid]_PASSING_KeyCondition46 [oid]" sourceLinkParameter="sv3#area2#page26#enu20#ln107#par483" target="sv3#opg14#dlu15#su74#kcond46.ent7#att24"/>
+      </OKLink>
+    </DeleteUnit>
+    <DeleteUnit gr:x="220" gr:y="655" id="sv3#opg14#dlu15" name="EliminaStorico" entity="ent7">
+      <Selector id="sv3#opg14#dlu15#su74" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#opg14#dlu15#su74#kcond46" name="KeyCondition46" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#opg14#dlu15#oln89" name="OKFlow89" to="sv3#area2#page21"/>
+    </DeleteUnit>
+  </OperationUnits>
+</OperationGroup>

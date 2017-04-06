@@ -1,0 +1,371 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="5" gr:y="105" id="sv3#area2#page6" name="Gestione Catalogo" landmark="true">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="25" gr:y="0" id="sv3#area2#page6#mssu2" name="Inserisci" linkOrder="sv3#area2#page6#mssu2#ln49">
+      <Link id="sv3#area2#page6#mssu2#ln49" name="Inserisci" to="sv3#area2#page8#enu13" type="normal" validate="true" ajaxOpenWindow="true" ajaxWindowUseTitle="false" ajaxWindowWidth="800" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowMaximizable="false" ajaxWindowModal="true" ajaxEnabled="true"/>
+      <Message xml:space="preserve">Clicca per inserire una nuova autovettura nel catalogo.</Message>
+    </MultiMessageUnit>
+    <PowerIndexUnit gr:x="175" gr:y="80" id="sv3#area2#page6#pwu2" name="Autovetture" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att1 ent1#att46 ent1#att2 ent1#att5 ent1#att9 ent1#att6 ent1#att7 ent1#att8 ent1#att10 ent1#att4 ent1#att50" linkOrder="sv3#area2#page6#pwu2#ln51" blockFactor="10">
+      <Link id="sv3#area2#page6#pwu2#ln51" name="Visualizza" to="sv3#area2#page9#enu14" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowUseTitle="false" ajaxWindowWidth="800" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowModal="true">
+        <LinkParameter id="sv3#area2#page6#pwu2#ln51#par85" name="oid_Key Condition [oid]" source="data[].ent1#att1" target="sv3#area2#page9#enu14.ent1#att1"/>
+      </Link>
+      <VRules/>
+      <DefaultSortAttribute attribute="ent1#att1" order="ascending"/>
+      <DefaultSortAttribute attribute="ent1#att46" order="ascending"/>
+      <DefaultSortAttribute attribute="ent1#att2" order="ascending"/>
+      <DefaultSortAttribute attribute="ent1#att4" order="ascending"/>
+      <DefaultSortAttribute attribute="ent1#att5" order="ascending"/>
+      <DefaultSortAttribute attribute="ent1#att6" order="ascending"/>
+      <DefaultSortAttribute attribute="ent1#att7" order="ascending"/>
+      <DefaultSortAttribute attribute="ent1#att8" order="ascending"/>
+      <DefaultSortAttribute attribute="ent1#att9" order="ascending"/>
+      <DefaultSortAttribute attribute="ent1#att10" order="ascending"/>
+      <DefaultSortAttribute attribute="ent1#att50" order="ascending"/>
+      <SortAttribute attribute="ent1#att1" order="ascending"/>
+      <SortAttribute attribute="ent1#att46" order="ascending"/>
+      <SortAttribute attribute="ent1#att2" order="ascending"/>
+      <SortAttribute attribute="ent1#att4" order="ascending"/>
+      <SortAttribute attribute="ent1#att5" order="ascending"/>
+      <SortAttribute attribute="ent1#att6" order="ascending"/>
+      <SortAttribute attribute="ent1#att7" order="ascending"/>
+      <SortAttribute attribute="ent1#att8" order="ascending"/>
+      <SortAttribute attribute="ent1#att9" order="ascending"/>
+      <SortAttribute attribute="ent1#att10" order="ascending"/>
+      <SortAttribute attribute="ent1#att50" order="ascending"/>
+      <Selector id="sv3#area2#page6#pwu2#su21" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area2#page6#pwu2#su21#acond5" name="nome" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att46" ignoreCase="true"/>
+        <AttributesCondition id="sv3#area2#page6#pwu2#su21#acond7" name="usato" predicate="eq" booleanOperator="or" implied="true" attributes="ent1#att4" ignoreCase="false"/>
+        <AttributesCondition id="sv3#area2#page6#pwu2#su21#acond8" name="catalogo" predicate="eq" booleanOperator="or" implied="true" attributes="ent1#att50"/>
+        <AttributesCondition id="sv3#area2#page6#pwu2#su21#acond9" name="alimentazione" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att8" ignoreCase="true"/>
+        <AttributesCondition id="sv3#area2#page6#pwu2#su21#acond10" name="immatricolazione" predicate="eq" booleanOperator="or" implied="true" attributes="ent1#att7" ignoreCase="true"/>
+        <AttributesCondition id="sv3#area2#page6#pwu2#su21#acond11" name="porte" predicate="eq" booleanOperator="or" implied="true" attributes="ent1#att10" ignoreCase="true"/>
+        <AttributesCondition id="sv3#area2#page6#pwu2#su21#acond12" name="cilindrata" predicate="eq" booleanOperator="or" implied="true" attributes="ent1#att9" ignoreCase="true"/>
+        <AttributesCondition id="sv3#area2#page6#pwu2#su21#acond16" name="prezzomin" predicate="gteq" booleanOperator="or" implied="true" attributes="ent1#att2"/>
+        <AttributesCondition id="sv3#area2#page6#pwu2#su21#acond17" name="prezzomax" predicate="lteq" booleanOperator="or" implied="true" attributes="ent1#att2"/>
+      </Selector>
+    </PowerIndexUnit>
+    <EntryUnit id="sv3#area2#page6#enu3" name="Filtri" gr:showAllParts="true" gr:x="0" gr:y="80" linkOrder="sv3#area2#page6#enu3#ln36 sv3#area2#page6#enu3#ln32 sv3#area2#page6#enu3#ln18" ajaxEnableExpandedLinks="false">
+      <Field id="sv3#area2#page6#enu3#fld21" name="Nome" ajaxAutocompleteEnabled="true" ajaxAutocompleteIndicator="true" ajaxAutocompleteMinChars="2" type="string" modifiable="true" ajaxAutocompleteLink="sv3#area2#page6#enu3#ln18"/>
+      <SelectionField id="sv3#area2#page6#enu3#sfld3" name="Usato" type="boolean"/>
+      <Link id="sv3#area2#page6#enu3#ln32" name="Ripristina" to="sv3#area2#opu3" type="normal" validate="true"/>
+      <Link id="sv3#area2#page6#enu3#ln36" name="Cerca" to="sv3#area2#page6#pwu2" type="normal" validate="true">
+        <LinkParameter id="sv3#area2#page6#enu3#ln36#par148" name="Alimentazione_alimentazione" source="sv3#area2#page6#enu3#fld22" target="sv3#area2#page6#pwu2#su21#acond9"/>
+        <LinkParameter id="sv3#area2#page6#enu3#ln36#par149" name="Catalogo_catalogo" source="sv3#area2#page6#enu3#sfld4" target="sv3#area2#page6#pwu2#su21#acond8"/>
+        <LinkParameter id="sv3#area2#page6#enu3#ln36#par150" name="Nome_nome" source="sv3#area2#page6#enu3#fld21" target="sv3#area2#page6#pwu2#su21#acond5"/>
+        <LinkParameter id="sv3#area2#page6#enu3#ln36#par151" name="Usato_usato" source="sv3#area2#page6#enu3#sfld3" target="sv3#area2#page6#pwu2#su21#acond7"/>
+        <LinkParameter id="sv3#area2#page6#enu3#ln36#par152" name="Cilindrata_cilindrata" source="sv3#area2#page6#enu3#fld26" target="sv3#area2#page6#pwu2#su21#acond12"/>
+        <LinkParameter id="sv3#area2#page6#enu3#ln36#par153" name="Anno di immatricolazione_immatricolazione" source="sv3#area2#page6#enu3#fld27" target="sv3#area2#page6#pwu2#su21#acond10"/>
+        <LinkParameter id="sv3#area2#page6#enu3#ln36#par154" name="Numero di porte_porte" source="sv3#area2#page6#enu3#fld28" target="sv3#area2#page6#pwu2#su21#acond11"/>
+        <LinkParameter id="sv3#area2#page6#enu3#ln36#par155" name="Prezzo max_prezzomax" source="sv3#area2#page6#enu3#fld25" target="sv3#area2#page6#pwu2#su21#acond17"/>
+        <LinkParameter id="sv3#area2#page6#enu3#ln36#par156" name="Prezzo min_prezzomin" source="sv3#area2#page6#enu3#fld23" target="sv3#area2#page6#pwu2#su21#acond16"/>
+      </Link>
+      <Field id="sv3#area2#page6#enu3#fld22" name="Alimentazione" type="string" modifiable="true" ajaxAutocompleteEnabled="false" ajaxAutocompleteIndicator="false"/>
+      <SelectionField id="sv3#area2#page6#enu3#sfld4" name="Catalogo" type="boolean"/>
+      <Field id="sv3#area2#page6#enu3#fld23" name="Prezzo min" type="decimal" modifiable="true"/>
+      <Field id="sv3#area2#page6#enu3#fld25" name="Prezzo max" type="decimal" modifiable="true"/>
+      <Field id="sv3#area2#page6#enu3#fld26" name="Cilindrata" type="integer" modifiable="true"/>
+      <Field id="sv3#area2#page6#enu3#fld27" name="Anno di immatricolazione" type="date" modifiable="true"/>
+      <Field id="sv3#area2#page6#enu3#fld28" name="Numero di porte" type="integer" modifiable="true"/>
+      <Link id="sv3#area2#page6#enu3#ln18" name="Flow18" to="sv3#area2#page11#inu2" type="normal" validate="true" ajaxEnabled="true">
+        <LinkParameter id="sv3#area2#page6#enu3#ln18#par17" name="Nome_nome" source="sv3#area2#page6#enu3#fld21" target="sv3#area2#page11#inu2#su10#acond3"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area2#page6#mssu2">
+          <layout:Link link="sv3#area2#page6#mssu2#ln49"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell rowspan="3" colspan="12">
+        <layout:Grid containerType="grid">
+          <layout:Row>
+            <layout:Cell colspan="4">
+              <layout:Field unitId="sv3#area2#page6#enu3" mode="full" field="sv3#area2#page6#enu3#fld21">
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="4">
+              <layout:Field unitId="sv3#area2#page6#enu3" mode="full" field="sv3#area2#page6#enu3#fld25">
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="4">
+              <layout:Field unitId="sv3#area2#page6#enu3" mode="full" field="sv3#area2#page6#enu3#fld23">
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="4">
+              <layout:Field unitId="sv3#area2#page6#enu3" mode="full" field="sv3#area2#page6#enu3#fld26">
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="4">
+              <layout:Field unitId="sv3#area2#page6#enu3" mode="full" field="sv3#area2#page6#enu3#fld22">
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="4">
+              <layout:Field unitId="sv3#area2#page6#enu3" mode="full" field="sv3#area2#page6#enu3#sfld4">
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="4">
+              <layout:Field unitId="sv3#area2#page6#enu3" mode="full" field="sv3#area2#page6#enu3#fld27">
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="4">
+              <layout:Field unitId="sv3#area2#page6#enu3" mode="full" field="sv3#area2#page6#enu3#fld28">
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="4">
+              <layout:Field unitId="sv3#area2#page6#enu3" mode="full" field="sv3#area2#page6#enu3#sfld3">
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="10"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="2">
+        <layout:Grid containerType="cell">
+          <layout:Row>
+            <layout:Cell>
+              <layout:Link unitId="sv3#area2#page6#enu3" link="sv3#area2#page6#enu3#ln36"/>
+              <layout:Link unitId="sv3#area2#page6#enu3" link="sv3#area2#page6#enu3#ln32"/>
+            </layout:Cell>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area2#page6#pwu2">
+          <layout:LayoutParameter name="compact" value="true" type="unit"/>
+          <layout:Attribute attribute="ent1#att1" label="Cod."/>
+          <layout:Attribute attribute="ent1#att46" label="Nome"/>
+          <layout:Attribute attribute="ent1#att2" label="Prezzo"/>
+          <layout:Attribute attribute="ent1#att5" label="Disp."/>
+          <layout:Attribute attribute="ent1#att9" label="CC"/>
+          <layout:Attribute attribute="ent1#att6" label="Km"/>
+          <layout:Attribute attribute="ent1#att7" label="Anno"/>
+          <layout:Attribute attribute="ent1#att8" label="Alim."/>
+          <layout:Attribute attribute="ent1#att10" label="Porte"/>
+          <layout:Attribute attribute="ent1#att4" label="Usato"/>
+          <layout:Attribute attribute="ent1#att50" label="Catalogo"/>
+          <layout:Link link="sv3#area2#page6#pwu2#ln51"/>
+          <layout:Link link="sv3#area2#page6#pwu2ent1#att1"/>
+          <layout:Link link="sv3#area2#page6#pwu2ent1#att46"/>
+          <layout:Link link="sv3#area2#page6#pwu2ent1#att2"/>
+          <layout:Link link="sv3#area2#page6#pwu2ent1#att4"/>
+          <layout:Link link="sv3#area2#page6#pwu2ent1#att5"/>
+          <layout:Link link="sv3#area2#page6#pwu2ent1#att6"/>
+          <layout:Link link="sv3#area2#page6#pwu2ent1#att7"/>
+          <layout:Link link="sv3#area2#page6#pwu2ent1#att8"/>
+          <layout:Link link="sv3#area2#page6#pwu2ent1#att9"/>
+          <layout:Link link="sv3#area2#page6#pwu2ent1#att10"/>
+          <layout:Link link="sv3#area2#page6#pwu2ent1#att50"/>
+          <layout:Link link="sv3#area2#page6#pwu2First"/>
+          <layout:Link link="sv3#area2#page6#pwu2Previous"/>
+          <layout:Link link="sv3#area2#page6#pwu2Block"/>
+          <layout:Link link="sv3#area2#page6#pwu2Next"/>
+          <layout:Link link="sv3#area2#page6#pwu2Last"/>
+          <layout:LayoutParameter name="collapsible" value="true" type="frame"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="link-style" value="button" type="link"/>
+</Page>

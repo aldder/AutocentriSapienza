@@ -1,0 +1,44 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="460" gr:y="305" id="sv2#opg2" name="Gestione utenti" transaction="true">
+  <OperationUnits>
+    <CreateUnit gr:x="20" gr:y="0" id="sv2#opg2#cru2" name="Inserimento" entity="User" skipBlankRecords="true" notBlankAttributes="userOID userName password email">
+      <OKLink id="sv2#opg2#cru2#oln5" name="OKFlow5" to="sv2#opg2#mlu3">
+        <LinkParameter id="sv2#opg2#cru2#oln5#par2" name="email_Mail - To" source="emailArray" target="sv2#opg2#mlu3.to"/>
+        <LinkParameter id="sv2#opg2#cru2#oln5#par3" name="nome_utente_nome" source="userNameArray" target="sv2#opg2#mlu3.nome"/>
+        <LinkParameter id="sv2#opg2#cru2#oln5#par7" name="password_password" source="passwordArray" target="sv2#opg2#mlu3.password"/>
+        <LinkParameter id="sv2#opg2#cru2#oln5#par9" name="Account creato_Mail - Subject" target="sv2#opg2#mlu3.subject" sourceValue="Creazione account"/>
+      </OKLink>
+      <Link id="sv2#opg2#cru2#ln179" name="Flow179" to="sv2#mpage10#mssu27" type="transport" validate="true">
+        <LinkParameter id="sv2#opg2#cru2#ln179#par316" name="L'utente &#232; stato inserito con successo._Shown Messages" sourceValue="L'utente &#232; stato inserito con successo." target="sv2#mpage10#mssu27.shownMessages"/>
+      </Link>
+    </CreateUnit>
+    <DeleteUnit id="sv2#opg2#dlu7" name="Cancellazione" gr:x="305" gr:y="0" entity="User" linkOrder="ln181">
+      <Selector id="sv2#opg2#dlu7#su63" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#opg2#dlu7#su63#kcond40" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#opg2#dlu7#oln32" name="OKFlow7" to="sv2#area5#page3"/>
+      <Link id="sv2#opg2#dlu7#ln181" name="Flow181" to="sv2#mpage10#mssu27" type="transport" validate="true">
+        <LinkParameter id="sv2#opg2#dlu7#ln181#par318" name="L'utente selezionato &#232; stato rimosso con successo._Shown Messages" sourceValue="L'utente selezionato &#232; stato rimosso con successo." target="sv2#mpage10#mssu27.shownMessages"/>
+      </Link>
+    </DeleteUnit>
+    <ModifyUnit id="sv2#opg2#mfu5" name="Modifica" gr:x="185" gr:y="0" entity="User">
+      <Selector id="sv2#opg2#mfu5#su64" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#opg2#mfu5#su64#kcond41" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#opg2#mfu5#ln180" name="Flow180" to="sv2#mpage10#mssu27" type="transport" validate="true">
+        <LinkParameter id="sv2#opg2#mfu5#ln180#par317" name="Le modifiche effettuate sono state salvate con successo._Shown Messages" sourceValue="Le modifiche effettuate sono state salvate con successo." target="sv2#mpage10#mssu27.shownMessages"/>
+      </Link>
+    </ModifyUnit>
+    <MailUnit gr:x="0" gr:y="130" id="sv2#opg2#mlu3" name="Notifica creazione" format="plainText" smtpServer="smtp1">
+      <Placeholder id="sv2#opg2#mlu3#ph1" name="nome"/>
+      <BodyTemplate xml:space="preserve">Il tuo account &#232; stato creato con successo.
+
+Le credenziali di accesso sono:
+
+	nome utente: $$nome$$
+	password: $$password$$</BodyTemplate>
+      <Placeholder id="sv2#opg2#mlu3#ph2" name="password"/>
+      <OKLink id="sv2#opg2#mlu3#oln6" name="OKFlow6" to="sv2#area5#page3"/>
+      <KOLink id="sv2#opg2#mlu3#kln3" name="KOFlow3" to="sv2#area5#page3" gr:bendpoints="-144,-54,296,161"/>
+    </MailUnit>
+  </OperationUnits>
+</OperationGroup>

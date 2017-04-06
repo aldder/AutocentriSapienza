@@ -1,0 +1,66 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="15" gr:y="975" id="sv3#area2#page19" name="Gestione Acquisti" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#area2#page19#pwu6" name="Autovetture acquistate" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att23 rel4#role7.ent1#att46 rel4#role7.ent1#att2 rel2#role4.userName ent6#att39 rel4#role7.ent1#att5" linkOrder="sv3#area2#page19#pwu6#ln74 sv3#area2#page19#pwu6#ln84">
+      <Link id="sv3#area2#page19#pwu6#ln74" name="Approva" to="sv3#area2#page27#enu18" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="660" ajaxWindowClosable="true" ajaxWindowModal="true">
+        <LinkParameter id="sv3#area2#page19#pwu6#ln74#par405" name="Acquisto_PendenteToAutovettura.nome_Autovettura" source="data[].rel4#role7$ent1#att46" target="sv3#area2#page27#enu18#fld91_slot"/>
+        <LinkParameter id="sv3#area2#page19#pwu6#ln74#par406" name="Acquisto_PendenteToAutovettura.disponibilit&#224;_Disponibilit&#224;" source="data[].rel4#role7$ent1#att5" target="sv3#area2#page27#enu18#fld88_slot"/>
+        <LinkParameter id="sv3#area2#page19#pwu6#ln74#par407" name="Acquisto_PendenteToAutovettura.prezzo_Prezzo" source="data[].rel4#role7$ent1#att2" target="sv3#area2#page27#enu18#fld94_slot"/>
+        <LinkParameter id="sv3#area2#page19#pwu6#ln74#par408" name="Acquisto_PendenteToUtente.nome_utente_Utente" source="data[].rel2#role4$userName" target="sv3#area2#page27#enu18#fld92_slot"/>
+        <LinkParameter id="sv3#area2#page19#pwu6#ln74#par409" name="oid_PASSING" source="data[].ent6#att23" passing="true"/>
+        <LinkParameter id="sv3#area2#page19#pwu6#ln74#par410" name="Acquisto_PendenteToAutovettura.oid_PASSING" source="data[].rel4#role7_ent1#att1" passing="true"/>
+        <LinkParameter id="sv3#area2#page19#pwu6#ln74#par411" name="Acquisto_PendenteToUtente.oid_PASSING" source="data[].rel2#role4_userOID" passing="true"/>
+        <LinkParameter id="sv3#area2#page19#pwu6#ln74#par225" name="Acquisto_PendenteToAutovettura.disponibilit&#224;_PASSING" source="data[].rel4#role7$ent1#att5" passing="true"/>
+        <LinkParameter id="sv3#area2#page19#pwu6#ln74#par359" name="quantita_PASSING" source="data[].ent6#att39" passing="true"/>
+      </Link>
+      <SortAttribute attribute="rel2#role4.userName" order="ascending"/>
+      <SortAttribute attribute="rel4#role7.ent1#att46" order="ascending"/>
+      <SortAttribute attribute="rel4#role7.ent1#att2" order="ascending"/>
+      <SortAttribute attribute="ent6#att23" order="ascending"/>
+      <SortAttribute attribute="ent6#att39" order="ascending"/>
+      <SortAttribute attribute="rel4#role7.ent1#att5" order="ascending"/>
+      <DefaultSortAttribute attribute="rel2#role4.userName" order="ascending"/>
+      <DefaultSortAttribute attribute="ent6#att23" order="ascending"/>
+      <DefaultSortAttribute attribute="rel4#role7.ent1#att46" order="ascending"/>
+      <DefaultSortAttribute attribute="rel4#role7.ent1#att2" order="ascending"/>
+      <DefaultSortAttribute attribute="ent6#att39" order="ascending"/>
+      <DefaultSortAttribute attribute="rel4#role7.ent1#att5" order="ascending"/>
+      <Link id="sv3#area2#page19#pwu6#ln84" name="Rifiuta" to="sv3#opg13#seu19" type="normal" validate="true">
+        <LinkParameter id="sv3#area2#page19#pwu6#ln84#par333" name="oid_PASSING" source="data[].ent6#att23" passing="true"/>
+        <LinkParameter id="sv3#area2#page19#pwu6#ln84#par364" name="oid_oid [oid]" source="data[].ent6#att23" target="sv3#opg13#seu19#su44#kcond29.ent6#att23"/>
+      </Link>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area2#page19#pwu6">
+          <layout:Attribute attribute="ent6#att23"/>
+          <layout:Attribute attribute="rel4#role7.ent1#att46"/>
+          <layout:Attribute attribute="rel4#role7.ent1#att2"/>
+          <layout:Attribute attribute="rel2#role4.userName"/>
+          <layout:Attribute attribute="ent6#att39"/>
+          <layout:Attribute attribute="rel4#role7.ent1#att5"/>
+          <layout:Link link="sv3#area2#page19#pwu6#ln74"/>
+          <layout:Link link="sv3#area2#page19#pwu6#ln84"/>
+          <layout:Link link="sv3#area2#page19#pwu6rel2#role4$userName"/>
+          <layout:Link link="sv3#area2#page19#pwu6rel4#role7$ent1#att46"/>
+          <layout:Link link="sv3#area2#page19#pwu6rel4#role7$ent1#att2"/>
+          <layout:Link link="sv3#area2#page19#pwu6ent6#att23"/>
+          <layout:Link link="sv3#area2#page19#pwu6ent6#att39"/>
+          <layout:Link link="sv3#area2#page19#pwu6rel4#role7$ent1#att5"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

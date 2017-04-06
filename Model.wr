@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?webml version="7.2.0.4"?>
+
+<WebProject xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" outputPath="${webapps_loc}/${project_name}" gr:showUnitContent="true" gr:showTooltip="true" httpPort="8080" httpsPort="8443" enableProjectDependencies="false" jobGroupName="WEBRATIO" wrTempNewProject="true" adminArea="true" adminPath="admin.do" adminUser="admin" adminPassword="admin" enableBrowserIntegration="true" bpm:bpmBased="false">
+  <ServiceDataProviders>
+    <SMTPServer id="smtp1" name="SMTP Server" url="smtp.gmail.com" port="465" useSsl="true" username="progettoconcessionario@gmail.com" password="Concessionario123" defaultFrom="progettoconcessionario@gmail.com">
+      <Property id="smtp1#prop1" name="mail.smtp.ssl" value="true"/>
+      <Property id="smtp1#prop2" name="mail.smtp.auth" value="true"/>
+      <Property id="smtp1#prop3" name="mail.smtp.socketFactory.class" value="javax.net.ssl.SSLSocketFactory"/>
+    </SMTPServer>
+  </ServiceDataProviders>
+  <ReferencedProject name="BootstrapStyle" natureId="com.webratio.ide.styles.wrstylenature"/>
+  <ReferencedProject name="StoreComponents" natureId="com.webratio.ide.units.wrunitsnature"/>
+  <ReferencedProject name="com.webratio.units.bpm" natureId="com.webratio.ide.units.wrunitsnature"/>
+  <ReferencedProject name="WebRatio" natureId="com.webratio.ide.styles.wrstylenature"/>
+  <ReferencedProject name="Multiflex" natureId="com.webratio.ide.styles.wrstylenature"/>
+</WebProject>

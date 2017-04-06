@@ -1,0 +1,157 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="5" gr:y="925" id="sv1#area4#page23" name="Prenotazioni interventi" landmark="true" ajaxEnabled="true">
+  <ContentUnits>
+    <EventCalendarUnit gr:x="185" gr:y="10" id="sv1#area4#page23#ecu1" name="Calendario" entityBased="true" entity="ent2" dateAttribute="ent2#att13" years="1" displayAttributes="rel17#role33.ent15#att66"/>
+    <SelectorUnit gr:x="0" gr:y="10" id="sv1#area4#page23#seu4" name="Appuntamenti" entity="ent2">
+      <Link id="sv1#area4#page23#seu4#ln3" name="Flow3" to="sv1#area4#page23#ecu1" type="transport" validate="true"/>
+    </SelectorUnit>
+    <EntryUnit gr:x="320" gr:y="10" id="sv1#area4#page23#enu11" name="Nuovo appuntamento" entity="ent2" fieldOrder="sv1#area4#page23#enu11#fld1 sv1#area4#page23#enu11#sfld7 sv1#area4#page23#enu11#sfld6 sv1#area4#page23#enu11#fld7" ajaxEnableExpandedLinks="false" linkOrder="sv1#area4#page23#enu11#ln43">
+      <Field id="sv1#area4#page23#enu11#fld1" name="Data" type="date" modifiable="true" attribute="ent2#att13" ajaxEventEnabled="false">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area4#page23#enu11#fld1#mnd10" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area4#page23#enu11#fld7" name="Descrizione" type="text" modifiable="true" attribute="ent2#att14"/>
+      <SelectionField id="sv1#area4#page23#enu11#sfld6" name="Tipologia" type="string">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area4#page23#enu11#sfld6#mnd16" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="sv1#area4#page23#enu11#sfld7" type="string" name="Ora">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area4#page23#enu11#sfld7#mnd63" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </SelectionField>
+      <Link id="sv1#area4#page23#enu11#ln43" name="Inserisci" to="sv1#opg4#seu14" type="normal" validate="true">
+        <LinkParameter id="sv1#area4#page23#enu11#ln43#par135" name="Data_data" source="sv1#area4#page23#enu11#fld1" target="sv1#opg4#seu14#su32#acond26"/>
+        <LinkParameter id="sv1#area4#page23#enu11#ln43#par136" name="Ora_ora" source="sv1#area4#page23#enu11#sfld7" target="sv1#opg4#seu14#su32#acond27"/>
+        <LinkParameter id="sv1#area4#page23#enu11#ln43#par159" name="Data_PASSING" source="sv1#area4#page23#enu11#fld1" passing="true"/>
+        <LinkParameter id="sv1#area4#page23#enu11#ln43#par160" name="Descrizione_PASSING" source="sv1#area4#page23#enu11#fld7" passing="true"/>
+        <LinkParameter id="sv1#area4#page23#enu11#ln43#par161" name="Key [oid]_PASSING" source="key.ent2#att12" passing="true"/>
+        <LinkParameter id="sv1#area4#page23#enu11#ln43#par162" name="Ora_PASSING" source="sv1#area4#page23#enu11#sfld7" passing="true"/>
+        <LinkParameter id="sv1#area4#page23#enu11#ln43#par163" name="Tipologia_PASSING" source="sv1#area4#page23#enu11#sfld6" passing="true"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="520" gr:y="100" id="sv1#area4#page23#seu6" name="Tipologia" entity="ent3">
+      <Link id="sv1#area4#page23#seu6#ln4" name="Flow4" to="sv1#area4#page23#enu11" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page23#seu6#ln4#par10" name="nome_Tipologia [label]" source="ent3#att16Array" target="sv1#area4#page23#enu11#sfld6_label"/>
+        <LinkParameter id="sv1#area4#page23#seu6#ln4#par11" name="oid_Tipologia [output]" source="ent3#att15Array" target="sv1#area4#page23#enu11#sfld6_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="530" gr:y="0" id="sv1#area4#page23#seu9" name="Orario" entity="ent15">
+      <Link id="sv1#area4#page23#seu9#ln25" name="Flow25" to="sv1#area4#page23#enu11" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page23#seu9#ln25#par105" name="ora_Ora [label]" source="ent15#att66Array" target="sv1#area4#page23#enu11#sfld7_label"/>
+        <LinkParameter id="sv1#area4#page23#seu9#ln25#par106" name="oid_Ora [output]" source="ent15#att65Array" target="sv1#area4#page23#enu11#sfld7_output"/>
+      </Link>
+    </SelectorUnit>
+    <PowerIndexUnit gr:x="165" gr:y="130" id="sv1#area4#page23#pwu8" name="I tuoi appuntamenti" sortable="true" checkable="false" useCountQuery="false" linkOrder="sv1#area4#page23#pwu8#ln24" entity="ent2" displayAttributes="ent2#att13 rel17#role33.ent15#att66 rel7#role14.ent3#att16">
+      <Link id="sv1#area4#page23#pwu8#ln24" name="Visualizza" to="sv1#area4#page31#enu12" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="600" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowModal="true">
+        <LinkParameter id="sv1#area4#page23#pwu8#ln24#par76" name="oid_Key Condition [oid]" source="data[].ent2#att12" target="sv1#area4#page31#enu12.ent2#att12"/>
+      </Link>
+      <Selector id="sv1#area4#page23#pwu8#su13" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area4#page23#pwu8#su13#rcond1" name="utente2appuntamento" predicate="in" implied="false" role="rel6#role11"/>
+      </Selector>
+      <SortAttribute attribute="rel17#role33.ent15#att66" order="ascending"/>
+      <SortAttribute attribute="ent2#att12" order="ascending"/>
+      <SortAttribute attribute="ent2#att13" order="ascending"/>
+      <SortAttribute attribute="rel7#role14.ent3#att16" order="ascending"/>
+      <DefaultSortAttribute attribute="rel17#role33.ent15#att66" order="ascending"/>
+      <DefaultSortAttribute attribute="ent2#att12" order="ascending"/>
+      <DefaultSortAttribute attribute="ent2#att13" order="ascending"/>
+      <DefaultSortAttribute attribute="rel7#role14.ent3#att16" order="ascending"/>
+    </PowerIndexUnit>
+    <GetUnit gr:x="10" gr:y="140" id="sv1#area4#page23#gtu1" name="utente" contextParameters="UserCtxParam">
+      <Link id="sv1#area4#page23#gtu1#ln26" name="Flow26" to="sv1#area4#page23#pwu8" type="transport" validate="true">
+        <LinkParameter id="sv1#area4#page23#gtu1#ln26#par75" name="UserCtxParam.oid_utente2appuntamento [oid]" source="sv1#area4#page23#gtu1.UserCtxParam" target="sv1#area4#page23#pwu8#su13#rcond1.userOID"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page23#ecu1">
+          <layout:Attribute attribute="rel17#role33.ent15#att66"/>
+          <layout:Link link="sv1#area4#page23#ecu1-month-0"/>
+          <layout:Link link="sv1#area4#page23#ecu1-month-1"/>
+          <layout:Link link="sv1#area4#page23#ecu1-month-2"/>
+          <layout:Link link="sv1#area4#page23#ecu1-month-3"/>
+          <layout:Link link="sv1#area4#page23#ecu1-month-4"/>
+          <layout:Link link="sv1#area4#page23#ecu1-month-5"/>
+          <layout:Link link="sv1#area4#page23#ecu1-month-6"/>
+          <layout:Link link="sv1#area4#page23#ecu1-month-7"/>
+          <layout:Link link="sv1#area4#page23#ecu1-month-8"/>
+          <layout:Link link="sv1#area4#page23#ecu1-month-9"/>
+          <layout:Link link="sv1#area4#page23#ecu1-month-10"/>
+          <layout:Link link="sv1#area4#page23#ecu1-month-11"/>
+          <layout:Link link="sv1#area4#page23#ecu1-year"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area4#page23#pwu8">
+          <layout:Attribute attribute="ent2#att13" label="Data"/>
+          <layout:Attribute attribute="rel17#role33.ent15#att66" label="Ora"/>
+          <layout:Attribute attribute="rel7#role14.ent3#att16" label="Tipologia"/>
+          <layout:Link link="sv1#area4#page23#pwu8#ln24"/>
+          <layout:Link link="sv1#area4#page23#pwu8rel17#role33$ent15#att66"/>
+          <layout:Link link="sv1#area4#page23#pwu8ent2#att13"/>
+          <layout:Link link="sv1#area4#page23#pwu8rel7#role14$ent3#att16"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:CustomLocation name="Right">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Unit unitId="sv1#area4#page23#enu11">
+            <layout:Field field="sv1#area4#page23#enu11#fld1"/>
+            <layout:Field field="sv1#area4#page23#enu11#sfld7"/>
+            <layout:Field field="sv1#area4#page23#enu11#sfld6"/>
+            <layout:Field field="sv1#area4#page23#enu11#fld7"/>
+            <layout:Link link="sv1#area4#page23#enu11#ln43"/>
+            <layout:LayoutParameter name="show-label" value="top" type="unit"/>
+          </layout:Unit>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <layout:LayoutParameter name="show-right-column" value="true" type="page"/>
+  <layout:LayoutParameter name="link-style" value="button" type="link"/>
+</Page>

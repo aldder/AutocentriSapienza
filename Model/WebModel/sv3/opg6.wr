@@ -1,0 +1,30 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="895" gr:y="450" id="sv3#opg6" name="Modifica autovettura" transaction="true">
+  <OperationUnits>
+    <ModifyUnit gr:x="0" gr:y="0" id="sv3#opg6#mfu2" name="Modifica" entity="ent1" linkOrder="ln193">
+      <Selector id="sv3#opg6#mfu2#su16" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#opg6#mfu2#su16#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#opg6#mfu2#oln10" name="OKFlow10" to="sv3#opg6#mlu2">
+        <LinkParameter id="sv3#opg6#mfu2#oln10#par343" name="Nome_PASSING" sourceLinkParameter="sv3#area2#page9#enu14#ln52#par342" passing="true"/>
+      </OKLink>
+      <Link id="sv3#opg6#mfu2#ln184" name="Flow184" to="sv3#mpage11#mssu29" type="transport" validate="true">
+        <LinkParameter id="sv3#opg6#mfu2#ln184#par320" name="Le modifiche effettuate sono state salvate con successo._Shown Messages" sourceValue="Le modifiche effettuate sono state salvate con successo." target="sv3#mpage11#mssu29.shownMessages"/>
+      </Link>
+      <Link id="sv3#opg6#mfu2#ln193" name="Flow193" to="sv3#opg6#seu12" type="transport" validate="true" gr:bendpoints="164,62,-216,57">
+        <LinkParameter id="sv3#opg6#mfu2#ln193#par345" name="oid_RoleCondition28 [oid]" source="ent1#att1Array" target="sv3#opg6#seu12#su68#rcond28.ent1#att1"/>
+      </Link>
+    </ModifyUnit>
+    <MailUnit gr:x="150" gr:y="20" id="sv3#opg6#mlu2" name="Notifica Modifica" format="plainText" smtpServer="smtp1">
+      <OKLink id="sv3#opg6#mlu2#oln8" name="OKFlow8" to="sv3#area2#page6"/>
+      <BodyTemplate xml:space="preserve">$Nome_PASSING$ &#232; stata modificata</BodyTemplate>
+    </MailUnit>
+    <SelectorUnit gr:x="330" gr:y="5" id="sv3#opg6#seu12" name="utenti" entity="User" linkOrder="ln194">
+      <Selector id="sv3#opg6#seu12#su68" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#opg6#seu12#su68#rcond28" name="autovettura2preferito" predicate="in" implied="false" role="rel3#role6.rel1#role1"/>
+      </Selector>
+      <Link id="sv3#opg6#seu12#ln194" name="Flow194" to="sv3#opg6#mlu2" type="transport" validate="true">
+        <LinkParameter id="sv3#opg6#seu12#ln194#par346" name="email_Mail - To" source="emailArray" target="sv3#opg6#mlu2.to"/>
+      </Link>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationGroup>

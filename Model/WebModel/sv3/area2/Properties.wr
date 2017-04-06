@@ -1,0 +1,8 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area2" name="Amministrazione Vendite" defaultPage="sv3#area2#page6" landmark="true" protected="true" gr:x="-15" gr:y="-5" layout:style="BootstrapStyle" landmarks="sv3#area2#page6 sv3#area2#page7 sv3#area2#page19 sv3#area2#page21">
+  <OperationUnits>
+    <NoOpOperationUnit id="sv3#area2#opu3" name="Ripristina" gr:x="205" gr:y="465">
+      <OKLink id="sv3#area2#opu3#oln15" name="OKFlow15" to="sv3#area2#page6"/>
+    </NoOpOperationUnit>
+  </OperationUnits>
+  <layout:LayoutParameter name="link-style" value="button" type="link"/>
+</Area>

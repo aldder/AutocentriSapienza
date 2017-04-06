@@ -1,0 +1,109 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="285" gr:y="2045" id="sv3#area2#page35" name="Dettagli annuncio" layout:pageLayout="BootstrapStyle/Empty" ignoreMasterPage="true">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#area2#page35#enu21" name="Dettagli annuncio" entity="ent10" fieldOrder="sv3#area2#page35#enu21#sfld13 sv3#area2#page35#enu21#fld105 sv3#area2#page35#enu21#fld82 sv3#area2#page35#enu21#fld83 sv3#area2#page35#enu21#fld84 sv3#area2#page35#enu21#fld85 sv3#area2#page35#enu21#fld86 sv3#area2#page35#enu21#fld102 sv3#area2#page35#enu21#fld103 sv3#area2#page35#enu21#fld104" linkOrder="sv3#area2#page35#enu21#ln109 sv3#area2#page35#enu21#ln70">
+      <Field id="sv3#area2#page35#enu21#fld82" name="Prezzo" type="float" modifiable="true" attribute="ent10#att36">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area2#page35#enu21#fld82#mnd82" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area2#page35#enu21#fld83" name="Foto" type="blob" modifiable="true" contentType="image" attribute="ent10#att37">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area2#page35#enu21#fld83#mnd78" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area2#page35#enu21#fld84" name="Kilometri" type="integer" modifiable="true" attribute="ent10#att40">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area2#page35#enu21#fld84#mnd79" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area2#page35#enu21#fld85" name="Anno di immatricolazione" type="date" modifiable="true" attribute="ent10#att41">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area2#page35#enu21#fld85#mnd75" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area2#page35#enu21#fld86" name="Alimentazione" type="string" modifiable="true" attribute="ent10#att42">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area2#page35#enu21#fld86#mnd74" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area2#page35#enu21#fld102" name="Cilindrata" type="integer" modifiable="true" attribute="ent10#att43">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area2#page35#enu21#fld102#mnd76" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area2#page35#enu21#fld103" name="Numero di porte" type="integer" modifiable="true" attribute="ent10#att44">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area2#page35#enu21#fld103#mnd81" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area2#page35#enu21#fld104" name="Descrizione" type="text" modifiable="true" attribute="ent10#att45">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area2#page35#enu21#fld104#mnd77" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area2#page35#enu21#fld105" name="Nome" type="string" modifiable="true" attribute="ent10#att47">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area2#page35#enu21#fld105#mnd80" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <SelectionField id="sv3#area2#page35#enu21#sfld13" name="Utente" type="string" role="rel13#role26">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area2#page35#enu21#sfld13#mnd83" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </SelectionField>
+      <Link id="sv3#area2#page35#enu21#ln109" name="Approva annuncio" to="sv3#opg15#cru15" type="normal" validate="true">
+        <LinkParameter id="sv3#area2#page35#enu21#ln109#par490" name="Alimentazione_alimentazione" source="sv3#area2#page35#enu21#fld86" target="sv3#opg15#cru15.ent1#att8"/>
+        <LinkParameter id="sv3#area2#page35#enu21#ln109#par491" name="Anno di immatricolazione_anno" source="sv3#area2#page35#enu21#fld85" target="sv3#opg15#cru15.ent1#att7"/>
+        <LinkParameter id="sv3#area2#page35#enu21#ln109#par492" name="1_catalogo" sourceValue="1" target="sv3#opg15#cru15.ent1#att50"/>
+        <LinkParameter id="sv3#area2#page35#enu21#ln109#par493" name="Cilindrata_cilindrata" source="sv3#area2#page35#enu21#fld102" target="sv3#opg15#cru15.ent1#att9"/>
+        <LinkParameter id="sv3#area2#page35#enu21#ln109#par494" name="Descrizione_descrizione" source="sv3#area2#page35#enu21#fld104" target="sv3#opg15#cru15.ent1#att11"/>
+        <LinkParameter id="sv3#area2#page35#enu21#ln109#par495" name="1_disponibilit&#224;" sourceValue="1" target="sv3#opg15#cru15.ent1#att5"/>
+        <LinkParameter id="sv3#area2#page35#enu21#ln109#par496" name="Foto_foto" source="sv3#area2#page35#enu21#fld83" target="sv3#opg15#cru15.ent1#att3"/>
+        <LinkParameter id="sv3#area2#page35#enu21#ln109#par497" name="Kilometri_kilometri" source="sv3#area2#page35#enu21#fld84" target="sv3#opg15#cru15.ent1#att6"/>
+        <LinkParameter id="sv3#area2#page35#enu21#ln109#par498" name="Nome_nome" source="sv3#area2#page35#enu21#fld105" target="sv3#opg15#cru15.ent1#att46"/>
+        <LinkParameter id="sv3#area2#page35#enu21#ln109#par499" name="Key [oid]_oid" source="key.ent10#att35" target="sv3#opg15#cru15.ent1#att1"/>
+        <LinkParameter id="sv3#area2#page35#enu21#ln109#par500" name="Numero di porte_porte" source="sv3#area2#page35#enu21#fld103" target="sv3#opg15#cru15.ent1#att10"/>
+        <LinkParameter id="sv3#area2#page35#enu21#ln109#par501" name="Prezzo_prezzo" source="sv3#area2#page35#enu21#fld82" target="sv3#opg15#cru15.ent1#att2"/>
+        <LinkParameter id="sv3#area2#page35#enu21#ln109#par502" name="1_usato" sourceValue="1" target="sv3#opg15#cru15.ent1#att4"/>
+        <LinkParameter id="sv3#area2#page35#enu21#ln109#par503" name="Key [oid]_PASSING" source="key.ent10#att35" passing="true"/>
+        <LinkParameter id="sv3#area2#page35#enu21#ln109#par505" name="Utente_PASSING" source="sv3#area2#page35#enu21#sfld13" passing="true"/>
+      </Link>
+      <Link id="sv3#area2#page35#enu21#ln70" name="Rifiuta annuncio" to="sv3#opg15#dlu17" type="normal" validate="true">
+        <LinkParameter id="sv3#area2#page35#enu21#ln70#par435" name="Key [oid]_KeyCondition37 [oid]" source="key.ent10#att35" target="sv3#opg15#dlu17#su67#kcond37.ent10#att35"/>
+        <LinkParameter id="sv3#area2#page35#enu21#ln70#par436" name="Nome_PASSING" source="sv3#area2#page35#enu21#fld105" passing="true"/>
+        <LinkParameter id="sv3#area2#page35#enu21#ln70#par439" name="Utente_PASSING" source="sv3#area2#page35#enu21#sfld13" passing="true"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area2#page35#enu21">
+          <layout:Field field="sv3#area2#page35#enu21#sfld13"/>
+          <layout:Field field="sv3#area2#page35#enu21#fld105"/>
+          <layout:Field field="sv3#area2#page35#enu21#fld82"/>
+          <layout:Field field="sv3#area2#page35#enu21#fld83"/>
+          <layout:Field field="sv3#area2#page35#enu21#fld84"/>
+          <layout:Field field="sv3#area2#page35#enu21#fld85"/>
+          <layout:Field field="sv3#area2#page35#enu21#fld86"/>
+          <layout:Field field="sv3#area2#page35#enu21#fld102"/>
+          <layout:Field field="sv3#area2#page35#enu21#fld103"/>
+          <layout:Field field="sv3#area2#page35#enu21#fld104"/>
+          <layout:Link link="sv3#area2#page35#enu21#ln109"/>
+          <layout:Link link="sv3#area2#page35#enu21#ln70"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

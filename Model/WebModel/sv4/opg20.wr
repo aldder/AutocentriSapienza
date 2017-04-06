@@ -1,0 +1,25 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="30" gr:y="1785" id="sv4#opg20" name="Gestione interventi" transaction="true">
+  <OperationUnits>
+    <CreateUnit gr:x="0" gr:y="0" id="sv4#opg20#cru21" name="InserisciIntervento" entity="ent8">
+      <OKLink id="sv4#opg20#cru21#oln119" name="OKFlow119" to="sv4#area3#page45"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="145" gr:y="0" id="sv4#opg20#mfu19" name="ModificaIntervento" entity="ent8">
+      <Selector id="sv4#opg20#mfu19#su96" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#opg20#mfu19#su96#kcond55" name="KeyCondition55" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#opg20#mfu19#oln120" name="OKFlow120" to="sv4#area3#page45"/>
+    </ModifyUnit>
+    <ModifyUnit gr:x="435" gr:y="0" id="sv4#opg20#mfu20" name="ModificaStato" entity="ent8">
+      <Selector id="sv4#opg20#mfu20#su97" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#opg20#mfu20#su97#kcond56" name="KeyCondition56" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#opg20#mfu20#oln122" name="OKFlow122" to="sv4#area3#page45"/>
+    </ModifyUnit>
+    <DeleteUnit gr:x="295" gr:y="0" id="sv4#opg20#dlu22" name="RimuoviIntervento" entity="ent8">
+      <Selector id="sv4#opg20#dlu22#su98" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#opg20#dlu22#su98#kcond57" name="KeyCondition57" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#opg20#dlu22#oln121" name="OKFlow121" to="sv4#area3#page45"/>
+    </DeleteUnit>
+  </OperationUnits>
+</OperationGroup>

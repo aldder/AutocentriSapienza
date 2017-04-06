@@ -1,0 +1,91 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="395" gr:y="975" id="sv3#area2#page27" name="Registra acquisto" layout:pageLayout="BootstrapStyle/Empty" ignoreMasterPage="true">
+  <ContentUnits>
+    <EntryUnit id="sv3#area2#page27#enu18" fieldOrder="sv3#area2#page27#enu18#fld91 sv3#area2#page27#enu18#fld92 sv3#area2#page27#enu18#fld88 sv3#area2#page27#enu18#fld94 sv3#area2#page27#enu18#fld93 sv3#area2#page27#enu18#fld89 sv3#area2#page27#enu18#fld95" gr:x="0" gr:y="0" name="Registra acquisto" gr:showAllParts="false" linkOrder="sv3#area2#page27#enu18#ln47" entity="ent7">
+      <Field id="sv3#area2#page27#enu18#fld88" type="integer" preloaded="true" modifiable="false" name="Disponibilit&#224;">
+        <VRules>
+          <CompareValidationRule id="sv3#area2#page27#enu18#fld88#cmp5" name="Compare5" predicate="gteq" value="1" errorMessage="l'autovettura non &#232; disponibile"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area2#page27#enu18#fld89" type="string" modifiable="true" name="Targa">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area2#page27#enu18#fld89#mnd66" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <CollectionValidationRule id="sv3#area2#page27#enu18#fld89#clc1" name="Unique" predicate="notIn" entity="ent7" attribute="ent7#att56" errorMessage="La targa &#232; gi&#224; presente nel sistema"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area2#page27#enu18#fld91" type="string" preloaded="true" modifiable="false" name="Autovettura">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area2#page27#enu18#fld91#mnd14" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area2#page27#enu18#fld92" type="string" preloaded="true" modifiable="false" name="Utente">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area2#page27#enu18#fld92#mnd67" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area2#page27#enu18#fld93" type="date" modifiable="true" name="Data">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area2#page27#enu18#fld93#mnd64" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area2#page27#enu18#fld94" type="decimal" preloaded="true" modifiable="true" name="Prezzo">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area2#page27#enu18#fld94#mnd65" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area2#page27#enu18#fld95" name="Descrizione" type="text" modifiable="true"/>
+      <Link id="sv3#area2#page27#enu18#ln47" name="Registra acquisto" to="sv3#opg13#pcu2" type="normal" validate="true">
+        <LinkParameter id="sv3#area2#page27#enu18#ln47#par127" name="oid_PASSING_id_acquisto" sourceLinkParameter="sv3#area2#page19#pwu6#ln74#par409" target="sv3#opg13#pcu2#pcp5"/>
+        <LinkParameter id="sv3#area2#page27#enu18#ln47#par128" name="Acquisto_PendenteToAutovettura.oid_PASSING_id_autovettura" sourceLinkParameter="sv3#area2#page19#pwu6#ln74#par410" target="sv3#opg13#pcu2#pcp3"/>
+        <LinkParameter id="sv3#area2#page27#enu18#ln47#par130" name="Acquisto_PendenteToUtente.oid_PASSING_id_utente" sourceLinkParameter="sv3#area2#page19#pwu6#ln74#par411" target="sv3#opg13#pcu2#pcp2"/>
+        <LinkParameter id="sv3#area2#page27#enu18#ln47#par131" name="Storico_Acquisto Object_Storico_Object" source="entityBean" target="sv3#opg13#pcu2#pcp6"/>
+        <LinkParameter id="sv3#area2#page27#enu18#ln47#par137" name="Data_data" source="sv3#area2#page27#enu18#fld93" target="sv3#opg13#pcu2#pcp7"/>
+        <LinkParameter id="sv3#area2#page27#enu18#ln47#par138" name="Prezzo_prezzo" source="sv3#area2#page27#enu18#fld94" target="sv3#opg13#pcu2#pcp8"/>
+        <LinkParameter id="sv3#area2#page27#enu18#ln47#par139" name="Descrizione_descrizione" source="sv3#area2#page27#enu18#fld95" target="sv3#opg13#pcu2#pcp9"/>
+        <LinkParameter id="sv3#area2#page27#enu18#ln47#par146" name="Targa_targa" source="sv3#area2#page27#enu18#fld89" target="sv3#opg13#pcu2#pcp10"/>
+        <LinkParameter id="sv3#area2#page27#enu18#ln47#par259" name="Acquisto_PendenteToAutovettura.disponibilit&#224;_PASSING_disponibilit&#224;" sourceLinkParameter="sv3#area2#page19#pwu6#ln74#par225" target="sv3#opg13#pcu2#pcp11"/>
+        <LinkParameter id="sv3#area2#page27#enu18#ln47#par360" name="quantita_PASSING_quantita" sourceLinkParameter="sv3#area2#page19#pwu6#ln74#par359" target="sv3#opg13#pcu2#pcp12"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area2#page27#enu18">
+          <layout:Field field="sv3#area2#page27#enu18#fld91"/>
+          <layout:Field field="sv3#area2#page27#enu18#fld92"/>
+          <layout:Field field="sv3#area2#page27#enu18#fld88"/>
+          <layout:Field field="sv3#area2#page27#enu18#fld94"/>
+          <layout:Field field="sv3#area2#page27#enu18#fld93"/>
+          <layout:Field field="sv3#area2#page27#enu18#fld89"/>
+          <layout:Field field="sv3#area2#page27#enu18#fld95"/>
+          <layout:Link link="sv3#area2#page27#enu18#ln47"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
