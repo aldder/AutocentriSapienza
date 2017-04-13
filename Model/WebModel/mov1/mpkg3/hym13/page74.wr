@@ -1,0 +1,82 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg3#hym13#page74" name="Le tue notifiche" landmark="true" gr:x="315" gr:y="0">
+  <ContentUnits>
+    <PowerIndexUnit id="mov1#mpkg3#hym13#page74#pwu29" name="Le tue notifiche" linkOrder="mov1#mpkg3#hym13#page74#pwu29#ln215 mov1#mpkg3#hym13#page74#pwu29#ln217" gr:x="130" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att19 rel8#role16.ent2#att13 rel16#role31.ent3#att16 rel15#role30.ent7#att56 ent4#att28" blockFactor="10">
+      <SortAttribute attribute="ent4#att18" order="ascending"/>
+      <SortAttribute attribute="ent4#att19" order="ascending"/>
+      <SortAttribute attribute="ent4#att28" order="ascending"/>
+      <SortAttribute attribute="rel15#role30.ent7#att56" order="ascending"/>
+      <SortAttribute attribute="rel8#role16.ent2#att13" order="ascending"/>
+      <DefaultSortAttribute attribute="ent4#att18" order="ascending"/>
+      <DefaultSortAttribute attribute="ent4#att19" order="ascending"/>
+      <DefaultSortAttribute attribute="ent4#att28" order="ascending"/>
+      <DefaultSortAttribute attribute="rel15#role30.ent7#att56" order="ascending"/>
+      <DefaultSortAttribute attribute="rel8#role16.ent2#att13" order="ascending"/>
+      <Selector id="mov1#mpkg3#hym13#page74#pwu29#su29" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#mpkg3#hym13#page74#pwu29#su29#rcond8" name="utente2notifica" predicate="in" implied="false" role="rel14#role27"/>
+      </Selector>
+      <Link id="mov1#mpkg3#hym13#page74#pwu29#ln215" name="Attiva" to="mov1#mpkg3#hym13#miu99" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym13#page74#pwu29#ln215#par878" name="oid_KeyCondition9 [oid]" source="data[].ent4#att18" target="mov1#mpkg3#hym13#miu99.mov2#mpkg22#mpkg25#opm49#icu51#icp246"/>
+        <LinkParameter id="mov1#mpkg3#hym13#page74#pwu29#ln215#par879" name="stato_stato" target="mov1#mpkg3#hym13#miu99.mov2#mpkg22#mpkg25#opm49#icu51#icp245" sourceValue="1"/>
+      </Link>
+      <Link id="mov1#mpkg3#hym13#page74#pwu29#ln217" name="Disattiva" to="mov1#mpkg3#hym13#miu99" type="normal" validate="true" gr:bendpoints="43,79,83,-66">
+        <LinkParameter id="mov1#mpkg3#hym13#page74#pwu29#ln217#par876" name="oid_KeyCondition9 [oid]" source="data[].ent4#att18" target="mov1#mpkg3#hym13#miu99.mov2#mpkg22#mpkg25#opm49#icu51#icp246"/>
+        <LinkParameter id="mov1#mpkg3#hym13#page74#pwu29#ln217#par877" name="stato_stato" target="mov1#mpkg3#hym13#miu99.mov2#mpkg22#mpkg25#opm49#icu51#icp245" sourceValue="0"/>
+      </Link>
+    </PowerIndexUnit>
+    <GetUnit id="mov1#mpkg3#hym13#page74#gtu2" name="utente" gr:x="0" gr:y="10" contextParameters="UserCtxParam">
+      <Link id="mov1#mpkg3#hym13#page74#gtu2#ln219" name="Flow48" to="mov1#mpkg3#hym13#page74#pwu29" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym13#page74#gtu2#ln219#par875" name="UserCtxParam.oid_utente2notifica [oid]" source="mov1#mpkg3#hym13#page74#gtu2.UserCtxParam" target="mov1#mpkg3#hym13#page74#pwu29#su29#rcond8.userOID"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg3#hym13#page74#pwu29">
+          <layout:Attribute label="Data notifica" attribute="ent4#att19"/>
+          <layout:Attribute label="Data appuntamento" attribute="rel8#role16.ent2#att13"/>
+          <layout:Attribute label="Tipologia" attribute="rel16#role31.ent3#att16"/>
+          <layout:Attribute label="Targa auto" attribute="rel15#role30.ent7#att56"/>
+          <layout:Attribute label="Invio notifica" attribute="ent4#att28"/>
+          <layout:Link link="mov1#mpkg3#hym13#page74#pwu29#ln215" layout:linkVisibilityConditionNegated="true" layout:linkDisableConditionVariable="mov1#mpkg3#hym13#page74#var1"/>
+          <layout:Link link="mov1#mpkg3#hym13#page74#pwu29#ln217" layout:linkDisableConditionVariable="mov1#mpkg3#hym13#page74#var1" layout:linkDisableConditionNegated="true"/>
+          <layout:Link link="mov1#mpkg3#hym13#page74#pwu29ent4#att19"/>
+          <layout:Link link="mov1#mpkg3#hym13#page74#pwu29ent4#att28"/>
+          <layout:Link link="mov1#mpkg3#hym13#page74#pwu29rel15#role30$ent7#att56"/>
+          <layout:Link link="mov1#mpkg3#hym13#page74#pwu29rel8#role16$ent2#att13"/>
+          <layout:Link link="mov1#mpkg3#hym13#page74#pwu29First"/>
+          <layout:Link link="mov1#mpkg3#hym13#page74#pwu29Previous"/>
+          <layout:Link link="mov1#mpkg3#hym13#page74#pwu29Block"/>
+          <layout:Link link="mov1#mpkg3#hym13#page74#pwu29Next"/>
+          <layout:Link link="mov1#mpkg3#hym13#page74#pwu29Last"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Variable id="mov1#mpkg3#hym13#page74#var1" name="isActive" type="boolean" unitId="mov1#mpkg3#hym13#page74#pwu29" parameter="data[].ent4#att28"/>
+</Page>

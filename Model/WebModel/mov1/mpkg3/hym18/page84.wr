@@ -1,0 +1,102 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg3#hym18#page84" name="Area personale" landmark="true" layout:layoutManager="grid" gr:x="350" gr:y="0">
+  <ContentUnits>
+    <EntryUnit id="mov1#mpkg3#hym18#page84#enu54" name="Cambia password" linkOrder="mov1#mpkg3#hym18#page84#enu54#ln339" gr:x="125" gr:y="0" entity="User" fieldOrder="mov1#mpkg3#hym18#page84#enu54#fld248 mov1#mpkg3#hym18#page84#enu54#fld249">
+      <Field id="mov1#mpkg3#hym18#page84#enu54#fld248" name="Inserisci nuova password" type="password" modifiable="true" attribute="password" preloaded="false">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym18#page84#enu54#fld248#mnd211" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg3#hym18#page84#enu54#fld249" name="Conferma Password" type="password" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="mov1#mpkg3#hym18#page84#enu54#fld249#cmp7" name="Compare" predicate="eq" valueField="mov1#mpkg3#hym18#page84#enu54#fld248" errorMessage="la password non coincide"/>
+          <MandatoryValidationRule id="mov1#mpkg3#hym18#page84#enu54#fld249#mnd217" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Link id="mov1#mpkg3#hym18#page84#enu54#ln339" name="Salva" to="mov1#mpkg3#hym18#miu126" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym18#page84#enu54#ln339#par1088" name="Key [oid]_KeyCondition10 [oid]" source="key.userOID" target="mov1#mpkg3#hym18#miu126.mov2#mpkg22#mpkg24#opm47#icu49#icp235"/>
+        <LinkParameter id="mov1#mpkg3#hym18#page84#enu54#ln339#par1089" name="Inserisci nuova password_password" source="mov1#mpkg3#hym18#page84#enu54#fld248" target="mov1#mpkg3#hym18#miu126.mov2#mpkg22#mpkg24#opm47#icu49#icp237"/>
+        <LinkParameter id="mov1#mpkg3#hym18#page84#enu54#ln339#par1090" name="Utente Object_Utente Object" source="entityBean" target="mov1#mpkg3#hym18#miu126.mov2#mpkg22#mpkg24#opm47#icu49#icp236"/>
+      </Link>
+    </EntryUnit>
+    <GetUnit id="mov1#mpkg3#hym18#page84#gtu12" name="utente" gr:x="0" gr:y="5" contextParameters="UserCtxParam">
+      <Link id="mov1#mpkg3#hym18#page84#gtu12#ln340" name="Flow160" to="mov1#mpkg3#hym18#page84#enu54" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym18#page84#gtu12#ln340#par1086" name="UserCtxParam.oid_Key Condition [oid]" source="mov1#mpkg3#hym18#page84#gtu12.UserCtxParam" target="mov1#mpkg3#hym18#page84#enu54.userOID"/>
+      </Link>
+    </GetUnit>
+    <MultiMessageUnit id="mov1#mpkg3#hym18#page84#mssu61" name="OkMessage" gr:x="160" gr:y="95"/>
+    <MultiMessageUnit id="mov1#mpkg3#hym18#page84#mssu62" name="KoMessage" gr:x="160" gr:y="160"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg3#hym18#page84#mssu61">
+          <layout:LayoutParameter name="messageType" value="success" type="unit"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg3#hym18#page84#mssu62">
+          <layout:LayoutParameter name="messageType" value="danger" type="unit"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg3#hym18#page84#enu54">
+          <layout:Field field="mov1#mpkg3#hym18#page84#enu54#fld248"/>
+          <layout:Field field="mov1#mpkg3#hym18#page84#enu54#fld249"/>
+          <layout:LayoutParameter name="show-label" value="top" type="unit"/>
+          <layout:Link link="mov1#mpkg3#hym18#page84#enu54#ln339"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,45 @@
+<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym10#mpage3" name="MasterPage" gr:x="200" gr:y="35">
+  <ContentUnits>
+    <DataUnit id="mov1#hym10#mpage3#dau1" name="UtenteCorrente" linkOrder="mov1#hym10#mpage3#dau1#ln311" gr:x="155" gr:y="110" entity="User" displayAttributes="userName">
+      <Selector id="mov1#hym10#mpage3#dau1#su202" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym10#mpage3#dau1#su202#kcond124" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="mov1#hym10#mpage3#dau1#ln311" name="Logout" to="mov1#hym10#lou2" type="normal" validate="true"/>
+    </DataUnit>
+    <DataUnit id="mov1#hym10#mpage3#dau6" name="GruppoCorrente" gr:x="0" gr:y="110" entity="Group" displayAttributes="groupName">
+      <Selector id="mov1#hym10#mpage3#dau6#su203" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym10#mpage3#dau6#su203#kcond125" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <GetUnit id="mov1#hym10#mpage3#gtu3" name="utente" landmark="false" gr:x="60" gr:y="0" contextParameters="GroupCtxParam UserCtxParam">
+      <Link id="mov1#hym10#mpage3#gtu3#ln312" name="Flow23" to="mov1#hym10#mpage3#dau1" type="transport" validate="true">
+        <LinkParameter id="mov1#hym10#mpage3#gtu3#ln312#par1890" name="UserCtxParam.oid_KeyCondition4 [oid]" source="mov1#hym10#mpage3#gtu3.UserCtxParam" target="mov1#hym10#mpage3#dau1#su202#kcond124.userOID"/>
+      </Link>
+      <Link id="mov1#hym10#mpage3#gtu3#ln313" name="Flow26" to="mov1#hym10#mpage3#dau6" type="transport" validate="true">
+        <LinkParameter id="mov1#hym10#mpage3#gtu3#ln313#par1891" name="GroupCtxParam.oid_KeyCondition5 [oid]" source="sv1#gtu19.GroupCtxParam" target="mov1#hym10#mpage3#dau6#su203#kcond125.groupOID"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:CustomLocation name="User">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell label="utente">
+          <layout:Unit unitId="mov1#hym10#mpage3#dau6" layout:frameLayout="None" layout:unitLayout="BootstrapStyle/User" layout:unitVisibilityCondition="cexpr1">
+            <layout:Attribute attribute="groupName"/>
+          </layout:Unit>
+          <layout:Unit unitId="mov1#hym10#mpage3#dau1" layout:frameLayout="None" layout:unitLayout="BootstrapStyle/User" layout:unitVisibilityCondition="cexpr1">
+            <layout:Attribute attribute="userName"/>
+            <layout:Link link="mov1#hym10#mpage3#dau1#ln311"/>
+          </layout:Unit>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <layout:CustomLocation name="Top">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell/>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+</MasterPage>

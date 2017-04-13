@@ -1,0 +1,92 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg38#mpkg40#opm80" name="InserimentoAutovettura" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg38#mpkg40#opm80#icu83" gr:x="-175" gr:y="-125">
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp377" name="Kilometri_PASSING"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp378" name="Usato_PASSING"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp379" name="Alimentazione_PASSING"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp380" name="Porte_PASSING"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp381" name="Autovettura Object_PASSING"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp382" name="Nome_PASSING"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp383" name="Anno di immatricolazione_PASSING"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp384" name="Prezzo_PASSING"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp385" name="Kilometri"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp386" name="Cilindrata_PASSING"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp387" name="Catalogo_PASSING"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp388" name="Disponibilit&#224;_PASSING"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp389" name="Descrizione_PASSING"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp390" name="Nome"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp391" name="Foto_PASSING"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp392" name="Key [oid]_PASSING"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp393" name="Prezzo"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm80#icu83#icp394" name="Usato"/>
+      <OKLink id="mov2#mpkg38#mpkg40#opm80#icu83#oln412" name="Inserisci" to="mov2#mpkg38#mpkg40#opm80#seu73">
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1418" name="Usato_PASSING" source="mov2#mpkg38#mpkg40#opm80#icu83#icp378" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1419" name="Autovettura Object_PASSING" source="mov2#mpkg38#mpkg40#opm80#icu83#icp381" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1420" name="Porte_PASSING" source="mov2#mpkg38#mpkg40#opm80#icu83#icp380" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1421" name="Disponibilit&#224;_PASSING" source="mov2#mpkg38#mpkg40#opm80#icu83#icp388" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1423" name="Nome_PASSING" source="mov2#mpkg38#mpkg40#opm80#icu83#icp382" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1424" name="Nome_Nome" source="mov2#mpkg38#mpkg40#opm80#icu83#icp390" target="mov2#mpkg38#mpkg40#opm80#seu73#su172#acond77"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1425" name="Prezzo_Prezzo" source="mov2#mpkg38#mpkg40#opm80#icu83#icp393" target="mov2#mpkg38#mpkg40#opm80#seu73#su172#acond78"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1426" name="Kilometri_PASSING" source="mov2#mpkg38#mpkg40#opm80#icu83#icp377" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1427" name="Alimentazione_PASSING" source="mov2#mpkg38#mpkg40#opm80#icu83#icp379" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1428" name="Usato_Usato" source="mov2#mpkg38#mpkg40#opm80#icu83#icp394" target="mov2#mpkg38#mpkg40#opm80#seu73#su172#acond79"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1429" name="Descrizione_PASSING" source="mov2#mpkg38#mpkg40#opm80#icu83#icp389" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1430" name="Foto_PASSING" source="mov2#mpkg38#mpkg40#opm80#icu83#icp391" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1431" name="Kilometri_Kilometri" source="mov2#mpkg38#mpkg40#opm80#icu83#icp385" target="mov2#mpkg38#mpkg40#opm80#seu73#su172#acond80"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1432" name="Prezzo_PASSING" source="mov2#mpkg38#mpkg40#opm80#icu83#icp384" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1433" name="Cilindrata_PASSING" source="mov2#mpkg38#mpkg40#opm80#icu83#icp386" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1434" name="Catalogo_PASSING" source="mov2#mpkg38#mpkg40#opm80#icu83#icp387" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1435" name="Anno di immatricolazione_PASSING" source="mov2#mpkg38#mpkg40#opm80#icu83#icp383" passing="true"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov2#mpkg38#mpkg40#opm80#kocu70" name="KO Port16" gr:x="835" gr:y="55"/>
+    <IsNotNullUnit id="mov2#mpkg38#mpkg40#opm80#inn21" name="is Not Null" gr:x="410" gr:y="15">
+      <KOLink id="mov2#mpkg38#mpkg40#opm80#inn21#kln175" name="KOFlow4" to="mov2#mpkg38#mpkg40#opm80#cru39">
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#inn21#kln175#par1436" name="Alimentazione_PASSING_alimentazione" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1450" target="mov2#mpkg38#mpkg40#opm80#cru39.ent1#att8"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#inn21#kln175#par1437" name="Anno di immatricolazione_PASSING_anno" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1451" target="mov2#mpkg38#mpkg40#opm80#cru39.ent1#att7"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#inn21#kln175#par1438" name="Autovettura Object_PASSING_Autovettura Object" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1452" target="mov2#mpkg38#mpkg40#opm80#cru39.entityBeans"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#inn21#kln175#par1439" name="Catalogo_PASSING_catalogo" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1453" target="mov2#mpkg38#mpkg40#opm80#cru39.ent1#att50"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#inn21#kln175#par1440" name="Cilindrata_PASSING_cilindrata" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1454" target="mov2#mpkg38#mpkg40#opm80#cru39.ent1#att9"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#inn21#kln175#par1441" name="Descrizione_PASSING_descrizione" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1456" target="mov2#mpkg38#mpkg40#opm80#cru39.ent1#att11"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#inn21#kln175#par1442" name="Disponibilit&#224;_PASSING_disponibilit&#224;" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1457" target="mov2#mpkg38#mpkg40#opm80#cru39.ent1#att5"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#inn21#kln175#par1443" name="Foto_PASSING_foto" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1458" target="mov2#mpkg38#mpkg40#opm80#cru39.ent1#att3"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#inn21#kln175#par1444" name="Kilometri_PASSING_kilometri" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1460" target="mov2#mpkg38#mpkg40#opm80#cru39.ent1#att6"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#inn21#kln175#par1445" name="Nome_PASSING_nome" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1461" target="mov2#mpkg38#mpkg40#opm80#cru39.ent1#att46"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#inn21#kln175#par1446" name="Porte_PASSING_porte" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1462" target="mov2#mpkg38#mpkg40#opm80#cru39.ent1#att10"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#inn21#kln175#par1447" name="Prezzo_PASSING_prezzo" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1463" target="mov2#mpkg38#mpkg40#opm80#cru39.ent1#att2"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#inn21#kln175#par1448" name="Usato_PASSING_usato" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1464" target="mov2#mpkg38#mpkg40#opm80#cru39.ent1#att4"/>
+      </KOLink>
+      <OKLink id="mov2#mpkg38#mpkg40#opm80#inn21#oln413" name="OKFlow14" to="mov2#mpkg38#mpkg40#opm80#kocu70" gr:bendpoints="96,93,-384,43;313,93,-167,43"/>
+    </IsNotNullUnit>
+    <CreateUnit id="mov2#mpkg38#mpkg40#opm80#cru39" name="Inserimento" gr:x="545" gr:y="5" entity="ent1">
+      <OKLink id="mov2#mpkg38#mpkg40#opm80#cru39#oln414" name="OKFlow2" to="mov2#mpkg38#mpkg40#opm80#okcu77"/>
+      <KOLink id="mov2#mpkg38#mpkg40#opm80#cru39#kln176" name="KOFlow59" to="mov2#mpkg38#mpkg40#opm80#kocu70"/>
+    </CreateUnit>
+    <SelectorUnit id="mov2#mpkg38#mpkg40#opm80#seu73" name="autovettura" gr:x="225" gr:y="-15" entity="ent1">
+      <Selector id="mov2#mpkg38#mpkg40#opm80#seu73#su172" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg38#mpkg40#opm80#seu73#su172#acond77" name="Nome" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att46" ignoreCase="true"/>
+        <AttributesCondition id="mov2#mpkg38#mpkg40#opm80#seu73#su172#acond78" name="Prezzo" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att2" ignoreCase="true"/>
+        <AttributesCondition id="mov2#mpkg38#mpkg40#opm80#seu73#su172#acond79" name="Usato" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att4"/>
+        <AttributesCondition id="mov2#mpkg38#mpkg40#opm80#seu73#su172#acond80" name="Kilometri" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att6"/>
+      </Selector>
+      <OKLink id="mov2#mpkg38#mpkg40#opm80#seu73#oln415" name="OKFlow9" to="mov2#mpkg38#mpkg40#opm80#inn21">
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1449" name="oid_Input" source="ent1#att1Array" target="mov2#mpkg38#mpkg40#opm80#inn21.isnotnull"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1450" name="Alimentazione_PASSING" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1427" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1451" name="Anno di immatricolazione_PASSING" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1435" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1452" name="Autovettura Object_PASSING" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1419" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1453" name="Catalogo_PASSING" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1434" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1454" name="Cilindrata_PASSING" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1433" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1455" name="Data Size_PASSING" source="dataSize" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1456" name="Descrizione_PASSING" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1429" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1457" name="Disponibilit&#224;_PASSING" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1421" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1458" name="Foto_PASSING" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1430" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1460" name="Kilometri_PASSING" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1426" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1461" name="Nome_PASSING" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1423" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1462" name="Porte_PASSING" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1420" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1463" name="Prezzo_PASSING" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1432" passing="true"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm80#seu73#oln415#par1464" name="Usato_PASSING" sourceLinkParameter="mov2#mpkg38#mpkg40#opm80#icu83#oln412#par1418" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <OKCollectorUnit id="mov2#mpkg38#mpkg40#opm80#okcu77" name="OK Port21" gr:x="835" gr:y="-30"/>
+  </OperationUnits>
+</OperationModule>

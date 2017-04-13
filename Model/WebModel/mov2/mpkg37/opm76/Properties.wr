@@ -1,0 +1,101 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg37#opm76" name="InvioNotificheAppuntamento" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg37#opm76#icu79" gr:x="10" gr:y="10">
+      <OKLink id="mov2#mpkg37#opm76#icu79#oln377" name="OKFlow35" to="mov2#mpkg37#opm76#tmu3"/>
+    </InputCollectorUnit>
+    <LoopUnit id="mov2#mpkg37#opm76#lpu2" name="Loop" gr:x="635" gr:y="20">
+      <OKLink id="mov2#mpkg37#opm76#lpu2#oln378" name="OKFlow125" to="mov2#mpkg37#opm76#seu66" code="next">
+        <LinkParameter id="mov2#mpkg37#opm76#lpu2#oln378#par1338" name="Next Element_KeyCondition14 [oid]" source="next" target="mov2#mpkg37#opm76#seu66#su151#kcond86.ent4#att18"/>
+      </OKLink>
+    </LoopUnit>
+    <SelectorUnit id="mov2#mpkg37#opm76#seu63" name="SelectAppuntamento" gr:x="975" gr:y="160" entity="ent2">
+      <Selector id="mov2#mpkg37#opm76#seu63#su139" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg37#opm76#seu63#su139#kcond76" name="KeyCondition61" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg37#opm76#seu63#oln379" name="OKFlow138" to="mov2#mpkg37#opm76#mlu8">
+        <LinkParameter id="mov2#mpkg37#opm76#seu63#oln379#par1339" name="data_intervento_data" source="ent2#att13Array" target="mov2#mpkg37#opm76#mlu8.data"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="mov2#mpkg37#opm76#seu64" name="SelectNotifiche" gr:x="410" gr:y="-5" entity="ent4" distinctAttributes="ent4#att18 ent4#att19 ent4#att20 ent4#att28">
+      <OKLink id="mov2#mpkg37#opm76#seu64#oln380" name="OKFlow74" to="mov2#mpkg37#opm76#lpu2">
+        <LinkParameter id="mov2#mpkg37#opm76#seu64#oln380#par1340" name="oid_Input Array" source="ent4#att18Array" target="mov2#mpkg37#opm76#lpu2.array"/>
+      </OKLink>
+      <Selector id="mov2#mpkg37#opm76#seu64#su147" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg37#opm76#seu64#su147#acond55" name="data" predicate="eq" booleanOperator="or" implied="false" attributes="ent4#att19"/>
+        <AttributesCondition id="mov2#mpkg37#opm76#seu64#su147#acond60" name="appuntamento" predicate="notNull" booleanOperator="or" implied="false" attributes="rel8#role16.ent2#att12"/>
+        <AttributesCondition id="mov2#mpkg37#opm76#seu64#su147#acond61" name="stato" predicate="eq" booleanOperator="or" implied="false" attributes="ent4#att28" value="1"/>
+      </Selector>
+    </SelectorUnit>
+    <MailUnit id="mov2#mpkg37#opm76#mlu8" name="NotificaAppuntamento" gr:x="1170" gr:y="175" format="plainText" smtpServer="smtp1">
+      <Placeholder id="mov2#mpkg37#opm76#mlu8#ph8" name="tipologia"/>
+      <Placeholder id="mov2#mpkg37#opm76#mlu8#ph17" name="utente"/>
+      <Placeholder id="mov2#mpkg37#opm76#mlu8#ph18" name="descrizione"/>
+      <Placeholder id="mov2#mpkg37#opm76#mlu8#ph19" name="data"/>
+      <OKLink id="mov2#mpkg37#opm76#mlu8#oln381" name="OKFlow141" to="mov2#mpkg37#opm76#lpu2" gr:bendpoints="-214,-160,366,-5"/>
+      <BodyTemplate xml:space="preserve">Ciao $$utente$$.
+
+Ti ricordiamo che in data $$data$$ hai preso un appuntamento presso l'officina per svolgere il seguente tipo di intervento:
+$$tipologia$$
+
+Descrizione intervento:
+$$descrizione$$</BodyTemplate>
+      <SubjectTemplate xml:space="preserve">Notifica appuntamento presso l'officina</SubjectTemplate>
+    </MailUnit>
+    <ParameterCollectorUnit id="mov2#mpkg37#opm76#pcu12" name="Parameter Collector" gr:x="775" gr:y="135">
+      <CollectorParameter id="mov2#mpkg37#opm76#pcu12#pcp54" name="id_notifica"/>
+      <CollectorParameter id="mov2#mpkg37#opm76#pcu12#pcp67" name="id_appuntamento"/>
+      <CollectorParameter id="mov2#mpkg37#opm76#pcu12#pcp68" name="nome_utente"/>
+      <CollectorParameter id="mov2#mpkg37#opm76#pcu12#pcp69" name="tipologia"/>
+      <CollectorParameter id="mov2#mpkg37#opm76#pcu12#pcp70" name="descrizione"/>
+      <Link id="mov2#mpkg37#opm76#pcu12#ln210" name="Flow140" to="mov2#mpkg37#opm76#mlu8" type="transport" validate="true" gr:bendpoints="146,123,-369,78;357,106,-43,111">
+        <LinkParameter id="mov2#mpkg37#opm76#pcu12#ln210#par1341" name="descrizione_descrizione" source="mov2#mpkg37#opm76#pcu12#pcp70" target="mov2#mpkg37#opm76#mlu8.descrizione"/>
+        <LinkParameter id="mov2#mpkg37#opm76#pcu12#ln210#par1342" name="email_Mail - To" source="mov2#mpkg37#opm76#pcu12#pcp71" target="mov2#mpkg37#opm76#mlu8.to"/>
+        <LinkParameter id="mov2#mpkg37#opm76#pcu12#ln210#par1343" name="tipologia_tipologia" source="mov2#mpkg37#opm76#pcu12#pcp69" target="mov2#mpkg37#opm76#mlu8.tipologia"/>
+        <LinkParameter id="mov2#mpkg37#opm76#pcu12#ln210#par1344" name="nome_utente_utente" source="mov2#mpkg37#opm76#pcu12#pcp68" target="mov2#mpkg37#opm76#mlu8.utente"/>
+      </Link>
+      <CollectorParameter id="mov2#mpkg37#opm76#pcu12#pcp71" name="email"/>
+      <OKLink id="mov2#mpkg37#opm76#pcu12#oln382" name="OKFlow162" to="mov2#mpkg37#opm76#seu63">
+        <LinkParameter id="mov2#mpkg37#opm76#pcu12#oln382#par1345" name="id_appuntamento_KeyCondition61 [oid]" source="mov2#mpkg37#opm76#pcu12#pcp67" target="mov2#mpkg37#opm76#seu63#su139#kcond76.ent2#att12"/>
+      </OKLink>
+    </ParameterCollectorUnit>
+    <TimeUnit id="mov2#mpkg37#opm76#tmu3" name="Today" gr:x="300" gr:y="20">
+      <OKLink id="mov2#mpkg37#opm76#tmu3#oln383" name="OKFlow146" to="mov2#mpkg37#opm76#seu64">
+        <LinkParameter id="mov2#mpkg37#opm76#tmu3#oln383#par1346" name="Current/Input Date_data" source="currentDate" target="mov2#mpkg37#opm76#seu64#su147#acond55"/>
+      </OKLink>
+    </TimeUnit>
+    <SelectorUnit id="mov2#mpkg37#opm76#seu65" name="SelectTipologia" gr:x="610" gr:y="395" entity="ent3">
+      <Selector id="mov2#mpkg37#opm76#seu65#su150" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg37#opm76#seu65#su150#kcond85" name="KeyCondition58" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg37#opm76#seu65#oln384" name="OKFlow136" to="mov2#mpkg37#opm76#pcu12">
+        <LinkParameter id="mov2#mpkg37#opm76#seu65#oln384#par1347" name="nome_tipologia" source="ent3#att16Array" target="mov2#mpkg37#opm76#pcu12#pcp69"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="mov2#mpkg37#opm76#seu66" name="SelectNotifica" gr:x="615" gr:y="140" entity="ent4">
+      <Selector id="mov2#mpkg37#opm76#seu66#su151" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg37#opm76#seu66#su151#kcond86" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg37#opm76#seu66#oln385" name="OKFlow126" to="mov2#mpkg37#opm76#seu67">
+        <LinkParameter id="mov2#mpkg37#opm76#seu66#oln385#par1348" name="NotificaToUtente.oid_KeyCondition15 [oid]" source="rel14#role28_userOIDArray" target="mov2#mpkg37#opm76#seu67#su152#kcond92.userOID"/>
+        <LinkParameter id="mov2#mpkg37#opm76#seu66#oln385#par1349" name="NotificaToTipologia.oid_PASSING" source="rel16#role31_ent3#att15Array" passing="true"/>
+      </OKLink>
+      <Link id="mov2#mpkg37#opm76#seu66#ln212" name="Flow141" to="mov2#mpkg37#opm76#pcu12" type="transport" validate="true">
+        <LinkParameter id="mov2#mpkg37#opm76#seu66#ln212#par1350" name="oid_id_notifica" source="ent4#att18Array" target="mov2#mpkg37#opm76#pcu12#pcp54"/>
+        <LinkParameter id="mov2#mpkg37#opm76#seu66#ln212#par1351" name="descrizione_descrizione" source="ent4#att20Array" target="mov2#mpkg37#opm76#pcu12#pcp70"/>
+        <LinkParameter id="mov2#mpkg37#opm76#seu66#ln212#par1352" name="NotificaToAppuntamento.oid_id_appuntamento" source="rel8#role16_ent2#att12Array" target="mov2#mpkg37#opm76#pcu12#pcp67"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="mov2#mpkg37#opm76#seu67" name="SelectUtente" gr:x="615" gr:y="270" entity="User">
+      <Selector id="mov2#mpkg37#opm76#seu67#su152" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg37#opm76#seu67#su152#kcond92" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="mov2#mpkg37#opm76#seu67#ln214" name="Flow142" to="mov2#mpkg37#opm76#pcu12" type="transport" validate="true">
+        <LinkParameter id="mov2#mpkg37#opm76#seu67#ln214#par1353" name="email_email" source="emailArray" target="mov2#mpkg37#opm76#pcu12#pcp71"/>
+        <LinkParameter id="mov2#mpkg37#opm76#seu67#ln214#par1354" name="nome_utente_nome_utente" source="userNameArray" target="mov2#mpkg37#opm76#pcu12#pcp68"/>
+      </Link>
+      <OKLink id="mov2#mpkg37#opm76#seu67#oln386" name="OKFlow132" to="mov2#mpkg37#opm76#seu65">
+        <LinkParameter id="mov2#mpkg37#opm76#seu67#oln386#par1355" name="NotificaToTipologia.oid_PASSING_KeyCondition58 [oid]" sourceLinkParameter="mov2#mpkg37#opm76#seu66#oln385#par1349" target="mov2#mpkg37#opm76#seu65#su150#kcond85.ent3#att15"/>
+      </OKLink>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationModule>

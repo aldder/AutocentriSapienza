@@ -1,0 +1,31 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg31#mpkg33#opm63" name="InserimentoAutovetturaCliente" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg31#mpkg33#opm63#icu66" gr:x="-25" gr:y="-50">
+      <InputCollectorParameter id="mov2#mpkg31#mpkg33#opm63#icu66#icp306" name="cliente"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg33#opm63#icu66#icp307" name="descrizione"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg33#opm63#icu66#icp308" name="marca"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg33#opm63#icu66#icp309" name="Autovetture_Clienti Object"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg33#opm63#icu66#icp310" name="nome"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg33#opm63#icu66#icp311" name="targa"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg33#opm63#icu66#icp312" name="oid"/>
+      <OKLink id="mov2#mpkg31#mpkg33#opm63#icu66#oln141" name="Inserisci" to="mov2#mpkg31#mpkg33#opm63#cru25">
+        <LinkParameter id="mov2#mpkg31#mpkg33#opm63#icu66#oln141#par1235" name="Cliente_cliente" source="mov2#mpkg31#mpkg33#opm63#icu66#icp306" target="mov2#mpkg31#mpkg33#opm63#cru25.ent11#att57"/>
+        <LinkParameter id="mov2#mpkg31#mpkg33#opm63#icu66#oln141#par1236" name="Descrizione_descrizione" source="mov2#mpkg31#mpkg33#opm63#icu66#icp307" target="mov2#mpkg31#mpkg33#opm63#cru25.ent11#att58"/>
+        <LinkParameter id="mov2#mpkg31#mpkg33#opm63#icu66#oln141#par1237" name="Targa_targa" source="mov2#mpkg31#mpkg33#opm63#icu66#icp311" target="mov2#mpkg31#mpkg33#opm63#cru25.ent11#att52"/>
+        <LinkParameter id="mov2#mpkg31#mpkg33#opm63#icu66#oln141#par1238" name="Nome_nome" source="mov2#mpkg31#mpkg33#opm63#icu66#icp310" target="mov2#mpkg31#mpkg33#opm63#cru25.ent11#att53"/>
+        <LinkParameter id="mov2#mpkg31#mpkg33#opm63#icu66#oln141#par1239" name="Autovetture_Clienti Object_Autovetture_Clienti Object" source="mov2#mpkg31#mpkg33#opm63#icu66#icp309" target="mov2#mpkg31#mpkg33#opm63#cru25.entityBeans"/>
+        <LinkParameter id="mov2#mpkg31#mpkg33#opm63#icu66#oln141#par1240" name="Marca_marca" source="mov2#mpkg31#mpkg33#opm63#icu66#icp308" target="mov2#mpkg31#mpkg33#opm63#cru25.ent11#att54"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov2#mpkg31#mpkg33#opm63#okcu62" name="OK Port29" gr:x="555" gr:y="-50">
+      <OutputCollectorParameter id="mov2#mpkg31#mpkg33#opm63#okcu62#ocp1" name="id_auto"/>
+    </OKCollectorUnit>
+    <CreateUnit id="mov2#mpkg31#mpkg33#opm63#cru25" name="Inserimento" gr:x="330" gr:y="0" entity="ent11">
+      <OKLink id="mov2#mpkg31#mpkg33#opm63#cru25#oln145" name="OKFlow111" to="mov2#mpkg31#mpkg33#opm63#okcu62">
+        <LinkParameter id="mov2#mpkg31#mpkg33#opm63#cru25#oln145#par1164" name="oid_id_auto" source="ent11#att51Array" target="mov2#mpkg31#mpkg33#opm63#okcu62#ocp1"/>
+      </OKLink>
+      <KOLink id="mov2#mpkg31#mpkg33#opm63#cru25#kln152" name="KOFlow100" to="mov2#mpkg31#mpkg33#opm63#kocu56"/>
+    </CreateUnit>
+    <KOCollectorUnit id="mov2#mpkg31#mpkg33#opm63#kocu56" name="KO Port27" gr:x="555" gr:y="55"/>
+  </OperationUnits>
+</OperationModule>

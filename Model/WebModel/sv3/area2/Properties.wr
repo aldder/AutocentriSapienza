@@ -1,8 +1,9 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area2" name="Amministrazione Vendite" defaultPage="sv3#area2#page6" landmark="true" protected="true" gr:x="-15" gr:y="-5" layout:style="BootstrapStyle" landmarks="sv3#area2#page6 sv3#area2#page7 sv3#area2#page19 sv3#area2#page21">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#area2" name="Amministrazione Vendite" defaultPage="sv3#area2#miu34" landmark="true" protected="true" gr:x="40" gr:y="35" layout:style="BootstrapStyle" landmarks="sv3#area2#miu34 sv3#area2#miu40 sv3#area2#miu49 sv3#area2#miu60">
   <OperationUnits>
-    <NoOpOperationUnit id="sv3#area2#opu3" name="Ripristina" gr:x="205" gr:y="465">
-      <OKLink id="sv3#area2#opu3#oln15" name="OKFlow15" to="sv3#area2#page6"/>
-    </NoOpOperationUnit>
+    <ModuleInstanceUnit gr:x="5" gr:y="0" id="sv3#area2#miu34" moduleId="mov1#mpkg5#hym1" landmark="true"/>
+    <ModuleInstanceUnit gr:x="325" gr:y="5" id="sv3#area2#miu40" moduleId="mov1#mpkg5#hym2" landmark="true" name="Gestione Acquisti Pendenti"/>
+    <ModuleInstanceUnit id="sv3#area2#miu49" name="Gestione Annunci di Vendita" landmark="true" gr:x="0" gr:y="135" moduleId="mov1#mpkg5#hym3"/>
+    <ModuleInstanceUnit gr:x="315" gr:y="125" id="sv3#area2#miu60" moduleId="mov1#mpkg5#hym11" landmark="true" name="Gestione Storico Acquisti"/>
   </OperationUnits>
   <layout:LayoutParameter name="link-style" value="button" type="link"/>
 </Area>

@@ -1,0 +1,140 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg5#hym3#page45" name="Gestione Annunci di Vendita" landmark="true" gr:x="305" gr:y="0">
+  <ContentUnits>
+    <PowerIndexUnit id="mov1#mpkg5#hym3#page45#pwu18" name="Annunci di vendita" linkOrder="mov1#mpkg5#hym3#page45#pwu18#ln97" gr:x="0" gr:y="45" sortable="true" checkable="false" useCountQuery="false" entity="ent10" displayAttributes="ent10#att35 ent10#att47 ent10#att36 ent10#att40 ent10#att41 ent10#att42 ent10#att43 ent10#att44 rel13#role26.userName" blockFactor="10">
+      <SortAttribute attribute="ent10#att35" order="ascending"/>
+      <SortAttribute attribute="rel13#role26.userName" order="ascending"/>
+      <SortAttribute attribute="ent10#att47" order="ascending"/>
+      <SortAttribute attribute="ent10#att36" order="ascending"/>
+      <SortAttribute attribute="ent10#att37" order="ascending"/>
+      <SortAttribute attribute="ent10#att40" order="ascending"/>
+      <SortAttribute attribute="ent10#att41" order="ascending"/>
+      <SortAttribute attribute="ent10#att42" order="ascending"/>
+      <SortAttribute attribute="ent10#att43" order="ascending"/>
+      <SortAttribute attribute="ent10#att44" order="ascending"/>
+      <DefaultSortAttribute attribute="ent10#att35" order="ascending"/>
+      <DefaultSortAttribute attribute="rel13#role26.userName" order="ascending"/>
+      <DefaultSortAttribute attribute="ent10#att47" order="ascending"/>
+      <DefaultSortAttribute attribute="ent10#att36" order="ascending"/>
+      <DefaultSortAttribute attribute="ent10#att37" order="ascending"/>
+      <DefaultSortAttribute attribute="ent10#att40" order="ascending"/>
+      <DefaultSortAttribute attribute="ent10#att41" order="ascending"/>
+      <DefaultSortAttribute attribute="ent10#att42" order="ascending"/>
+      <DefaultSortAttribute attribute="ent10#att43" order="ascending"/>
+      <DefaultSortAttribute attribute="ent10#att44" order="ascending"/>
+      <Link id="mov1#mpkg5#hym3#page45#pwu18#ln97" name="Visualizza" to="mov1#mpkg5#hym3#page46#enu27" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli annuncio">
+        <LinkParameter id="mov1#mpkg5#hym3#page45#pwu18#ln97#par455" name="oid_Key Condition [oid]" source="data[].ent10#att35" target="mov1#mpkg5#hym3#page46#enu27.ent10#att35"/>
+        <LinkParameter id="mov1#mpkg5#hym3#page45#pwu18#ln97#par540" name="AnnuncioToUtente.nome_utente_Utente" source="data[].rel13#role26$userName" target="mov1#mpkg5#hym3#page46#enu27#fld190_slot"/>
+        <LinkParameter id="mov1#mpkg5#hym3#page45#pwu18#ln97#par541" name="AnnuncioToUtente.oid_PASSING" source="data[].rel13#role26_userOID" passing="true"/>
+      </Link>
+    </PowerIndexUnit>
+    <MultiMessageUnit id="mov1#mpkg5#hym3#page45#mssu26" name="KoMessage" gr:x="155" gr:y="65"/>
+    <MultiMessageUnit id="mov1#mpkg5#hym3#page45#mssu28" name="OkMessage" gr:x="155" gr:y="0"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg5#hym3#page45#mssu28">
+          <layout:LayoutParameter name="messageType" value="success" type="unit"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg5#hym3#page45#mssu26">
+          <layout:LayoutParameter name="messageType" value="danger" type="unit"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg5#hym3#page45#pwu18">
+          <layout:Attribute label="Codice" attribute="ent10#att35"/>
+          <layout:Attribute label="Nome" attribute="ent10#att47"/>
+          <layout:Attribute label="Prezzo" attribute="ent10#att36"/>
+          <layout:Attribute label="Kilometri" attribute="ent10#att40"/>
+          <layout:Attribute label="Anno di imm." attribute="ent10#att41"/>
+          <layout:Attribute label="Alimentazione" attribute="ent10#att42"/>
+          <layout:Attribute label="Cilindrata" attribute="ent10#att43"/>
+          <layout:Attribute label="Porte" attribute="ent10#att44"/>
+          <layout:Attribute label="Utente" attribute="rel13#role26.userName"/>
+          <layout:Link link="mov1#mpkg5#hym3#page45#pwu18#ln97"/>
+          <layout:Link link="mov1#mpkg5#hym3#page45#pwu18ent10#att35"/>
+          <layout:Link link="mov1#mpkg5#hym3#page45#pwu18rel13#role26$userName"/>
+          <layout:Link link="mov1#mpkg5#hym3#page45#pwu18ent10#att47"/>
+          <layout:Link link="mov1#mpkg5#hym3#page45#pwu18ent10#att36"/>
+          <layout:Link link="mov1#mpkg5#hym3#page45#pwu18ent10#att40"/>
+          <layout:Link link="mov1#mpkg5#hym3#page45#pwu18ent10#att41"/>
+          <layout:Link link="mov1#mpkg5#hym3#page45#pwu18ent10#att42"/>
+          <layout:Link link="mov1#mpkg5#hym3#page45#pwu18ent10#att43"/>
+          <layout:Link link="mov1#mpkg5#hym3#page45#pwu18ent10#att44"/>
+          <layout:Link link="mov1#mpkg5#hym3#page45#pwu18First"/>
+          <layout:Link link="mov1#mpkg5#hym3#page45#pwu18Previous"/>
+          <layout:Link link="mov1#mpkg5#hym3#page45#pwu18Block"/>
+          <layout:Link link="mov1#mpkg5#hym3#page45#pwu18Next"/>
+          <layout:Link link="mov1#mpkg5#hym3#page45#pwu18Last"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

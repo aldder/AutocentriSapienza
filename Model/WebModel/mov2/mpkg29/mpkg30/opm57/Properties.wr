@@ -1,0 +1,43 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg29#mpkg30#opm57" name="InserimentoUtente" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg29#mpkg30#opm57#icu59" gr:x="-20" gr:y="-35">
+      <InputCollectorParameter id="mov2#mpkg29#mpkg30#opm57#icu59#icp281" name="nome_utente"/>
+      <InputCollectorParameter id="mov2#mpkg29#mpkg30#opm57#icu59#icp282" name="password"/>
+      <InputCollectorParameter id="mov2#mpkg29#mpkg30#opm57#icu59#icp283" name="Group.oid(defaultGroup)"/>
+      <InputCollectorParameter id="mov2#mpkg29#mpkg30#opm57#icu59#icp284" name="Group.oid(groups)"/>
+      <InputCollectorParameter id="mov2#mpkg29#mpkg30#opm57#icu59#icp285" name="Utente Object"/>
+      <InputCollectorParameter id="mov2#mpkg29#mpkg30#opm57#icu59#icp287" name="email"/>
+      <OKLink id="mov2#mpkg29#mpkg30#opm57#icu59#oln105" name="Inserisci" to="mov2#mpkg29#mpkg30#opm57#cru22">
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm57#icu59#oln105#par805" name="groups_Group.oid(groups)" source="mov2#mpkg29#mpkg30#opm57#icu59#icp284" target="mov2#mpkg29#mpkg30#opm57#cru22.User2Group.groupOID"/>
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm57#icu59#oln105#par806" name="Utente Object_Utente Object" source="mov2#mpkg29#mpkg30#opm57#icu59#icp285" target="mov2#mpkg29#mpkg30#opm57#cru22.entityBeans"/>
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm57#icu59#oln105#par939" name="password_password" source="mov2#mpkg29#mpkg30#opm57#icu59#icp282" target="mov2#mpkg29#mpkg30#opm57#cru22.password"/>
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm57#icu59#oln105#par941" name="email_email" source="mov2#mpkg29#mpkg30#opm57#icu59#icp287" target="mov2#mpkg29#mpkg30#opm57#cru22.email"/>
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm57#icu59#oln105#par943" name="nome_utente_nome_utente" source="mov2#mpkg29#mpkg30#opm57#icu59#icp281" target="mov2#mpkg29#mpkg30#opm57#cru22.userName"/>
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm57#icu59#oln105#par944" name="defaultGroup_Group.oid(defaultGroup)" source="mov2#mpkg29#mpkg30#opm57#icu59#icp283" target="mov2#mpkg29#mpkg30#opm57#cru22.User2DefaultGroup.groupOID"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov2#mpkg29#mpkg30#opm57#kocu50" name="KO Port1" gr:x="720" gr:y="45"/>
+    <CreateUnit id="mov2#mpkg29#mpkg30#opm57#cru22" name="Inserimento" gr:x="320" gr:y="0" entity="User" skipBlankRecords="true" notBlankAttributes="userOID userName password email">
+      <OKLink id="mov2#mpkg29#mpkg30#opm57#cru22#oln106" name="OKFlow5" to="mov2#mpkg29#mpkg30#opm57#mlu6">
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm57#cru22#oln106#par946" name="email_Mail - To" source="emailArray" target="mov2#mpkg29#mpkg30#opm57#mlu6.to"/>
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm57#cru22#oln106#par949" name="nome_utente_nome" source="userNameArray" target="mov2#mpkg29#mpkg30#opm57#mlu6.nome"/>
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm57#cru22#oln106#par950" name="password_password" source="passwordArray" target="mov2#mpkg29#mpkg30#opm57#mlu6.password"/>
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm57#cru22#oln106#par951" name="Account creato_Mail - Subject" target="mov2#mpkg29#mpkg30#opm57#mlu6.subject" sourceValue="Creazione account"/>
+      </OKLink>
+      <KOLink id="mov2#mpkg29#mpkg30#opm57#cru22#kln139" name="KOFlow39" to="mov2#mpkg29#mpkg30#opm57#kocu50" gr:bendpoints="117,46,-413,1"/>
+    </CreateUnit>
+    <MailUnit id="mov2#mpkg29#mpkg30#opm57#mlu6" name="Notifica creazione" gr:x="480" gr:y="10" format="plainText" smtpServer="smtp1">
+      <Placeholder id="mov2#mpkg29#mpkg30#opm57#mlu6#ph2" name="nome"/>
+      <BodyTemplate xml:space="preserve">Il tuo account &#232; stato creato con successo.
+
+Le credenziali di accesso sono:
+
+	nome utente: $$nome$$
+	password: $$password$$</BodyTemplate>
+      <Placeholder id="mov2#mpkg29#mpkg30#opm57#mlu6#ph3" name="password"/>
+      <OKLink id="mov2#mpkg29#mpkg30#opm57#mlu6#oln107" name="OKFlow6" to="mov2#mpkg29#mpkg30#opm57#okcu56"/>
+      <KOLink id="mov2#mpkg29#mpkg30#opm57#mlu6#kln140" name="KOFlow40" to="mov2#mpkg29#mpkg30#opm57#kocu50"/>
+    </MailUnit>
+    <OKCollectorUnit id="mov2#mpkg29#mpkg30#opm57#okcu56" name="OK Port2" gr:x="720" gr:y="-40"/>
+  </OperationUnits>
+</OperationModule>

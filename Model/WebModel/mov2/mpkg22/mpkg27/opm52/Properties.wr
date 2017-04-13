@@ -1,0 +1,38 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg22#mpkg27#opm52" name="InserimentoAnnuncio" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg22#mpkg27#opm52#icu54" gr:x="85" gr:y="-80">
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm52#icu54#icp251" name="Utente.oid(AnnuncioToUtente)"/>
+      <OKLink id="mov2#mpkg22#mpkg27#opm52#icu54#oln94" name="Inserisci annuncio" to="mov2#mpkg22#mpkg27#opm52#cru19">
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm52#icu54#oln94#par621" name="Annuncio Object" source="mov2#mpkg22#mpkg27#opm52#icu54#icp252" target="mov2#mpkg22#mpkg27#opm52#cru19.entityBeans"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm52#icu54#oln94#par622" name="alimentazione" source="mov2#mpkg22#mpkg27#opm52#icu54#icp253" target="mov2#mpkg22#mpkg27#opm52#cru19.ent10#att42"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm52#icu54#oln94#par623" name="anno" source="mov2#mpkg22#mpkg27#opm52#icu54#icp254" target="mov2#mpkg22#mpkg27#opm52#cru19.ent10#att41"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm52#icu54#oln94#par624" name="cilindrata" source="mov2#mpkg22#mpkg27#opm52#icu54#icp255" target="mov2#mpkg22#mpkg27#opm52#cru19.ent10#att43"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm52#icu54#oln94#par626" name="descrizione" source="mov2#mpkg22#mpkg27#opm52#icu54#icp256" target="mov2#mpkg22#mpkg27#opm52#cru19.ent10#att45"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm52#icu54#oln94#par630" name="foto" source="mov2#mpkg22#mpkg27#opm52#icu54#icp257" target="mov2#mpkg22#mpkg27#opm52#cru19.ent10#att37"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm52#icu54#oln94#par631" name="foto [file name]" source="mov2#mpkg22#mpkg27#opm52#icu54#icp258" target="mov2#mpkg22#mpkg27#opm52#cru19.ent10#att37_name"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm52#icu54#oln94#par632" name="kilometri" source="mov2#mpkg22#mpkg27#opm52#icu54#icp259" target="mov2#mpkg22#mpkg27#opm52#cru19.ent10#att40"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm52#icu54#oln94#par639" name="nome" source="mov2#mpkg22#mpkg27#opm52#icu54#icp260" target="mov2#mpkg22#mpkg27#opm52#cru19.ent10#att47"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm52#icu54#oln94#par640" name="porte" source="mov2#mpkg22#mpkg27#opm52#icu54#icp261" target="mov2#mpkg22#mpkg27#opm52#cru19.ent10#att44"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm52#icu54#oln94#par641" name="prezzo" source="mov2#mpkg22#mpkg27#opm52#icu54#icp262" target="mov2#mpkg22#mpkg27#opm52#cru19.ent10#att36"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm52#icu54#oln94#par1072" name="Utente.oid(AnnuncioToUtente)_Utente.oid(AnnuncioToUtente)" source="mov2#mpkg22#mpkg27#opm52#icu54#icp251" target="mov2#mpkg22#mpkg27#opm52#cru19.rel13#role26.userOID"/>
+      </OKLink>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm52#icu54#icp252" name="Annuncio Object"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm52#icu54#icp253" name="alimentazione"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm52#icu54#icp254" name="anno"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm52#icu54#icp255" name="cilindrata"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm52#icu54#icp256" name="descrizione"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm52#icu54#icp257" name="foto"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm52#icu54#icp258" name="foto [file name]"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm52#icu54#icp259" name="kilometri"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm52#icu54#icp260" name="nome"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm52#icu54#icp261" name="porte"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm52#icu54#icp262" name="prezzo"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov2#mpkg22#mpkg27#opm52#okcu51" name="OK Port5" gr:x="680" gr:y="-60"/>
+    <CreateUnit id="mov2#mpkg22#mpkg27#opm52#cru19" name="Inserimento" gr:x="475" gr:y="0" entity="ent10">
+      <OKLink id="mov2#mpkg22#mpkg27#opm52#cru19#oln95" name="OKFlow21" to="mov2#mpkg22#mpkg27#opm52#okcu51"/>
+      <KOLink id="mov2#mpkg22#mpkg27#opm52#cru19#kln134" name="KOFlow23" to="mov2#mpkg22#mpkg27#opm52#kocu45"/>
+    </CreateUnit>
+    <KOCollectorUnit id="mov2#mpkg22#mpkg27#opm52#kocu45" name="KO Port3" gr:x="680" gr:y="40"/>
+  </OperationUnits>
+</OperationModule>

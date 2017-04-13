@@ -1,0 +1,57 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym7#page62" name="Dettagli orario" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="405" gr:y="305" layout:frameLayout="None">
+  <ContentUnits>
+    <EntryUnit id="mov1#mpkg6#hym7#page62#enu44" name="Dettagli orario" linkOrder="mov1#mpkg6#hym7#page62#enu44#ln264 mov1#mpkg6#hym7#page62#enu44#ln265" gr:x="0" gr:y="0" entity="ent15" fieldOrder="mov1#mpkg6#hym7#page62#enu44#fld173">
+      <Field id="mov1#mpkg6#hym7#page62#enu44#fld173" name="Ora" type="time" modifiable="true" attribute="ent15#att66">
+        <VRules>
+          <CollectionValidationRule id="mov1#mpkg6#hym7#page62#enu44#fld173#clc23" name="Unique" predicate="notIn" entity="ent15" attribute="ent15#att66" errorMessage="valore gi&#224; presente"/>
+          <TypeValidationRule id="mov1#mpkg6#hym7#page62#enu44#fld173#tvr16" name="Type Validation" errorMessage="valore non corretto" type="time"/>
+          <MandatoryValidationRule id="mov1#mpkg6#hym7#page62#enu44#fld173#mnd218" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Link id="mov1#mpkg6#hym7#page62#enu44#ln264" name="Salva modifiche" to="mov1#mpkg6#hym7#miu79" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg6#hym7#page62#enu44#ln264#par1699" name="Key [oid]_KeyCondition53 [oid]" source="key.ent15#att65" target="mov1#mpkg6#hym7#miu79.mov2#mpkg31#mpkg34#opm67#icu70#icp324"/>
+        <LinkParameter id="mov1#mpkg6#hym7#page62#enu44#ln264#par1700" name="Ora_ora" source="mov1#mpkg6#hym7#page62#enu44#fld173" target="mov1#mpkg6#hym7#miu79.mov2#mpkg31#mpkg34#opm67#icu70#icp325"/>
+        <LinkParameter id="mov1#mpkg6#hym7#page62#enu44#ln264#par1701" name="Orario Object_Orario Object" source="entityBean" target="mov1#mpkg6#hym7#miu79.mov2#mpkg31#mpkg34#opm67#icu70#icp323"/>
+      </Link>
+      <Link id="mov1#mpkg6#hym7#page62#enu44#ln265" name="Elimina orario" to="mov1#mpkg6#hym7#miu81" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg6#hym7#page62#enu44#ln265#par1702" name="Key [oid]_KeyCondition54 [oid]" source="key.ent15#att65" target="mov1#mpkg6#hym7#miu81.mov2#mpkg31#mpkg34#opm68#icu71#icp326"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg6#hym7#page62#enu44">
+          <layout:Field field="mov1#mpkg6#hym7#page62#enu44#fld173"/>
+          <layout:Link link="mov1#mpkg6#hym7#page62#enu44#ln264"/>
+          <layout:Link link="mov1#mpkg6#hym7#page62#enu44#ln265"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

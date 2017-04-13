@@ -1,0 +1,36 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg22#mpkg28#opm55" name="InserimentoPreferito" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg22#mpkg28#opm55#icu57" gr:x="-180" gr:y="40" linkOrder="mov2#mpkg22#mpkg28#opm55#icu57#ln359">
+      <InputCollectorParameter id="mov2#mpkg22#mpkg28#opm55#icu57#icp277" name="id_utente"/>
+      <OKLink id="mov2#mpkg22#mpkg28#opm55#icu57#oln100" name="Aggiungi ai preferiti" to="mov2#mpkg22#mpkg28#opm55#seu36">
+        <LinkParameter id="mov2#mpkg22#mpkg28#opm55#icu57#oln100#par1145" name="id_autovettura_autovettura2preferito [oid]" source="mov2#mpkg22#mpkg28#opm55#icu57#icp278" target="mov2#mpkg22#mpkg28#opm55#seu36#su49#rcond22.ent1#att1"/>
+        <LinkParameter id="mov2#mpkg22#mpkg28#opm55#icu57#oln100#par1146" name="id_utente_utente2preferito [oid]" source="mov2#mpkg22#mpkg28#opm55#icu57#icp277" target="mov2#mpkg22#mpkg28#opm55#seu36#su49#rcond27.userOID"/>
+      </OKLink>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg28#opm55#icu57#icp278" name="id_autovettura"/>
+      <Link id="mov2#mpkg22#mpkg28#opm55#icu57#ln359" name="Flow359" to="mov2#mpkg22#mpkg28#opm55#cru21" type="transport" validate="true" gr:bendpoints="175,-78,-350,-78;402,-77,-123,-77">
+        <LinkParameter id="mov2#mpkg22#mpkg28#opm55#icu57#ln359#par1147" name="id_autovettura_Autovettura.oid(PreferitoToAutovettura)" source="mov2#mpkg22#mpkg28#opm55#icu57#icp278" target="mov2#mpkg22#mpkg28#opm55#cru21.rel20#role39.ent1#att1"/>
+        <LinkParameter id="mov2#mpkg22#mpkg28#opm55#icu57#ln359#par1148" name="1_notifica" sourceValue="1" target="mov2#mpkg22#mpkg28#opm55#cru21.ent5#att22"/>
+        <LinkParameter id="mov2#mpkg22#mpkg28#opm55#icu57#ln359#par1149" name="id_utente_Utente.oid(PreferitoToUtente)" source="mov2#mpkg22#mpkg28#opm55#icu57#icp277" target="mov2#mpkg22#mpkg28#opm55#cru21.rel1#role1.userOID"/>
+      </Link>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov2#mpkg22#mpkg28#opm55#okcu54" name="OK Port8" gr:x="600" gr:y="-5"/>
+    <CreateUnit id="mov2#mpkg22#mpkg28#opm55#cru21" name="Inserimento" gr:x="405" gr:y="40" entity="ent5" skipBlankRecords="true" notBlankAttributes="ent5#att21 ent5#att22">
+      <OKLink id="mov2#mpkg22#mpkg28#opm55#cru21#oln101" name="OKFlow24" to="mov2#mpkg22#mpkg28#opm55#okcu54"/>
+      <KOLink id="mov2#mpkg22#mpkg28#opm55#cru21#kln137" name="KOFlow31" to="mov2#mpkg22#mpkg28#opm55#kocu48"/>
+    </CreateUnit>
+    <KOCollectorUnit id="mov2#mpkg22#mpkg28#opm55#kocu48" name="KO Port7" gr:x="600" gr:y="70"/>
+    <SelectorUnit gr:x="80" gr:y="30" id="mov2#mpkg22#mpkg28#opm55#seu36" name="SelectPreferito" entity="ent5">
+      <OKLink id="mov2#mpkg22#mpkg28#opm55#seu36#oln181" name="OKFlow181" to="mov2#mpkg22#mpkg28#opm55#inn3">
+        <LinkParameter id="mov2#mpkg22#mpkg28#opm55#seu36#oln181#par1144" name="oid_Input" source="ent5#att21Array" target="mov2#mpkg22#mpkg28#opm55#inn3.isnotnull"/>
+      </OKLink>
+      <Selector id="mov2#mpkg22#mpkg28#opm55#seu36#su49" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov2#mpkg22#mpkg28#opm55#seu36#su49#rcond22" name="autovettura2preferito" predicate="in" implied="false" role="rel20#role40"/>
+        <RelationshipRoleCondition id="mov2#mpkg22#mpkg28#opm55#seu36#su49#rcond27" name="utente2preferito" predicate="in" implied="false" role="rel1#role2"/>
+      </Selector>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="245" gr:y="50" id="mov2#mpkg22#mpkg28#opm55#inn3" name="Is Not Null">
+      <KOLink id="mov2#mpkg22#mpkg28#opm55#inn3#kln90" name="KOFlow90" to="mov2#mpkg22#mpkg28#opm55#cru21"/>
+      <OKLink id="mov2#mpkg22#mpkg28#opm55#inn3#oln182" name="OKFlow182" to="mov2#mpkg22#mpkg28#opm55#okcu54" gr:bendpoints="92,-81,-328,-36;252,-80,-168,-35"/>
+    </IsNotNullUnit>
+  </OperationUnits>
+</OperationModule>

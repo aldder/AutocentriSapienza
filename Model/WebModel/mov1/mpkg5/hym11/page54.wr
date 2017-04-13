@@ -1,0 +1,590 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg5#hym11#page54" name="Inserisci acquisto" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="1105" gr:y="-210" layout:frameLayout="None">
+  <ContentUnits>
+    <EntryUnit id="mov1#mpkg5#hym11#page54#enu33" name="Inserisci acquisto" linkOrder="mov1#mpkg5#hym11#page54#enu33#ln142 mov1#mpkg5#hym11#page54#enu33#ln145" gr:x="0" gr:y="115" entity="ent7" fieldOrder="mov1#mpkg5#hym11#page54#enu33#sfld21 mov1#mpkg5#hym11#page54#enu33#fld210 mov1#mpkg5#hym11#page54#enu33#fld211 mov1#mpkg5#hym11#page54#enu33#fld206 mov1#mpkg5#hym11#page54#enu33#fld207 mov1#mpkg5#hym11#page54#enu33#fld208 mov1#mpkg5#hym11#page54#enu33#fld209">
+      <Field id="mov1#mpkg5#hym11#page54#enu33#fld206" name="Data" type="date" modifiable="true" attribute="ent7#att48">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld206#mnd175" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <TypeValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld206#tvr44" name="Type Validation" type="date" errorMessage="valore non corretto"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg5#hym11#page54#enu33#fld207" name="Prezzo" type="float" modifiable="true" attribute="ent7#att59" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld207#mnd177" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <TypeValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld207#tvr45" name="Type Validation" type="float" errorMessage="valore non corretto"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg5#hym11#page54#enu33#fld208" name="Targa" type="string" modifiable="true" attribute="ent7#att56">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld208#mnd178" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg5#hym11#page54#enu33#fld209" name="Descrizione" type="text" modifiable="true" attribute="ent7#att60">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld209#mnd176" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg5#hym11#page54#enu33#fld210" name="Autovettura" ajaxEventEnabled="false" ajaxEventType="keyup" ajaxEventIndicator="false" ajaxAutocompleteEnabled="false" ajaxAutocompleteIndicator="true" ajaxAutocompleteMinChars="2" type="string" modifiable="false" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld210#mnd173" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg5#hym11#page54#enu33#fld211" name="Codice autovettura" type="integer" modifiable="false" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld211#mnd174" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <TypeValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld211#tvr43" name="Type Validation" type="integer" errorMessage="valore non corretto"/>
+        </VRules>
+      </Field>
+      <Link id="mov1#mpkg5#hym11#page54#enu33#ln142" name="Nuovo utente" to="mov1#mpkg5#hym11#page56#enu35" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxReplaceWindow="false" ajaxWindowWidth="600" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserisci utente"/>
+      <SelectionField id="mov1#mpkg5#hym11#page54#enu33#sfld21" name="Utente" type="string" modifiable="true" role="rel12#role23">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg5#hym11#page54#enu33#sfld21#mnd179" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </SelectionField>
+      <Link id="mov1#mpkg5#hym11#page54#enu33#ln145" name="Inserisci acquisto" to="mov1#mpkg5#hym11#miu66" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg5#hym11#page54#enu33#ln145#par729" name="Data_data" source="mov1#mpkg5#hym11#page54#enu33#fld206" target="mov1#mpkg5#hym11#miu66.mov2#mpkg38#mpkg39#opm78#icu81#icp355"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page54#enu33#ln145#par730" name="Descrizione_descrizione" source="mov1#mpkg5#hym11#page54#enu33#fld209" target="mov1#mpkg5#hym11#miu66.mov2#mpkg38#mpkg39#opm78#icu81#icp359"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page54#enu33#ln145#par731" name="Codice autovettura_id_autovettura" source="mov1#mpkg5#hym11#page54#enu33#fld211" target="mov1#mpkg5#hym11#miu66.mov2#mpkg38#mpkg39#opm78#icu81#icp366"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page54#enu33#ln145#par732" name="Utente_id_utente" source="mov1#mpkg5#hym11#page54#enu33#sfld21" target="mov1#mpkg5#hym11#miu66.mov2#mpkg38#mpkg39#opm78#icu81#icp357"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page54#enu33#ln145#par734" name="Prezzo_prezzo" source="mov1#mpkg5#hym11#page54#enu33#fld207" target="mov1#mpkg5#hym11#miu66.mov2#mpkg38#mpkg39#opm78#icu81#icp356"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page54#enu33#ln145#par735" name="Storico_Acquisto Object_Storico_Acquisto Object" source="entityBean" target="mov1#mpkg5#hym11#miu66.mov2#mpkg38#mpkg39#opm78#icu81#icp354"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page54#enu33#ln145#par736" name="Targa_targa" source="mov1#mpkg5#hym11#page54#enu33#fld208" target="mov1#mpkg5#hym11#miu66.mov2#mpkg38#mpkg39#opm78#icu81#icp363"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit id="mov1#mpkg5#hym11#page54#seu15" name="SelectUtente" gr:x="25" gr:y="0" entity="User">
+      <Selector id="mov1#mpkg5#hym11#page54#seu15#su15" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#mpkg5#hym11#page54#seu15#su15#acond57" name="gruppo" predicate="eq" booleanOperator="or" implied="false" attributes="User2DefaultGroup.groupOID" value="4"/>
+      </Selector>
+      <Link id="mov1#mpkg5#hym11#page54#seu15#ln146" name="Flow139" to="mov1#mpkg5#hym11#page54#enu33" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg5#hym11#page54#seu15#ln146#par683" name="nome_utente_UtenteS [label]" source="userNameArray" target="mov1#mpkg5#hym11#page54#enu33#sfld21_label"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page54#seu15#ln146#par684" name="oid_UtenteS [output]" source="userOIDArray" target="mov1#mpkg5#hym11#page54#enu33#sfld21_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell layout:cellLayout="Print Frame" colspan="12">
+        <layout:Grid label="Inserisci acquisto" containerType="grid">
+          <layout:Row>
+            <layout:Cell colspan="9">
+              <layout:Field unitId="mov1#mpkg5#hym11#page54#enu33" field="mov1#mpkg5#hym11#page54#enu33#sfld21" mode="full"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="3">
+              <layout:Link unitId="mov1#mpkg5#hym11#page54#enu33" link="mov1#mpkg5#hym11#page54#enu33#ln142" styleClass="pull-right"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Field unitId="mov1#mpkg5#hym11#page54#enu33" field="mov1#mpkg5#hym11#page54#enu33#fld210" mode="full"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Field unitId="mov1#mpkg5#hym11#page54#enu33" field="mov1#mpkg5#hym11#page54#enu33#fld211" mode="full"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Field unitId="mov1#mpkg5#hym11#page54#enu33" field="mov1#mpkg5#hym11#page54#enu33#fld206" mode="full"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Field unitId="mov1#mpkg5#hym11#page54#enu33" field="mov1#mpkg5#hym11#page54#enu33#fld207" mode="full"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Field unitId="mov1#mpkg5#hym11#page54#enu33" field="mov1#mpkg5#hym11#page54#enu33#fld208" mode="full"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Field unitId="mov1#mpkg5#hym11#page54#enu33" field="mov1#mpkg5#hym11#page54#enu33#fld209" mode="full"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="4">
+              <layout:Link unitId="mov1#mpkg5#hym11#page54#enu33" link="mov1#mpkg5#hym11#page54#enu33#ln145"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="8"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

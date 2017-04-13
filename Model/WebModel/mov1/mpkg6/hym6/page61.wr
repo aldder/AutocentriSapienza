@@ -1,0 +1,83 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym6#page61" name="Dettagli autovettura" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="560" gr:y="345" layout:frameLayout="None">
+  <ContentUnits>
+    <EntryUnit id="mov1#mpkg6#hym6#page61#enu43" name="Dettagli autovettura" linkOrder="mov1#mpkg6#hym6#page61#enu43#ln255 mov1#mpkg6#hym6#page61#enu43#ln254" gr:x="0" gr:y="0" entity="ent11" fieldOrder="mov1#mpkg6#hym6#page61#enu43#fld168 mov1#mpkg6#hym6#page61#enu43#fld169 mov1#mpkg6#hym6#page61#enu43#fld170 mov1#mpkg6#hym6#page61#enu43#fld171 mov1#mpkg6#hym6#page61#enu43#fld172">
+      <Field id="mov1#mpkg6#hym6#page61#enu43#fld168" name="Targa" type="string" modifiable="true" attribute="ent11#att52">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym6#page61#enu43#fld168#mnd140" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym6#page61#enu43#fld169" name="Nome" type="string" modifiable="true" attribute="ent11#att53">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym6#page61#enu43#fld169#mnd141" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym6#page61#enu43#fld170" name="Marca" type="string" modifiable="true" attribute="ent11#att54">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym6#page61#enu43#fld170#mnd142" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym6#page61#enu43#fld171" name="Cliente" type="string" modifiable="true" attribute="ent11#att57">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym6#page61#enu43#fld171#mnd143" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym6#page61#enu43#fld172" name="Descrizione" type="text" modifiable="true" attribute="ent11#att58">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym6#page61#enu43#fld172#mnd144" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Link id="mov1#mpkg6#hym6#page61#enu43#ln254" name="Rimuovi autovettura" to="mov1#mpkg6#hym6#miu70" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg6#hym6#page61#enu43#ln254#par1656" name="Key [oid]_KeyCondition51 [oid]" source="key.ent11#att51" target="mov1#mpkg6#hym6#miu70.mov2#mpkg31#mpkg33#opm65#icu68#icp320"/>
+      </Link>
+      <Link id="mov1#mpkg6#hym6#page61#enu43#ln255" name="Salva modifiche" to="mov1#mpkg6#hym6#miu71" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg6#hym6#page61#enu43#ln255#par1650" name="Cliente_cliente" source="mov1#mpkg6#hym6#page61#enu43#fld171" target="mov1#mpkg6#hym6#miu71.mov2#mpkg31#mpkg33#opm64#icu67#icp314"/>
+        <LinkParameter id="mov1#mpkg6#hym6#page61#enu43#ln255#par1651" name="Descrizione_descrizione" source="mov1#mpkg6#hym6#page61#enu43#fld172" target="mov1#mpkg6#hym6#miu71.mov2#mpkg31#mpkg33#opm64#icu67#icp319"/>
+        <LinkParameter id="mov1#mpkg6#hym6#page61#enu43#ln255#par1652" name="Key [oid]_KeyCondition52 [oid]" source="key.ent11#att51" target="mov1#mpkg6#hym6#miu71.mov2#mpkg31#mpkg33#opm64#icu67#icp316"/>
+        <LinkParameter id="mov1#mpkg6#hym6#page61#enu43#ln255#par1653" name="Marca_marca" source="mov1#mpkg6#hym6#page61#enu43#fld170" target="mov1#mpkg6#hym6#miu71.mov2#mpkg31#mpkg33#opm64#icu67#icp313"/>
+        <LinkParameter id="mov1#mpkg6#hym6#page61#enu43#ln255#par1654" name="Nome_nome" source="mov1#mpkg6#hym6#page61#enu43#fld169" target="mov1#mpkg6#hym6#miu71.mov2#mpkg31#mpkg33#opm64#icu67#icp315"/>
+        <LinkParameter id="mov1#mpkg6#hym6#page61#enu43#ln255#par1655" name="Targa_targa" source="mov1#mpkg6#hym6#page61#enu43#fld168" target="mov1#mpkg6#hym6#miu71.mov2#mpkg31#mpkg33#opm64#icu67#icp317"/>
+        <LinkParameter id="mov1#mpkg6#hym6#page61#enu43#ln255#par1667" name="Autovetture_Clienti Object_Autovetture_Clienti Object" source="entityBean" target="mov1#mpkg6#hym6#miu71.mov2#mpkg31#mpkg33#opm64#icu67#icp318"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg6#hym6#page61#enu43">
+          <layout:Field field="mov1#mpkg6#hym6#page61#enu43#fld168"/>
+          <layout:Field field="mov1#mpkg6#hym6#page61#enu43#fld169"/>
+          <layout:Field field="mov1#mpkg6#hym6#page61#enu43#fld170"/>
+          <layout:Field field="mov1#mpkg6#hym6#page61#enu43#fld171"/>
+          <layout:Field field="mov1#mpkg6#hym6#page61#enu43#fld172"/>
+          <layout:Link link="mov1#mpkg6#hym6#page61#enu43#ln255"/>
+          <layout:Link link="mov1#mpkg6#hym6#page61#enu43#ln254"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

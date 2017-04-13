@@ -1,0 +1,41 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg22#mpkg27#opm53" name="ModificaAnnuncio" gr:x="0" gr:y="55">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg22#mpkg27#opm53#icu55" gr:x="25" gr:y="-60">
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp263" name="KeyCondition17 [oid]"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp264" name="porte"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp265" name="descrizione"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp266" name="alimentazione"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp267" name="cilindrata"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp268" name="prezzo"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp269" name="foto"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp270" name="nome"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp271" name="Annuncio Object"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp272" name="anno"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp273" name="kilometri"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp274" name="Utente.oid(AnnuncioToUtente)"/>
+      <OKLink id="mov2#mpkg22#mpkg27#opm53#icu55#oln96" name="Salva modifiche" to="mov2#mpkg22#mpkg27#opm53#mfu22">
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par676" name="Anno_anno" source="mov2#mpkg22#mpkg27#opm53#icu55#icp272" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att41"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par692" name="Annuncio Object_Annuncio Object" source="mov2#mpkg22#mpkg27#opm53#icu55#icp271" target="mov2#mpkg22#mpkg27#opm53#mfu22.entityBeans"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par693" name="_Utente.oid(AnnuncioToUtente)" source="mov2#mpkg22#mpkg27#opm53#icu55#icp274" target="mov2#mpkg22#mpkg27#opm53#mfu22.rel13#role26.userOID"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par694" name="Porte_porte" source="mov2#mpkg22#mpkg27#opm53#icu55#icp264" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att44"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par695" name="Descrizione_descrizione" source="mov2#mpkg22#mpkg27#opm53#icu55#icp265" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att45"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par697" name="Alimentazione_alimentazione" source="mov2#mpkg22#mpkg27#opm53#icu55#icp266" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att42"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par698" name="Prezzo_prezzo" source="mov2#mpkg22#mpkg27#opm53#icu55#icp268" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att36"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par699" name="Key [oid]_KeyCondition17 [oid]" source="mov2#mpkg22#mpkg27#opm53#icu55#icp263" target="mov2#mpkg22#mpkg27#opm53#mfu22#su82#kcond43.ent10#att35"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par702" name="Foto_foto" source="mov2#mpkg22#mpkg27#opm53#icu55#icp269" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att37"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par703" name="Kilometri_kilometri" source="mov2#mpkg22#mpkg27#opm53#icu55#icp273" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att40"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par704" name="Cilindrata_cilindrata" source="mov2#mpkg22#mpkg27#opm53#icu55#icp267" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att43"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par708" name="Nome_nome" source="mov2#mpkg22#mpkg27#opm53#icu55#icp270" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att47"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov2#mpkg22#mpkg27#opm53#okcu52" name="OK Port6" gr:x="585" gr:y="-20"/>
+    <ModifyUnit id="mov2#mpkg22#mpkg27#opm53#mfu22" name="Modifica" gr:x="405" gr:y="15" entity="ent10">
+      <Selector id="mov2#mpkg22#mpkg27#opm53#mfu22#su82" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg22#mpkg27#opm53#mfu22#su82#kcond43" name="KeyCondition17" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg22#mpkg27#opm53#mfu22#oln97" name="OKFlow20" to="mov2#mpkg22#mpkg27#opm53#okcu52"/>
+      <KOLink id="mov2#mpkg22#mpkg27#opm53#mfu22#kln135" name="KOFlow26" to="mov2#mpkg22#mpkg27#opm53#kocu46"/>
+    </ModifyUnit>
+    <KOCollectorUnit id="mov2#mpkg22#mpkg27#opm53#kocu46" name="KO Port4" gr:x="585" gr:y="55"/>
+  </OperationUnits>
+</OperationModule>

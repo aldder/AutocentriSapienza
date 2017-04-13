@@ -1,0 +1,41 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg22#mpkg24#opm48" name="RegistrazioneUtente" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg22#mpkg24#opm48#icu50" gr:x="5" gr:y="40">
+      <InputCollectorParameter id="mov2#mpkg22#mpkg24#opm48#icu50#icp238" name="oid"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg24#opm48#icu50#icp239" name="email"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg24#opm48#icu50#icp240" name="nome_utente"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg24#opm48#icu50#icp241" name="Utente Object"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg24#opm48#icu50#icp242" name="Group.oid(defaultGroup)"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg24#opm48#icu50#icp243" name="Group.oid(groups)"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg24#opm48#icu50#icp244" name="password"/>
+      <OKLink id="mov2#mpkg22#mpkg24#opm48#icu50#oln80" name="Registrati" to="mov2#mpkg22#mpkg24#opm48#cru17">
+        <LinkParameter id="mov2#mpkg22#mpkg24#opm48#icu50#oln80#par475" name="4_Group.oid(defaultGroup)" source="mov2#mpkg22#mpkg24#opm48#icu50#icp242" target="mov2#mpkg22#mpkg24#opm48#cru17.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov2#mpkg22#mpkg24#opm48#icu50#oln80#par479" name="Password_password" source="mov2#mpkg22#mpkg24#opm48#icu50#icp244" target="mov2#mpkg22#mpkg24#opm48#cru17.password"/>
+        <LinkParameter id="mov2#mpkg22#mpkg24#opm48#icu50#oln80#par480" name="Email_email" source="mov2#mpkg22#mpkg24#opm48#icu50#icp239" target="mov2#mpkg22#mpkg24#opm48#cru17.email"/>
+        <LinkParameter id="mov2#mpkg22#mpkg24#opm48#icu50#oln80#par484" name="4_Group.oid(groups)" source="mov2#mpkg22#mpkg24#opm48#icu50#icp243" target="mov2#mpkg22#mpkg24#opm48#cru17.User2Group.groupOID"/>
+        <LinkParameter id="mov2#mpkg22#mpkg24#opm48#icu50#oln80#par504" name="Utente Object_Utente Object" source="mov2#mpkg22#mpkg24#opm48#icu50#icp241" target="mov2#mpkg22#mpkg24#opm48#cru17.entityBeans"/>
+        <LinkParameter id="mov2#mpkg22#mpkg24#opm48#icu50#oln80#par506" name="Nome Utente_nome_utente" source="mov2#mpkg22#mpkg24#opm48#icu50#icp240" target="mov2#mpkg22#mpkg24#opm48#cru17.userName"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <LoginUnit id="mov2#mpkg22#mpkg24#opm48#lgu1" name="Login Create" gr:x="495" gr:y="100"/>
+    <CreateUnit id="mov2#mpkg22#mpkg24#opm48#cru17" name="Inserimento" gr:x="315" gr:y="90" entity="User">
+      <OKLink id="mov2#mpkg22#mpkg24#opm48#cru17#oln81" name="OKFlow3" to="mov2#mpkg22#mpkg24#opm48#mlu5">
+        <LinkParameter id="mov2#mpkg22#mpkg24#opm48#cru17#oln81#par507" name="email_Mail - To" source="emailArray" target="mov2#mpkg22#mpkg24#opm48#mlu5.to"/>
+        <LinkParameter id="mov2#mpkg22#mpkg24#opm48#cru17#oln81#par510" name="nome_utente_utente" source="userNameArray" target="mov2#mpkg22#mpkg24#opm48#mlu5.utente"/>
+      </OKLink>
+      <Link id="mov2#mpkg22#mpkg24#opm48#cru17#ln119" name="Flow8" to="mov2#mpkg22#mpkg24#opm48#lgu1" type="transport" validate="true">
+        <LinkParameter id="mov2#mpkg22#mpkg24#opm48#cru17#ln119#par512" name="nome_utente_Username" source="userNameArray" target="mov2#mpkg22#mpkg24#opm48#lgu1.username"/>
+        <LinkParameter id="mov2#mpkg22#mpkg24#opm48#cru17#ln119#par518" name="password_Password" source="passwordArray" target="mov2#mpkg22#mpkg24#opm48#lgu1.password"/>
+      </Link>
+      <KOLink id="mov2#mpkg22#mpkg24#opm48#cru17#kln91" name="KOFlow91" to="mov2#mpkg22#mpkg24#opm48#kocu4" gr:bendpoints="88,-67,-262,-77;229,-71,-171,-71"/>
+    </CreateUnit>
+    <MailUnit id="mov2#mpkg22#mpkg24#opm48#mlu5" name="ConfirmationMail" gr:x="360" gr:y="220" format="plainText" smtpServer="smtp1">
+      <SubjectTemplate xml:space="preserve">Benvenuto nel concessionario</SubjectTemplate>
+      <BodyTemplate xml:space="preserve">Grazie per esserti registrato.
+
+Le tue credenziali di accesso sono:
+Nome utente: $$utente$$
+Password: $$password$$
+
+Adesso puoi accedere alle funzionalit&#224; riservate ai nostri clienti.
+</BodyTemplate>      <OKLink id="mov2#mpkg22#mpkg24#opm48#mlu5#oln82" name="OKFlow4" to="mov2#mpkg22#mpkg24#opm48#lgu1"/>      <KOLink id="mov2#mpkg22#mpkg24#opm48#mlu5#kln98" name="KOFlow1" to="mov2#mpkg22#mpkg24#opm48#lgu1" gr:bendpoints="98,-3,23,117"/>      <Placeholder id="mov2#mpkg22#mpkg24#opm48#mlu5#ph1" name="utente"/>      <Placeholder id="mov2#mpkg22#mpkg24#opm48#mlu5#ph9" name="password"/>    </MailUnit>    <KOCollectorUnit gr:x="655" gr:y="90" id="mov2#mpkg22#mpkg24#opm48#kocu4" name="KO Port4"/>  </OperationUnits></OperationModule>

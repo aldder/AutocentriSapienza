@@ -1,0 +1,57 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym5#page57" name="Dettagli tipologia" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="415" gr:y="330" layout:frameLayout="None">
+  <ContentUnits>
+    <EntryUnit id="mov1#mpkg6#hym5#page57#enu40" name="Dettagli tipologia" linkOrder="mov1#mpkg6#hym5#page57#enu40#ln240 mov1#mpkg6#hym5#page57#enu40#ln243" gr:x="0" gr:y="0" entity="ent3">
+      <Field id="mov1#mpkg6#hym5#page57#enu40#fld157" name="Nome" type="string" modifiable="true" attribute="ent3#att16">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym5#page57#enu40#fld157#mnd129" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym5#page57#enu40#fld158" name="Descrizione" type="text" modifiable="true" attribute="ent3#att38">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym5#page57#enu40#fld158#mnd130" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym5#page57#enu40#fld159" name="Ripetizione" type="integer" modifiable="true" attribute="ent3#att17" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym5#page57#enu40#fld159#mnd131" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <TypeValidationRule id="mov1#mpkg6#hym5#page57#enu40#fld159#tvr14" name="Type Validation" type="integer" errorMessage="valore non corretto"/>
+        </VRules>
+        <Slot id="mov1#mpkg6#hym5#page57#enu40#fld159#slot11" name="Slot" label="true" output="true" value="Se la tipologia non ha ripetizione inserisci il valore 0"/>
+      </Field>
+      <Link id="mov1#mpkg6#hym5#page57#enu40#ln240" name="Salva modifiche" to="mov1#mpkg6#hym5#miu64" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg6#hym5#page57#enu40#ln240#par1593" name="Descrizione_descrizione" source="mov1#mpkg6#hym5#page57#enu40#fld158" target="mov1#mpkg6#hym5#miu64.mov2#mpkg31#mpkg32#opm61#icu63#icp304"/>
+        <LinkParameter id="mov1#mpkg6#hym5#page57#enu40#ln240#par1594" name="Key [oid]_KeyCondition3 [oid]" source="key.ent3#att15" target="mov1#mpkg6#hym5#miu64.mov2#mpkg31#mpkg32#opm61#icu63#icp301"/>
+        <LinkParameter id="mov1#mpkg6#hym5#page57#enu40#ln240#par1595" name="Nome_nome" source="mov1#mpkg6#hym5#page57#enu40#fld157" target="mov1#mpkg6#hym5#miu64.mov2#mpkg31#mpkg32#opm61#icu63#icp302"/>
+        <LinkParameter id="mov1#mpkg6#hym5#page57#enu40#ln240#par1596" name="Ripetizione_ripetizione" source="mov1#mpkg6#hym5#page57#enu40#fld159" target="mov1#mpkg6#hym5#miu64.mov2#mpkg31#mpkg32#opm61#icu63#icp303"/>
+        <LinkParameter id="mov1#mpkg6#hym5#page57#enu40#ln240#par1597" name="Tipologia Object_Tipologia Object" source="entityBean" target="mov1#mpkg6#hym5#miu64.mov2#mpkg31#mpkg32#opm61#icu63#icp300"/>
+      </Link>
+      <Link id="mov1#mpkg6#hym5#page57#enu40#ln243" name="Elimina tipologia" to="mov1#mpkg6#hym5#miu63" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg6#hym5#page57#enu40#ln243#par1598" name="Key [oid]_KeyCondition4 [oid]" source="key.ent3#att15" target="mov1#mpkg6#hym5#miu63.mov2#mpkg31#mpkg32#opm62#icu64#icp305"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg6#hym5#page57#enu40">
+          <layout:Field field="mov1#mpkg6#hym5#page57#enu40#fld157"/>
+          <layout:Field field="mov1#mpkg6#hym5#page57#enu40#fld158"/>
+          <layout:Field field="mov1#mpkg6#hym5#page57#enu40#fld159"/>
+          <layout:Link link="mov1#mpkg6#hym5#page57#enu40#ln240"/>
+          <layout:Link link="mov1#mpkg6#hym5#page57#enu40#ln243"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,76 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg4#hym12#page72" name="Dettagli utente" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="300" gr:y="280" layout:frameLayout="None">
+  <ContentUnits>
+    <EntryUnit id="mov1#mpkg4#hym12#page72#enu37" name="Utente" linkOrder="mov1#mpkg4#hym12#page72#enu37#ln190 mov1#mpkg4#hym12#page72#enu37#ln189" gr:x="170" gr:y="0" entity="User" fieldOrder="mov1#mpkg4#hym12#page72#enu37#fld221 mov1#mpkg4#hym12#page72#enu37#fld222 mov1#mpkg4#hym12#page72#enu37#sfld34">
+      <Field id="mov1#mpkg4#hym12#page72#enu37#fld221" name="Nome Utente" type="string" modifiable="true" attribute="userName">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg4#hym12#page72#enu37#fld221#mnd180" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg4#hym12#page72#enu37#fld222" name="Email" type="string" modifiable="true" attribute="email">
+        <VRules>
+          <EMailValidationRule id="mov1#mpkg4#hym12#page72#enu37#fld222#email7" name="EMail" errorMessage="formato non valido"/>
+          <MandatoryValidationRule id="mov1#mpkg4#hym12#page72#enu37#fld222#mnd181" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <SelectionField id="mov1#mpkg4#hym12#page72#enu37#sfld34" name="Gruppo" type="string" role="User2DefaultGroup">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg4#hym12#page72#enu37#sfld34#mnd182" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </SelectionField>
+      <Link id="mov1#mpkg4#hym12#page72#enu37#ln189" name="Elimina Utente" to="mov1#mpkg4#hym12#miu89" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg4#hym12#page72#enu37#ln189#par856" name="Key [oid]_KeyCondition5 [oid]" source="key.userOID" target="mov1#mpkg4#hym12#miu89.mov2#mpkg29#mpkg30#opm59#icu61#icp294"/>
+      </Link>
+      <Link id="mov1#mpkg4#hym12#page72#enu37#ln190" name="Salva Modifiche" to="mov1#mpkg4#hym12#miu84" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg4#hym12#page72#enu37#ln190#par850" name="Email_email" source="mov1#mpkg4#hym12#page72#enu37#fld222" target="mov1#mpkg4#hym12#miu84.mov2#mpkg29#mpkg30#opm58#icu60#icp291"/>
+        <LinkParameter id="mov1#mpkg4#hym12#page72#enu37#ln190#par851" name="Gruppo_Group.oid(defaultGroup)" source="mov1#mpkg4#hym12#page72#enu37#sfld34" target="mov1#mpkg4#hym12#miu84.mov2#mpkg29#mpkg30#opm58#icu60#icp289"/>
+        <LinkParameter id="mov1#mpkg4#hym12#page72#enu37#ln190#par852" name="Gruppo_Group.oid(groups)" source="mov1#mpkg4#hym12#page72#enu37#sfld34" target="mov1#mpkg4#hym12#miu84.mov2#mpkg29#mpkg30#opm58#icu60#icp288"/>
+        <LinkParameter id="mov1#mpkg4#hym12#page72#enu37#ln190#par853" name="Key [oid]_KeyCondition2 [oid]" source="key.userOID" target="mov1#mpkg4#hym12#miu84.mov2#mpkg29#mpkg30#opm58#icu60#icp293"/>
+        <LinkParameter id="mov1#mpkg4#hym12#page72#enu37#ln190#par854" name="Nome Utente_nome_utente" source="mov1#mpkg4#hym12#page72#enu37#fld221" target="mov1#mpkg4#hym12#miu84.mov2#mpkg29#mpkg30#opm58#icu60#icp290"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit id="mov1#mpkg4#hym12#page72#seu27" name="SelectorGruppi" gr:x="0" gr:y="0" entity="Group" distinctAttributes="groupName">
+      <Link id="mov1#mpkg4#hym12#page72#seu27#ln191" name="Flow17" to="mov1#mpkg4#hym12#page72#enu37" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg4#hym12#page72#seu27#ln191#par830" name="groupName_Gruppo [label]" source="groupNameArray" target="mov1#mpkg4#hym12#page72#enu37#sfld34_label"/>
+        <LinkParameter id="mov1#mpkg4#hym12#page72#seu27#ln191#par831" name="oid_Gruppo [output]" source="groupOIDArray" target="mov1#mpkg4#hym12#page72#enu37#sfld34_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg4#hym12#page72#enu37">
+          <layout:Field field="mov1#mpkg4#hym12#page72#enu37#fld221"/>
+          <layout:Field field="mov1#mpkg4#hym12#page72#enu37#fld222"/>
+          <layout:Field field="mov1#mpkg4#hym12#page72#enu37#sfld34"/>
+          <layout:Link link="mov1#mpkg4#hym12#page72#enu37#ln190"/>
+          <layout:Link link="mov1#mpkg4#hym12#page72#enu37#ln189"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

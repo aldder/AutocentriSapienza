@@ -1,0 +1,154 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym5#page58" name="Gestione tipologie" landmark="true" gr:x="230" gr:y="85">
+  <ContentUnits>
+    <PowerIndexUnit id="mov1#mpkg6#hym5#page58#pwu23" name="Tipologie interventi" linkOrder="mov1#mpkg6#hym5#page58#pwu23#ln244" gr:x="0" gr:y="90" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att15 ent3#att16 ent3#att17" blockFactor="10">
+      <SortAttribute attribute="ent3#att15" order="ascending"/>
+      <SortAttribute attribute="ent3#att16" order="ascending"/>
+      <DefaultSortAttribute attribute="ent3#att15" order="ascending"/>
+      <DefaultSortAttribute attribute="ent3#att16" order="ascending"/>
+      <Link id="mov1#mpkg6#hym5#page58#pwu23#ln244" name="Visualizza" to="mov1#mpkg6#hym5#page57#enu40" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowWidth="600" ajaxWindowHeight="400" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli tipologia" ajaxWindowAutoResizing="false">
+        <LinkParameter id="mov1#mpkg6#hym5#page58#pwu23#ln244#par1582" name="oid_Key Condition [oid]" source="data[].ent3#att15" target="mov1#mpkg6#hym5#page57#enu40.ent3#att15"/>
+      </Link>
+    </PowerIndexUnit>
+    <EntryUnit id="mov1#mpkg6#hym5#page58#enu41" name="Nuova tipologia" linkOrder="mov1#mpkg6#hym5#page58#enu41#ln245" gr:x="235" gr:y="0" entity="ent3">
+      <Field id="mov1#mpkg6#hym5#page58#enu41#fld160" name="Nome" type="string" modifiable="true" attribute="ent3#att16">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym5#page58#enu41#fld160#mnd132" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <CollectionValidationRule id="mov1#mpkg6#hym5#page58#enu41#fld160#clc17" name="Unique" predicate="notIn" entity="ent3" attribute="ent3#att16" errorMessage="valore gi&#224; presente"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym5#page58#enu41#fld161" name="Descrizione" type="text" modifiable="true" attribute="ent3#att38">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym5#page58#enu41#fld161#mnd133" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym5#page58#enu41#fld162" name="Ripetizione" type="integer" modifiable="true" attribute="ent3#att17" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym5#page58#enu41#fld162#mnd134" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <TypeValidationRule id="mov1#mpkg6#hym5#page58#enu41#fld162#tvr13" name="Type Validation" type="integer" errorMessage="valore non corretto"/>
+        </VRules>
+        <Slot id="mov1#mpkg6#hym5#page58#enu41#fld162#slot12" name="Slot" label="true" output="true" value="0 se la tipologia non ha ripetizione"/>
+      </Field>
+      <Link id="mov1#mpkg6#hym5#page58#enu41#ln245" name="Inserisci" to="mov1#mpkg6#hym5#miu62" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg6#hym5#page58#enu41#ln245#par1588" name="Descrizione_descrizione" source="mov1#mpkg6#hym5#page58#enu41#fld161" target="mov1#mpkg6#hym5#miu62.mov2#mpkg31#mpkg32#opm60#icu62#icp295"/>
+        <LinkParameter id="mov1#mpkg6#hym5#page58#enu41#ln245#par1589" name="Nome_nome" source="mov1#mpkg6#hym5#page58#enu41#fld160" target="mov1#mpkg6#hym5#miu62.mov2#mpkg31#mpkg32#opm60#icu62#icp298"/>
+        <LinkParameter id="mov1#mpkg6#hym5#page58#enu41#ln245#par1591" name="Ripetizione_ripetizione" source="mov1#mpkg6#hym5#page58#enu41#fld162" target="mov1#mpkg6#hym5#miu62.mov2#mpkg31#mpkg32#opm60#icu62#icp297"/>
+        <LinkParameter id="mov1#mpkg6#hym5#page58#enu41#ln245#par1592" name="Tipologia Object_Tipologia Object" source="entityBean" target="mov1#mpkg6#hym5#miu62.mov2#mpkg31#mpkg32#opm60#icu62#icp296"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit id="mov1#mpkg6#hym5#page58#mssu49" name="KoMessage" gr:x="275" gr:y="100" ajaxTooltipEnabled="false"/>
+    <MultiMessageUnit id="mov1#mpkg6#hym5#page58#mssu50" name="OkMessage" gr:x="165" gr:y="100"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg6#hym5#page58#mssu50">
+          <layout:LayoutParameter name="messageType" value="success" type="unit"/>
+          <layout:LayoutParameter name="message-dismissable" value="true" type="unit"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg6#hym5#page58#mssu49">
+          <layout:LayoutParameter name="messageType" value="danger" type="unit"/>
+          <layout:LayoutParameter name="message-dismissable" value="true" type="unit"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg6#hym5#page58#pwu23">
+          <layout:Attribute label="Codice" attribute="ent3#att15"/>
+          <layout:Attribute label="Nome" attribute="ent3#att16"/>
+          <layout:Attribute label="Ripetizione" attribute="ent3#att17"/>
+          <layout:Link link="mov1#mpkg6#hym5#page58#pwu23#ln244"/>
+          <layout:Link link="mov1#mpkg6#hym5#page58#pwu23ent3#att15"/>
+          <layout:Link link="mov1#mpkg6#hym5#page58#pwu23ent3#att16"/>
+          <layout:Link link="mov1#mpkg6#hym5#page58#pwu23First"/>
+          <layout:Link link="mov1#mpkg6#hym5#page58#pwu23Previous"/>
+          <layout:Link link="mov1#mpkg6#hym5#page58#pwu23Block"/>
+          <layout:Link link="mov1#mpkg6#hym5#page58#pwu23Next"/>
+          <layout:Link link="mov1#mpkg6#hym5#page58#pwu23Last"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="link-style" value="button" type="link"/>
+  <layout:CustomLocation name="Right">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Unit unitId="mov1#mpkg6#hym5#page58#enu41">
+            <layout:Field field="mov1#mpkg6#hym5#page58#enu41#fld160"/>
+            <layout:Field field="mov1#mpkg6#hym5#page58#enu41#fld161"/>
+            <layout:Field field="mov1#mpkg6#hym5#page58#enu41#fld162"/>
+            <layout:LayoutParameter name="show-label" value="top" type="unit"/>
+            <layout:Link link="mov1#mpkg6#hym5#page58#enu41#ln245"/>
+          </layout:Unit>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <layout:LayoutParameter name="show-right-column" value="true" type="page"/>
+</Page>

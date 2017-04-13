@@ -1,0 +1,18 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg31#mpkg34#opm66" name="InserimentoOrarioAppuntamento" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg31#mpkg34#opm66#icu69" gr:x="5" gr:y="0">
+      <InputCollectorParameter id="mov2#mpkg31#mpkg34#opm66#icu69#icp321" name="Orario Object"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg34#opm66#icu69#icp322" name="ora"/>
+      <OKLink id="mov2#mpkg31#mpkg34#opm66#icu69#oln166" name="Inserisci" to="mov2#mpkg31#mpkg34#opm66#cru29">
+        <LinkParameter id="mov2#mpkg31#mpkg34#opm66#icu69#oln166#par1249" name="Orario Object_Orario Object" source="mov2#mpkg31#mpkg34#opm66#icu69#icp321" target="mov2#mpkg31#mpkg34#opm66#cru29.entityBeans"/>
+        <LinkParameter id="mov2#mpkg31#mpkg34#opm66#icu69#oln166#par1250" name="Ora_ora" source="mov2#mpkg31#mpkg34#opm66#icu69#icp322" target="mov2#mpkg31#mpkg34#opm66#cru29.ent15#att66"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov2#mpkg31#mpkg34#opm66#okcu65" name="OK Port32" gr:x="555" gr:y="-45"/>
+    <CreateUnit id="mov2#mpkg31#mpkg34#opm66#cru29" name="Inserimento" gr:x="300" gr:y="0" entity="ent15">
+      <OKLink id="mov2#mpkg31#mpkg34#opm66#cru29#oln174" name="OKFlow114" to="mov2#mpkg31#mpkg34#opm66#okcu65"/>
+      <KOLink id="mov2#mpkg31#mpkg34#opm66#cru29#kln155" name="KOFlow106" to="mov2#mpkg31#mpkg34#opm66#kocu59"/>
+    </CreateUnit>
+    <KOCollectorUnit id="mov2#mpkg31#mpkg34#opm66#kocu59" name="KO Port30" gr:x="555" gr:y="35"/>
+  </OperationUnits>
+</OperationModule>

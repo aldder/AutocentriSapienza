@@ -1,0 +1,47 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg29#mpkg30#opm58" name="ModificaUtente" gr:x="0" gr:y="55">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg29#mpkg30#opm58#icu60" gr:x="-175" gr:y="0" linkOrder="mov2#mpkg29#mpkg30#opm58#icu60#ln200">
+      <InputCollectorParameter id="mov2#mpkg29#mpkg30#opm58#icu60#icp288" name="Group.oid(groups)"/>
+      <InputCollectorParameter id="mov2#mpkg29#mpkg30#opm58#icu60#icp289" name="Group.oid(defaultGroup)"/>
+      <InputCollectorParameter id="mov2#mpkg29#mpkg30#opm58#icu60#icp290" name="nome_utente"/>
+      <InputCollectorParameter id="mov2#mpkg29#mpkg30#opm58#icu60#icp291" name="email"/>
+      <InputCollectorParameter id="mov2#mpkg29#mpkg30#opm58#icu60#icp292" name="Utente Object"/>
+      <InputCollectorParameter id="mov2#mpkg29#mpkg30#opm58#icu60#icp293" name="KeyCondition2 [oid]"/>
+      <OKLink id="mov2#mpkg29#mpkg30#opm58#icu60#oln108" name="Salva Modifiche" to="mov2#mpkg29#mpkg30#opm58#seu39">
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm58#icu60#oln108#par952" name="email_email" source="mov2#mpkg29#mpkg30#opm58#icu60#icp291" target="mov2#mpkg29#mpkg30#opm58#seu39#su87#acond28"/>
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm58#icu60#oln108#par954" name="nome_utente_nome" source="mov2#mpkg29#mpkg30#opm58#icu60#icp290" target="mov2#mpkg29#mpkg30#opm58#seu39#su87#acond25"/>
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm58#icu60#oln108#par1173" name="KeyCondition2 [oid]_KeyCondition11 [oid (not in)]" source="mov2#mpkg29#mpkg30#opm58#icu60#icp293" target="mov2#mpkg29#mpkg30#opm58#seu39#su87#kcond11.userOID"/>
+      </OKLink>
+      <Link id="mov2#mpkg29#mpkg30#opm58#icu60#ln200" name="Flow200" to="mov2#mpkg29#mpkg30#opm58#mfu25" type="transport" validate="true" gr:bendpoints="206,-83,-304,-83;420,-82,-90,-82">
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm58#icu60#ln200#par857" name="email_email" source="mov2#mpkg29#mpkg30#opm58#icu60#icp291" target="mov2#mpkg29#mpkg30#opm58#mfu25.email"/>
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm58#icu60#ln200#par858" name="Group.oid(defaultGroup)_Group.oid(defaultGroup)" source="mov2#mpkg29#mpkg30#opm58#icu60#icp289" target="mov2#mpkg29#mpkg30#opm58#mfu25.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm58#icu60#ln200#par859" name="Group.oid(groups)_Group.oid(groups)" source="mov2#mpkg29#mpkg30#opm58#icu60#icp288" target="mov2#mpkg29#mpkg30#opm58#mfu25.User2Group.groupOID"/>
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm58#icu60#ln200#par860" name="KeyCondition2 [oid]_KeyCondition2 [oid]" source="mov2#mpkg29#mpkg30#opm58#icu60#icp293" target="mov2#mpkg29#mpkg30#opm58#mfu25#su86#kcond49.userOID"/>
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm58#icu60#ln200#par861" name="nome_utente_nome_utente" source="mov2#mpkg29#mpkg30#opm58#icu60#icp290" target="mov2#mpkg29#mpkg30#opm58#mfu25.userName"/>
+      </Link>
+    </InputCollectorUnit>
+    <ModifyUnit id="mov2#mpkg29#mpkg30#opm58#mfu25" name="Modifica" gr:x="435" gr:y="30" entity="User">
+      <Selector id="mov2#mpkg29#mpkg30#opm58#mfu25#su86" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg29#mpkg30#opm58#mfu25#su86#kcond49" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg29#mpkg30#opm58#mfu25#oln109" name="OKFlow25" to="mov2#mpkg29#mpkg30#opm58#okcu57"/>
+      <KOLink id="mov2#mpkg29#mpkg30#opm58#mfu25#kln141" name="KOFlow47" to="mov2#mpkg29#mpkg30#opm58#kocu51"/>
+    </ModifyUnit>
+    <OKCollectorUnit id="mov2#mpkg29#mpkg30#opm58#okcu57" name="OK Port15" gr:x="585" gr:y="-15"/>
+    <KOCollectorUnit id="mov2#mpkg29#mpkg30#opm58#kocu51" name="KO Port13" gr:x="585" gr:y="100"/>
+    <SelectorUnit id="mov2#mpkg29#mpkg30#opm58#seu39" name="SelectUtente" gr:x="140" gr:y="25" entity="User">
+      <Selector id="mov2#mpkg29#mpkg30#opm58#seu39#su87" defaultPolicy="fill" booleanOperator="or" expression="( mov2#mpkg29#mpkg30#opm58#seu39#su87#acond25 OR mov2#mpkg29#mpkg30#opm58#seu39#su87#acond28 ) AND mov2#mpkg29#mpkg30#opm58#seu39#su87#kcond11">
+        <AttributesCondition id="mov2#mpkg29#mpkg30#opm58#seu39#su87#acond25" name="nome" predicate="eq" booleanOperator="or" implied="false" attributes="userName"/>
+        <AttributesCondition id="mov2#mpkg29#mpkg30#opm58#seu39#su87#acond28" name="email" predicate="eq" booleanOperator="or" implied="false" attributes="email"/>
+        <KeyCondition id="mov2#mpkg29#mpkg30#opm58#seu39#su87#kcond11" name="KeyCondition11" predicate="notIn" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg29#mpkg30#opm58#seu39#oln110" name="OKFlow29" to="mov2#mpkg29#mpkg30#opm58#inn7">
+        <LinkParameter id="mov2#mpkg29#mpkg30#opm58#seu39#oln110#par1139" name="oid_Input" source="userOIDArray" target="mov2#mpkg29#mpkg30#opm58#inn7.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit id="mov2#mpkg29#mpkg30#opm58#inn7" name="Is Not Null" gr:x="280" gr:y="45">
+      <OKLink id="mov2#mpkg29#mpkg30#opm58#inn7#oln111" name="OKFlow30" to="mov2#mpkg29#mpkg30#opm58#kocu51" gr:bendpoints="59,65,-351,0"/>
+      <KOLink id="mov2#mpkg29#mpkg30#opm58#inn7#kln142" name="KOFlow51" to="mov2#mpkg29#mpkg30#opm58#mfu25"/>
+    </IsNotNullUnit>
+  </OperationUnits>
+</OperationModule>

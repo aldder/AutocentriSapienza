@@ -1,0 +1,108 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg37#opm75" name="InvioNotificheAcquisto" gr:x="0" gr:y="60">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg37#opm75#icu78" gr:x="10" gr:y="10">
+      <OKLink id="mov2#mpkg37#opm75#icu78#oln366" name="OKFlow35" to="mov2#mpkg37#opm75#tmu1"/>
+    </InputCollectorUnit>
+    <SelectorUnit id="mov2#mpkg37#opm75#seu57" name="SelectAcquisto" gr:x="1005" gr:y="155" entity="ent7">
+      <Selector id="mov2#mpkg37#opm75#seu57#su122" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg37#opm75#seu57#su122#kcond72" name="KeyCondition59" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg37#opm75#seu57#oln367" name="OKFlow137" to="mov2#mpkg37#opm75#seu60">
+        <LinkParameter id="mov2#mpkg37#opm75#seu57#oln367#par1319" name="oid_RoleCondition11 [oid]" source="ent7#att24Array" target="mov2#mpkg37#opm75#seu60#su136#rcond23.ent7#att24"/>
+      </OKLink>
+    </SelectorUnit>
+    <MailUnit id="mov2#mpkg37#opm75#mlu7" name="NotificaAcquisto" gr:x="1355" gr:y="165" format="plainText" smtpServer="smtp1">
+      <Placeholder id="mov2#mpkg37#opm75#mlu7#ph4" name="tipologia"/>
+      <Placeholder id="mov2#mpkg37#opm75#mlu7#ph5" name="utente"/>
+      <Placeholder id="mov2#mpkg37#opm75#mlu7#ph6" name="autovettura"/>
+      <Placeholder id="mov2#mpkg37#opm75#mlu7#ph7" name="descrizione"/>
+      <OKLink id="mov2#mpkg37#opm75#mlu7#oln368" name="OKFlow140" to="mov2#mpkg37#opm75#lpu1" gr:bendpoints="-88,-154,652,1"/>
+      <BodyTemplate xml:space="preserve">Ciao $$utente$$
+
+Ti ricordiamo che a breve scadranno i termini per il seguente intervento da effettuare sull'autovettura "$$autovettura$$" acquistata presso il nostro concessionario:
+$$tipologia$$
+
+Note aggiuntive:
+$$descrizione$$</BodyTemplate>
+      <SubjectTemplate xml:space="preserve">Scadenza interventi per la tua auto</SubjectTemplate>
+    </MailUnit>
+    <SelectorUnit id="mov2#mpkg37#opm75#seu58" name="SelectNotifiche" gr:x="410" gr:y="0" entity="ent4" distinctAttributes="ent4#att18 ent4#att19 ent4#att20 ent4#att28">
+      <OKLink id="mov2#mpkg37#opm75#seu58#oln369" name="OKFlow74" to="mov2#mpkg37#opm75#lpu1">
+        <LinkParameter id="mov2#mpkg37#opm75#seu58#oln369#par1320" name="oid_Input Array" source="ent4#att18Array" target="mov2#mpkg37#opm75#lpu1.array"/>
+      </OKLink>
+      <Selector id="mov2#mpkg37#opm75#seu58#su123" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg37#opm75#seu58#su123#acond43" name="data" predicate="eq" booleanOperator="or" implied="false" attributes="ent4#att19"/>
+        <AttributesCondition id="mov2#mpkg37#opm75#seu58#su123#acond44" name="acquisto" predicate="notNull" booleanOperator="or" implied="false" attributes="rel15#role30.ent7#att24"/>
+      </Selector>
+    </SelectorUnit>
+    <ParameterCollectorUnit id="mov2#mpkg37#opm75#pcu11" name="Parameter Collector" gr:x="795" gr:y="135">
+      <CollectorParameter id="mov2#mpkg37#opm75#pcu11#pcp48" name="id_notifica"/>
+      <CollectorParameter id="mov2#mpkg37#opm75#pcu11#pcp49" name="nome_utente"/>
+      <CollectorParameter id="mov2#mpkg37#opm75#pcu11#pcp50" name="tipologia"/>
+      <CollectorParameter id="mov2#mpkg37#opm75#pcu11#pcp51" name="descrizione"/>
+      <Link id="mov2#mpkg37#opm75#pcu11#ln204" name="Flow138" to="mov2#mpkg37#opm75#mlu7" type="transport" validate="true" gr:bendpoints="96,132,-454,137;462,136,-98,136">
+        <LinkParameter id="mov2#mpkg37#opm75#pcu11#ln204#par1321" name="descrizione_descrizione" source="mov2#mpkg37#opm75#pcu11#pcp51" target="mov2#mpkg37#opm75#mlu7.descrizione"/>
+        <LinkParameter id="mov2#mpkg37#opm75#pcu11#ln204#par1322" name="email_Mail - To" source="mov2#mpkg37#opm75#pcu11#pcp52" target="mov2#mpkg37#opm75#mlu7.to"/>
+        <LinkParameter id="mov2#mpkg37#opm75#pcu11#ln204#par1323" name="tipologia_tipologia" source="mov2#mpkg37#opm75#pcu11#pcp50" target="mov2#mpkg37#opm75#mlu7.tipologia"/>
+        <LinkParameter id="mov2#mpkg37#opm75#pcu11#ln204#par1324" name="nome_utente_utente" source="mov2#mpkg37#opm75#pcu11#pcp49" target="mov2#mpkg37#opm75#mlu7.utente"/>
+      </Link>
+      <CollectorParameter id="mov2#mpkg37#opm75#pcu11#pcp52" name="email"/>
+      <CollectorParameter id="mov2#mpkg37#opm75#pcu11#pcp53" name="id_acquisto"/>
+      <OKLink id="mov2#mpkg37#opm75#pcu11#oln370" name="OKFlow163" to="mov2#mpkg37#opm75#seu57">
+        <LinkParameter id="mov2#mpkg37#opm75#pcu11#oln370#par1325" name="id_acquisto_KeyCondition59 [oid]" source="mov2#mpkg37#opm75#pcu11#pcp53" target="mov2#mpkg37#opm75#seu57#su122#kcond72.ent7#att24"/>
+      </OKLink>
+    </ParameterCollectorUnit>
+    <SelectorUnit id="mov2#mpkg37#opm75#seu59" name="SelectTipologia" gr:x="620" gr:y="395" entity="ent3">
+      <Selector id="mov2#mpkg37#opm75#seu59#su124" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg37#opm75#seu59#su124#kcond73" name="KeyCondition58" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg37#opm75#seu59#oln371" name="OKFlow136" to="mov2#mpkg37#opm75#pcu11">
+        <LinkParameter id="mov2#mpkg37#opm75#seu59#oln371#par1326" name="nome_tipologia" source="ent3#att16Array" target="mov2#mpkg37#opm75#pcu11#pcp50"/>
+      </OKLink>
+    </SelectorUnit>
+    <TimeUnit id="mov2#mpkg37#opm75#tmu1" name="Today" gr:x="300" gr:y="20">
+      <OKLink id="mov2#mpkg37#opm75#tmu1#oln372" name="OKFlow146" to="mov2#mpkg37#opm75#seu58">
+        <LinkParameter id="mov2#mpkg37#opm75#tmu1#oln372#par1327" name="Current/Input Date_data" source="currentDate" target="mov2#mpkg37#opm75#seu58#su123#acond43"/>
+      </OKLink>
+    </TimeUnit>
+    <SelectorUnit id="mov2#mpkg37#opm75#seu60" name="SelectAutovettura" gr:x="1165" gr:y="155" entity="ent1">
+      <Selector id="mov2#mpkg37#opm75#seu60#su136" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov2#mpkg37#opm75#seu60#su136#rcond23" name="RoleCondition11" predicate="in" implied="false" role="rel19#role37"/>
+      </Selector>
+      <OKLink id="mov2#mpkg37#opm75#seu60#oln373" name="OKFlow139" to="mov2#mpkg37#opm75#mlu7">
+        <LinkParameter id="mov2#mpkg37#opm75#seu60#oln373#par1328" name="nome_autovettura" source="ent1#att46Array" target="mov2#mpkg37#opm75#mlu7.autovettura"/>
+      </OKLink>
+    </SelectorUnit>
+    <LoopUnit id="mov2#mpkg37#opm75#lpu1" name="Loop" gr:x="645" gr:y="20">
+      <OKLink id="mov2#mpkg37#opm75#lpu1#oln374" name="OKFlow125" to="mov2#mpkg37#opm75#seu62" code="next">
+        <LinkParameter id="mov2#mpkg37#opm75#lpu1#oln374#par1329" name="Next Element_KeyCondition14 [oid]" source="next" target="mov2#mpkg37#opm75#seu62#su138#kcond75.ent4#att18"/>
+      </OKLink>
+    </LoopUnit>
+    <SelectorUnit id="mov2#mpkg37#opm75#seu61" name="SelectUtente" gr:x="625" gr:y="270" entity="User">
+      <Selector id="mov2#mpkg37#opm75#seu61#su137" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg37#opm75#seu61#su137#kcond74" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="mov2#mpkg37#opm75#seu61#ln205" name="Flow142" to="mov2#mpkg37#opm75#pcu11" type="transport" validate="true">
+        <LinkParameter id="mov2#mpkg37#opm75#seu61#ln205#par1330" name="email_email" source="emailArray" target="mov2#mpkg37#opm75#pcu11#pcp52"/>
+        <LinkParameter id="mov2#mpkg37#opm75#seu61#ln205#par1331" name="nome_utente_nome_utente" source="userNameArray" target="mov2#mpkg37#opm75#pcu11#pcp49"/>
+      </Link>
+      <OKLink id="mov2#mpkg37#opm75#seu61#oln375" name="OKFlow132" to="mov2#mpkg37#opm75#seu59">
+        <LinkParameter id="mov2#mpkg37#opm75#seu61#oln375#par1332" name="NotificaToTipologia.oid_PASSING_KeyCondition58 [oid]" sourceLinkParameter="mov2#mpkg37#opm75#seu62#oln376#par1334" target="mov2#mpkg37#opm75#seu59#su124#kcond73.ent3#att15"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="mov2#mpkg37#opm75#seu62" name="SelectNotifica" gr:x="625" gr:y="145" entity="ent4">
+      <Selector id="mov2#mpkg37#opm75#seu62#su138" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg37#opm75#seu62#su138#kcond75" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg37#opm75#seu62#oln376" name="OKFlow126" to="mov2#mpkg37#opm75#seu61">
+        <LinkParameter id="mov2#mpkg37#opm75#seu62#oln376#par1333" name="NotificaToUtente.oid_KeyCondition15 [oid]" source="rel14#role28_userOIDArray" target="mov2#mpkg37#opm75#seu61#su137#kcond74.userOID"/>
+        <LinkParameter id="mov2#mpkg37#opm75#seu62#oln376#par1334" name="NotificaToTipologia.oid_PASSING" source="rel16#role31_ent3#att15Array" passing="true"/>
+      </OKLink>
+      <Link id="mov2#mpkg37#opm75#seu62#ln208" name="Flow141" to="mov2#mpkg37#opm75#pcu11" type="transport" validate="true">
+        <LinkParameter id="mov2#mpkg37#opm75#seu62#ln208#par1335" name="oid_id_notifica" source="ent4#att18Array" target="mov2#mpkg37#opm75#pcu11#pcp48"/>
+        <LinkParameter id="mov2#mpkg37#opm75#seu62#ln208#par1336" name="descrizione_descrizione" source="ent4#att20Array" target="mov2#mpkg37#opm75#pcu11#pcp51"/>
+        <LinkParameter id="mov2#mpkg37#opm75#seu62#ln208#par1337" name="NotificaToStorico_Acquisto.oid_id_acquisto" source="rel15#role30_ent7#att24Array" target="mov2#mpkg37#opm75#pcu11#pcp53"/>
+      </Link>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationModule>

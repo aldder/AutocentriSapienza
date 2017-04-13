@@ -1,0 +1,204 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg4#hym12#page73" name="Gestione Utenti" landmark="true" gr:x="300" gr:y="0">
+  <ContentUnits>
+    <EntryUnit id="mov1#mpkg4#hym12#page73#enu38" name="Inserisci utente" linkOrder="mov1#mpkg4#hym12#page73#enu38#ln195" gr:x="180" gr:y="0" entity="User">
+      <Field id="mov1#mpkg4#hym12#page73#enu38#fld223" name="Nome Utente" type="string" modifiable="true" attribute="userName">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg4#hym12#page73#enu38#fld223#mnd183" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <CollectionValidationRule id="mov1#mpkg4#hym12#page73#enu38#fld223#clc16" name="Unique" predicate="notIn" entity="User" attribute="userName" errorMessage="valore gi&#224; presente"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg4#hym12#page73#enu38#fld224" name="Password" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg4#hym12#page73#enu38#fld224#mnd184" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg4#hym12#page73#enu38#fld225" name="Email" type="string" modifiable="true" attribute="email">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg4#hym12#page73#enu38#fld225#mnd185" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <EMailValidationRule id="mov1#mpkg4#hym12#page73#enu38#fld225#email8" name="EMail" errorMessage="formato non valido"/>
+          <CollectionValidationRule id="mov1#mpkg4#hym12#page73#enu38#fld225#clc19" name="Unique" predicate="notIn" entity="User" attribute="email" errorMessage="valore gi&#224; presente"/>
+        </VRules>
+      </Field>
+      <SelectionField id="mov1#mpkg4#hym12#page73#enu38#sfld35" name="Gruppo" type="string" role="User2DefaultGroup">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg4#hym12#page73#enu38#sfld35#mnd186" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </SelectionField>
+      <Link id="mov1#mpkg4#hym12#page73#enu38#ln195" name="Inserisci" to="mov1#mpkg4#hym12#miu83" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg4#hym12#page73#enu38#ln195#par844" name="Email_email" source="mov1#mpkg4#hym12#page73#enu38#fld225" target="mov1#mpkg4#hym12#miu83.mov2#mpkg29#mpkg30#opm57#icu59#icp287"/>
+        <LinkParameter id="mov1#mpkg4#hym12#page73#enu38#ln195#par845" name="Gruppo_Group.oid(defaultGroup)" source="mov1#mpkg4#hym12#page73#enu38#sfld35" target="mov1#mpkg4#hym12#miu83.mov2#mpkg29#mpkg30#opm57#icu59#icp283"/>
+        <LinkParameter id="mov1#mpkg4#hym12#page73#enu38#ln195#par846" name="Gruppo_Group.oid(groups)" source="mov1#mpkg4#hym12#page73#enu38#sfld35" target="mov1#mpkg4#hym12#miu83.mov2#mpkg29#mpkg30#opm57#icu59#icp284"/>
+        <LinkParameter id="mov1#mpkg4#hym12#page73#enu38#ln195#par847" name="Nome Utente_nome_utente" source="mov1#mpkg4#hym12#page73#enu38#fld223" target="mov1#mpkg4#hym12#miu83.mov2#mpkg29#mpkg30#opm57#icu59#icp281"/>
+        <LinkParameter id="mov1#mpkg4#hym12#page73#enu38#ln195#par848" name="Password_password" source="mov1#mpkg4#hym12#page73#enu38#fld224" target="mov1#mpkg4#hym12#miu83.mov2#mpkg29#mpkg30#opm57#icu59#icp282"/>
+        <LinkParameter id="mov1#mpkg4#hym12#page73#enu38#ln195#par849" name="Utente Object_Utente Object" source="entityBean" target="mov1#mpkg4#hym12#miu83.mov2#mpkg29#mpkg30#opm57#icu59#icp285"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit id="mov1#mpkg4#hym12#page73#seu28" name="SelectorGruppi" gr:x="0" gr:y="0" entity="Group" distinctAttributes="groupName groupOID">
+      <Link id="mov1#mpkg4#hym12#page73#seu28#ln196" name="Flow14" to="mov1#mpkg4#hym12#page73#enu38" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg4#hym12#page73#seu28#ln196#par838" name="groupName_defaultGroup [label]" source="groupNameArray" target="mov1#mpkg4#hym12#page73#enu38#sfld35_label"/>
+        <LinkParameter id="mov1#mpkg4#hym12#page73#seu28#ln196#par839" name="oid_defaultGroup [output]" source="groupOIDArray" target="mov1#mpkg4#hym12#page73#enu38#sfld35_output"/>
+      </Link>
+      <Link id="mov1#mpkg4#hym12#page73#seu28#ln197" name="Flow40" to="mov1#mpkg4#hym12#page73#enu39" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg4#hym12#page73#seu28#ln197#par840" name="groupName_groups [label]" source="groupNameArray" target="mov1#mpkg4#hym12#page73#enu39#msfld1_label"/>
+        <LinkParameter id="mov1#mpkg4#hym12#page73#seu28#ln197#par841" name="oid_groups [output]" source="groupOIDArray" target="mov1#mpkg4#hym12#page73#enu39#msfld1_output"/>
+      </Link>
+    </SelectorUnit>
+    <PowerIndexUnit id="mov1#mpkg4#hym12#page73#pwu28" name="Utenti" linkOrder="mov1#mpkg4#hym12#page73#pwu28#ln198" gr:x="115" gr:y="110" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="userOID userName email password" blockFactor="10">
+      <Link id="mov1#mpkg4#hym12#page73#pwu28#ln198" name="Visualizza" to="mov1#mpkg4#hym12#page72#enu37" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowWidth="600" ajaxWindowHeight="300" ajaxWindowAutoResizing="false" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowTitle="Dettagli utente">
+        <LinkParameter id="mov1#mpkg4#hym12#page73#pwu28#ln198#par842" name="oid_Key Condition [oid]" source="data[].userOID" target="mov1#mpkg4#hym12#page72#enu37.userOID"/>
+      </Link>
+      <DefaultSortAttribute attribute="userOID" order="ascending"/>
+      <DefaultSortAttribute attribute="userName" order="ascending"/>
+      <DefaultSortAttribute attribute="email" order="ascending"/>
+      <SortAttribute attribute="userOID" order="ascending"/>
+      <SortAttribute attribute="userName" order="ascending"/>
+      <SortAttribute attribute="email" order="ascending"/>
+      <Selector id="mov1#mpkg4#hym12#page73#pwu28#su28" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#mpkg4#hym12#page73#pwu28#su28#rcond6" name="gruppo" predicate="in" implied="true" role="Group2User"/>
+      </Selector>
+    </PowerIndexUnit>
+    <EntryUnit id="mov1#mpkg4#hym12#page73#enu39" name="Filtri" linkOrder="mov1#mpkg4#hym12#page73#enu39#ln199" gr:x="15" gr:y="120" entity="User">
+      <MultiSelectionField id="mov1#mpkg4#hym12#page73#enu39#msfld1" name="Gruppi" type="string" role="User2Group"/>
+      <Link id="mov1#mpkg4#hym12#page73#enu39#ln199" name="Seleziona" to="mov1#mpkg4#hym12#page73#pwu28" type="normal" validate="true" ajaxEnabled="true">
+        <LinkParameter id="mov1#mpkg4#hym12#page73#enu39#ln199#par843" name="Gruppi_gruppo [oid]" source="mov1#mpkg4#hym12#page73#enu39#msfld1" target="mov1#mpkg4#hym12#page73#pwu28#su28#rcond6.groupOID"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit id="mov1#mpkg4#hym12#page73#mssu38" name="OkMessage" gr:x="230" gr:y="90"/>
+    <MultiMessageUnit id="mov1#mpkg4#hym12#page73#mssu39" name="KoMessage" gr:x="230" gr:y="155"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg4#hym12#page73#mssu38">
+          <layout:LayoutParameter name="messageType" value="success" type="unit"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg4#hym12#page73#mssu39">
+          <layout:LayoutParameter name="messageType" value="danger" type="unit"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg4#hym12#page73#pwu28">
+          <layout:Attribute label="Codice" attribute="userOID"/>
+          <layout:Attribute label="Nome Utente" attribute="userName"/>
+          <layout:Attribute label="Email" attribute="email"/>
+          <layout:Attribute label="Password" attribute="password"/>
+          <layout:Link link="mov1#mpkg4#hym12#page73#pwu28#ln198"/>
+          <layout:Link link="mov1#mpkg4#hym12#page73#pwu28userOID"/>
+          <layout:Link link="mov1#mpkg4#hym12#page73#pwu28userName"/>
+          <layout:Link link="mov1#mpkg4#hym12#page73#pwu28email"/>
+          <layout:Link link="mov1#mpkg4#hym12#page73#pwu28First"/>
+          <layout:Link link="mov1#mpkg4#hym12#page73#pwu28Previous"/>
+          <layout:Link link="mov1#mpkg4#hym12#page73#pwu28Block"/>
+          <layout:Link link="mov1#mpkg4#hym12#page73#pwu28Next"/>
+          <layout:Link link="mov1#mpkg4#hym12#page73#pwu28Last"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="multi-selection-field-rendering" value="checkbox vertical" type="field"/>
+  <layout:LayoutParameter name="select-all-links" value="false" type="field"/>
+  <layout:LayoutParameter name="mandatory-fields" value="true" type="field"/>
+  <layout:LayoutParameter name="show-left-column" value="true" type="page"/>
+  <layout:CustomLocation name="Left">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Unit unitId="mov1#mpkg4#hym12#page73#enu39">
+            <layout:Field field="mov1#mpkg4#hym12#page73#enu39#msfld1"/>
+            <layout:Link link="mov1#mpkg4#hym12#page73#enu39#ln199"/>
+            <layout:LayoutParameter name="show-label" value="top" type="unit"/>
+          </layout:Unit>
+          <layout:Unit unitId="mov1#mpkg4#hym12#page73#enu38">
+            <layout:Field field="mov1#mpkg4#hym12#page73#enu38#fld223"/>
+            <layout:Field field="mov1#mpkg4#hym12#page73#enu38#fld224"/>
+            <layout:Field field="mov1#mpkg4#hym12#page73#enu38#fld225"/>
+            <layout:Field field="mov1#mpkg4#hym12#page73#enu38#sfld35"/>
+            <layout:LayoutParameter name="show-label" value="top" type="unit"/>
+            <layout:Link link="mov1#mpkg4#hym12#page73#enu38#ln195"/>
+          </layout:Unit>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+</Page>

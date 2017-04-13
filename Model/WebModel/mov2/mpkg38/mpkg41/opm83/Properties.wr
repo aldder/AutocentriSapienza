@@ -1,0 +1,54 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg38#mpkg41#opm83" name="RifiutaAcquistoPendente" gr:x="0" gr:y="55">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg38#mpkg41#opm83#icu86" gr:x="-15" gr:y="45" linkOrder="mov2#mpkg38#mpkg41#opm83#icu86#ln82">
+      <InputCollectorParameter id="mov2#mpkg38#mpkg41#opm83#icu86#icp413" name="oid [oid]"/>
+      <OKLink id="mov2#mpkg38#mpkg41#opm83#icu86#oln423" name="Rifiuta" to="mov2#mpkg38#mpkg41#opm83#seu86">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm83#icu86#oln423#par1491" name="oid_oid [oid]" source="mov2#mpkg38#mpkg41#opm83#icu86#icp413" target="mov2#mpkg38#mpkg41#opm83#seu86#su180#kcond109.ent6#att23"/>
+      </OKLink>
+      <Link id="mov2#mpkg38#mpkg41#opm83#icu86#ln81" name="Flow81" to="mov2#mpkg38#mpkg41#opm83#mfu37" type="transport" validate="true" gr:bendpoints="193,-99,-522,-59;601,-96,-114,-56">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm83#icu86#ln81#par358" name="oid [oid]_KeyCondition24 [oid]" source="mov2#mpkg38#mpkg41#opm83#icu86#icp413" target="mov2#mpkg38#mpkg41#opm83#mfu37#su179#kcond108.ent6#att23"/>
+      </Link>
+      <Link id="mov2#mpkg38#mpkg41#opm83#icu86#ln82" name="Flow82" to="mov2#mpkg38#mpkg41#opm83#dlu41" type="transport" validate="true" gr:bendpoints="160,102,-405,37;445,102,-120,37">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm83#icu86#ln82#par359" name="oid [oid]_KeyCondition25 [oid]" source="mov2#mpkg38#mpkg41#opm83#icu86#icp413" target="mov2#mpkg38#mpkg41#opm83#dlu41#su178#kcond107.ent6#att23"/>
+      </Link>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov2#mpkg38#mpkg41#opm83#okcu80" name="OK Port22" gr:x="1020" gr:y="10"/>
+    <DeleteUnit id="mov2#mpkg38#mpkg41#opm83#dlu41" name="RimuoviAcquisto" gr:x="595" gr:y="105" entity="ent6">
+      <Selector id="mov2#mpkg38#mpkg41#opm83#dlu41#su178" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg38#mpkg41#opm83#dlu41#su178#kcond107" name="KeyCondition25" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg38#mpkg41#opm83#dlu41#oln424" name="OKFlow70" to="mov2#mpkg38#mpkg41#opm83#okcu80" gr:bendpoints="0,-20"/>
+      <KOLink id="mov2#mpkg38#mpkg41#opm83#dlu41#kln182" name="KOFlow69" to="mov2#mpkg38#mpkg41#opm83#kocu73"/>
+    </DeleteUnit>
+    <ModifyUnit id="mov2#mpkg38#mpkg41#opm83#mfu37" name="ModificaQuantita" gr:x="745" gr:y="0" entity="ent6">
+      <Selector id="mov2#mpkg38#mpkg41#opm83#mfu37#su179" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg38#mpkg41#opm83#mfu37#su179#kcond108" name="KeyCondition24" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg38#mpkg41#opm83#mfu37#oln425" name="OKFlow69" to="mov2#mpkg38#mpkg41#opm83#okcu80"/>
+      <KOLink id="mov2#mpkg38#mpkg41#opm83#mfu37#kln183" name="KOFlow68" to="mov2#mpkg38#mpkg41#opm83#kocu73"/>
+    </ModifyUnit>
+    <IsNotNullUnit id="mov2#mpkg38#mpkg41#opm83#inn22" name="Is Not Null" gr:x="430" gr:y="55">
+      <OKLink id="mov2#mpkg38#mpkg41#opm83#inn22#oln426" name="OKFlow55" to="mov2#mpkg38#mpkg41#opm83#mathu6">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm83#inn22#oln426#par1492" name="quantita_PASSING_quantita" sourceLinkParameter="mov2#mpkg38#mpkg41#opm83#seu86#oln427#par1496" target="mov2#mpkg38#mpkg41#opm83#mathu6#mathv6"/>
+      </OKLink>
+      <KOLink id="mov2#mpkg38#mpkg41#opm83#inn22#kln184" name="KOFlow9" to="mov2#mpkg38#mpkg41#opm83#dlu41"/>
+    </IsNotNullUnit>
+    <SelectorUnit id="mov2#mpkg38#mpkg41#opm83#seu86" name="AcquistiMult" gr:x="270" gr:y="35" entity="ent6">
+      <Selector id="mov2#mpkg38#mpkg41#opm83#seu86#su180" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg38#mpkg41#opm83#seu86#su180#acond81" name="quantita" predicate="gt" booleanOperator="or" implied="false" attributes="ent6#att39" value="1"/>
+        <KeyCondition id="mov2#mpkg38#mpkg41#opm83#seu86#su180#kcond109" name="oid" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg38#mpkg41#opm83#seu86#oln427" name="OKFlow54" to="mov2#mpkg38#mpkg41#opm83#inn22">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm83#seu86#oln427#par1495" name="oid_Input" source="ent6#att23Array" target="mov2#mpkg38#mpkg41#opm83#inn22.isnotnull"/>
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm83#seu86#oln427#par1496" name="quantita_PASSING" source="ent6#att39Array" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <MathUnit id="mov2#mpkg38#mpkg41#opm83#mathu6" name="decrQuantita" gr:x="595" gr:y="10" resultType="integer" defaultExpression="quantita - 1">
+      <MathVariable id="mov2#mpkg38#mpkg41#opm83#mathu6#mathv6" name="quantita"/>
+      <OKLink id="mov2#mpkg38#mpkg41#opm83#mathu6#oln428" name="OKFlow56" to="mov2#mpkg38#mpkg41#opm83#mfu37">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm83#mathu6#oln428#par1498" name="Result_quantita" source="result" target="mov2#mpkg38#mpkg41#opm83#mfu37.ent6#att39"/>
+      </OKLink>
+    </MathUnit>
+    <KOCollectorUnit id="mov2#mpkg38#mpkg41#opm83#kocu73" name="KO Port19" gr:x="1020" gr:y="110"/>
+  </OperationUnits>
+</OperationModule>

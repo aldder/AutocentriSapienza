@@ -1,0 +1,44 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov1#mpkg3#hym19" name="Homepage">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="80" gr:y="140" id="mov1#mpkg3#hym19#icu15" name="Input Port">
+      <OKLink id="mov1#mpkg3#hym19#icu15#oln177" to="mov1#mpkg3#hym19#page87" name="Flow"/>
+    </InputCollectorUnit>
+    <LoginUnit id="mov1#mpkg3#hym19#lgu3" name="Login" gr:x="965" gr:y="30">
+      <KOLink id="mov1#mpkg3#hym19#lgu3#kln85" name="KOFlow2" to="mov1#mpkg3#hym19#page87#mssu64">
+        <LinkParameter id="mov1#mpkg3#hym19#lgu3#kln85#par1096" name="Username o Password errati!_Shown Messages" target="mov1#mpkg3#hym19#page87#mssu64.shownMessages" sourceValue="Username o Password errati!"/>
+      </KOLink>
+    </LoginUnit>
+    <ModuleInstanceUnit id="mov1#mpkg3#hym19#miu128" gr:x="990" gr:y="275" moduleId="mov2#mpkg22#mpkg24#opm48">
+      <KOLink id="mov1#mpkg3#hym19#miu128#kln92" name="KOFlow92" to="mov1#mpkg3#hym19#page87#mssu66">
+        <LinkParameter id="mov1#mpkg3#hym19#miu128#kln92#par1150" name="Si e' verificato un errore._Shown Messages" sourceValue="Si e' verificato un errore." target="mov1#mpkg3#hym19#page87#mssu66.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <NoOpOperationUnit id="mov1#mpkg3#hym19#opu3" name="Ripristina" gr:x="300" gr:y="250">
+      <OKLink id="mov1#mpkg3#hym19#opu3#oln178" name="OKFlow1" to="mov1#mpkg3#hym19#page87"/>
+    </NoOpOperationUnit>
+    <ModuleInstanceUnit id="mov1#mpkg3#hym19#miu129" gr:x="875" gr:y="495" moduleId="mov2#mpkg22#mpkg28#opm55">
+      <OKLink id="mov1#mpkg3#hym19#miu129#oln179" name="OKFlow24" to="mov1#mpkg3#hym19#page87#mssu65">
+        <LinkParameter id="mov1#mpkg3#hym19#miu129#oln179#par1097" name="L'autovettura e' stata aggiunta ai preferiti._Shown Messages" target="mov1#mpkg3#hym19#page87#mssu65.shownMessages" sourceValue="L'autovettura e' stata aggiunta ai preferiti."/>
+      </OKLink>
+      <KOLink id="mov1#mpkg3#hym19#miu129#kln87" name="KOFlow21" to="mov1#mpkg3#hym19#page87#mssu66">
+        <LinkParameter id="mov1#mpkg3#hym19#miu129#kln87#par1098" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg3#hym19#page87#mssu66.shownMessages" sourceValue="Si e' verificato un errore."/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="mov1#mpkg3#hym19#miu130" gr:x="890" gr:y="410" moduleId="mov2#mpkg22#mpkg26#opm50">
+      <OKLink id="mov1#mpkg3#hym19#miu130#oln180" name="OKFlow23" to="mov1#mpkg3#hym19#page87#mssu65">
+        <LinkParameter id="mov1#mpkg3#hym19#miu130#oln180#par1099" name="L'autovettura e' stata aggiunta agli acquisti pendenti._Shown Messages" target="mov1#mpkg3#hym19#page87#mssu65.shownMessages" sourceValue="L'autovettura e' stata aggiunta agli acquisti pendenti."/>
+      </OKLink>
+      <KOLink id="mov1#mpkg3#hym19#miu130#kln89" name="KOFlow22" to="mov1#mpkg3#hym19#page87#mssu66">
+        <LinkParameter id="mov1#mpkg3#hym19#miu130#kln89#par1100" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg3#hym19#page87#mssu66.shownMessages" sourceValue="Si e' verificato un errore."/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <GetUnit id="mov1#mpkg3#hym19#gtu14" name="UtenteCorrente" landmark="false" gr:x="1175" gr:y="500" contextParameters="UserCtxParam">
+      <Link id="mov1#mpkg3#hym19#gtu14#ln354" name="Flow46" to="mov1#mpkg3#hym19#miu130" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym19#gtu14#ln354#par1128" name="UserCtxParam.oid_utente2acquisto [oid]" source="mov1#mpkg3#hym19#gtu14.UserCtxParam" target="mov1#mpkg3#hym19#miu130.mov2#mpkg22#mpkg26#opm50#icu52#icp247"/>
+      </Link>
+      <Link id="mov1#mpkg3#hym19#gtu14#ln355" name="Flow47" to="mov1#mpkg3#hym19#miu129" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym19#gtu14#ln355#par1132" name="UserCtxParam.oid_Utente.oid(PreferitoToUtente)" source="mov1#mpkg3#hym19#gtu14.UserCtxParam" target="mov1#mpkg3#hym19#miu129.mov2#mpkg22#mpkg28#opm55#icu57#icp277"/>
+      </Link>
+    </GetUnit>
+  </OperationUnits>
+</HybridModule>

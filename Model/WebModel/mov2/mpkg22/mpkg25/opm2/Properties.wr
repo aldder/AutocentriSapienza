@@ -1,0 +1,62 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg22#mpkg25#opm2" name="InserimentoNotifiche" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg22#mpkg25#opm2#icu7" gr:x="90" gr:y="155">
+      <InputCollectorParameter id="mov2#mpkg22#mpkg25#opm2#icu7#icp6" name="id_utente"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg25#opm2#icu7#icp7" name="data"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg25#opm2#icu7#icp8" name="id_acquisto"/>
+      <Link id="mov2#mpkg22#mpkg25#opm2#icu7#ln173" name="Flow93" to="mov2#mpkg22#mpkg25#opm2#dfu2" type="transport" validate="true" gr:bendpoints="190,166,-515,81;574,166,-131,81">
+        <LinkParameter id="mov2#mpkg22#mpkg25#opm2#icu7#ln173#par781" name="data_PASSING_Date(s)" source="mov2#mpkg22#mpkg25#opm2#icu7#icp7" target="mov2#mpkg22#mpkg25#opm2#dfu2.dateArray"/>
+      </Link>
+      <Link id="mov2#mpkg22#mpkg25#opm2#icu7#ln176" name="Flow92" to="mov2#mpkg22#mpkg25#opm2#cru5" type="transport" validate="true" gr:bendpoints="186,85,-349,0">
+        <LinkParameter id="mov2#mpkg22#mpkg25#opm2#icu7#ln176#par782" name="Utente.oid(Storico_AcquistoToUtente)_PASSING_Utente.oid(NotificaToUtente)" source="mov2#mpkg22#mpkg25#opm2#icu7#icp6" target="mov2#mpkg22#mpkg25#opm2#cru5.rel14#role28.userOID"/>
+        <LinkParameter id="mov2#mpkg22#mpkg25#opm2#icu7#ln176#par783" name="oid_Storico_Acquisto.oid(NotificaToStorico_Acquisto)" source="mov2#mpkg22#mpkg25#opm2#icu7#icp8" target="mov2#mpkg22#mpkg25#opm2#cru5.rel15#role30.ent7#att24"/>
+      </Link>
+      <OKLink id="mov2#mpkg22#mpkg25#opm2#icu7#oln77" name="OKFlow85" to="mov2#mpkg22#mpkg25#opm2#seu26"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov2#mpkg22#mpkg25#opm2#kocu3" name="KO Port1" gr:x="1020" gr:y="220"/>
+    <OKCollectorUnit id="mov2#mpkg22#mpkg25#opm2#okcu2" name="OK Port1" gr:x="1020" gr:y="120"/>
+    <DatesFunctionUnit id="mov2#mpkg22#mpkg25#opm2#dfu2" name="addTime" gr:x="850" gr:y="260" mode="addDaysToDate(s)">
+      <OKLink id="mov2#mpkg22#mpkg25#opm2#dfu2#oln118" name="OKFlow64" to="mov2#mpkg22#mpkg25#opm2#cru5">
+        <LinkParameter id="mov2#mpkg22#mpkg25#opm2#dfu2#oln118#par784" name="Result Date(s)_data_notifica" source="resultDates" target="mov2#mpkg22#mpkg25#opm2#cru5.ent4#att19"/>
+        <LinkParameter id="mov2#mpkg22#mpkg25#opm2#dfu2#oln118#par785" name="Notifica automatica._descrizione" target="mov2#mpkg22#mpkg25#opm2#cru5.ent4#att20" sourceValue="Notifica automatica."/>
+        <LinkParameter id="mov2#mpkg22#mpkg25#opm2#dfu2#oln118#par786" name="1_stato" target="mov2#mpkg22#mpkg25#opm2#cru5.ent4#att28" sourceValue="1"/>
+        <LinkParameter id="mov2#mpkg22#mpkg25#opm2#dfu2#oln118#par787" name="Next Element_PASSING_Tipologia.oid(NotificaToTipologia)" sourceLinkParameter="mov2#mpkg22#mpkg25#opm2#mathu5#oln129#par793" target="mov2#mpkg22#mpkg25#opm2#cru5.rel16#role31.ent3#att15"/>
+      </OKLink>
+    </DatesFunctionUnit>
+    <SelectorUnit id="mov2#mpkg22#mpkg25#opm2#seu25" name="getRipetizione" gr:x="670" gr:y="115" entity="ent3">
+      <Selector id="mov2#mpkg22#mpkg25#opm2#seu25#su26" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg22#mpkg25#opm2#seu25#su26#kcond5" name="oid" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg22#mpkg25#opm2#seu25#oln122" name="OKFlow46" to="mov2#mpkg22#mpkg25#opm2#mathu5">
+        <LinkParameter id="mov2#mpkg22#mpkg25#opm2#seu25#oln122#par788" name="ripetizione_mesi" source="ent3#att17Array" target="mov2#mpkg22#mpkg25#opm2#mathu5#mathv5"/>
+        <LinkParameter id="mov2#mpkg22#mpkg25#opm2#seu25#oln122#par789" name="Next Element_PASSING" sourceLinkParameter="mov2#mpkg22#mpkg25#opm2#lpu5#oln126#par790" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <CreateUnit id="mov2#mpkg22#mpkg25#opm2#cru5" name="InserisciNotifica" gr:x="675" gr:y="255" entity="ent4">
+      <OKLink id="mov2#mpkg22#mpkg25#opm2#cru5#oln125" name="OKFlow65" to="mov2#mpkg22#mpkg25#opm2#lpu5"/>
+      <KOLink id="mov2#mpkg22#mpkg25#opm2#cru5#kln54" name="KOFlow80" to="mov2#mpkg22#mpkg25#opm2#kocu3" gr:bendpoints="115,70,-350,105;282,70,-183,105"/>
+    </CreateUnit>
+    <LoopUnit id="mov2#mpkg22#mpkg25#opm2#lpu5" name="Loop" gr:x="515" gr:y="180">
+      <OKLink id="mov2#mpkg22#mpkg25#opm2#lpu5#oln126" name="OKFlow62" to="mov2#mpkg22#mpkg25#opm2#seu25" code="next">
+        <LinkParameter id="mov2#mpkg22#mpkg25#opm2#lpu5#oln126#par790" name="Next Element_PASSING" source="next" passing="true"/>
+        <LinkParameter id="mov2#mpkg22#mpkg25#opm2#lpu5#oln126#par791" name="Next Element_oid [oid]" source="next" target="mov2#mpkg22#mpkg25#opm2#seu25#su26#kcond5.ent3#att15"/>
+      </OKLink>
+      <OKLink id="mov2#mpkg22#mpkg25#opm2#lpu5#oln127" name="OKFlow86" to="mov2#mpkg22#mpkg25#opm2#okcu2" code="end" gr:bendpoints="111,-136,-469,-86;390,-135,-190,-85"/>
+    </LoopUnit>
+    <MathUnit id="mov2#mpkg22#mpkg25#opm2#mathu5" name="MonthsToDays" gr:x="830" gr:y="125" resultType="integer" defaultExpression="(mesi - 1) * 30">
+      <MathVariable id="mov2#mpkg22#mpkg25#opm2#mathu5#mathv5" name="mesi"/>
+      <OKLink id="mov2#mpkg22#mpkg25#opm2#mathu5#oln129" name="OKFlow63" to="mov2#mpkg22#mpkg25#opm2#dfu2">
+        <LinkParameter id="mov2#mpkg22#mpkg25#opm2#mathu5#oln129#par792" name="Result_Number(s) Of Days" source="result" target="mov2#mpkg22#mpkg25#opm2#dfu2.numberOfDaysArray"/>
+        <LinkParameter id="mov2#mpkg22#mpkg25#opm2#mathu5#oln129#par793" name="Next Element_PASSING" sourceLinkParameter="mov2#mpkg22#mpkg25#opm2#seu25#oln122#par789" passing="true"/>
+      </OKLink>
+    </MathUnit>
+    <SelectorUnit id="mov2#mpkg22#mpkg25#opm2#seu26" name="TipoInterventi" gr:x="360" gr:y="165" entity="ent3">
+      <Selector id="mov2#mpkg22#mpkg25#opm2#seu26#su27" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg22#mpkg25#opm2#seu26#su27#acond66" name="ripetizione" predicate="neq" booleanOperator="or" implied="false" attributes="ent3#att17" value="0"/>
+      </Selector>
+      <OKLink id="mov2#mpkg22#mpkg25#opm2#seu26#oln130" name="OKFlow61" to="mov2#mpkg22#mpkg25#opm2#lpu5">
+        <LinkParameter id="mov2#mpkg22#mpkg25#opm2#seu26#oln130#par794" name="oid_Input Array" source="ent3#att15Array" target="mov2#mpkg22#mpkg25#opm2#lpu5.array"/>
+      </OKLink>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationModule>

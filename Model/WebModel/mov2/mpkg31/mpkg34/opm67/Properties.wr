@@ -1,0 +1,40 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg31#mpkg34#opm67" name="ModificaOrarioAppuntamento" gr:x="0" gr:y="55">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg31#mpkg34#opm67#icu70" gr:x="-15" gr:y="-10" linkOrder="mov2#mpkg31#mpkg34#opm67#icu70#ln268">
+      <InputCollectorParameter id="mov2#mpkg31#mpkg34#opm67#icu70#icp323" name="Orario Object"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg34#opm67#icu70#icp324" name="KeyCondition53 [oid]"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg34#opm67#icu70#icp325" name="ora"/>
+      <OKLink id="mov2#mpkg31#mpkg34#opm67#icu70#oln215" name="Salva modifiche" to="mov2#mpkg31#mpkg34#opm67#seu96">
+        <LinkParameter id="mov2#mpkg31#mpkg34#opm67#icu70#oln215#par1704" name="KeyCondition53 [oid]_KeyCondition121 [oid (not in)]" source="mov2#mpkg31#mpkg34#opm67#icu70#icp324" target="mov2#mpkg31#mpkg34#opm67#seu96#su192#kcond121.ent15#att65"/>
+        <LinkParameter id="mov2#mpkg31#mpkg34#opm67#icu70#oln215#par1705" name="ora_ora" source="mov2#mpkg31#mpkg34#opm67#icu70#icp325" target="mov2#mpkg31#mpkg34#opm67#seu96#su192#acond86"/>
+      </OKLink>
+      <Link id="mov2#mpkg31#mpkg34#opm67#icu70#ln268" name="Flow268" to="mov2#mpkg31#mpkg34#opm67#mfu28" type="transport" validate="true" gr:bendpoints="198,-64,-307,-74;387,-65,-118,-75">
+        <LinkParameter id="mov2#mpkg31#mpkg34#opm67#icu70#ln268#par1706" name="KeyCondition53 [oid]_KeyCondition53 [oid]" source="mov2#mpkg31#mpkg34#opm67#icu70#icp324" target="mov2#mpkg31#mpkg34#opm67#mfu28#su110#kcond64.ent15#att65"/>
+        <LinkParameter id="mov2#mpkg31#mpkg34#opm67#icu70#ln268#par1707" name="ora_ora" source="mov2#mpkg31#mpkg34#opm67#icu70#icp325" target="mov2#mpkg31#mpkg34#opm67#mfu28.ent15#att66"/>
+        <LinkParameter id="mov2#mpkg31#mpkg34#opm67#icu70#ln268#par1708" name="Orario Object_Orario Object" source="mov2#mpkg31#mpkg34#opm67#icu70#icp323" target="mov2#mpkg31#mpkg34#opm67#mfu28.entityBeans"/>
+      </Link>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov2#mpkg31#mpkg34#opm67#okcu66" name="OK Port34" gr:x="770" gr:y="-35"/>
+    <ModifyUnit id="mov2#mpkg31#mpkg34#opm67#mfu28" name="Modifica" gr:x="595" gr:y="0" entity="ent15">
+      <Selector id="mov2#mpkg31#mpkg34#opm67#mfu28#su110" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg31#mpkg34#opm67#mfu28#su110#kcond64" name="KeyCondition53" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg31#mpkg34#opm67#mfu28#oln235" name="OKFlow115" to="mov2#mpkg31#mpkg34#opm67#okcu66"/>
+      <KOLink id="mov2#mpkg31#mpkg34#opm67#mfu28#kln156" name="KOFlow107" to="mov2#mpkg31#mpkg34#opm67#kocu60"/>
+    </ModifyUnit>
+    <KOCollectorUnit id="mov2#mpkg31#mpkg34#opm67#kocu60" name="KO Port31" gr:x="770" gr:y="55"/>
+    <SelectorUnit gr:x="310" gr:y="-5" id="mov2#mpkg31#mpkg34#opm67#seu96" name="SelectOrario" entity="ent15">
+      <Selector id="mov2#mpkg31#mpkg34#opm67#seu96#su192" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg31#mpkg34#opm67#seu96#su192#acond86" name="ora" predicate="eq" booleanOperator="or" implied="false" attributes="ent15#att66"/>
+        <KeyCondition id="mov2#mpkg31#mpkg34#opm67#seu96#su192#kcond121" name="KeyCondition121" predicate="notIn" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg31#mpkg34#opm67#seu96#oln478" name="OKFlow478" to="mov2#mpkg31#mpkg34#opm67#inn25">
+        <LinkParameter id="mov2#mpkg31#mpkg34#opm67#seu96#oln478#par1703" name="oid_Input" source="ent15#att65Array" target="mov2#mpkg31#mpkg34#opm67#inn25.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="455" gr:y="15" id="mov2#mpkg31#mpkg34#opm67#inn25" name="Is Not Null">
+      <OKLink id="mov2#mpkg31#mpkg34#opm67#inn25#oln479" name="OKFlow479" to="mov2#mpkg31#mpkg34#opm67#kocu60" gr:bendpoints="70,51,-310,1"/>
+      <KOLink id="mov2#mpkg31#mpkg34#opm67#inn25#kln215" name="KOFlow215" to="mov2#mpkg31#mpkg34#opm67#mfu28"/>
+    </IsNotNullUnit>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,31 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="165" id="mov1#mpkg5#hym11" name="Gestione Storico Acquisti" landmarks="mov1#mpkg5#hym11#page67">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="220" gr:y="25" id="mov1#mpkg5#hym11#icu5" name="Input Port">
+      <OKLink id="mov1#mpkg5#hym11#icu5#oln42" to="mov1#mpkg5#hym11#page67" name="Landmark"/>
+    </InputCollectorUnit>
+    <ModuleInstanceUnit id="mov1#mpkg5#hym11#miu61" gr:x="1020" gr:y="230" moduleId="mov2#mpkg38#mpkg39#opm79">
+      <OKLink id="mov1#mpkg5#hym11#miu61#oln43" name="OKFlow86" to="mov1#mpkg5#hym11#page67"/>
+      <KOLink id="mov1#mpkg5#hym11#miu61#kln36" name="KOFlow82" to="mov1#mpkg5#hym11#page67#mssu37">
+        <LinkParameter id="mov1#mpkg5#hym11#miu61#kln36#par690" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg5#hym11#page67#mssu37.shownMessages" sourceValue="Si e' verificato un errore."/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="mov1#mpkg5#hym11#miu65" gr:x="1380" gr:y="120" action="true" moduleId="mov2#mpkg29#mpkg30#opm57">
+      <OKLink id="mov1#mpkg5#hym11#miu65#oln44" name="OKFlow213" to="mov1#mpkg5#hym11#page54"/>
+      <KOLink id="mov1#mpkg5#hym11#miu65#kln37" name="KOFlow84" to="mov1#mpkg5#hym11#page67#mssu37">
+        <LinkParameter id="mov1#mpkg5#hym11#miu65#kln37#par709" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg5#hym11#page67#mssu37.shownMessages" sourceValue="Si e' verificato un errore."/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="mov1#mpkg5#hym11#miu66" gr:x="1060" gr:y="65" moduleId="mov2#mpkg38#mpkg39#opm78">
+      <OKLink id="mov1#mpkg5#hym11#miu66#oln45" name="OKFlow77" to="mov1#mpkg5#hym11#page67"/>
+      <KOLink id="mov1#mpkg5#hym11#miu66#kln38" name="KOFlow81" to="mov1#mpkg5#hym11#page67#mssu37">
+        <LinkParameter id="mov1#mpkg5#hym11#miu66#kln38#par710" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg5#hym11#page67#mssu37.shownMessages" sourceValue="Si e' verificato un errore."/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="mov1#mpkg5#hym11#miu67" gr:x="995" gr:y="330" moduleId="mov2#mpkg38#mpkg39#opm77">
+      <OKLink id="mov1#mpkg5#hym11#miu67#oln46" name="OKFlow89" to="mov1#mpkg5#hym11#page67"/>
+      <KOLink id="mov1#mpkg5#hym11#miu67#kln39" name="KOFlow83" to="mov1#mpkg5#hym11#page67#mssu37">
+        <LinkParameter id="mov1#mpkg5#hym11#miu67#kln39#par728" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg5#hym11#page67#mssu37.shownMessages" sourceValue="Si e' verificato un errore."/>
+      </KOLink>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</HybridModule>

@@ -1,6 +1,6 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="AmmWebView" landmarks="sv2#area5" homePage="sv2#area5#page3" localized="false">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="AmmWebView" landmarks="sv2#area5" homePage="sv2#area5#miu82" localized="false">
   <OperationUnits>
-    <LogoutUnit id="sv2#lou12" name="Logout" gr:x="385" gr:y="105" siteView="sv1"/>
+    <ModuleInstanceUnit gr:x="360" gr:y="110" id="sv2#miu74" action="false" moduleId="mov1#hym10"/>
   </OperationUnits>
   <layout:LayoutParameter name="mandatory-fields" value="true" type="field"/>
   <layout:LayoutParameter name="link-style" value="button" type="link"/>

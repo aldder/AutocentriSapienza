@@ -1,0 +1,66 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym6#page59" name="Inserisci autovettura" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="570" gr:y="-30" layout:frameLayout="None">
+  <ContentUnits>
+    <EntryUnit id="mov1#mpkg6#hym6#page59#enu42" name="Inserisci autovettura" linkOrder="mov1#mpkg6#hym6#page59#enu42#ln251" gr:x="0" gr:y="0" entity="ent11" fieldOrder="mov1#mpkg6#hym6#page59#enu42#fld163 mov1#mpkg6#hym6#page59#enu42#fld164 mov1#mpkg6#hym6#page59#enu42#fld165 mov1#mpkg6#hym6#page59#enu42#fld166 mov1#mpkg6#hym6#page59#enu42#fld167">
+      <Field id="mov1#mpkg6#hym6#page59#enu42#fld163" name="Targa" type="string" modifiable="true" attribute="ent11#att52">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym6#page59#enu42#fld163#mnd135" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <CollectionValidationRule id="mov1#mpkg6#hym6#page59#enu42#fld163#clc18" name="Unique" predicate="notIn" entity="ent11" attribute="ent11#att52" errorMessage="valore gi&#224; presente"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym6#page59#enu42#fld164" name="Nome" type="string" modifiable="true" attribute="ent11#att53">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym6#page59#enu42#fld164#mnd136" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym6#page59#enu42#fld165" name="Marca" type="string" modifiable="true" attribute="ent11#att54">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym6#page59#enu42#fld165#mnd137" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym6#page59#enu42#fld166" name="Cliente" type="string" modifiable="true" attribute="ent11#att57">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym6#page59#enu42#fld166#mnd138" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym6#page59#enu42#fld167" name="Descrizione" type="text" modifiable="true" attribute="ent11#att58">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym6#page59#enu42#fld167#mnd139" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Link id="mov1#mpkg6#hym6#page59#enu42#ln251" name="Inserisci" to="mov1#mpkg6#hym6#miu69" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg6#hym6#page59#enu42#ln251#par1642" name="Autovetture_Clienti Object_Autovetture_Clienti Object" source="entityBean" target="mov1#mpkg6#hym6#miu69.mov2#mpkg31#mpkg33#opm63#icu66#icp309"/>
+        <LinkParameter id="mov1#mpkg6#hym6#page59#enu42#ln251#par1643" name="Cliente_cliente" source="mov1#mpkg6#hym6#page59#enu42#fld166" target="mov1#mpkg6#hym6#miu69.mov2#mpkg31#mpkg33#opm63#icu66#icp306"/>
+        <LinkParameter id="mov1#mpkg6#hym6#page59#enu42#ln251#par1644" name="Descrizione_descrizione" source="mov1#mpkg6#hym6#page59#enu42#fld167" target="mov1#mpkg6#hym6#miu69.mov2#mpkg31#mpkg33#opm63#icu66#icp307"/>
+        <LinkParameter id="mov1#mpkg6#hym6#page59#enu42#ln251#par1645" name="Marca_marca" source="mov1#mpkg6#hym6#page59#enu42#fld165" target="mov1#mpkg6#hym6#miu69.mov2#mpkg31#mpkg33#opm63#icu66#icp308"/>
+        <LinkParameter id="mov1#mpkg6#hym6#page59#enu42#ln251#par1646" name="Nome_nome" source="mov1#mpkg6#hym6#page59#enu42#fld164" target="mov1#mpkg6#hym6#miu69.mov2#mpkg31#mpkg33#opm63#icu66#icp310"/>
+        <LinkParameter id="mov1#mpkg6#hym6#page59#enu42#ln251#par1647" name="Key [oid]_oid" source="key.ent11#att51" target="mov1#mpkg6#hym6#miu69.mov2#mpkg31#mpkg33#opm63#icu66#icp312"/>
+        <LinkParameter id="mov1#mpkg6#hym6#page59#enu42#ln251#par1648" name="Targa_targa" source="mov1#mpkg6#hym6#page59#enu42#fld163" target="mov1#mpkg6#hym6#miu69.mov2#mpkg31#mpkg33#opm63#icu66#icp311"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg6#hym6#page59#enu42">
+          <layout:Field field="mov1#mpkg6#hym6#page59#enu42#fld163"/>
+          <layout:Field field="mov1#mpkg6#hym6#page59#enu42#fld164"/>
+          <layout:Field field="mov1#mpkg6#hym6#page59#enu42#fld165"/>
+          <layout:Field field="mov1#mpkg6#hym6#page59#enu42#fld166"/>
+          <layout:Field field="mov1#mpkg6#hym6#page59#enu42#fld167"/>
+          <layout:Link link="mov1#mpkg6#hym6#page59#enu42#ln251"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

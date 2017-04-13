@@ -1,7 +1,5 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-10" gr:y="25" id="sv1#area1" name="Homepage" landmark="true" defaultPage="sv1#area1#page5">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="90" gr:y="35" id="sv1#area1" name="Homepage" landmark="true" defaultPage="sv1#area1#miu127">
   <OperationUnits>
-    <NoOpOperationUnit gr:x="0" gr:y="405" id="sv1#area1#opu2" name="Ripristina">
-      <OKLink id="sv1#area1#opu2#oln1" name="OKFlow1" to="sv1#area1#page5"/>
-    </NoOpOperationUnit>
+    <ModuleInstanceUnit gr:x="0" gr:y="0" id="sv1#area1#miu127" moduleId="mov1#mpkg3#hym19"/>
   </OperationUnits>
 </Area>

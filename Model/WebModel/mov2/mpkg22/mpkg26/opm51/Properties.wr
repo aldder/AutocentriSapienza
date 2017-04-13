@@ -1,0 +1,30 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg22#mpkg26#opm51" name="CancellazioneAcquistoPendente" gr:x="0" gr:y="55">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg22#mpkg26#opm51#icu53" gr:x="40" gr:y="10">
+      <InputCollectorParameter id="mov2#mpkg22#mpkg26#opm51#icu53#icp249" name="id_utente"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg26#opm51#icu53#icp250" name="id_autovettura"/>
+      <OKLink id="mov2#mpkg22#mpkg26#opm51#icu53#oln91" name="Rimuovi acquisto" to="mov2#mpkg22#mpkg26#opm51#seu29">
+        <LinkParameter id="mov2#mpkg22#mpkg26#opm51#icu53#oln91#par619" name="oid_autovettura2acquisto [oid]" source="mov2#mpkg22#mpkg26#opm51#icu53#icp250" target="mov2#mpkg22#mpkg26#opm51#seu29#su67#rcond14.ent1#att1"/>
+        <LinkParameter id="mov2#mpkg22#mpkg26#opm51#icu53#oln91#par975" name="utente2acquisto [oid]_utente2acquisto [oid]" source="mov2#mpkg22#mpkg26#opm51#icu53#icp249" target="mov2#mpkg22#mpkg26#opm51#seu29#su67#rcond15.userOID"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov2#mpkg22#mpkg26#opm51#okcu50" name="OK Port2" gr:x="735" gr:y="-20"/>
+    <SelectorUnit id="mov2#mpkg22#mpkg26#opm51#seu29" name="Acquisti pendenti" gr:x="335" gr:y="0" entity="ent6">
+      <Selector id="mov2#mpkg22#mpkg26#opm51#seu29#su67" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov2#mpkg22#mpkg26#opm51#seu29#su67#rcond14" name="autovettura2acquisto" predicate="in" implied="false" role="rel18#role36"/>
+        <RelationshipRoleCondition id="mov2#mpkg22#mpkg26#opm51#seu29#su67#rcond15" name="utente2acquisto" predicate="in" implied="false" role="rel2#role3"/>
+      </Selector>
+      <OKLink id="mov2#mpkg22#mpkg26#opm51#seu29#oln92" name="OKFlow30" to="mov2#mpkg22#mpkg26#opm51#dlu19">
+        <LinkParameter id="mov2#mpkg22#mpkg26#opm51#seu29#oln92#par620" name="oid_KeyCondition39 [oid]" source="ent6#att23Array" target="mov2#mpkg22#mpkg26#opm51#dlu19#su77#kcond37.ent6#att23"/>
+      </OKLink>
+    </SelectorUnit>
+    <DeleteUnit id="mov2#mpkg22#mpkg26#opm51#dlu19" name="Cancellazione" gr:x="545" gr:y="5" entity="ent6">
+      <Selector id="mov2#mpkg22#mpkg26#opm51#dlu19#su77" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg22#mpkg26#opm51#dlu19#su77#kcond37" name="KeyCondition39" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg22#mpkg26#opm51#dlu19#oln93" name="OKFlow31" to="mov2#mpkg22#mpkg26#opm51#okcu50"/>
+      <KOLink id="mov2#mpkg22#mpkg26#opm51#dlu19#kln133" name="KOFlow30" to="mov2#mpkg22#mpkg26#opm51#kocu44"/>
+    </DeleteUnit>
+    <KOCollectorUnit id="mov2#mpkg22#mpkg26#opm51#kocu44" name="KO Port6" gr:x="735" gr:y="55"/>
+  </OperationUnits>
+</OperationModule>

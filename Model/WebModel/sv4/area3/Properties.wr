@@ -1,4 +1,10 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area3" name="Amministrazione Officina" defaultPage="sv4#area3#page33" landmark="true" protected="true" gr:x="30" gr:y="15" layout:style="BootstrapStyle" landmarks="sv4#area3#page33 sv4#area3#page30 sv4#area3#page41 sv4#area3#page43 sv4#area3#page45">
-  <OperationUnits/>
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area3" name="Amministrazione Officina" defaultPage="sv4#area3#miu55" landmark="true" protected="true" gr:x="35" gr:y="30" layout:style="BootstrapStyle" landmarks="sv4#area3#miu55 sv4#area3#miu68 sv4#area3#miu78 sv4#area3#miu85 sv4#area3#miu93">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="0" gr:y="0" id="sv4#area3#miu55" moduleId="mov1#mpkg6#hym5" landmark="true"/>
+    <ModuleInstanceUnit gr:x="0" gr:y="125" id="sv4#area3#miu68" moduleId="mov1#mpkg6#hym6" landmark="true"/>
+    <ModuleInstanceUnit gr:x="330" gr:y="0" id="sv4#area3#miu78" moduleId="mov1#mpkg6#hym7" landmark="true"/>
+    <ModuleInstanceUnit gr:x="340" gr:y="120" id="sv4#area3#miu85" moduleId="mov1#mpkg6#hym8" landmark="true"/>
+    <ModuleInstanceUnit gr:x="10" gr:y="225" id="sv4#area3#miu93" moduleId="mov1#mpkg6#hym9" landmark="true"/>
+  </OperationUnits>
   <layout:LayoutParameter name="link-style" value="button" type="link"/>
 </Area>

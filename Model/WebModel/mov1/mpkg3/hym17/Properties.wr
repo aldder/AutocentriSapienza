@@ -1,0 +1,33 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="275" id="mov1#mpkg3#hym17" name="Gestione Annunci di Vendita" landmarks="mov1#mpkg3#hym17#page83">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="10" gr:y="105" id="mov1#mpkg3#hym17#icu13" name="Input Port">
+      <OKLink id="mov1#mpkg3#hym17#icu13#oln169" to="mov1#mpkg3#hym17#page83" name="Landmark"/>
+    </InputCollectorUnit>
+    <ModuleInstanceUnit id="mov1#mpkg3#hym17#miu120" gr:x="795" gr:y="355" moduleId="mov2#mpkg22#mpkg27#opm54">
+      <OKLink id="mov1#mpkg3#hym17#miu120#oln170" name="OKFlow22" to="mov1#mpkg3#hym17#page83"/>
+      <KOLink id="mov1#mpkg3#hym17#miu120#kln79" name="KOFlow20" to="mov1#mpkg3#hym17#page83#mssu48">
+        <LinkParameter id="mov1#mpkg3#hym17#miu120#kln79#par1021" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg3#hym17#page83#mssu48.shownMessages" sourceValue="Si e' verificato un errore."/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="mov1#mpkg3#hym17#miu121" gr:x="805" gr:y="185" moduleId="mov2#mpkg22#mpkg27#opm52">
+      <OKLink id="mov1#mpkg3#hym17#miu121#oln171" name="OKFlow21" to="mov1#mpkg3#hym17#page83"/>
+      <KOLink id="mov1#mpkg3#hym17#miu121#kln80" name="KOFlow17" to="mov1#mpkg3#hym17#page83#mssu48">
+        <LinkParameter id="mov1#mpkg3#hym17#miu121#kln80#par1032" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg3#hym17#page83#mssu48.shownMessages" sourceValue="Si e' verificato un errore."/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="mov1#mpkg3#hym17#miu122" gr:x="795" gr:y="270" moduleId="mov2#mpkg22#mpkg27#opm53">
+      <OKLink id="mov1#mpkg3#hym17#miu122#oln172" name="OKFlow20" to="mov1#mpkg3#hym17#page83"/>
+      <KOLink id="mov1#mpkg3#hym17#miu122#kln81" name="KOFlow18" to="mov1#mpkg3#hym17#page83#mssu48">
+        <LinkParameter id="mov1#mpkg3#hym17#miu122#kln81#par1046" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg3#hym17#page83#mssu48.shownMessages" sourceValue="Si e' verificato un errore."/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <GetUnit gr:x="1095" gr:y="210" id="mov1#mpkg3#hym17#gtu11" name="UtenteCorrente" contextParameters="UserCtxParam" linkOrder="mov1#mpkg3#hym17#gtu11#ln334 mov1#mpkg3#hym17#gtu11#ln335">
+      <Link id="mov1#mpkg3#hym17#gtu11#ln334" name="Flow334" to="mov1#mpkg3#hym17#miu121" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym17#gtu11#ln334#par1049" name="UserCtxParam.oid_Utente.oid(AnnuncioToUtente)" source="mov1#mpkg3#hym17#gtu11.UserCtxParam" target="mov1#mpkg3#hym17#miu121.mov2#mpkg22#mpkg27#opm52#icu54#icp251"/>
+      </Link>
+      <Link id="mov1#mpkg3#hym17#gtu11#ln335" name="Flow335" to="mov1#mpkg3#hym17#miu122" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym17#gtu11#ln335#par1050" name="UserCtxParam.oid_Utente.oid(AnnuncioToUtente)" source="mov1#mpkg3#hym17#gtu11.UserCtxParam" target="mov1#mpkg3#hym17#miu122.mov2#mpkg22#mpkg27#opm53#icu55#icp274"/>
+      </Link>
+    </GetUnit>
+  </OperationUnits>
+</HybridModule>

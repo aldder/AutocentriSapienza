@@ -1,3 +1,10 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1#area4" name="Area Clienti" defaultPage="sv1#area4#page14" landmark="true" protected="true" gr:x="1495" gr:y="30" landmarks="sv1#area4#page14 sv1#area4#page17 sv1#area4#page15 sv1#area4#page18 sv1#area4#page22 sv1#area4#page23">
-  <OperationUnits/>
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1#area4" name="Area Clienti" defaultPage="sv1#area4#miu125" landmark="true" protected="true" gr:x="90" gr:y="215" landmarks="sv1#area4#miu119 sv1#area4#miu125 sv1#area4#miu114 sv1#area4#miu98 sv1#area4#miu110 sv1#area4#miu103">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="320" gr:y="0" id="sv1#area4#miu98" moduleId="mov1#mpkg3#hym13" landmark="true"/>
+    <ModuleInstanceUnit gr:x="320" gr:y="160" id="sv1#area4#miu103" moduleId="mov1#mpkg3#hym14" landmark="true"/>
+    <ModuleInstanceUnit gr:x="320" gr:y="80" id="sv1#area4#miu110" moduleId="mov1#mpkg3#hym15" landmark="true"/>
+    <ModuleInstanceUnit gr:x="0" gr:y="160" id="sv1#area4#miu114" moduleId="mov1#mpkg3#hym16" landmark="true"/>
+    <ModuleInstanceUnit gr:x="0" gr:y="80" id="sv1#area4#miu119" moduleId="mov1#mpkg3#hym17" landmark="true"/>
+    <ModuleInstanceUnit gr:x="0" gr:y="0" id="sv1#area4#miu125" moduleId="mov1#mpkg3#hym18" landmark="true"/>
+  </OperationUnits>
 </Area>

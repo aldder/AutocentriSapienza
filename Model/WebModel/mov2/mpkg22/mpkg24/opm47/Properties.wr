@@ -1,0 +1,23 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg22#mpkg24#opm47" name="ModificaPassword" gr:x="0" gr:y="55">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg22#mpkg24#opm47#icu49" gr:x="0" gr:y="150">
+      <InputCollectorParameter id="mov2#mpkg22#mpkg24#opm47#icu49#icp235" name="KeyCondition10 [oid]"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg24#opm47#icu49#icp236" name="Utente Object"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg24#opm47#icu49#icp237" name="password"/>
+      <OKLink id="mov2#mpkg22#mpkg24#opm47#icu49#oln78" name="Salva" to="mov2#mpkg22#mpkg24#opm47#mfu15">
+        <LinkParameter id="mov2#mpkg22#mpkg24#opm47#icu49#oln78#par469" name="Key [oid]_KeyCondition10 [oid]" source="mov2#mpkg22#mpkg24#opm47#icu49#icp235" target="mov2#mpkg22#mpkg24#opm47#mfu15#su44#kcond24.userOID"/>
+        <LinkParameter id="mov2#mpkg22#mpkg24#opm47#icu49#oln78#par472" name="Inserisci nuova password_password" source="mov2#mpkg22#mpkg24#opm47#icu49#icp237" target="mov2#mpkg22#mpkg24#opm47#mfu15.password"/>
+        <LinkParameter id="mov2#mpkg22#mpkg24#opm47#icu49#oln78#par474" name="Utente Object_Utente Object" source="mov2#mpkg22#mpkg24#opm47#icu49#icp236" target="mov2#mpkg22#mpkg24#opm47#mfu15.entityBeans"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <ModifyUnit id="mov2#mpkg22#mpkg24#opm47#mfu15" name="Modifica" gr:x="325" gr:y="160" entity="User">
+      <Selector id="mov2#mpkg22#mpkg24#opm47#mfu15#su44" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg22#mpkg24#opm47#mfu15#su44#kcond24" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg22#mpkg24#opm47#mfu15#oln79" name="OKFlow18" to="mov2#mpkg22#mpkg24#opm47#okcu47"/>
+      <KOLink id="mov2#mpkg22#mpkg24#opm47#mfu15#kln97" name="KOFlow16" to="mov2#mpkg22#mpkg24#opm47#kocu41"/>
+    </ModifyUnit>
+    <OKCollectorUnit id="mov2#mpkg22#mpkg24#opm47#okcu47" name="OK Port1" gr:x="505" gr:y="125"/>
+    <KOCollectorUnit id="mov2#mpkg22#mpkg24#opm47#kocu41" name="KO Port2" gr:x="505" gr:y="235"/>
+  </OperationUnits>
+</OperationModule>

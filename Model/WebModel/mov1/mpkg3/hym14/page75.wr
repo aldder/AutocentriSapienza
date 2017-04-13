@@ -1,0 +1,198 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg3#hym14#page75" name="Prenotazioni interventi" landmark="true" layout:layoutManager="grid" ajaxEnabled="true" gr:x="375" gr:y="-155">
+  <ContentUnits>
+    <EventCalendarUnit id="mov1#mpkg3#hym14#page75#ecu2" name="Calendario" gr:x="185" gr:y="105" entityBased="true" entity="ent2" dateAttribute="ent2#att13" years="1" displayAttributes="rel17#role33.ent15#att66"/>
+    <SelectorUnit id="mov1#mpkg3#hym14#page75#seu30" name="Appuntamenti" gr:x="0" gr:y="105" entity="ent2">
+      <Link id="mov1#mpkg3#hym14#page75#seu30#ln238" name="Flow3" to="mov1#mpkg3#hym14#page75#ecu2" type="transport" validate="true"/>
+    </SelectorUnit>
+    <EntryUnit id="mov1#mpkg3#hym14#page75#enu48" name="Nuovo appuntamento" linkOrder="mov1#mpkg3#hym14#page75#enu48#ln239" ajaxEnableExpandedLinks="false" gr:x="320" gr:y="105" entity="ent2" fieldOrder="mov1#mpkg3#hym14#page75#enu48#fld226 mov1#mpkg3#hym14#page75#enu48#sfld37 mov1#mpkg3#hym14#page75#enu48#sfld36 mov1#mpkg3#hym14#page75#enu48#fld227">
+      <Field id="mov1#mpkg3#hym14#page75#enu48#fld226" name="Data" ajaxEventEnabled="false" type="date" modifiable="true" attribute="ent2#att13">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym14#page75#enu48#fld226#mnd187" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <TypeValidationRule id="mov1#mpkg3#hym14#page75#enu48#fld226#tvr1" name="Type Validation" type="date" errorMessage="valore non corretto"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg3#hym14#page75#enu48#fld227" name="Descrizione" type="text" modifiable="true" attribute="ent2#att14"/>
+      <SelectionField id="mov1#mpkg3#hym14#page75#enu48#sfld36" name="Tipologia" type="string">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym14#page75#enu48#sfld36#mnd188" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="mov1#mpkg3#hym14#page75#enu48#sfld37" name="Ora" type="string">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym14#page75#enu48#sfld37#mnd189" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </SelectionField>
+      <Link id="mov1#mpkg3#hym14#page75#enu48#ln239" name="Inserisci" to="mov1#mpkg3#hym14#miu106" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym14#page75#enu48#ln239#par927" name="Data_data" source="mov1#mpkg3#hym14#page75#enu48#fld226" target="mov1#mpkg3#hym14#miu106.mov2#mpkg22#mpkg23#opm36#icu46#icp91"/>
+        <LinkParameter id="mov1#mpkg3#hym14#page75#enu48#ln239#par928" name="Descrizione_descrizione" source="mov1#mpkg3#hym14#page75#enu48#fld227" target="mov1#mpkg3#hym14#miu106.mov2#mpkg22#mpkg23#opm36#icu46#icp92"/>
+        <LinkParameter id="mov1#mpkg3#hym14#page75#enu48#ln239#par929" name="Ora_id_orario" source="mov1#mpkg3#hym14#page75#enu48#sfld37" target="mov1#mpkg3#hym14#miu106.mov2#mpkg22#mpkg23#opm36#icu46#icp90"/>
+        <LinkParameter id="mov1#mpkg3#hym14#page75#enu48#ln239#par930" name="Tipologia_id_tipologia" source="mov1#mpkg3#hym14#page75#enu48#sfld36" target="mov1#mpkg3#hym14#miu106.mov2#mpkg22#mpkg23#opm36#icu46#icp93"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit id="mov1#mpkg3#hym14#page75#seu31" name="Tipologia" gr:x="410" gr:y="0" entity="ent3">
+      <Link id="mov1#mpkg3#hym14#page75#seu31#ln242" name="Flow4" to="mov1#mpkg3#hym14#page75#enu48" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym14#page75#seu31#ln242#par902" name="nome_Tipologia [label]" source="ent3#att16Array" target="mov1#mpkg3#hym14#page75#enu48#sfld36_label"/>
+        <LinkParameter id="mov1#mpkg3#hym14#page75#seu31#ln242#par903" name="oid_Tipologia [output]" source="ent3#att15Array" target="mov1#mpkg3#hym14#page75#enu48#sfld36_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="mov1#mpkg3#hym14#page75#seu33" name="Orario" gr:x="325" gr:y="0" entity="ent15">
+      <Link id="mov1#mpkg3#hym14#page75#seu33#ln246" name="Flow25" to="mov1#mpkg3#hym14#page75#enu48" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym14#page75#seu33#ln246#par904" name="ora_Ora [label]" source="ent15#att66Array" target="mov1#mpkg3#hym14#page75#enu48#sfld37_label"/>
+        <LinkParameter id="mov1#mpkg3#hym14#page75#seu33#ln246#par905" name="oid_Ora [output]" source="ent15#att65Array" target="mov1#mpkg3#hym14#page75#enu48#sfld37_output"/>
+      </Link>
+    </SelectorUnit>
+    <PowerIndexUnit id="mov1#mpkg3#hym14#page75#pwu30" name="I tuoi appuntamenti" linkOrder="mov1#mpkg3#hym14#page75#pwu30#ln247" gr:x="130" gr:y="240" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att13 rel17#role33.ent15#att66 rel7#role14.ent3#att16" blockFactor="10">
+      <Link id="mov1#mpkg3#hym14#page75#pwu30#ln247" name="Visualizza" to="mov1#mpkg3#hym14#page76#enu51" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="600" ajaxWindowHeight="500" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli appuntamento">
+        <LinkParameter id="mov1#mpkg3#hym14#page75#pwu30#ln247#par906" name="oid_Key Condition [oid]" source="data[].ent2#att12" target="mov1#mpkg3#hym14#page76#enu51.ent2#att12"/>
+      </Link>
+      <Selector id="mov1#mpkg3#hym14#page75#pwu30#su30" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#mpkg3#hym14#page75#pwu30#su30#rcond9" name="utente2appuntamento" predicate="in" implied="false" role="rel6#role11"/>
+      </Selector>
+      <SortAttribute attribute="rel17#role33.ent15#att66" order="ascending"/>
+      <SortAttribute attribute="ent2#att12" order="ascending"/>
+      <SortAttribute attribute="ent2#att13" order="ascending"/>
+      <SortAttribute attribute="rel7#role14.ent3#att16" order="ascending"/>
+      <DefaultSortAttribute attribute="rel17#role33.ent15#att66" order="ascending"/>
+      <DefaultSortAttribute attribute="ent2#att12" order="ascending"/>
+      <DefaultSortAttribute attribute="ent2#att13" order="ascending"/>
+      <DefaultSortAttribute attribute="rel7#role14.ent3#att16" order="ascending"/>
+    </PowerIndexUnit>
+    <GetUnit id="mov1#mpkg3#hym14#page75#gtu4" name="utente" gr:x="5" gr:y="250" contextParameters="UserCtxParam">
+      <Link id="mov1#mpkg3#hym14#page75#gtu4#ln248" name="Flow26" to="mov1#mpkg3#hym14#page75#pwu30" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym14#page75#gtu4#ln248#par907" name="UserCtxParam.oid_utente2appuntamento [oid]" source="mov1#mpkg3#hym14#page75#gtu4.UserCtxParam" target="mov1#mpkg3#hym14#page75#pwu30#su30#rcond9.userOID"/>
+      </Link>
+    </GetUnit>
+    <MultiMessageUnit id="mov1#mpkg3#hym14#page75#mssu40" name="OkMessage" gr:x="390" gr:y="235"/>
+    <MultiMessageUnit id="mov1#mpkg3#hym14#page75#mssu41" name="KoMessage" gr:x="390" gr:y="300"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg3#hym14#page75#mssu40">
+          <layout:LayoutParameter name="messageType" value="success" type="unit"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg3#hym14#page75#mssu41">
+          <layout:LayoutParameter name="messageType" value="danger" type="unit"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg3#hym14#page75#ecu2">
+          <layout:Attribute attribute="rel17#role33.ent15#att66"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#ecu2-month-0"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#ecu2-month-1"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#ecu2-month-2"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#ecu2-month-3"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#ecu2-month-4"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#ecu2-month-5"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#ecu2-month-6"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#ecu2-month-7"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#ecu2-month-8"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#ecu2-month-9"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#ecu2-month-10"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#ecu2-month-11"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#ecu2-year"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg3#hym14#page75#pwu30">
+          <layout:Attribute label="Data" attribute="ent2#att13"/>
+          <layout:Attribute label="Ora" attribute="rel17#role33.ent15#att66"/>
+          <layout:Attribute label="Tipologia" attribute="rel7#role14.ent3#att16"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30#ln247"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30rel17#role33$ent15#att66"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30ent2#att13"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30rel7#role14$ent3#att16"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30First"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30Previous"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30Block"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30Next"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30Last"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:CustomLocation name="Right">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Unit unitId="mov1#mpkg3#hym14#page75#enu48">
+            <layout:Field field="mov1#mpkg3#hym14#page75#enu48#fld226"/>
+            <layout:Field field="mov1#mpkg3#hym14#page75#enu48#sfld37"/>
+            <layout:Field field="mov1#mpkg3#hym14#page75#enu48#sfld36"/>
+            <layout:Field field="mov1#mpkg3#hym14#page75#enu48#fld227"/>
+            <layout:LayoutParameter name="show-label" value="top" type="unit"/>
+            <layout:Link link="mov1#mpkg3#hym14#page75#enu48#ln239"/>
+          </layout:Unit>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <layout:LayoutParameter name="show-right-column" value="true" type="page"/>
+  <layout:LayoutParameter name="link-style" value="button" type="link"/>
+</Page>

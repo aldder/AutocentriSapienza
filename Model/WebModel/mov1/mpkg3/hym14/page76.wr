@@ -1,0 +1,85 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg3#hym14#page76" name="Dettagli appuntamento" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="485" gr:y="295" layout:frameLayout="None">
+  <ContentUnits>
+    <EntryUnit id="mov1#mpkg3#hym14#page76#enu51" name="Dettagli appuntamento" linkOrder="mov1#mpkg3#hym14#page76#enu51#ln250 mov1#mpkg3#hym14#page76#enu51#ln249" gr:x="115" gr:y="35" entity="ent2">
+      <Field id="mov1#mpkg3#hym14#page76#enu51#fld228" name="Data" type="date" modifiable="true" attribute="ent2#att13">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym14#page76#enu51#fld228#mnd190" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <TypeValidationRule id="mov1#mpkg3#hym14#page76#enu51#fld228#tvr2" name="Type Validation" errorMessage="valore non corretto"/>
+        </VRules>
+      </Field>
+      <SelectionField id="mov1#mpkg3#hym14#page76#enu51#sfld38" name="Ora" type="string" role="rel17#role33">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym14#page76#enu51#sfld38#mnd191" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="mov1#mpkg3#hym14#page76#enu51#sfld39" name="Tipologia" type="string" role="rel7#role14">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym14#page76#enu51#sfld39#mnd192" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </SelectionField>
+      <Field id="mov1#mpkg3#hym14#page76#enu51#fld229" name="Descrizione" type="text" modifiable="true" attribute="ent2#att14"/>
+      <Link id="mov1#mpkg3#hym14#page76#enu51#ln249" name="Elimina appuntamento" to="mov1#mpkg3#hym14#miu105" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym14#page76#enu51#ln249#par908" name="Key [oid]_appuntamento2notifica [oid]" source="key.ent2#att12" target="mov1#mpkg3#hym14#miu105.mov1#mpkg3#mpkg10#opm20#icu20#icp51"/>
+        <LinkParameter id="mov1#mpkg3#hym14#page76#enu51#ln249#par909" name="Key [oid]_PASSING" source="key.ent2#att12" target="mov1#mpkg3#hym14#miu105.mov1#mpkg3#mpkg10#opm20#icu20#icp52"/>
+      </Link>
+      <Link id="mov1#mpkg3#hym14#page76#enu51#ln250" name="Salva modifiche" to="mov1#mpkg3#hym14#miu104" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym14#page76#enu51#ln250#par945" name="Data_data" source="mov1#mpkg3#hym14#page76#enu51#fld228" target="mov1#mpkg3#hym14#miu104.mov2#mpkg22#mpkg23#opm45#icu47#icp95"/>
+        <LinkParameter id="mov1#mpkg3#hym14#page76#enu51#ln250#par947" name="Descrizione_descrizione" source="mov1#mpkg3#hym14#page76#enu51#fld229" target="mov1#mpkg3#hym14#miu104.mov2#mpkg22#mpkg23#opm45#icu47#icp202"/>
+        <LinkParameter id="mov1#mpkg3#hym14#page76#enu51#ln250#par948" name="Key [oid]_id_appuntamento" source="key.ent2#att12" target="mov1#mpkg3#hym14#miu104.mov2#mpkg22#mpkg23#opm45#icu47#icp146"/>
+        <LinkParameter id="mov1#mpkg3#hym14#page76#enu51#ln250#par953" name="Ora_id_orario" source="mov1#mpkg3#hym14#page76#enu51#sfld38" target="mov1#mpkg3#hym14#miu104.mov2#mpkg22#mpkg23#opm45#icu47#icp94"/>
+        <LinkParameter id="mov1#mpkg3#hym14#page76#enu51#ln250#par955" name="Tipologia_id_tipologia" source="mov1#mpkg3#hym14#page76#enu51#sfld39" target="mov1#mpkg3#hym14#miu104.mov2#mpkg22#mpkg23#opm45#icu47#icp203"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit id="mov1#mpkg3#hym14#page76#seu34" name="Tipologia" gr:x="0" gr:y="85" entity="ent3">
+      <Link id="mov1#mpkg3#hym14#page76#seu34#ln257" name="Flow38" to="mov1#mpkg3#hym14#page76#enu51" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym14#page76#seu34#ln257#par915" name="nome_Tipologia [label]" source="ent3#att16Array" target="mov1#mpkg3#hym14#page76#enu51#sfld39_label"/>
+        <LinkParameter id="mov1#mpkg3#hym14#page76#seu34#ln257#par916" name="oid_Tipologia [output]" source="ent3#att15Array" target="mov1#mpkg3#hym14#page76#enu51#sfld39_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="mov1#mpkg3#hym14#page76#seu35" name="Orario" gr:x="0" gr:y="0" entity="ent15">
+      <Link id="mov1#mpkg3#hym14#page76#seu35#ln258" name="Flow37" to="mov1#mpkg3#hym14#page76#enu51" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym14#page76#seu35#ln258#par917" name="ora_Ora [label]" source="ent15#att66Array" target="mov1#mpkg3#hym14#page76#enu51#sfld38_label"/>
+        <LinkParameter id="mov1#mpkg3#hym14#page76#seu35#ln258#par918" name="oid_Ora [output]" source="ent15#att65Array" target="mov1#mpkg3#hym14#page76#enu51#sfld38_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg3#hym14#page76#enu51">
+          <layout:Field field="mov1#mpkg3#hym14#page76#enu51#fld228"/>
+          <layout:Field field="mov1#mpkg3#hym14#page76#enu51#sfld38"/>
+          <layout:Field field="mov1#mpkg3#hym14#page76#enu51#sfld39"/>
+          <layout:Field field="mov1#mpkg3#hym14#page76#enu51#fld229"/>
+          <layout:Link link="mov1#mpkg3#hym14#page76#enu51#ln250"/>
+          <layout:Link link="mov1#mpkg3#hym14#page76#enu51#ln249"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

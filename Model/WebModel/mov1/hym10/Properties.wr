@@ -1,0 +1,6 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="720" gr:y="20" id="mov1#hym10" name="Master Page">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="-60" gr:y="120" id="mov1#hym10#icu95" name="Input Port"/>
+    <LogoutUnit id="mov1#hym10#lou2" name="Logout" gr:x="545" gr:y="185" siteView="sv1"/>
+  </OperationUnits>
+</HybridModule>

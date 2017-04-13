@@ -1,0 +1,19 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="55" id="mov1#mpkg5#hym2" name="Gestione Acquisti Pendenti" landmarks="mov1#mpkg5#hym2#page43">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="10" gr:y="105" id="mov1#mpkg5#hym2#icu2" name="Input Port">
+      <OKLink id="mov1#mpkg5#hym2#icu2#oln20" to="mov1#mpkg5#hym2#page43" name="Landmark"/>
+    </InputCollectorUnit>
+    <ModuleInstanceUnit id="mov1#mpkg5#hym2#miu41" gr:x="685" gr:y="260" moduleId="mov2#mpkg38#mpkg41#opm84">
+      <OKLink id="mov1#mpkg5#hym2#miu41#oln21" name="OKFlow45" to="mov1#mpkg5#hym2#page43"/>
+      <KOLink id="mov1#mpkg5#hym2#miu41#kln19" name="KOFlow77" to="mov1#mpkg5#hym2#page43#mssu14">
+        <LinkParameter id="mov1#mpkg5#hym2#miu41#kln19#par331" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg5#hym2#page43#mssu14.shownMessages" sourceValue="Si e' verificato un errore."/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="mov1#mpkg5#hym2#miu42" gr:x="675" gr:y="55" moduleId="mov2#mpkg38#mpkg41#opm83">
+      <OKLink id="mov1#mpkg5#hym2#miu42#oln23" name="OKFlow69" to="mov1#mpkg5#hym2#page43"/>
+      <KOLink id="mov1#mpkg5#hym2#miu42#kln23" name="KOFlow70" to="mov1#mpkg5#hym2#page43#mssu14">
+        <LinkParameter id="mov1#mpkg5#hym2#miu42#kln23#par343" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg5#hym2#page43#mssu14.shownMessages" sourceValue="Si e' verificato un errore."/>
+      </KOLink>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</HybridModule>

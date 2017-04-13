@@ -1,0 +1,42 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg38#mpkg42#opm86" name="RifiutoAnnuncioVendita" gr:x="0" gr:y="55">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg38#mpkg42#opm86#icu89" gr:x="5" gr:y="-10" linkOrder="mov2#mpkg38#mpkg42#opm86#icu89#ln105">
+      <InputCollectorParameter id="mov2#mpkg38#mpkg42#opm86#icu89#icp439" name="oid"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg42#opm86#icu89#icp441" name="id_utente"/>
+      <OKLink id="mov2#mpkg38#mpkg42#opm86#icu89#oln451" name="Rifiuta annuncio" to="mov2#mpkg38#mpkg42#opm86#dlu44">
+        <LinkParameter id="mov2#mpkg38#mpkg42#opm86#icu89#oln451#par1566" name="Key [oid]_KeyCondition37 [oid]" source="mov2#mpkg38#mpkg42#opm86#icu89#icp439" target="mov2#mpkg38#mpkg42#opm86#dlu44#su190#kcond118.ent10#att35"/>
+      </OKLink>
+      <Link id="mov2#mpkg38#mpkg42#opm86#icu89#ln104" name="Flow104" to="mov2#mpkg38#mpkg42#opm86#seu94" type="transport" validate="true" gr:bendpoints="172,-68,-238,-68;299,-68,-111,-68">
+        <LinkParameter id="mov2#mpkg38#mpkg42#opm86#icu89#ln104#par544" name="id_utente_oid [oid]" source="mov2#mpkg38#mpkg42#opm86#icu89#icp441" target="mov2#mpkg38#mpkg42#opm86#seu94#su189#kcond117.userOID"/>
+      </Link>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg42#opm86#icu89#icp2" name="autovettura"/>
+      <Link id="mov2#mpkg38#mpkg42#opm86#icu89#ln105" name="Flow105" to="mov2#mpkg38#mpkg42#opm86#mlu11" type="transport" validate="true" gr:bendpoints="151,-88,-409,-83;433,-86,-127,-81">
+        <LinkParameter id="mov2#mpkg38#mpkg42#opm86#icu89#ln105#par545" name="autovettura_autovettura" source="mov2#mpkg38#mpkg42#opm86#icu89#icp2" target="mov2#mpkg38#mpkg42#opm86#mlu11.autovettura"/>
+      </Link>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov2#mpkg38#mpkg42#opm86#okcu83" name="OK Port24" gr:x="830" gr:y="-40"/>
+    <SelectorUnit id="mov2#mpkg38#mpkg42#opm86#seu94" name="SelectUtente" gr:x="475" gr:y="0" entity="User">
+      <Selector id="mov2#mpkg38#mpkg42#opm86#seu94#su189" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg38#mpkg42#opm86#seu94#su189#kcond117" name="oid" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg38#mpkg42#opm86#seu94#oln452" name="OKFlow96" to="mov2#mpkg38#mpkg42#opm86#mlu11">
+        <LinkParameter id="mov2#mpkg38#mpkg42#opm86#seu94#oln452#par1568" name="Annuncio rifiutato_Mail - Subject" target="mov2#mpkg38#mpkg42#opm86#mlu11.subject" sourceValue="Annuncio rifiutato"/>
+        <LinkParameter id="mov2#mpkg38#mpkg42#opm86#seu94#oln452#par1569" name="email_Mail - To" source="emailArray" target="mov2#mpkg38#mpkg42#opm86#mlu11.to"/>
+        <LinkParameter id="mov2#mpkg38#mpkg42#opm86#seu94#oln452#par1570" name="nome_utente_utente" source="userNameArray" target="mov2#mpkg38#mpkg42#opm86#mlu11.utente"/>
+      </OKLink>
+    </SelectorUnit>
+    <DeleteUnit id="mov2#mpkg38#mpkg42#opm86#dlu44" name="EliminaAnnuncio" gr:x="280" gr:y="0" entity="ent10">
+      <Selector id="mov2#mpkg38#mpkg42#opm86#dlu44#su190" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg38#mpkg42#opm86#dlu44#su190#kcond118" name="KeyCondition37" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg38#mpkg42#opm86#dlu44#oln453" name="OKFlow94" to="mov2#mpkg38#mpkg42#opm86#seu94"/>
+      <KOLink id="mov2#mpkg38#mpkg42#opm86#dlu44#kln194" name="KOFlow92" to="mov2#mpkg38#mpkg42#opm86#kocu76" gr:bendpoints="125,82,-470,32;413,83,-182,33"/>
+    </DeleteUnit>
+    <MailUnit id="mov2#mpkg38#mpkg42#opm86#mlu11" name="NotificaEmail" gr:x="620" gr:y="15" format="plainText" smtpServer="smtp1">
+      <Placeholder id="mov2#mpkg38#mpkg42#opm86#mlu11#ph24" name="autovettura"/>
+      <Placeholder id="mov2#mpkg38#mpkg42#opm86#mlu11#ph25" name="utente"/>
+      <BodyTemplate xml:space="preserve">Ciao $$utente$$
+
+L'annuncio che hai pubblicato per la vedita dell'autovettura
+$$autovettura$$ &#232; stato rifiutato.
+</BodyTemplate>      <OKLink id="mov2#mpkg38#mpkg42#opm86#mlu11#oln454" name="OKFlow87" to="mov2#mpkg38#mpkg42#opm86#okcu83"/>      <KOLink id="mov2#mpkg38#mpkg42#opm86#mlu11#kln195" name="KOFlow11" to="mov2#mpkg38#mpkg42#opm86#kocu76"/>    </MailUnit>    <KOCollectorUnit id="mov2#mpkg38#mpkg42#opm86#kocu76" name="KO Port23" gr:x="830" gr:y="55"/>  </OperationUnits></OperationModule>

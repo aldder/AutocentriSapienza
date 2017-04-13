@@ -1,0 +1,18 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="165" id="mov1#mpkg3#hym15" name="Gestione Acquisti Pendenti" landmarks="mov1#mpkg3#hym15#page77">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="30" gr:y="115" id="mov1#mpkg3#hym15#icu11">
+      <OKLink id="mov1#mpkg3#hym15#icu11#oln157" to="mov1#mpkg3#hym15#page77" name="Landmark"/>
+    </InputCollectorUnit>
+    <ModuleInstanceUnit id="mov1#mpkg3#hym15#miu111" gr:x="720" gr:y="190" moduleId="mov2#mpkg22#mpkg26#opm51">
+      <OKLink id="mov1#mpkg3#hym15#miu111#oln159" name="OKFlow31" to="mov1#mpkg3#hym15#page77"/>
+      <KOLink id="mov1#mpkg3#hym15#miu111#kln72" name="KOFlow42" to="mov1#mpkg3#hym15#page77#mssu42">
+        <LinkParameter id="mov1#mpkg3#hym15#miu111#kln72#par971" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg3#hym15#page77#mssu42.shownMessages" sourceValue="Si e' verificato un errore."/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <GetUnit gr:x="820" gr:y="295" id="mov1#mpkg3#hym15#gtu7" name="UtenteCorrente" contextParameters="UserCtxParam" linkOrder="mov1#mpkg3#hym15#gtu7#ln295">
+      <Link id="mov1#mpkg3#hym15#gtu7#ln295" name="Flow295" to="mov1#mpkg3#hym15#miu111" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym15#gtu7#ln295#par973" name="UserCtxParam.oid_utente2acquisto [oid]" source="mov1#mpkg3#hym15#gtu7.UserCtxParam" target="mov1#mpkg3#hym15#miu111.mov2#mpkg22#mpkg26#opm51#icu53#icp249"/>
+      </Link>
+    </GetUnit>
+  </OperationUnits>
+</HybridModule>

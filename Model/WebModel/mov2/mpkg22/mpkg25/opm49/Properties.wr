@@ -1,0 +1,21 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg22#mpkg25#opm49" name="ModificaNotifica" gr:x="0" gr:y="55">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg22#mpkg25#opm49#icu51" gr:x="-15" gr:y="5">
+      <InputCollectorParameter id="mov2#mpkg22#mpkg25#opm49#icu51#icp245" name="stato"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg25#opm49#icu51#icp246" name="KeyCondition9 [oid]"/>
+      <OKLink id="mov2#mpkg22#mpkg25#opm49#icu51#oln83" name="Start" to="mov2#mpkg22#mpkg25#opm49#mfu16">
+        <LinkParameter id="mov2#mpkg22#mpkg25#opm49#icu51#oln83#par524" name="oid_KeyCondition9 [oid]" source="mov2#mpkg22#mpkg25#opm49#icu51#icp246" target="mov2#mpkg22#mpkg25#opm49#mfu16#su46#kcond25.ent4#att18"/>
+        <LinkParameter id="mov2#mpkg22#mpkg25#opm49#icu51#oln83#par525" name="1_stato" source="mov2#mpkg22#mpkg25#opm49#icu51#icp245" target="mov2#mpkg22#mpkg25#opm49#mfu16.ent4#att28"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov2#mpkg22#mpkg25#opm49#okcu48" name="OK Port11" gr:x="500" gr:y="-30"/>
+    <ModifyUnit id="mov2#mpkg22#mpkg25#opm49#mfu16" name="Edit notifica" gr:x="300" gr:y="0" entity="ent4">
+      <Selector id="mov2#mpkg22#mpkg25#opm49#mfu16#su46" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg22#mpkg25#opm49#mfu16#su46#kcond25" name="KeyCondition9" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg22#mpkg25#opm49#mfu16#oln84" name="OKFlow37" to="mov2#mpkg22#mpkg25#opm49#okcu48"/>
+      <KOLink id="mov2#mpkg22#mpkg25#opm49#mfu16#kln99" name="KOFlow38" to="mov2#mpkg22#mpkg25#opm49#kocu42"/>
+    </ModifyUnit>
+    <KOCollectorUnit id="mov2#mpkg22#mpkg25#opm49#kocu42" name="KO Port12" gr:x="500" gr:y="50"/>
+  </OperationUnits>
+</OperationModule>
