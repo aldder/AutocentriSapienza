@@ -176,7 +176,7 @@
       <db:JoinColumn attribute="ent4#att18" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="Database" type="MySQL" url="jdbc:mysql://localhost:3306/concessionario" username="root" password="cm9vdA==" cryptedPassword="true"/>
+  <db:Database id="db2" name="Database" type="MySQL" url="jdbc:mysql://sql11.freemysqlhosting.net:3306/sql11164821" username="sql11164821" password="blN5YTY0Mk5Fdw==" cryptedPassword="true"/>
   <Entity gr:x="1075" gr:y="425" id="ent11" name="Autovetture_Clienti" duration="persistent" attributeOrder="ent11#att51 ent11#att52 ent11#att53 ent11#att54 ent11#att57 ent11#att58" db:database="db2" db:table="autovetture_clienti">
     <Attribute id="ent11#att51" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent11#att52" name="targa" type="string" db:column="targa"/>
