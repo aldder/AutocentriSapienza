@@ -1,28 +1,28 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym9#page13" name="Inserisci autovettura" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" layout:frameLayout="None" gr:x="1170" gr:y="650">
   <ContentUnits>
-    <EntryUnit id="mov1#mpkg6#hym9#page13#enu15" name="Inserisci autovettura" linkOrder="mov1#mpkg6#hym9#page13#enu15#ln11" gr:x="0" gr:y="0" entity="ent11" fieldOrder="mov1#mpkg6#hym9#page13#enu15#fld9 mov1#mpkg6#hym9#page13#enu15#fld10 mov1#mpkg6#hym9#page13#enu15#fld11 mov1#mpkg6#hym9#page13#enu15#fld12 mov1#mpkg6#hym9#page13#enu15#fld13">
-      <Field id="mov1#mpkg6#hym9#page13#enu15#fld9" name="Targa" type="string" modifiable="true" attribute="ent11#att52">
+    <EntryUnit id="mov1#mpkg6#hym9#page13#enu15" name="Inserisci autovettura" linkOrder="mov1#mpkg6#hym9#page13#enu15#ln11" gr:x="0" gr:y="0" fieldOrder="mov1#mpkg6#hym9#page13#enu15#fld9 mov1#mpkg6#hym9#page13#enu15#fld10 mov1#mpkg6#hym9#page13#enu15#fld11 mov1#mpkg6#hym9#page13#enu15#fld12 mov1#mpkg6#hym9#page13#enu15#fld13">
+      <Field id="mov1#mpkg6#hym9#page13#enu15#fld9" name="Targa" type="string" modifiable="true">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page13#enu15#fld9#mnd47" name="Mandatory" errorMessage="campo obbligatorio"/>
-          <CollectionValidationRule id="mov1#mpkg6#hym9#page13#enu15#fld9#clc6" name="Unique" predicate="notIn" entity="ent11" attribute="ent11#att52" errorMessage="valore gi&#224; presente"/>
+          <CollectionValidationRule id="mov1#mpkg6#hym9#page13#enu15#fld9#clc6" name="Unique" predicate="notIn" errorMessage="valore gi&#224; presente"/>
         </VRules>
       </Field>
-      <Field id="mov1#mpkg6#hym9#page13#enu15#fld10" name="Nome" type="string" modifiable="true" attribute="ent11#att53">
+      <Field id="mov1#mpkg6#hym9#page13#enu15#fld10" name="Nome" type="string" modifiable="true">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page13#enu15#fld10#mnd50" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
       </Field>
-      <Field id="mov1#mpkg6#hym9#page13#enu15#fld11" name="Marca" type="string" modifiable="true" attribute="ent11#att54">
+      <Field id="mov1#mpkg6#hym9#page13#enu15#fld11" name="Marca" type="string" modifiable="true">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page13#enu15#fld11#mnd51" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
       </Field>
-      <Field id="mov1#mpkg6#hym9#page13#enu15#fld12" name="Cliente" type="string" modifiable="true" attribute="ent11#att57">
+      <Field id="mov1#mpkg6#hym9#page13#enu15#fld12" name="Cliente" type="string" modifiable="true">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page13#enu15#fld12#mnd59" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
       </Field>
-      <Field id="mov1#mpkg6#hym9#page13#enu15#fld13" name="Descrizione" type="text" modifiable="true" attribute="ent11#att58">
+      <Field id="mov1#mpkg6#hym9#page13#enu15#fld13" name="Descrizione" type="text" modifiable="true">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page13#enu15#fld13#mnd61" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>

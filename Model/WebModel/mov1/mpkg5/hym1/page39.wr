@@ -3,6 +3,7 @@
     <IndexUnit id="mov1#mpkg5#hym1#page39#inu5" name="SuggNome" gr:x="0" gr:y="0" entity="ent1" displayAttributes="ent1#att46" distinct="true">
       <Selector id="mov1#mpkg5#hym1#page39#inu5#su4" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov1#mpkg5#hym1#page39#inu5#su4#acond6" name="nome" predicate="contains" booleanOperator="or" implied="false" attributes="ent1#att46" ignoreCase="true"/>
+        <AttributesCondition id="mov1#mpkg5#hym1#page39#inu5#su4#acond8" name="catalogo" predicate="eq" booleanOperator="or" implied="false" value="1" attributes="ent1#att50"/>
       </Selector>
     </IndexUnit>
   </ContentUnits>

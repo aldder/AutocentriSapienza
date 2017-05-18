@@ -1,24 +1,18 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg38#mpkg39#opm79" name="ModificaStoricoAcquisti" gr:x="0" gr:y="55">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg38#mpkg39#opm79#icu82" gr:x="175" gr:y="170">
+    <InputCollectorUnit id="mov2#mpkg38#mpkg39#opm79#icu82" gr:x="185" gr:y="185">
       <OKLink id="mov2#mpkg38#mpkg39#opm79#icu82#oln402" name="Salva modifiche" to="mov2#mpkg38#mpkg39#opm79#mfu35">
         <LinkParameter id="mov2#mpkg38#mpkg39#opm79#icu82#oln402#par1392" name="Data_data" source="mov2#mpkg38#mpkg39#opm79#icu82#icp373" target="mov2#mpkg38#mpkg39#opm79#mfu35.ent7#att48"/>
         <LinkParameter id="mov2#mpkg38#mpkg39#opm79#icu82#oln402#par1393" name="Key [oid]_KeyCondition32 [oid]" source="mov2#mpkg38#mpkg39#opm79#icu82#icp369" target="mov2#mpkg38#mpkg39#opm79#mfu35#su169#kcond103.ent7#att24"/>
-        <LinkParameter id="mov2#mpkg38#mpkg39#opm79#icu82#oln402#par1394" name="Targa_targa" source="mov2#mpkg38#mpkg39#opm79#icu82#icp376" target="mov2#mpkg38#mpkg39#opm79#mfu35.ent7#att56"/>
-        <LinkParameter id="mov2#mpkg38#mpkg39#opm79#icu82#oln402#par1395" name="Prezzo_prezzo" source="mov2#mpkg38#mpkg39#opm79#icu82#icp375" target="mov2#mpkg38#mpkg39#opm79#mfu35.ent7#att59"/>
         <LinkParameter id="mov2#mpkg38#mpkg39#opm79#icu82#oln402#par1396" name="Descrizione_descrizione" source="mov2#mpkg38#mpkg39#opm79#icu82#icp374" target="mov2#mpkg38#mpkg39#opm79#mfu35.ent7#att60"/>
-        <LinkParameter id="mov2#mpkg38#mpkg39#opm79#icu82#oln402#par1397" name="Storico_Acquisto Object_Storico_Acquisto Object" source="mov2#mpkg38#mpkg39#opm79#icu82#icp371" target="mov2#mpkg38#mpkg39#opm79#mfu35.entityBeans"/>
         <LinkParameter id="mov2#mpkg38#mpkg39#opm79#icu82#oln402#par1398" name="Utente_Utente.oid(Storico_AcquistoToUtente)" source="mov2#mpkg38#mpkg39#opm79#icu82#icp372" target="mov2#mpkg38#mpkg39#opm79#mfu35.rel12#role23.userOID"/>
         <LinkParameter id="mov2#mpkg38#mpkg39#opm79#icu82#oln402#par1399" name="Autovettura.oid(StoricoAcquistoToAutovettura)" source="mov2#mpkg38#mpkg39#opm79#icu82#icp368" target="mov2#mpkg38#mpkg39#opm79#mfu35.rel19#role37.ent1#att1"/>
       </OKLink>
       <InputCollectorParameter id="mov2#mpkg38#mpkg39#opm79#icu82#icp368" name="id_autovettura"/>
-      <InputCollectorParameter id="mov2#mpkg38#mpkg39#opm79#icu82#icp369" name="oid"/>
-      <InputCollectorParameter id="mov2#mpkg38#mpkg39#opm79#icu82#icp371" name="Storico_Acquisto Object"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg39#opm79#icu82#icp369" name="id_storico"/>
       <InputCollectorParameter id="mov2#mpkg38#mpkg39#opm79#icu82#icp372" name="id_utente"/>
       <InputCollectorParameter id="mov2#mpkg38#mpkg39#opm79#icu82#icp373" name="data"/>
       <InputCollectorParameter id="mov2#mpkg38#mpkg39#opm79#icu82#icp374" name="descrizione"/>
-      <InputCollectorParameter id="mov2#mpkg38#mpkg39#opm79#icu82#icp375" name="prezzo"/>
-      <InputCollectorParameter id="mov2#mpkg38#mpkg39#opm79#icu82#icp376" name="targa"/>
       <Link id="mov2#mpkg38#mpkg39#opm79#icu82#ln171" name="Flow93" to="mov2#mpkg38#mpkg39#opm79#miu72" type="transport" validate="true" gr:bendpoints="195,-100,-615,-105;660,-99,-150,-104">
         <LinkParameter id="mov2#mpkg38#mpkg39#opm79#icu82#ln171#par1169" name="data_data" source="mov2#mpkg38#mpkg39#opm79#icu82#icp373" target="mov2#mpkg38#mpkg39#opm79#miu72.mov2#mpkg22#mpkg25#opm2#icu7#icp7"/>
         <LinkParameter id="mov2#mpkg38#mpkg39#opm79#icu82#ln171#par1170" name="id_utente_id_utente" source="mov2#mpkg38#mpkg39#opm79#icu82#icp372" target="mov2#mpkg38#mpkg39#opm79#miu72.mov2#mpkg22#mpkg25#opm2#icu7#icp6"/>

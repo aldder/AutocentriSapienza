@@ -29,6 +29,7 @@
         <LinkParameter id="mov1#mpkg3#hym14#page76#enu51#ln250#par953" name="Ora_id_orario" source="mov1#mpkg3#hym14#page76#enu51#sfld38" target="mov1#mpkg3#hym14#miu104.mov2#mpkg22#mpkg23#opm45#icu47#icp94"/>
         <LinkParameter id="mov1#mpkg3#hym14#page76#enu51#ln250#par955" name="Tipologia_id_tipologia" source="mov1#mpkg3#hym14#page76#enu51#sfld39" target="mov1#mpkg3#hym14#miu104.mov2#mpkg22#mpkg23#opm45#icu47#icp203"/>
       </Link>
+      <SelectionField id="mov1#mpkg3#hym14#page76#enu51#sfld2" name="Autovettura" type="string"/>
     </EntryUnit>
     <SelectorUnit id="mov1#mpkg3#hym14#page76#seu34" name="Tipologia" gr:x="0" gr:y="85" entity="ent3">
       <Link id="mov1#mpkg3#hym14#page76#seu34#ln257" name="Flow38" to="mov1#mpkg3#hym14#page76#enu51" type="transport" validate="true">
@@ -40,6 +41,12 @@
       <Link id="mov1#mpkg3#hym14#page76#seu35#ln258" name="Flow37" to="mov1#mpkg3#hym14#page76#enu51" type="transport" validate="true">
         <LinkParameter id="mov1#mpkg3#hym14#page76#seu35#ln258#par917" name="ora_Ora [label]" source="ent15#att66Array" target="mov1#mpkg3#hym14#page76#enu51#sfld38_label"/>
         <LinkParameter id="mov1#mpkg3#hym14#page76#seu35#ln258#par918" name="oid_Ora [output]" source="ent15#att65Array" target="mov1#mpkg3#hym14#page76#enu51#sfld38_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="0" gr:y="170" id="mov1#mpkg3#hym14#page76#seu4" name="Storico" entity="ent7">
+      <Link id="mov1#mpkg3#hym14#page76#seu4#ln13" name="Flow13" to="mov1#mpkg3#hym14#page76#enu51" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym14#page76#seu4#ln13#par59" name="targa_Autovettura [label]" source="ent7#att56Array" target="mov1#mpkg3#hym14#page76#enu51#sfld2_label"/>
+        <LinkParameter id="mov1#mpkg3#hym14#page76#seu4#ln13#par60" name="oid_Autovettura [output]" source="ent7#att24Array" target="mov1#mpkg3#hym14#page76#enu51#sfld2_output"/>
       </Link>
     </SelectorUnit>
   </ContentUnits>
@@ -61,14 +68,29 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#mpkg3#hym14#page76#enu51">
-          <layout:Field field="mov1#mpkg3#hym14#page76#enu51#fld228"/>
-          <layout:Field field="mov1#mpkg3#hym14#page76#enu51#sfld38"/>
-          <layout:Field field="mov1#mpkg3#hym14#page76#enu51#sfld39"/>
-          <layout:Field field="mov1#mpkg3#hym14#page76#enu51#fld229"/>
           <layout:Link link="mov1#mpkg3#hym14#page76#enu51#ln250"/>
           <layout:Link link="mov1#mpkg3#hym14#page76#enu51#ln249"/>
+          <layout:Field field="mov1#mpkg3#hym14#page76#enu51#fld228"/>
+          <layout:Field field="mov1#mpkg3#hym14#page76#enu51#fld229"/>
+          <layout:Field field="mov1#mpkg3#hym14#page76#enu51#sfld38"/>
+          <layout:Field field="mov1#mpkg3#hym14#page76#enu51#sfld39"/>
+          <layout:Field field="mov1#mpkg3#hym14#page76#enu51#sfld2"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

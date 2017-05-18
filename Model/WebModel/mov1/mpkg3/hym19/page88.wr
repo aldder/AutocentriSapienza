@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg3#hym19#page88" name="Dettagli autovettura" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="540" gr:y="405" layout:frameLayout="None">
   <ContentUnits>
-    <DataUnit id="mov1#mpkg3#hym19#page88#dau5" name="Dettagli autovettura" linkOrder="mov1#mpkg3#hym19#page88#dau5#ln352 mov1#mpkg3#hym19#page88#dau5#ln353" gr:x="0" gr:y="0" entity="ent1" displayAttributes="ent1#att3 ent1#att46 ent1#att2 ent1#att4 ent1#att5 ent1#att6 ent1#att7 ent1#att8 ent1#att9 ent1#att10 ent1#att11">
+    <DataUnit id="mov1#mpkg3#hym19#page88#dau5" name="Dettagli autovettura" linkOrder="mov1#mpkg3#hym19#page88#dau5#ln352 mov1#mpkg3#hym19#page88#dau5#ln353" gr:x="0" gr:y="0" entity="ent1" displayAttributes="ent1#att46 ent1#att3 ent1#att2 ent1#att7 ent1#att6 ent1#att8 ent1#att9 ent1#att10 ent1#att4 ent1#att11">
       <Selector id="mov1#mpkg3#hym19#page88#dau5#su48" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov1#mpkg3#hym19#page88#dau5#su48#kcond8" name="KeyCondition18" predicate="in" implied="false"/>
       </Selector>
@@ -9,7 +9,6 @@
       </Link>
       <Link id="mov1#mpkg3#hym19#page88#dau5#ln353" name="Aggiungi ai preferiti" to="mov1#mpkg3#hym19#miu129" type="normal" validate="true">
         <LinkParameter id="mov1#mpkg3#hym19#page88#dau5#ln353#par1130" name="oid_Autovettura.oid(PreferitoToAutovettura)" source="data.ent1#att1" target="mov1#mpkg3#hym19#miu129.mov2#mpkg22#mpkg28#opm55#icu57#icp278"/>
-        <LinkParameter id="mov1#mpkg3#hym19#page88#dau5#ln353#par1131" name="1_notifica" sourceValue="1" target="mov1#mpkg3#hym19#miu129.mov2#mpkg22#mpkg28#opm55#icu57#icp276"/>
       </Link>
     </DataUnit>
   </ContentUnits>
@@ -17,22 +16,21 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#mpkg3#hym19#page88#dau5">
+          <layout:Link link="mov1#mpkg3#hym19#page88#dau5#ln352" layout:linkVisibilityCondition="cexpr1"/>
+          <layout:Link link="mov1#mpkg3#hym19#page88#dau5#ln353" layout:linkVisibilityCondition="cexpr1"/>
+          <layout:Attribute label="Nome" attribute="ent1#att46"/>
           <layout:Attribute label="Foto" attribute="ent1#att3">
             <layout:LayoutParameter name="image-width" value="400" type="attribute"/>
             <layout:LayoutParameter name="image-height" value="300" type="attribute"/>
           </layout:Attribute>
-          <layout:Attribute label="Nome" attribute="ent1#att46"/>
           <layout:Attribute label="Prezzo" attribute="ent1#att2"/>
-          <layout:Attribute label="Usato" attribute="ent1#att4"/>
-          <layout:Attribute label="Disponibilit&#224;" attribute="ent1#att5"/>
-          <layout:Attribute label="Kilometri" attribute="ent1#att6"/>
           <layout:Attribute label="Anno di immatricolazione" attribute="ent1#att7"/>
+          <layout:Attribute label="Kilometri" attribute="ent1#att6"/>
           <layout:Attribute label="Alimentazione" attribute="ent1#att8"/>
           <layout:Attribute label="Cilindrata" attribute="ent1#att9"/>
           <layout:Attribute label="Numero di porte" attribute="ent1#att10"/>
+          <layout:Attribute label="Usato" attribute="ent1#att4"/>
           <layout:Attribute label="Descrizione" attribute="ent1#att11"/>
-          <layout:Link link="mov1#mpkg3#hym19#page88#dau5#ln352" layout:linkVisibilityCondition="cexpr1"/>
-          <layout:Link link="mov1#mpkg3#hym19#page88#dau5#ln353" layout:linkVisibilityCondition="cexpr1"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

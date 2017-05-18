@@ -1,0 +1,34 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg31#mpkg1#opm5" name="CancellazioneAutovetturaOfficina" gr:x="0" gr:y="110">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg31#mpkg1#opm5#icu17" gr:x="-305" gr:y="0" linkOrder="mov2#mpkg31#mpkg1#opm5#icu17#ln59">
+      <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm5#icu17#icp113" name="id_auto"/>
+      <OKLink id="mov2#mpkg31#mpkg1#opm5#icu17#oln53" name="Rimuovi autovettura" to="mov2#mpkg31#mpkg1#opm5#seu24">
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm5#icu17#oln53#par604" name="id_auto_autovettura2storico [oid]" source="mov2#mpkg31#mpkg1#opm5#icu17#icp113" target="mov2#mpkg31#mpkg1#opm5#seu24#su65#rcond13.ent1#att1"/>
+      </OKLink>
+      <Link id="mov2#mpkg31#mpkg1#opm5#icu17#ln59" name="Flow59" to="mov2#mpkg31#mpkg1#opm5#dlu5" type="transport" validate="true" gr:bendpoints="182,-72,-473,-37;498,-72,-157,-37">
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm5#icu17#ln59#par606" name="id_auto_KeyCondition51 [oid]" source="mov2#mpkg31#mpkg1#opm5#icu17#icp113" target="mov2#mpkg31#mpkg1#opm5#dlu5#su47#kcond20.ent1#att1"/>
+      </Link>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov2#mpkg31#mpkg1#opm5#okcu4" name="OK Port31" gr:x="595" gr:y="-40"/>
+    <DeleteUnit id="mov2#mpkg31#mpkg1#opm5#dlu5" name="Cancellazione" gr:x="405" gr:y="-40" entity="ent1">
+      <Selector id="mov2#mpkg31#mpkg1#opm5#dlu5#su47" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg31#mpkg1#opm5#dlu5#su47#kcond20" name="KeyCondition51" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg31#mpkg1#opm5#dlu5#oln54" name="OKFlow113" to="mov2#mpkg31#mpkg1#opm5#okcu4"/>
+      <KOLink id="mov2#mpkg31#mpkg1#opm5#dlu5#kln20" name="KOFlow102" to="mov2#mpkg31#mpkg1#opm5#kocu6"/>
+    </DeleteUnit>
+    <KOCollectorUnit id="mov2#mpkg31#mpkg1#opm5#kocu6" name="KO Port29" gr:x="595" gr:y="60"/>
+    <SelectorUnit gr:x="-5" gr:y="-5" id="mov2#mpkg31#mpkg1#opm5#seu24" name="SelectorStorico" entity="ent7">
+      <Selector id="mov2#mpkg31#mpkg1#opm5#seu24#su65" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov2#mpkg31#mpkg1#opm5#seu24#su65#rcond13" name="autovettura2storico" predicate="in" implied="false" role="rel19#role38"/>
+      </Selector>
+      <OKLink id="mov2#mpkg31#mpkg1#opm5#seu24#oln139" name="OKFlow139" to="mov2#mpkg31#mpkg1#opm5#inn9">
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm5#seu24#oln139#par605" name="oid_Input" source="ent7#att24Array" target="mov2#mpkg31#mpkg1#opm5#inn9.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="220" gr:y="10" id="mov2#mpkg31#mpkg1#opm5#inn9" name="Is Not Null">
+      <OKLink id="mov2#mpkg31#mpkg1#opm5#inn9#oln141" name="OKFlow141" to="mov2#mpkg31#mpkg1#opm5#kocu6"/>
+      <KOLink id="mov2#mpkg31#mpkg1#opm5#inn9#kln28" name="KOFlow28" to="mov2#mpkg31#mpkg1#opm5#dlu5"/>
+    </IsNotNullUnit>
+  </OperationUnits>
+</OperationModule>

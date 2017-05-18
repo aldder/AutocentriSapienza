@@ -1,21 +1,32 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym6#page60" name="Gestione autovetture clienti" landmark="true" gr:x="355" gr:y="115">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym6#page60" name="Gestione autovetture clienti" landmark="true" gr:x="275" gr:y="120">
   <ContentUnits>
-    <PowerIndexUnit id="mov1#mpkg6#hym6#page60#pwu24" name="Autovetture clienti" linkOrder="mov1#mpkg6#hym6#page60#pwu24#ln252" gr:x="0" gr:y="65" sortable="true" checkable="false" useCountQuery="false" entity="ent11" displayAttributes="ent11#att51 ent11#att52 ent11#att53 ent11#att54 ent11#att57">
-      <SortAttribute attribute="ent11#att51" order="ascending"/>
-      <SortAttribute attribute="ent11#att52" order="ascending"/>
-      <SortAttribute attribute="ent11#att53" order="ascending"/>
-      <SortAttribute attribute="ent11#att54" order="ascending"/>
-      <SortAttribute attribute="ent11#att57" order="ascending"/>
+    <PowerIndexUnit id="mov1#mpkg6#hym6#page60#pwu24" name="Autovetture clienti" linkOrder="mov1#mpkg6#hym6#page60#pwu24#ln252" gr:x="0" gr:y="110" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att46 ent1#att30 ent1#att7 ent1#att6 ent1#att8 ent1#att9 ent1#att10">
       <Link id="mov1#mpkg6#hym6#page60#pwu24#ln252" name="Visualizza" to="mov1#mpkg6#hym6#page61#enu43" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="500" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli autovettura">
-        <LinkParameter id="mov1#mpkg6#hym6#page60#pwu24#ln252#par1631" name="oid_Key Condition [oid]" source="data[].ent11#att51" target="mov1#mpkg6#hym6#page61#enu43.ent11#att51"/>
+        <LinkParameter id="mov1#mpkg6#hym6#page60#pwu24#ln252#par346" name="oid_Key Condition [oid]" source="data[].ent1#att1" target="mov1#mpkg6#hym6#page61#enu43.ent1#att1"/>
       </Link>
+      <Selector id="mov1#mpkg6#hym6#page60#pwu24#su24" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#mpkg6#hym6#page60#pwu24#su24#acond9" name="officina" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att5" value="1"/>
+      </Selector>
+      <SortAttribute attribute="ent1#att1" order="ascending"/>
+      <SortAttribute attribute="ent1#att46" order="ascending"/>
+      <SortAttribute attribute="ent1#att30" order="ascending"/>
+      <SortAttribute attribute="ent1#att3" order="ascending"/>
+      <SortAttribute attribute="ent1#att2" order="ascending"/>
+      <SortAttribute attribute="ent1#att7" order="ascending"/>
+      <SortAttribute attribute="ent1#att6" order="ascending"/>
+      <SortAttribute attribute="ent1#att8" order="ascending"/>
+      <SortAttribute attribute="ent1#att9" order="ascending"/>
+      <SortAttribute attribute="ent1#att10" order="ascending"/>
+      <SortAttribute attribute="ent1#att4" order="ascending"/>
+      <SortAttribute attribute="ent1#att50" order="ascending"/>
+      <SortAttribute attribute="ent1#att5" order="ascending"/>
     </PowerIndexUnit>
-    <MultiMessageUnit id="mov1#mpkg6#hym6#page60#mssu51" name="Inserisci" linkOrder="mov1#mpkg6#hym6#page60#mssu51#ln253" gr:x="20" gr:y="0">
+    <MultiMessageUnit id="mov1#mpkg6#hym6#page60#mssu51" name="Inserisci" gr:x="130" gr:y="15" linkOrder="mov1#mpkg6#hym6#page60#mssu51#ln43">
       <Message xml:space="preserve">Clicca per inserire una nuova autovettura cliente.</Message>
-      <Link id="mov1#mpkg6#hym6#page60#mssu51#ln253" name="Inserisci" to="mov1#mpkg6#hym6#page59#enu42" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="500" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserisci autovettura"/>
+      <Link id="mov1#mpkg6#hym6#page60#mssu51#ln43" name="Inserisci" to="mov1#mpkg6#hym6#page59" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxReplaceWindow="false" ajaxWindowUseTitle="true" ajaxWindowTitle="Seleziona autovettura" ajaxWindowWidth="800" ajaxWindowHeight="750" ajaxWindowClosable="true" ajaxWindowModal="true"/>
     </MultiMessageUnit>
-    <MultiMessageUnit id="mov1#mpkg6#hym6#page60#mssu52" name="KoMessage" gr:x="155" gr:y="105"/>
-    <MultiMessageUnit id="mov1#mpkg6#hym6#page60#mssu53" name="OkMessage" gr:x="155" gr:y="40"/>
+    <MultiMessageUnit id="mov1#mpkg6#hym6#page60#mssu52" name="KoMessage" gr:x="155" gr:y="150"/>
+    <MultiMessageUnit id="mov1#mpkg6#hym6#page60#mssu53" name="OkMessage" gr:x="155" gr:y="85"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -57,7 +68,7 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#mpkg6#hym6#page60#mssu51">
-          <layout:Link link="mov1#mpkg6#hym6#page60#mssu51#ln253"/>
+          <layout:Link link="mov1#mpkg6#hym6#page60#mssu51#ln43"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -75,17 +86,21 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#mpkg6#hym6#page60#pwu24">
-          <layout:Attribute attribute="ent11#att51" label="Codice"/>
-          <layout:Attribute attribute="ent11#att52" label="Targa"/>
-          <layout:Attribute attribute="ent11#att53" label="Nome"/>
-          <layout:Attribute attribute="ent11#att54" label="Marca"/>
-          <layout:Attribute attribute="ent11#att57" label="Cliente"/>
+          <layout:Attribute attribute="ent1#att46" label="Nome"/>
+          <layout:Attribute attribute="ent1#att30" label="Targa"/>
+          <layout:Attribute attribute="ent1#att7" label="Anno"/>
+          <layout:Attribute attribute="ent1#att6" label="Kilometri"/>
+          <layout:Attribute attribute="ent1#att8" label="Alimentazione"/>
+          <layout:Attribute attribute="ent1#att9" label="Cilindrata"/>
+          <layout:Attribute attribute="ent1#att10" label="Porte"/>
           <layout:Link link="mov1#mpkg6#hym6#page60#pwu24#ln252"/>
-          <layout:Link link="mov1#mpkg6#hym6#page60#pwu24ent11#att51"/>
-          <layout:Link link="mov1#mpkg6#hym6#page60#pwu24ent11#att52"/>
-          <layout:Link link="mov1#mpkg6#hym6#page60#pwu24ent11#att53"/>
-          <layout:Link link="mov1#mpkg6#hym6#page60#pwu24ent11#att54"/>
-          <layout:Link link="mov1#mpkg6#hym6#page60#pwu24ent11#att57"/>
+          <layout:Link link="mov1#mpkg6#hym6#page60#pwu24ent1#att46"/>
+          <layout:Link link="mov1#mpkg6#hym6#page60#pwu24ent1#att30"/>
+          <layout:Link link="mov1#mpkg6#hym6#page60#pwu24ent1#att7"/>
+          <layout:Link link="mov1#mpkg6#hym6#page60#pwu24ent1#att6"/>
+          <layout:Link link="mov1#mpkg6#hym6#page60#pwu24ent1#att8"/>
+          <layout:Link link="mov1#mpkg6#hym6#page60#pwu24ent1#att9"/>
+          <layout:Link link="mov1#mpkg6#hym6#page60#pwu24ent1#att10"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

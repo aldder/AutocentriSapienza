@@ -1,0 +1,55 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov2#mpkg31#mpkg1#opm7" name="InserimentoAutovetturaOfficina">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#mpkg31#mpkg1#opm7#icu19" gr:x="25" gr:y="-30">
+      <OKLink id="mov2#mpkg31#mpkg1#opm7#icu19#oln90" name="OKFlow90" to="mov2#mpkg31#mpkg1#opm7#seu23">
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm7#icu19#oln90#par574" name="targa_targa" source="mov2#mpkg31#mpkg1#opm7#icu19#icp154" target="mov2#mpkg31#mpkg1#opm7#seu23#su63#acond53"/>
+      </OKLink>
+      <Link id="mov2#mpkg31#mpkg1#opm7#icu19#ln54" name="Flow54" to="mov2#mpkg31#mpkg1#opm7#cru8" type="transport" validate="true" gr:bendpoints="172,-79,-393,-49;437,-79,-128,-49">
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm7#icu19#ln54#par560" name="alimentazione" source="mov2#mpkg31#mpkg1#opm7#icu19#icp141" target="mov2#mpkg31#mpkg1#opm7#cru8.ent1#att8"/>
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm7#icu19#ln54#par561" name="anno" source="mov2#mpkg31#mpkg1#opm7#icu19#icp142" target="mov2#mpkg31#mpkg1#opm7#cru8.ent1#att7"/>
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm7#icu19#ln54#par562" name="catalogo" source="mov2#mpkg31#mpkg1#opm7#icu19#icp143" target="mov2#mpkg31#mpkg1#opm7#cru8.ent1#att50"/>
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm7#icu19#ln54#par563" name="cilindrata" source="mov2#mpkg31#mpkg1#opm7#icu19#icp144" target="mov2#mpkg31#mpkg1#opm7#cru8.ent1#att9"/>
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm7#icu19#ln54#par564" name="descrizione" source="mov2#mpkg31#mpkg1#opm7#icu19#icp145" target="mov2#mpkg31#mpkg1#opm7#cru8.ent1#att11"/>
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm7#icu19#ln54#par565" name="foto" source="mov2#mpkg31#mpkg1#opm7#icu19#icp147" target="mov2#mpkg31#mpkg1#opm7#cru8.ent1#att3"/>
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm7#icu19#ln54#par566" name="kilometri" source="mov2#mpkg31#mpkg1#opm7#icu19#icp148" target="mov2#mpkg31#mpkg1#opm7#cru8.ent1#att6"/>
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm7#icu19#ln54#par567" name="nome" source="mov2#mpkg31#mpkg1#opm7#icu19#icp149" target="mov2#mpkg31#mpkg1#opm7#cru8.ent1#att46"/>
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm7#icu19#ln54#par568" name="officina" source="mov2#mpkg31#mpkg1#opm7#icu19#icp150" target="mov2#mpkg31#mpkg1#opm7#cru8.ent1#att5"/>
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm7#icu19#ln54#par570" name="porte" source="mov2#mpkg31#mpkg1#opm7#icu19#icp152" target="mov2#mpkg31#mpkg1#opm7#cru8.ent1#att10"/>
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm7#icu19#ln54#par571" name="prezzo" source="mov2#mpkg31#mpkg1#opm7#icu19#icp153" target="mov2#mpkg31#mpkg1#opm7#cru8.ent1#att2"/>
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm7#icu19#ln54#par572" name="targa" source="mov2#mpkg31#mpkg1#opm7#icu19#icp154" target="mov2#mpkg31#mpkg1#opm7#cru8.ent1#att30"/>
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm7#icu19#ln54#par573" name="usato" source="mov2#mpkg31#mpkg1#opm7#icu19#icp155" target="mov2#mpkg31#mpkg1#opm7#cru8.ent1#att4"/>
+      </Link>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm7#icu19#icp141" name="alimentazione"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm7#icu19#icp142" name="anno"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm7#icu19#icp143" name="catalogo"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm7#icu19#icp144" name="cilindrata"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm7#icu19#icp145" name="descrizione"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm7#icu19#icp147" name="foto"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm7#icu19#icp148" name="kilometri"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm7#icu19#icp149" name="nome"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm7#icu19#icp150" name="officina"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm7#icu19#icp152" name="porte"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm7#icu19#icp153" name="prezzo"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm7#icu19#icp154" name="targa"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm7#icu19#icp155" name="usato"/>
+    </InputCollectorUnit>
+    <SelectorUnit gr:x="295" gr:y="60" id="mov2#mpkg31#mpkg1#opm7#seu23" name="SelectorAuto" entity="ent1">
+      <Selector id="mov2#mpkg31#mpkg1#opm7#seu23#su63" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#mpkg31#mpkg1#opm7#seu23#su63#acond53" name="targa" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att30" ignoreCase="true"/>
+      </Selector>
+      <OKLink id="mov2#mpkg31#mpkg1#opm7#seu23#oln99" name="OKFlow99" to="mov2#mpkg31#mpkg1#opm7#inn8">
+        <LinkParameter id="mov2#mpkg31#mpkg1#opm7#seu23#oln99#par559" name="oid_Input" source="ent1#att1Array" target="mov2#mpkg31#mpkg1#opm7#inn8.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="460" gr:y="75" id="mov2#mpkg31#mpkg1#opm7#inn8" name="Is Not Null">
+      <KOLink id="mov2#mpkg31#mpkg1#opm7#inn8#kln22" name="KOFlow22" to="mov2#mpkg31#mpkg1#opm7#cru8"/>
+      <OKLink id="mov2#mpkg31#mpkg1#opm7#inn8#oln138" name="OKFlow138" to="mov2#mpkg31#mpkg1#opm7#kocu8"/>
+    </IsNotNullUnit>
+    <CreateUnit gr:x="650" gr:y="35" id="mov2#mpkg31#mpkg1#opm7#cru8" name="InserisciAuto" entity="ent1">
+      <OKLink id="mov2#mpkg31#mpkg1#opm7#cru8#oln133" name="OKFlow133" to="mov2#mpkg31#mpkg1#opm7#okcu6"/>
+      <KOLink id="mov2#mpkg31#mpkg1#opm7#cru8#kln25" name="KOFlow25" to="mov2#mpkg31#mpkg1#opm7#kocu8"/>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="885" gr:y="5" id="mov2#mpkg31#mpkg1#opm7#okcu6" name="OK Port6"/>
+    <KOCollectorUnit gr:x="885" gr:y="120" id="mov2#mpkg31#mpkg1#opm7#kocu8" name="KO Port8"/>
+  </OperationUnits>
+</OperationModule>

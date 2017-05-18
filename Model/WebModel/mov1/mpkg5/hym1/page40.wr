@@ -4,7 +4,7 @@
       <Link id="mov1#mpkg5#hym1#page40#mssu9#ln52" name="Inserisci" to="mov1#mpkg5#hym1#page42#enu25" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowWidth="800" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowMaximizable="false" ajaxWindowModal="true" ajaxWindowTitle="Inserisci autovettura"/>
       <Message xml:space="preserve">Clicca per inserire una nuova autovettura nel catalogo.</Message>
     </MultiMessageUnit>
-    <PowerIndexUnit id="mov1#mpkg5#hym1#page40#pwu15" name="Autovetture" linkOrder="mov1#mpkg5#hym1#page40#pwu15#ln53" gr:x="175" gr:y="10" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att1 ent1#att46 ent1#att2 ent1#att5 ent1#att9 ent1#att6 ent1#att7 ent1#att8 ent1#att10 ent1#att4 ent1#att50" blockFactor="10">
+    <PowerIndexUnit id="mov1#mpkg5#hym1#page40#pwu15" name="Autovetture" linkOrder="mov1#mpkg5#hym1#page40#pwu15#ln53" gr:x="175" gr:y="10" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att1 ent1#att46 ent1#att2 ent1#att9 ent1#att6 ent1#att7 ent1#att8 ent1#att10 ent1#att4" blockFactor="10">
       <Link id="mov1#mpkg5#hym1#page40#pwu15#ln53" name="Visualizza" to="mov1#mpkg5#hym1#page41#enu24" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowWidth="800" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowTitle="Dettagli autovettura">
         <LinkParameter id="mov1#mpkg5#hym1#page40#pwu15#ln53#par182" name="oid_Key Condition [oid]" source="data[].ent1#att1" target="mov1#mpkg5#hym1#page41#enu24.ent1#att1"/>
       </Link>
@@ -13,7 +13,6 @@
       <DefaultSortAttribute attribute="ent1#att46" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att2" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att4" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att5" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att6" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att7" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att8" order="ascending"/>
@@ -24,7 +23,6 @@
       <SortAttribute attribute="ent1#att46" order="ascending"/>
       <SortAttribute attribute="ent1#att2" order="ascending"/>
       <SortAttribute attribute="ent1#att4" order="ascending"/>
-      <SortAttribute attribute="ent1#att5" order="ascending"/>
       <SortAttribute attribute="ent1#att6" order="ascending"/>
       <SortAttribute attribute="ent1#att7" order="ascending"/>
       <SortAttribute attribute="ent1#att8" order="ascending"/>
@@ -34,7 +32,7 @@
       <Selector id="mov1#mpkg5#hym1#page40#pwu15#su5" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov1#mpkg5#hym1#page40#pwu15#su5#acond18" name="nome" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att46" ignoreCase="true"/>
         <AttributesCondition id="mov1#mpkg5#hym1#page40#pwu15#su5#acond26" name="usato" predicate="eq" booleanOperator="or" implied="true" attributes="ent1#att4" ignoreCase="false"/>
-        <AttributesCondition id="mov1#mpkg5#hym1#page40#pwu15#su5#acond27" name="catalogo" predicate="eq" booleanOperator="or" implied="true" attributes="ent1#att50"/>
+        <AttributesCondition id="mov1#mpkg5#hym1#page40#pwu15#su5#acond27" name="catalogo" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att50" value="1"/>
         <AttributesCondition id="mov1#mpkg5#hym1#page40#pwu15#su5#acond31" name="alimentazione" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att8" ignoreCase="true"/>
         <AttributesCondition id="mov1#mpkg5#hym1#page40#pwu15#su5#acond37" name="immatricolazione" predicate="eq" booleanOperator="or" implied="true" attributes="ent1#att7" ignoreCase="true"/>
         <AttributesCondition id="mov1#mpkg5#hym1#page40#pwu15#su5#acond38" name="porte" predicate="eq" booleanOperator="or" implied="true" attributes="ent1#att10" ignoreCase="true"/>
@@ -43,13 +41,12 @@
         <AttributesCondition id="mov1#mpkg5#hym1#page40#pwu15#su5#acond45" name="prezzomax" predicate="lteq" booleanOperator="or" implied="true" attributes="ent1#att2"/>
       </Selector>
     </PowerIndexUnit>
-    <EntryUnit id="mov1#mpkg5#hym1#page40#enu23" name="Filtri" linkOrder="mov1#mpkg5#hym1#page40#enu23#ln57 mov1#mpkg5#hym1#page40#enu23#ln56 mov1#mpkg5#hym1#page40#enu23#ln58" ajaxEnableExpandedLinks="false" gr:showAllParts="true" gr:x="0" gr:y="10">
+    <EntryUnit id="mov1#mpkg5#hym1#page40#enu23" name="Filtri" linkOrder="mov1#mpkg5#hym1#page40#enu23#ln57 mov1#mpkg5#hym1#page40#enu23#ln56 mov1#mpkg5#hym1#page40#enu23#ln58" ajaxEnableExpandedLinks="false" gr:showAllParts="true" gr:x="0" gr:y="25">
       <Field id="mov1#mpkg5#hym1#page40#enu23#fld112" name="Nome" ajaxAutocompleteEnabled="true" ajaxAutocompleteLink="mov1#mpkg5#hym1#page40#enu23#ln58" ajaxAutocompleteIndicator="true" ajaxAutocompleteMinChars="2" type="string" modifiable="true"/>
       <SelectionField id="mov1#mpkg5#hym1#page40#enu23#sfld12" name="Usato" type="boolean"/>
       <Link id="mov1#mpkg5#hym1#page40#enu23#ln56" name="Ripristina" to="mov1#mpkg5#hym1#opu1" type="normal" validate="true"/>
       <Link id="mov1#mpkg5#hym1#page40#enu23#ln57" name="Cerca" to="mov1#mpkg5#hym1#page40#pwu15" type="normal" validate="true">
         <LinkParameter id="mov1#mpkg5#hym1#page40#enu23#ln57#par183" name="Alimentazione_alimentazione" source="mov1#mpkg5#hym1#page40#enu23#fld113" target="mov1#mpkg5#hym1#page40#pwu15#su5#acond31"/>
-        <LinkParameter id="mov1#mpkg5#hym1#page40#enu23#ln57#par184" name="Catalogo_catalogo" source="mov1#mpkg5#hym1#page40#enu23#sfld14" target="mov1#mpkg5#hym1#page40#pwu15#su5#acond27"/>
         <LinkParameter id="mov1#mpkg5#hym1#page40#enu23#ln57#par185" name="Nome_nome" source="mov1#mpkg5#hym1#page40#enu23#fld112" target="mov1#mpkg5#hym1#page40#pwu15#su5#acond18"/>
         <LinkParameter id="mov1#mpkg5#hym1#page40#enu23#ln57#par186" name="Usato_usato" source="mov1#mpkg5#hym1#page40#enu23#sfld12" target="mov1#mpkg5#hym1#page40#pwu15#su5#acond26"/>
         <LinkParameter id="mov1#mpkg5#hym1#page40#enu23#ln57#par187" name="Cilindrata_cilindrata" source="mov1#mpkg5#hym1#page40#enu23#fld116" target="mov1#mpkg5#hym1#page40#pwu15#su5#acond39"/>
@@ -59,7 +56,6 @@
         <LinkParameter id="mov1#mpkg5#hym1#page40#enu23#ln57#par191" name="Prezzo min_prezzomin" source="mov1#mpkg5#hym1#page40#enu23#fld114" target="mov1#mpkg5#hym1#page40#pwu15#su5#acond40"/>
       </Link>
       <Field id="mov1#mpkg5#hym1#page40#enu23#fld113" name="Alimentazione" ajaxAutocompleteEnabled="false" ajaxAutocompleteIndicator="false" type="string" modifiable="true"/>
-      <SelectionField id="mov1#mpkg5#hym1#page40#enu23#sfld14" name="Catalogo" type="boolean"/>
       <Field id="mov1#mpkg5#hym1#page40#enu23#fld114" name="Prezzo min" type="decimal" modifiable="true"/>
       <Field id="mov1#mpkg5#hym1#page40#enu23#fld115" name="Prezzo max" type="decimal" modifiable="true"/>
       <Field id="mov1#mpkg5#hym1#page40#enu23#fld116" name="Cilindrata" type="integer" modifiable="true"/>
@@ -174,7 +170,7 @@
             <layout:Cell/>
             <layout:Cell/>
             <layout:Cell colspan="4">
-              <layout:Field unitId="mov1#mpkg5#hym1#page40#enu23" field="mov1#mpkg5#hym1#page40#enu23#sfld14" mode="full">
+              <layout:Field unitId="mov1#mpkg5#hym1#page40#enu23" field="mov1#mpkg5#hym1#page40#enu23#sfld12" mode="full">
                 <layout:LayoutParameter name="label-position" value="top" type="field"/>
               </layout:Field>
             </layout:Cell>
@@ -199,11 +195,7 @@
             <layout:Cell/>
             <layout:Cell/>
             <layout:Cell/>
-            <layout:Cell colspan="4">
-              <layout:Field unitId="mov1#mpkg5#hym1#page40#enu23" field="mov1#mpkg5#hym1#page40#enu23#sfld12" mode="full">
-                <layout:LayoutParameter name="label-position" value="top" type="field"/>
-              </layout:Field>
-            </layout:Cell>
+            <layout:Cell colspan="4"/>
             <layout:Cell/>
             <layout:Cell/>
             <layout:Cell/>
@@ -277,35 +269,31 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#mpkg5#hym1#page40#pwu15">
           <layout:LayoutParameter name="compact" value="true" type="unit"/>
+          <layout:LayoutParameter name="collapsible" value="true" type="frame"/>
           <layout:Attribute label="Cod." attribute="ent1#att1"/>
           <layout:Attribute label="Nome" attribute="ent1#att46"/>
           <layout:Attribute label="Prezzo" attribute="ent1#att2"/>
-          <layout:Attribute label="Disp." attribute="ent1#att5"/>
           <layout:Attribute label="CC" attribute="ent1#att9"/>
           <layout:Attribute label="Km" attribute="ent1#att6"/>
           <layout:Attribute label="Anno" attribute="ent1#att7"/>
           <layout:Attribute label="Alim." attribute="ent1#att8"/>
           <layout:Attribute label="Porte" attribute="ent1#att10"/>
           <layout:Attribute label="Usato" attribute="ent1#att4"/>
-          <layout:Attribute label="Catalogo" attribute="ent1#att50"/>
           <layout:Link link="mov1#mpkg5#hym1#page40#pwu15#ln53"/>
           <layout:Link link="mov1#mpkg5#hym1#page40#pwu15ent1#att1"/>
           <layout:Link link="mov1#mpkg5#hym1#page40#pwu15ent1#att46"/>
           <layout:Link link="mov1#mpkg5#hym1#page40#pwu15ent1#att2"/>
           <layout:Link link="mov1#mpkg5#hym1#page40#pwu15ent1#att4"/>
-          <layout:Link link="mov1#mpkg5#hym1#page40#pwu15ent1#att5"/>
           <layout:Link link="mov1#mpkg5#hym1#page40#pwu15ent1#att6"/>
           <layout:Link link="mov1#mpkg5#hym1#page40#pwu15ent1#att7"/>
           <layout:Link link="mov1#mpkg5#hym1#page40#pwu15ent1#att8"/>
           <layout:Link link="mov1#mpkg5#hym1#page40#pwu15ent1#att9"/>
           <layout:Link link="mov1#mpkg5#hym1#page40#pwu15ent1#att10"/>
-          <layout:Link link="mov1#mpkg5#hym1#page40#pwu15ent1#att50"/>
           <layout:Link link="mov1#mpkg5#hym1#page40#pwu15First"/>
           <layout:Link link="mov1#mpkg5#hym1#page40#pwu15Previous"/>
           <layout:Link link="mov1#mpkg5#hym1#page40#pwu15Block"/>
           <layout:Link link="mov1#mpkg5#hym1#page40#pwu15Next"/>
           <layout:Link link="mov1#mpkg5#hym1#page40#pwu15Last"/>
-          <layout:LayoutParameter name="collapsible" value="true" type="frame"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

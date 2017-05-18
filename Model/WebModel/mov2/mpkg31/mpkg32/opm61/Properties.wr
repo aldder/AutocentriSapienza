@@ -1,22 +1,20 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg31#mpkg32#opm61" name="ModificaTipologiaIntervento" gr:x="0" gr:y="55">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg31#mpkg32#opm61#icu63" gr:x="-5" gr:y="-15">
-      <InputCollectorParameter id="mov2#mpkg31#mpkg32#opm61#icu63#icp300" name="Tipologia Object"/>
-      <InputCollectorParameter id="mov2#mpkg31#mpkg32#opm61#icu63#icp301" name="KeyCondition3 [oid]"/>
-      <InputCollectorParameter id="mov2#mpkg31#mpkg32#opm61#icu63#icp302" name="nome"/>
-      <InputCollectorParameter id="mov2#mpkg31#mpkg32#opm61#icu63#icp303" name="ripetizione"/>
-      <InputCollectorParameter id="mov2#mpkg31#mpkg32#opm61#icu63#icp304" name="descrizione"/>
+    <InputCollectorUnit id="mov2#mpkg31#mpkg32#opm61#icu63" gr:x="-5" gr:y="5">
       <OKLink id="mov2#mpkg31#mpkg32#opm61#icu63#oln119" name="Salva modifiche" to="mov2#mpkg31#mpkg32#opm61#seu41">
-        <LinkParameter id="mov2#mpkg31#mpkg32#opm61#icu63#oln119#par1211" name="nome_nome" source="mov2#mpkg31#mpkg32#opm61#icu63#icp302" target="mov2#mpkg31#mpkg32#opm61#seu41#su98#acond33"/>
-        <LinkParameter id="mov2#mpkg31#mpkg32#opm61#icu63#oln119#par1604" name="KeyCondition3 [oid]_KeyCondition119 [oid (not in)]" source="mov2#mpkg31#mpkg32#opm61#icu63#icp301" target="mov2#mpkg31#mpkg32#opm61#seu41#su98#kcond119.ent3#att15"/>
+        <LinkParameter id="mov2#mpkg31#mpkg32#opm61#icu63#oln119#par1211" name="nome_nome" source="mov2#mpkg31#mpkg32#opm61#icu63#icp55" target="mov2#mpkg31#mpkg32#opm61#seu41#su98#acond33"/>
+        <LinkParameter id="mov2#mpkg31#mpkg32#opm61#icu63#oln119#par1604" name="KeyCondition3 [oid]_KeyCondition119 [oid (not in)]" source="mov2#mpkg31#mpkg32#opm61#icu63#icp53" target="mov2#mpkg31#mpkg32#opm61#seu41#su98#kcond119.ent3#att15"/>
       </OKLink>
       <Link id="mov2#mpkg31#mpkg32#opm61#icu63#ln187" name="Flow5" to="mov2#mpkg31#mpkg32#opm61#mfu26" type="transport" validate="true" gr:bendpoints="168,-66,-337,-66;415,-65,-90,-65">
-        <LinkParameter id="mov2#mpkg31#mpkg32#opm61#icu63#ln187#par1212" name="descrizione_descrizione" source="mov2#mpkg31#mpkg32#opm61#icu63#icp304" target="mov2#mpkg31#mpkg32#opm61#mfu26.ent3#att38"/>
-        <LinkParameter id="mov2#mpkg31#mpkg32#opm61#icu63#ln187#par1213" name="KeyCondition3 [oid]_KeyCondition3 [oid]" source="mov2#mpkg31#mpkg32#opm61#icu63#icp301" target="mov2#mpkg31#mpkg32#opm61#mfu26#su96#kcond55.ent3#att15"/>
-        <LinkParameter id="mov2#mpkg31#mpkg32#opm61#icu63#ln187#par1214" name="nome_nome" source="mov2#mpkg31#mpkg32#opm61#icu63#icp302" target="mov2#mpkg31#mpkg32#opm61#mfu26.ent3#att16"/>
-        <LinkParameter id="mov2#mpkg31#mpkg32#opm61#icu63#ln187#par1215" name="ripetizione_ripetizione" source="mov2#mpkg31#mpkg32#opm61#icu63#icp303" target="mov2#mpkg31#mpkg32#opm61#mfu26.ent3#att17"/>
-        <LinkParameter id="mov2#mpkg31#mpkg32#opm61#icu63#ln187#par1216" name="Tipologia Object_Tipologia Object" source="mov2#mpkg31#mpkg32#opm61#icu63#icp300" target="mov2#mpkg31#mpkg32#opm61#mfu26.entityBeans"/>
+        <LinkParameter id="mov2#mpkg31#mpkg32#opm61#icu63#ln187#par1212" name="descrizione_descrizione" source="mov2#mpkg31#mpkg32#opm61#icu63#icp54" target="mov2#mpkg31#mpkg32#opm61#mfu26.ent3#att38"/>
+        <LinkParameter id="mov2#mpkg31#mpkg32#opm61#icu63#ln187#par1213" name="KeyCondition3 [oid]_KeyCondition3 [oid]" source="mov2#mpkg31#mpkg32#opm61#icu63#icp53" target="mov2#mpkg31#mpkg32#opm61#mfu26#su96#kcond55.ent3#att15"/>
+        <LinkParameter id="mov2#mpkg31#mpkg32#opm61#icu63#ln187#par1214" name="nome_nome" source="mov2#mpkg31#mpkg32#opm61#icu63#icp55" target="mov2#mpkg31#mpkg32#opm61#mfu26.ent3#att16"/>
+        <LinkParameter id="mov2#mpkg31#mpkg32#opm61#icu63#ln187#par1215" name="ripetizione_ripetizione" source="mov2#mpkg31#mpkg32#opm61#icu63#icp56" target="mov2#mpkg31#mpkg32#opm61#mfu26.ent3#att17"/>
       </Link>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg32#opm61#icu63#icp53" name="id_tipologia"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg32#opm61#icu63#icp54" name="descrizione"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg32#opm61#icu63#icp55" name="nome"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg32#opm61#icu63#icp56" name="ripetizione"/>
     </InputCollectorUnit>
     <OKCollectorUnit id="mov2#mpkg31#mpkg32#opm61#okcu60" name="OK Port27" gr:x="760" gr:y="-20"/>
     <ModifyUnit id="mov2#mpkg31#mpkg32#opm61#mfu26" name="Modifica" gr:x="585" gr:y="15" entity="ent3">

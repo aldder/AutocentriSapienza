@@ -3,7 +3,7 @@
     <InitJobUnit id="wsv1#job1#iju1" name="Init Job" gr:x="0" gr:y="5">
       <OKLink id="wsv1#job1#iju1#oln35" name="OKFlow35" to="wsv1#job1#miu1"/>
     </InitJobUnit>
-    <ModuleInstanceUnit gr:x="185" gr:y="0" id="wsv1#job1#miu1" moduleId="mov2#mpkg37#opm76"/>
+    <ModuleInstanceUnit gr:x="180" gr:y="0" id="wsv1#job1#miu1" moduleId="mov2#mpkg37#opm76"/>
   </OperationUnits>
   <Trigger id="wsv1#job1#trg1" name="Giornaliero" schedulePolicy="everyDay" hours="15" minutes="21" seconds="30"/>
 </Job>

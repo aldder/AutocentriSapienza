@@ -22,6 +22,7 @@
       <OKLink id="mov2#mpkg22#mpkg24#opm48#cru17#oln81" name="OKFlow3" to="mov2#mpkg22#mpkg24#opm48#mlu5">
         <LinkParameter id="mov2#mpkg22#mpkg24#opm48#cru17#oln81#par507" name="email_Mail - To" source="emailArray" target="mov2#mpkg22#mpkg24#opm48#mlu5.to"/>
         <LinkParameter id="mov2#mpkg22#mpkg24#opm48#cru17#oln81#par510" name="nome_utente_utente" source="userNameArray" target="mov2#mpkg22#mpkg24#opm48#mlu5.utente"/>
+        <LinkParameter id="mov2#mpkg22#mpkg24#opm48#cru17#oln81#par17" name="password_password" source="passwordArray" target="mov2#mpkg22#mpkg24#opm48#mlu5.password"/>
       </OKLink>
       <Link id="mov2#mpkg22#mpkg24#opm48#cru17#ln119" name="Flow8" to="mov2#mpkg22#mpkg24#opm48#lgu1" type="transport" validate="true">
         <LinkParameter id="mov2#mpkg22#mpkg24#opm48#cru17#ln119#par512" name="nome_utente_Username" source="userNameArray" target="mov2#mpkg22#mpkg24#opm48#lgu1.username"/>

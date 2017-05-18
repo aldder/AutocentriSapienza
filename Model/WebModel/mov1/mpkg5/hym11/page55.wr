@@ -1,21 +1,25 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg5#hym11#page55" name="Seleziona autovettura" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" ajaxEnabled="false" gr:x="865" gr:y="-210" layout:frameLayout="None">
   <ContentUnits>
-    <PowerIndexUnit id="mov1#mpkg5#hym11#page55#pwu21" name="Seleziona l'autovettura" linkOrder="mov1#mpkg5#hym11#page55#pwu21#ln147" gr:x="0" gr:y="100" sortable="true" checkable="false" useCountQuery="false" entity="ent1" blockFactor="10" displayAttributes="ent1#att1 ent1#att46 ent1#att2 ent1#att5 ent1#att4 ent1#att6">
+    <PowerIndexUnit id="mov1#mpkg5#hym11#page55#pwu21" name="Seleziona l'autovettura" linkOrder="mov1#mpkg5#hym11#page55#pwu21#ln147" gr:x="0" gr:y="100" sortable="true" checkable="false" useCountQuery="false" entity="ent1" blockFactor="10" displayAttributes="ent1#att1 ent1#att46 ent1#att2 ent1#att4 ent1#att6">
       <Link id="mov1#mpkg5#hym11#page55#pwu21#ln147" name="Seleziona" to="mov1#mpkg5#hym11#page54#enu33" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxReplaceWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="550" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserisci acquisto">
         <LinkParameter id="mov1#mpkg5#hym11#page55#pwu21#ln147#par685" name="oid_Codice autovettura" source="data[].ent1#att1" target="mov1#mpkg5#hym11#page54#enu33#fld211_slot"/>
         <LinkParameter id="mov1#mpkg5#hym11#page55#pwu21#ln147#par686" name="nome_Autovettura" source="data[].ent1#att46" target="mov1#mpkg5#hym11#page54#enu33#fld210_slot"/>
-        <LinkParameter id="mov1#mpkg5#hym11#page55#pwu21#ln147#par687" name="prezzo_prezzo" source="data[].ent1#att2" target="mov1#mpkg5#hym11#page54#enu33#fld207_slot"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page55#pwu21#ln147#par220" name="alimentazione_Alimentazione" source="data[].ent1#att8" target="mov1#mpkg5#hym11#page54#enu33#fld37_slot"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page55#pwu21#ln147#par221" name="anno_Anno di immatricolazione" source="data[].ent1#att7" target="mov1#mpkg5#hym11#page54#enu33#fld38_slot"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page55#pwu21#ln147#par222" name="cilindrata_Cilindrata" source="data[].ent1#att9" target="mov1#mpkg5#hym11#page54#enu33#fld39_slot"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page55#pwu21#ln147#par223" name="kilometri_Kilometri" source="data[].ent1#att6" target="mov1#mpkg5#hym11#page54#enu33#fld40_slot"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page55#pwu21#ln147#par224" name="prezzo_Prezzo" source="data[].ent1#att2" target="mov1#mpkg5#hym11#page54#enu33#fld41_slot"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page55#pwu21#ln147#par225" name="usato_Usato" source="data[].ent1#att4" target="mov1#mpkg5#hym11#page54#enu33#fld42_slot"/>
       </Link>
       <Selector id="mov1#mpkg5#hym11#page55#pwu21#su16" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov1#mpkg5#hym11#page55#pwu21#su16#acond58" name="nome" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att46" ignoreCase="true"/>
-        <AttributesCondition id="mov1#mpkg5#hym11#page55#pwu21#su16#acond59" name="disponibilita" predicate="gteq" booleanOperator="or" implied="false" attributes="ent1#att5" value="1"/>
+        <AttributesCondition id="mov1#mpkg5#hym11#page55#pwu21#su16#acond4" name="catalogo" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att50" value="1"/>
       </Selector>
       <SortAttribute attribute="ent1#att1" order="ascending"/>
       <SortAttribute attribute="ent1#att46" order="ascending"/>
       <SortAttribute attribute="ent1#att2" order="ascending"/>
       <SortAttribute attribute="ent1#att7" order="ascending"/>
       <SortAttribute attribute="ent1#att4" order="ascending"/>
-      <SortAttribute attribute="ent1#att5" order="ascending"/>
       <SortAttribute attribute="ent1#att6" order="ascending"/>
       <SortAttribute attribute="ent1#att8" order="ascending"/>
       <SortAttribute attribute="ent1#att9" order="ascending"/>
@@ -26,7 +30,6 @@
       <DefaultSortAttribute attribute="ent1#att2" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att7" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att4" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att5" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att6" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att8" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att9" order="ascending"/>
@@ -68,7 +71,6 @@
           <layout:Attribute label="Codice" attribute="ent1#att1"/>
           <layout:Attribute label="Nome" attribute="ent1#att46"/>
           <layout:Attribute label="Prezzo" attribute="ent1#att2"/>
-          <layout:Attribute label="Disponibilit&#224;" attribute="ent1#att5"/>
           <layout:Attribute label="Usato" attribute="ent1#att4"/>
           <layout:Attribute label="Kilometri" attribute="ent1#att6"/>
           <layout:Link link="mov1#mpkg5#hym11#page55#pwu21#ln147"/>
@@ -76,7 +78,6 @@
           <layout:Link link="mov1#mpkg5#hym11#page55#pwu21ent1#att46"/>
           <layout:Link link="mov1#mpkg5#hym11#page55#pwu21ent1#att2"/>
           <layout:Link link="mov1#mpkg5#hym11#page55#pwu21ent1#att4"/>
-          <layout:Link link="mov1#mpkg5#hym11#page55#pwu21ent1#att5"/>
           <layout:Link link="mov1#mpkg5#hym11#page55#pwu21ent1#att6"/>
           <layout:Link link="mov1#mpkg5#hym11#page55#pwu21First"/>
           <layout:Link link="mov1#mpkg5#hym11#page55#pwu21Previous"/>

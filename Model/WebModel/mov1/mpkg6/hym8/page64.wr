@@ -12,7 +12,7 @@
           <MandatoryValidationRule id="mov1#mpkg6#hym8#page64#enu46#fld176#mnd221" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
       </Field>
-      <SelectionField id="mov1#mpkg6#hym8#page64#enu46#sfld22" name="Autovettura" type="string" role="rel11#role22">
+      <SelectionField id="mov1#mpkg6#hym8#page64#enu46#sfld22" name="Autovettura" type="string">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym8#page64#enu46#sfld22#mnd219" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
@@ -31,7 +31,7 @@
         <LinkParameter id="mov1#mpkg6#hym8#page64#enu46#ln274#par1768" name="Tipologia_Tipologia.oid(InterventoToTipologia)" source="mov1#mpkg6#hym8#page64#enu46#sfld23" target="mov1#mpkg6#hym8#miu87.mov2#mpkg31#mpkg36#opm72#icu75#icp340"/>
       </Link>
     </EntryUnit>
-    <SelectorUnit id="mov1#mpkg6#hym8#page64#seu97" name="AutovetturaC" gr:x="0" gr:y="0" entity="ent11">
+    <SelectorUnit id="mov1#mpkg6#hym8#page64#seu97" name="AutovetturaC" gr:x="0" gr:y="0">
       <Link id="mov1#mpkg6#hym8#page64#seu97#ln275" name="Flow147" to="mov1#mpkg6#hym8#page64#enu46" type="transport" validate="true">
         <LinkParameter id="mov1#mpkg6#hym8#page64#seu97#ln275#par1737" name="targa_Autovettura [label]" source="ent11#att52Array" target="mov1#mpkg6#hym8#page64#enu46#sfld22_label"/>
         <LinkParameter id="mov1#mpkg6#hym8#page64#seu97#ln275#par1738" name="oid_Autovettura [output]" source="ent11#att51Array" target="mov1#mpkg6#hym8#page64#enu46#sfld22_output"/>

@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg3#hym16#page80" name="I tuoi preferiti" landmark="true" gr:x="300" gr:y="0">
   <ContentUnits>
-    <PowerIndexUnit id="mov1#mpkg3#hym16#page80#pwu32" name="Autovetture preferite" linkOrder="mov1#mpkg3#hym16#page80#pwu32#ln318" gr:x="140" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att46 ent1#att2 ent1#att5 ent1#att7 ent1#att9 ent1#att8 ent1#att6" blockFactor="10">
+    <PowerIndexUnit id="mov1#mpkg3#hym16#page80#pwu32" name="Autovetture preferite" linkOrder="mov1#mpkg3#hym16#page80#pwu32#ln318" gr:x="140" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att46 ent1#att2 ent1#att7 ent1#att9 ent1#att8 ent1#att6" blockFactor="10">
       <Selector id="mov1#mpkg3#hym16#page80#pwu32#su36" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="mov1#mpkg3#hym16#page80#pwu32#su36#rcond17" name="utente2preferito" predicate="in" implied="false" role="rel1#role2.rel20#role39"/>
       </Selector>
@@ -12,7 +12,6 @@
       <SortAttribute attribute="ent1#att2" order="ascending"/>
       <SortAttribute attribute="ent1#att7" order="ascending"/>
       <SortAttribute attribute="ent1#att4" order="ascending"/>
-      <SortAttribute attribute="ent1#att5" order="ascending"/>
       <SortAttribute attribute="ent1#att6" order="ascending"/>
       <SortAttribute attribute="ent1#att8" order="ascending"/>
       <SortAttribute attribute="ent1#att9" order="ascending"/>
@@ -23,7 +22,6 @@
       <DefaultSortAttribute attribute="ent1#att2" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att7" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att4" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att5" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att6" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att8" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att9" order="ascending"/>
@@ -80,7 +78,6 @@
         <layout:Unit unitId="mov1#mpkg3#hym16#page80#pwu32">
           <layout:Attribute label="Nome" attribute="ent1#att46"/>
           <layout:Attribute label="Prezzo" attribute="ent1#att2"/>
-          <layout:Attribute label="Disponibilit&#224;" attribute="ent1#att5"/>
           <layout:Attribute label="Anno di imm." attribute="ent1#att7"/>
           <layout:Attribute label="Cilindrata" attribute="ent1#att9"/>
           <layout:Attribute label="Alimentazione" attribute="ent1#att8"/>
@@ -89,7 +86,6 @@
           <layout:Link link="mov1#mpkg3#hym16#page80#pwu32ent1#att46"/>
           <layout:Link link="mov1#mpkg3#hym16#page80#pwu32ent1#att2"/>
           <layout:Link link="mov1#mpkg3#hym16#page80#pwu32ent1#att7"/>
-          <layout:Link link="mov1#mpkg3#hym16#page80#pwu32ent1#att5"/>
           <layout:Link link="mov1#mpkg3#hym16#page80#pwu32ent1#att6"/>
           <layout:Link link="mov1#mpkg3#hym16#page80#pwu32ent1#att8"/>
           <layout:Link link="mov1#mpkg3#hym16#page80#pwu32ent1#att9"/>

@@ -4,22 +4,25 @@
       <Link id="mov1#mpkg5#hym11#page67#mssu33#ln151" name="Inserisci" to="mov1#mpkg5#hym11#page55" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxReplaceWindow="false" ajaxWindowWidth="800" ajaxWindowHeight="750" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowShowEffect="Effect.BlindDown" ajaxWindowUseTitle="true" ajaxWindowTitle="Seleziona autovettura"/>
       <Message xml:space="preserve">Clicca per inserire un nuovo acquisto.</Message>
     </MultiMessageUnit>
-    <PowerIndexUnit id="mov1#mpkg5#hym11#page67#pwu22" name="Storico acquisti" linkOrder="mov1#mpkg5#hym11#page67#pwu22#ln152" gr:x="0" gr:y="110" sortable="true" checkable="false" useCountQuery="false" entity="ent7" displayAttributes="ent7#att24 ent7#att56 ent7#att48 ent7#att59 rel12#role23.userName rel19#role37.ent1#att46" blockFactor="10">
+    <PowerIndexUnit id="mov1#mpkg5#hym11#page67#pwu22" name="Storico acquisti" linkOrder="mov1#mpkg5#hym11#page67#pwu22#ln152" gr:x="0" gr:y="110" sortable="true" checkable="false" useCountQuery="false" entity="ent7" displayAttributes="ent7#att24 ent7#att48 rel12#role23.userName rel19#role37.ent1#att46 rel19#role37.ent1#att30 rel19#role37.ent1#att2" blockFactor="10">
       <Link id="mov1#mpkg5#hym11#page67#pwu22#ln152" name="Visualizza" to="mov1#mpkg5#hym11#page71#enu36" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="550" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli acquisto">
         <LinkParameter id="mov1#mpkg5#hym11#page67#pwu22#ln152#par711" name="oid_Key Condition [oid]" source="data[].ent7#att24" target="mov1#mpkg5#hym11#page71#enu36.ent7#att24"/>
-        <LinkParameter id="mov1#mpkg5#hym11#page67#pwu22#ln152#par712" name="Storico_AcquistoToUtente.oid_Utente - Preselection" source="data[].rel12#role23_userOID" target="mov1#mpkg5#hym11#page71#enu36#sfld33_presel"/>
-        <LinkParameter id="mov1#mpkg5#hym11#page67#pwu22#ln152#par713" name="Storico_AcquistoToAutovettura.oid_Autovettura - Preselection" source="data[].rel19#role37_ent1#att1" target="mov1#mpkg5#hym11#page71#enu36#sfld26_presel"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page67#pwu22#ln152#par232" name="StoricoAcquistoToAutovettura.nome_Autovettura" source="data[].rel19#role37$ent1#att46" target="mov1#mpkg5#hym11#page71#enu36#fld43_slot"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page67#pwu22#ln152#par233" name="Storico_AcquistoToUtente.nome_utente_Utente" source="data[].rel12#role23$userName" target="mov1#mpkg5#hym11#page71#enu36#fld44_slot"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page67#pwu22#ln152#par234" name="Storico_AcquistoToUtente.oid_PASSING" source="data[].rel12#role23_userOID" passing="true"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page67#pwu22#ln152#par235" name="StoricoAcquistoToAutovettura.oid_PASSING" source="data[].rel19#role37_ent1#att1" passing="true"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page67#pwu22#ln152#par243" name="StoricoAcquistoToAutovettura.prezzo_Prezzo" source="data[].rel19#role37$ent1#att2" target="mov1#mpkg5#hym11#page71#enu36#fld46_slot"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page67#pwu22#ln152#par244" name="StoricoAcquistoToAutovettura.targa_Targa" source="data[].rel19#role37$ent1#att30" target="mov1#mpkg5#hym11#page71#enu36#fld45_slot"/>
       </Link>
-      <SortAttribute attribute="rel12#role23.userName" order="ascending"/>
-      <SortAttribute attribute="ent7#att24" order="ascending"/>
-      <SortAttribute attribute="ent7#att56" order="ascending"/>
-      <SortAttribute attribute="ent7#att48" order="ascending"/>
-      <SortAttribute attribute="ent7#att59" order="ascending"/>
       <DefaultSortAttribute attribute="rel12#role23.userName" order="ascending"/>
       <DefaultSortAttribute attribute="ent7#att24" order="ascending"/>
-      <DefaultSortAttribute attribute="ent7#att56" order="ascending"/>
       <DefaultSortAttribute attribute="ent7#att48" order="ascending"/>
-      <DefaultSortAttribute attribute="ent7#att59" order="ascending"/>
+      <SortAttribute attribute="rel12#role23.userName" order="ascending"/>
+      <SortAttribute attribute="ent7#att24" order="ascending"/>
+      <SortAttribute attribute="ent7#att48" order="ascending"/>
+      <SortAttribute attribute="rel19#role37.ent1#att46" order="ascending"/>
+      <SortAttribute attribute="rel19#role37.ent1#att30" order="ascending"/>
+      <SortAttribute attribute="rel19#role37.ent1#att2" order="ascending"/>
     </PowerIndexUnit>
     <MultiMessageUnit id="mov1#mpkg5#hym11#page67#mssu34" name="OkMessage" gr:x="185" gr:y="70"/>
     <MultiMessageUnit id="mov1#mpkg5#hym11#page67#mssu37" name="KoMessage" gr:x="185" gr:y="135"/>
@@ -83,17 +86,18 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#mpkg5#hym11#page67#pwu22">
           <layout:Attribute label="Codice" attribute="ent7#att24"/>
-          <layout:Attribute label="Targa" attribute="ent7#att56"/>
           <layout:Attribute label="Data" attribute="ent7#att48"/>
-          <layout:Attribute label="Prezzo" attribute="ent7#att59"/>
           <layout:Attribute label="Utente" attribute="rel12#role23.userName"/>
-          <layout:Attribute attribute="rel19#role37.ent1#att46"/>
+          <layout:Attribute attribute="rel19#role37.ent1#att46" label="Nome"/>
+          <layout:Attribute attribute="rel19#role37.ent1#att30" label="Targa"/>
+          <layout:Attribute attribute="rel19#role37.ent1#att2" label="Prezzo"/>
           <layout:Link link="mov1#mpkg5#hym11#page67#pwu22#ln152"/>
           <layout:Link link="mov1#mpkg5#hym11#page67#pwu22rel12#role23$userName"/>
           <layout:Link link="mov1#mpkg5#hym11#page67#pwu22ent7#att24"/>
-          <layout:Link link="mov1#mpkg5#hym11#page67#pwu22ent7#att56"/>
           <layout:Link link="mov1#mpkg5#hym11#page67#pwu22ent7#att48"/>
-          <layout:Link link="mov1#mpkg5#hym11#page67#pwu22ent7#att59"/>
+          <layout:Link link="mov1#mpkg5#hym11#page67#pwu22rel19#role37$ent1#att46"/>
+          <layout:Link link="mov1#mpkg5#hym11#page67#pwu22rel19#role37$ent1#att30"/>
+          <layout:Link link="mov1#mpkg5#hym11#page67#pwu22rel19#role37$ent1#att2"/>
           <layout:Link link="mov1#mpkg5#hym11#page67#pwu22First"/>
           <layout:Link link="mov1#mpkg5#hym11#page67#pwu22Previous"/>
           <layout:Link link="mov1#mpkg5#hym11#page67#pwu22Block"/>

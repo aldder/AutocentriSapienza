@@ -5,7 +5,7 @@
         <LinkParameter id="mov1#mpkg3#hym15#page77#gtu6#ln290#par968" name="UserCtxParam.oid_utente" source="mov1#mpkg3#hym15#page77#gtu6.UserCtxParam" target="mov1#mpkg3#hym15#page77#pwu31#su32#acond67"/>
       </Link>
     </GetUnit>
-    <PowerIndexUnit id="mov1#mpkg3#hym15#page77#pwu31" name="Autovetture acquistate" linkOrder="mov1#mpkg3#hym15#page77#pwu31#ln291" gr:x="140" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="rel18#role35.ent1#att46 rel18#role35.ent1#att2 rel18#role35.ent1#att7 ent6#att39 rel18#role35.ent1#att5" blockFactor="10">
+    <PowerIndexUnit id="mov1#mpkg3#hym15#page77#pwu31" name="Autovetture acquistate" linkOrder="mov1#mpkg3#hym15#page77#pwu31#ln291" gr:x="140" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="rel18#role35.ent1#att46 rel18#role35.ent1#att2 rel18#role35.ent1#att7 rel18#role35.ent1#att6 rel18#role35.ent1#att8 rel18#role35.ent1#att9 rel18#role35.ent1#att4 ent6#att39" blockFactor="10">
       <Selector id="mov1#mpkg3#hym15#page77#pwu31#su32" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov1#mpkg3#hym15#page77#pwu31#su32#acond67" name="utente" predicate="eq" booleanOperator="or" implied="false" attributes="rel2#role4.userOID"/>
       </Selector>
@@ -15,17 +15,23 @@
       <SortAttribute attribute="rel18#role35.ent1#att46" order="ascending"/>
       <SortAttribute attribute="rel18#role35.ent1#att2" order="ascending"/>
       <SortAttribute attribute="rel18#role35.ent1#att7" order="ascending"/>
-      <SortAttribute attribute="rel18#role35.ent1#att5" order="ascending"/>
       <SortAttribute attribute="ent6#att23" order="ascending"/>
       <SortAttribute attribute="ent6#att25" order="ascending"/>
       <SortAttribute attribute="ent6#att39" order="ascending"/>
+      <SortAttribute attribute="rel18#role35.ent1#att6" order="ascending"/>
+      <SortAttribute attribute="rel18#role35.ent1#att8" order="ascending"/>
+      <SortAttribute attribute="rel18#role35.ent1#att9" order="ascending"/>
+      <SortAttribute attribute="rel18#role35.ent1#att4" order="ascending"/>
       <DefaultSortAttribute attribute="rel18#role35.ent1#att46" order="ascending"/>
       <DefaultSortAttribute attribute="rel18#role35.ent1#att2" order="ascending"/>
       <DefaultSortAttribute attribute="rel18#role35.ent1#att7" order="ascending"/>
-      <DefaultSortAttribute attribute="rel18#role35.ent1#att5" order="ascending"/>
       <DefaultSortAttribute attribute="ent6#att23" order="ascending"/>
       <DefaultSortAttribute attribute="ent6#att25" order="ascending"/>
       <DefaultSortAttribute attribute="ent6#att39" order="ascending"/>
+      <DefaultSortAttribute attribute="rel18#role35.ent1#att6" order="ascending"/>
+      <DefaultSortAttribute attribute="rel18#role35.ent1#att8" order="ascending"/>
+      <DefaultSortAttribute attribute="rel18#role35.ent1#att9" order="ascending"/>
+      <DefaultSortAttribute attribute="rel18#role35.ent1#att4" order="ascending"/>
     </PowerIndexUnit>
     <MultiMessageUnit id="mov1#mpkg3#hym15#page77#mssu42" name="KoMessage" gr:x="210" gr:y="165"/>
     <MultiMessageUnit id="mov1#mpkg3#hym15#page77#mssu43" name="OkMessage" gr:x="210" gr:y="100"/>
@@ -73,14 +79,20 @@
           <layout:Attribute label="Nome" attribute="rel18#role35.ent1#att46"/>
           <layout:Attribute label="Prezzo" attribute="rel18#role35.ent1#att2"/>
           <layout:Attribute label="Anno di imm." attribute="rel18#role35.ent1#att7"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att6" label="Kilometri"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att8" label="Alimentazione"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att9" label="Cilindrata"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att4" label="Usato"/>
           <layout:Attribute label="Quantit&#224;" attribute="ent6#att39"/>
-          <layout:Attribute label="Disponibilit&#224;" attribute="rel18#role35.ent1#att5"/>
           <layout:Link link="mov1#mpkg3#hym15#page77#pwu31#ln291"/>
           <layout:Link link="mov1#mpkg3#hym15#page77#pwu31rel18#role35$ent1#att46"/>
           <layout:Link link="mov1#mpkg3#hym15#page77#pwu31rel18#role35$ent1#att2"/>
           <layout:Link link="mov1#mpkg3#hym15#page77#pwu31rel18#role35$ent1#att7"/>
-          <layout:Link link="mov1#mpkg3#hym15#page77#pwu31rel18#role35$ent1#att5"/>
           <layout:Link link="mov1#mpkg3#hym15#page77#pwu31ent6#att39"/>
+          <layout:Link link="mov1#mpkg3#hym15#page77#pwu31rel18#role35$ent1#att6"/>
+          <layout:Link link="mov1#mpkg3#hym15#page77#pwu31rel18#role35$ent1#att8"/>
+          <layout:Link link="mov1#mpkg3#hym15#page77#pwu31rel18#role35$ent1#att9"/>
+          <layout:Link link="mov1#mpkg3#hym15#page77#pwu31rel18#role35$ent1#att4"/>
           <layout:Link link="mov1#mpkg3#hym15#page77#pwu31First"/>
           <layout:Link link="mov1#mpkg3#hym15#page77#pwu31Previous"/>
           <layout:Link link="mov1#mpkg3#hym15#page77#pwu31Block"/>

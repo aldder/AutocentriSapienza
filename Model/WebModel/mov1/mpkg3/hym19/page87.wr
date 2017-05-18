@@ -11,7 +11,7 @@
           <MandatoryValidationRule id="mov1#mpkg3#hym19#page87#enu56#fld255#mnd216" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
       </Field>
-      <Link id="mov1#mpkg3#hym19#page87#enu56#ln346" name="Registrati" to="mov1#mpkg3#hym19#page86#enu55" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowWidth="600" ajaxWindowHeight="350" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowTitle="Registrazione">
+      <Link id="mov1#mpkg3#hym19#page87#enu56#ln346" name="Registrati" to="mov1#mpkg3#hym19#page86#enu55" type="normal" validate="false" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowWidth="600" ajaxWindowHeight="350" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowTitle="Registrazione">
         <LinkParameter id="mov1#mpkg3#hym19#page87#enu56#ln346#par1107" name="Key [oid]_Key Condition [oid]" source="key.userOID" target="mov1#mpkg3#hym19#page86#enu55.userOID"/>
       </Link>
       <Link id="mov1#mpkg3#hym19#page87#enu56#ln347" name="Login" to="mov1#mpkg3#hym19#lgu3" type="normal" validate="true">
@@ -23,9 +23,9 @@
       <Message xml:space="preserve">Benvenuto nel nostro concessionario, accedi se hai gi&#224; un account, altrimenti creane uno!</Message>
     </MultiMessageUnit>
     <MultiMessageUnit id="mov1#mpkg3#hym19#page87#mssu64" name="Login Error" ajaxTooltipEnabled="false" gr:x="330" gr:y="0"/>
-    <PowerIndexUnit id="mov1#mpkg3#hym19#page87#pwu34" name="Il nostro catalogo" linkOrder="mov1#mpkg3#hym19#page87#pwu34#ln348" gr:x="140" gr:y="165" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att46 ent1#att3 ent1#att2 ent1#att9 ent1#att8" blockFactor="10">
+    <PowerIndexUnit id="mov1#mpkg3#hym19#page87#pwu34" name="Il nostro catalogo" linkOrder="mov1#mpkg3#hym19#page87#pwu34#ln348" gr:x="140" gr:y="165" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att46 ent1#att3 ent1#att2 ent1#att9 ent1#att8" blockFactor="10" distinct="false">
       <Link id="mov1#mpkg3#hym19#page87#pwu34#ln348" name="Visualizza" to="mov1#mpkg3#hym19#page88#dau5" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowWidth="800" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowTitle="Dettagli autovettura">
-        <LinkParameter id="mov1#mpkg3#hym19#page87#pwu34#ln348#par1110" name="oid_KeyCondition18 [oid]" source="data[].ent1#att1" target="mov1#mpkg3#hym19#page88#dau5#su48#kcond8.ent1#att1"/>
+        <LinkParameter id="mov1#mpkg3#hym19#page87#pwu34#ln348#par68" name="oid_KeyCondition18 [oid]" source="data[].ent1#att1" target="mov1#mpkg3#hym19#page88#dau5#su48#kcond8.ent1#att1"/>
       </Link>
       <SortAttribute attribute="ent1#att2" order="ascending"/>
       <SortAttribute attribute="ent1#att8" order="ascending"/>
@@ -36,7 +36,7 @@
       <DefaultSortAttribute attribute="ent1#att9" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att46" order="ascending"/>
       <Selector id="mov1#mpkg3#hym19#page87#pwu34#su45" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="mov1#mpkg3#hym19#page87#pwu34#su45#acond69" name="catalogo" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att50" value="true"/>
+        <AttributesCondition id="mov1#mpkg3#hym19#page87#pwu34#su45#acond69" name="catalogo" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att50" value="1"/>
         <AttributesCondition id="mov1#mpkg3#hym19#page87#pwu34#su45#acond70" name="nome" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att46" ignoreCase="true"/>
         <AttributesCondition id="mov1#mpkg3#hym19#page87#pwu34#su45#acond71" name="usato" predicate="eq" booleanOperator="or" implied="true" attributes="ent1#att4" ignoreCase="false"/>
         <AttributesCondition id="mov1#mpkg3#hym19#page87#pwu34#su45#acond72" name="prezzomin" predicate="gteq" booleanOperator="or" implied="true" attributes="ent1#att2"/>

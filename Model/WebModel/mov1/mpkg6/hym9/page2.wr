@@ -1,19 +1,9 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym9#page2" name="Presa in consegna" ignoreMasterPage="false" layout:pageLayout="BootstrapStyle/Empty" layout:frameLayout="None" ajaxEnabled="false" gr:x="950" gr:y="660">
   <ContentUnits>
-    <PowerIndexUnit id="mov1#mpkg6#hym9#page2#pwu4" name="Autovetture clienti" linkOrder="mov1#mpkg6#hym9#page2#pwu4#ln5" gr:x="0" gr:y="60" sortable="true" checkable="false" useCountQuery="false" entity="ent11" displayAttributes="ent11#att52 ent11#att53 ent11#att54 ent11#att57" blockWindow="10">
+    <PowerIndexUnit id="mov1#mpkg6#hym9#page2#pwu4" name="Autovetture clienti" linkOrder="mov1#mpkg6#hym9#page2#pwu4#ln5" gr:x="0" gr:y="60" sortable="true" checkable="false" useCountQuery="false" blockWindow="10">
       <Link id="mov1#mpkg6#hym9#page2#pwu4#ln5" name="Seleziona" to="mov1#mpkg6#hym9#pcu3" type="normal" validate="true">
         <LinkParameter id="mov1#mpkg6#hym9#page2#pwu4#ln5#par2" name="oid_id_auto" source="data[].ent11#att51" target="mov1#mpkg6#hym9#pcu3#pcp21"/>
       </Link>
-      <SortAttribute attribute="ent11#att51" order="ascending"/>
-      <SortAttribute attribute="ent11#att52" order="ascending"/>
-      <SortAttribute attribute="ent11#att53" order="ascending"/>
-      <SortAttribute attribute="ent11#att54" order="ascending"/>
-      <SortAttribute attribute="ent11#att57" order="ascending"/>
-      <DefaultSortAttribute attribute="ent11#att51" order="ascending"/>
-      <DefaultSortAttribute attribute="ent11#att52" order="ascending"/>
-      <DefaultSortAttribute attribute="ent11#att53" order="ascending"/>
-      <DefaultSortAttribute attribute="ent11#att54" order="ascending"/>
-      <DefaultSortAttribute attribute="ent11#att57" order="ascending"/>
     </PowerIndexUnit>
     <MultiMessageUnit id="mov1#mpkg6#hym9#page2#mssu3" name="Inserisci" linkOrder="mov1#mpkg6#hym9#page2#mssu3#ln8" gr:x="55" gr:y="0">
       <Message xml:space="preserve">Inserisci una nuova autovettura.</Message>
@@ -42,15 +32,7 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#mpkg6#hym9#page2#pwu4">
-          <layout:Attribute attribute="ent11#att52" label="Targa"/>
-          <layout:Attribute attribute="ent11#att53" label="Nome"/>
-          <layout:Attribute attribute="ent11#att54" label="Marca"/>
-          <layout:Attribute attribute="ent11#att57" label="Cliente"/>
           <layout:Link link="mov1#mpkg6#hym9#page2#pwu4#ln5"/>
-          <layout:Link link="mov1#mpkg6#hym9#page2#pwu4ent11#att52"/>
-          <layout:Link link="mov1#mpkg6#hym9#page2#pwu4ent11#att53"/>
-          <layout:Link link="mov1#mpkg6#hym9#page2#pwu4ent11#att54"/>
-          <layout:Link link="mov1#mpkg6#hym9#page2#pwu4ent11#att57"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

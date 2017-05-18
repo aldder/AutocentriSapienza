@@ -1,6 +1,6 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg37#opm75" name="InvioNotificheAcquisto" gr:x="0" gr:y="60">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg37#opm75" name="InvioNotificheAcquisto" gr:x="0" gr:y="55">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg37#opm75#icu78" gr:x="10" gr:y="10">
+    <InputCollectorUnit id="mov2#mpkg37#opm75#icu78" gr:x="30" gr:y="10">
       <OKLink id="mov2#mpkg37#opm75#icu78#oln366" name="OKFlow35" to="mov2#mpkg37#opm75#tmu1"/>
     </InputCollectorUnit>
     <SelectorUnit id="mov2#mpkg37#opm75#seu57" name="SelectAcquisto" gr:x="1005" gr:y="155" entity="ent7">
@@ -16,7 +16,6 @@
       <Placeholder id="mov2#mpkg37#opm75#mlu7#ph5" name="utente"/>
       <Placeholder id="mov2#mpkg37#opm75#mlu7#ph6" name="autovettura"/>
       <Placeholder id="mov2#mpkg37#opm75#mlu7#ph7" name="descrizione"/>
-      <OKLink id="mov2#mpkg37#opm75#mlu7#oln368" name="OKFlow140" to="mov2#mpkg37#opm75#lpu1" gr:bendpoints="-88,-154,652,1"/>
       <BodyTemplate xml:space="preserve">Ciao $$utente$$
 
 Ti ricordiamo che a breve scadranno i termini per il seguente intervento da effettuare sull'autovettura "$$autovettura$$" acquistata presso il nostro concessionario:
@@ -25,6 +24,7 @@ $$tipologia$$
 Note aggiuntive:
 $$descrizione$$</BodyTemplate>
       <SubjectTemplate xml:space="preserve">Scadenza interventi per la tua auto</SubjectTemplate>
+      <OKLink id="mov2#mpkg37#opm75#mlu7#oln9" name="OKFlow9" to="mov2#mpkg37#opm75#mathu1"/>
     </MailUnit>
     <SelectorUnit id="mov2#mpkg37#opm75#seu58" name="SelectNotifiche" gr:x="410" gr:y="0" entity="ent4" distinctAttributes="ent4#att18 ent4#att19 ent4#att20 ent4#att28">
       <OKLink id="mov2#mpkg37#opm75#seu58#oln369" name="OKFlow74" to="mov2#mpkg37#opm75#lpu1">
@@ -51,6 +51,17 @@ $$descrizione$$</BodyTemplate>
       <OKLink id="mov2#mpkg37#opm75#pcu11#oln370" name="OKFlow163" to="mov2#mpkg37#opm75#seu57">
         <LinkParameter id="mov2#mpkg37#opm75#pcu11#oln370#par1325" name="id_acquisto_KeyCondition59 [oid]" source="mov2#mpkg37#opm75#pcu11#pcp53" target="mov2#mpkg37#opm75#seu57#su122#kcond72.ent7#att24"/>
       </OKLink>
+      <Link id="mov2#mpkg37#opm75#pcu11#ln2" name="Flow2" to="mov2#mpkg37#opm75#mfu2" type="transport" validate="true">
+        <LinkParameter id="mov2#mpkg37#opm75#pcu11#ln2#par8" name="id_notifica_KeyCondition10 [oid]" source="mov2#mpkg37#opm75#pcu11#pcp48" target="mov2#mpkg37#opm75#mfu2#su9#kcond10.ent4#att18"/>
+      </Link>
+      <CollectorParameter id="mov2#mpkg37#opm75#pcu11#pcp1" name="data_notifica"/>
+      <CollectorParameter id="mov2#mpkg37#opm75#pcu11#pcp2" name="ripetizione"/>
+      <Link id="mov2#mpkg37#opm75#pcu11#ln4" name="Flow4" to="mov2#mpkg37#opm75#mathu1" type="transport" validate="true">
+        <LinkParameter id="mov2#mpkg37#opm75#pcu11#ln4#par13" name="ripetizione_ripetizione" source="mov2#mpkg37#opm75#pcu11#pcp2" target="mov2#mpkg37#opm75#mathu1#mathv1"/>
+      </Link>
+      <Link id="mov2#mpkg37#opm75#pcu11#ln6" name="Flow6" to="mov2#mpkg37#opm75#dfu1" type="transport" validate="true">
+        <LinkParameter id="mov2#mpkg37#opm75#pcu11#ln6#par15" name="data_Date(s)" source="mov2#mpkg37#opm75#pcu11#pcp1" target="mov2#mpkg37#opm75#dfu1.dateArray"/>
+      </Link>
     </ParameterCollectorUnit>
     <SelectorUnit id="mov2#mpkg37#opm75#seu59" name="SelectTipologia" gr:x="620" gr:y="395" entity="ent3">
       <Selector id="mov2#mpkg37#opm75#seu59#su124" defaultPolicy="fill" booleanOperator="and">
@@ -58,6 +69,7 @@ $$descrizione$$</BodyTemplate>
       </Selector>
       <OKLink id="mov2#mpkg37#opm75#seu59#oln371" name="OKFlow136" to="mov2#mpkg37#opm75#pcu11">
         <LinkParameter id="mov2#mpkg37#opm75#seu59#oln371#par1326" name="nome_tipologia" source="ent3#att16Array" target="mov2#mpkg37#opm75#pcu11#pcp50"/>
+        <LinkParameter id="mov2#mpkg37#opm75#seu59#oln371#par11" name="ripetizione_ripetizione" source="ent3#att17Array" target="mov2#mpkg37#opm75#pcu11#pcp2"/>
       </OKLink>
     </SelectorUnit>
     <TimeUnit id="mov2#mpkg37#opm75#tmu1" name="Today" gr:x="300" gr:y="20">
@@ -102,7 +114,25 @@ $$descrizione$$</BodyTemplate>
         <LinkParameter id="mov2#mpkg37#opm75#seu62#ln208#par1335" name="oid_id_notifica" source="ent4#att18Array" target="mov2#mpkg37#opm75#pcu11#pcp48"/>
         <LinkParameter id="mov2#mpkg37#opm75#seu62#ln208#par1336" name="descrizione_descrizione" source="ent4#att20Array" target="mov2#mpkg37#opm75#pcu11#pcp51"/>
         <LinkParameter id="mov2#mpkg37#opm75#seu62#ln208#par1337" name="NotificaToStorico_Acquisto.oid_id_acquisto" source="rel15#role30_ent7#att24Array" target="mov2#mpkg37#opm75#pcu11#pcp53"/>
+        <LinkParameter id="mov2#mpkg37#opm75#seu62#ln208#par10" name="data_notifica_data" source="ent4#att19Array" target="mov2#mpkg37#opm75#pcu11#pcp1"/>
       </Link>
     </SelectorUnit>
+    <ModifyUnit gr:x="820" gr:y="10" id="mov2#mpkg37#opm75#mfu2" name="ModificaData" entity="ent4">
+      <Selector id="mov2#mpkg37#opm75#mfu2#su9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg37#opm75#mfu2#su9#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg37#opm75#mfu2#oln19" name="OKFlow19" to="mov2#mpkg37#opm75#lpu1"/>
+    </ModifyUnit>
+    <MathUnit gr:x="1240" gr:y="20" id="mov2#mpkg37#opm75#mathu1" name="Month2Day" resultType="integer" defaultExpression="ripetizione * 30">
+      <MathVariable id="mov2#mpkg37#opm75#mathu1#mathv1" name="ripetizione"/>
+      <OKLink id="mov2#mpkg37#opm75#mathu1#oln17" name="OKFlow17" to="mov2#mpkg37#opm75#dfu1">
+        <LinkParameter id="mov2#mpkg37#opm75#mathu1#oln17#par14" name="Result_Number(s) Of Days" source="result" target="mov2#mpkg37#opm75#dfu1.numberOfDaysArray"/>
+      </OKLink>
+    </MathUnit>
+    <DatesFunctionUnit gr:x="1035" gr:y="20" id="mov2#mpkg37#opm75#dfu1" name="IncrementaData" mode="addDaysToDate(s)">
+      <OKLink id="mov2#mpkg37#opm75#dfu1#oln18" name="OKFlow18" to="mov2#mpkg37#opm75#mfu2">
+        <LinkParameter id="mov2#mpkg37#opm75#dfu1#oln18#par16" name="Result Date(s)_data_notifica" source="resultDates" target="mov2#mpkg37#opm75#mfu2.ent4#att19"/>
+      </OKLink>
+    </DatesFunctionUnit>
   </OperationUnits>
 </OperationModule>

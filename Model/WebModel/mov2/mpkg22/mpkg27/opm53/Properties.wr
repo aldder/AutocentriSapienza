@@ -1,35 +1,36 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg22#mpkg27#opm53" name="ModificaAnnuncio" gr:x="0" gr:y="55">
   <OperationUnits>
     <InputCollectorUnit id="mov2#mpkg22#mpkg27#opm53#icu55" gr:x="25" gr:y="-60">
-      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp263" name="KeyCondition17 [oid]"/>
-      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp264" name="porte"/>
-      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp265" name="descrizione"/>
-      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp266" name="alimentazione"/>
-      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp267" name="cilindrata"/>
-      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp268" name="prezzo"/>
-      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp269" name="foto"/>
-      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp270" name="nome"/>
-      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp271" name="Annuncio Object"/>
-      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp272" name="anno"/>
-      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp273" name="kilometri"/>
-      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp274" name="Utente.oid(AnnuncioToUtente)"/>
       <OKLink id="mov2#mpkg22#mpkg27#opm53#icu55#oln96" name="Salva modifiche" to="mov2#mpkg22#mpkg27#opm53#mfu22">
-        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par676" name="Anno_anno" source="mov2#mpkg22#mpkg27#opm53#icu55#icp272" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att41"/>
-        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par692" name="Annuncio Object_Annuncio Object" source="mov2#mpkg22#mpkg27#opm53#icu55#icp271" target="mov2#mpkg22#mpkg27#opm53#mfu22.entityBeans"/>
-        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par693" name="_Utente.oid(AnnuncioToUtente)" source="mov2#mpkg22#mpkg27#opm53#icu55#icp274" target="mov2#mpkg22#mpkg27#opm53#mfu22.rel13#role26.userOID"/>
-        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par694" name="Porte_porte" source="mov2#mpkg22#mpkg27#opm53#icu55#icp264" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att44"/>
-        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par695" name="Descrizione_descrizione" source="mov2#mpkg22#mpkg27#opm53#icu55#icp265" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att45"/>
-        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par697" name="Alimentazione_alimentazione" source="mov2#mpkg22#mpkg27#opm53#icu55#icp266" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att42"/>
-        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par698" name="Prezzo_prezzo" source="mov2#mpkg22#mpkg27#opm53#icu55#icp268" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att36"/>
-        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par699" name="Key [oid]_KeyCondition17 [oid]" source="mov2#mpkg22#mpkg27#opm53#icu55#icp263" target="mov2#mpkg22#mpkg27#opm53#mfu22#su82#kcond43.ent10#att35"/>
-        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par702" name="Foto_foto" source="mov2#mpkg22#mpkg27#opm53#icu55#icp269" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att37"/>
-        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par703" name="Kilometri_kilometri" source="mov2#mpkg22#mpkg27#opm53#icu55#icp273" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att40"/>
-        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par704" name="Cilindrata_cilindrata" source="mov2#mpkg22#mpkg27#opm53#icu55#icp267" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att43"/>
-        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par708" name="Nome_nome" source="mov2#mpkg22#mpkg27#opm53#icu55#icp270" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent10#att47"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par41" name="alimentazione_alimentazione" source="mov2#mpkg22#mpkg27#opm53#icu55#icp69" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent1#att8"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par42" name="anno_anno" source="mov2#mpkg22#mpkg27#opm53#icu55#icp70" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent1#att7"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par43" name="cilindrata_cilindrata" source="mov2#mpkg22#mpkg27#opm53#icu55#icp71" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent1#att9"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par44" name="descrizione_descrizione" source="mov2#mpkg22#mpkg27#opm53#icu55#icp72" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent1#att11"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par45" name="foto_foto" source="mov2#mpkg22#mpkg27#opm53#icu55#icp73" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent1#att3"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par46" name="KeyCondition17 [oid]_KeyCondition17 [oid]" source="mov2#mpkg22#mpkg27#opm53#icu55#icp79" target="mov2#mpkg22#mpkg27#opm53#mfu22#su82#kcond43.ent1#att1"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par47" name="kilometri_kilometri" source="mov2#mpkg22#mpkg27#opm53#icu55#icp74" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent1#att6"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par48" name="nome_nome" source="mov2#mpkg22#mpkg27#opm53#icu55#icp75" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent1#att46"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par49" name="porte_porte" source="mov2#mpkg22#mpkg27#opm53#icu55#icp76" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent1#att10"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par50" name="prezzo_prezzo" source="mov2#mpkg22#mpkg27#opm53#icu55#icp77" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent1#att2"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par295" name="targa" source="mov2#mpkg22#mpkg27#opm53#icu55#icp78" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent1#att30"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par296" name="0_catalogo" sourceValue="0" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent1#att50"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par297" name="0_officina" sourceValue="0" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent1#att5"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm53#icu55#oln96#par298" name="1_usato" sourceValue="1" target="mov2#mpkg22#mpkg27#opm53#mfu22.ent1#att4"/>
       </OKLink>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp69" name="alimentazione"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp70" name="anno"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp71" name="cilindrata"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp72" name="descrizione"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp73" name="foto"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp74" name="kilometri"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp75" name="nome"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp76" name="porte"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp77" name="prezzo"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp78" name="targa"/>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg27#opm53#icu55#icp79" name="id_auto"/>
     </InputCollectorUnit>
     <OKCollectorUnit id="mov2#mpkg22#mpkg27#opm53#okcu52" name="OK Port6" gr:x="585" gr:y="-20"/>
-    <ModifyUnit id="mov2#mpkg22#mpkg27#opm53#mfu22" name="Modifica" gr:x="405" gr:y="15" entity="ent10">
+    <ModifyUnit id="mov2#mpkg22#mpkg27#opm53#mfu22" name="Modifica" gr:x="405" gr:y="15" entity="ent1">
       <Selector id="mov2#mpkg22#mpkg27#opm53#mfu22#su82" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg22#mpkg27#opm53#mfu22#su82#kcond43" name="KeyCondition17" predicate="in" implied="false"/>
       </Selector>

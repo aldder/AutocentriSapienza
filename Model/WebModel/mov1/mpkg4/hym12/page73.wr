@@ -4,7 +4,7 @@
       <Field id="mov1#mpkg4#hym12#page73#enu38#fld223" name="Nome Utente" type="string" modifiable="true" attribute="userName">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg4#hym12#page73#enu38#fld223#mnd183" name="Mandatory" errorMessage="campo obbligatorio"/>
-          <CollectionValidationRule id="mov1#mpkg4#hym12#page73#enu38#fld223#clc16" name="Unique" predicate="notIn" entity="User" attribute="userName" errorMessage="valore gi&#224; presente"/>
+          <CollectionValidationRule id="mov1#mpkg4#hym12#page73#enu38#fld223#clc16" name="Unique" predicate="notIn" entity="User" attribute="userName" errorMessage="valore gi&#224; presente" ignoreCase="true"/>
         </VRules>
       </Field>
       <Field id="mov1#mpkg4#hym12#page73#enu38#fld224" name="Password" type="password" modifiable="true" attribute="password">
@@ -16,7 +16,7 @@
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg4#hym12#page73#enu38#fld225#mnd185" name="Mandatory" errorMessage="campo obbligatorio"/>
           <EMailValidationRule id="mov1#mpkg4#hym12#page73#enu38#fld225#email8" name="EMail" errorMessage="formato non valido"/>
-          <CollectionValidationRule id="mov1#mpkg4#hym12#page73#enu38#fld225#clc19" name="Unique" predicate="notIn" entity="User" attribute="email" errorMessage="valore gi&#224; presente"/>
+          <CollectionValidationRule id="mov1#mpkg4#hym12#page73#enu38#fld225#clc19" name="Unique" predicate="notIn" entity="User" attribute="email" errorMessage="valore gi&#224; presente" ignoreCase="true"/>
         </VRules>
       </Field>
       <SelectionField id="mov1#mpkg4#hym12#page73#enu38#sfld35" name="Gruppo" type="string" role="User2DefaultGroup">

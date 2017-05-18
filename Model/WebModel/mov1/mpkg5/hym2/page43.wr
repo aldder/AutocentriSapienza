@@ -1,31 +1,39 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg5#hym2#page43" name="Gestione Acquisti Pendenti" landmark="true" gr:x="305" gr:y="15">
   <ContentUnits>
-    <PowerIndexUnit id="mov1#mpkg5#hym2#page43#pwu17" name="Autovetture acquistate" linkOrder="mov1#mpkg5#hym2#page43#pwu17#ln78 mov1#mpkg5#hym2#page43#pwu17#ln79" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att23 rel2#role4.userName rel18#role35.ent1#att46 rel18#role35.ent1#att2 ent6#att39 rel18#role35.ent1#att5" blockFactor="10">
+    <PowerIndexUnit id="mov1#mpkg5#hym2#page43#pwu17" name="Autovetture acquistate" linkOrder="mov1#mpkg5#hym2#page43#pwu17#ln78 mov1#mpkg5#hym2#page43#pwu17#ln79" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att23 rel2#role4.userName rel18#role35.ent1#att46 rel18#role35.ent1#att2 rel18#role35.ent1#att7 rel18#role35.ent1#att6 rel18#role35.ent1#att8 rel18#role35.ent1#att9 rel18#role35.ent1#att4" blockFactor="10">
       <Link id="mov1#mpkg5#hym2#page43#pwu17#ln78" name="Approva" to="mov1#mpkg5#hym2#page44#enu26" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Registra acquisto">
         <LinkParameter id="mov1#mpkg5#hym2#page43#pwu17#ln78#par332" name="Acquisto_PendenteToAutovettura.nome_Autovettura" source="data[].rel18#role35$ent1#att46" target="mov1#mpkg5#hym2#page44#enu26#fld149_slot"/>
         <LinkParameter id="mov1#mpkg5#hym2#page43#pwu17#ln78#par335" name="Acquisto_PendenteToUtente.nome_utente_Utente" source="data[].rel2#role4$userName" target="mov1#mpkg5#hym2#page44#enu26#fld150_slot"/>
         <LinkParameter id="mov1#mpkg5#hym2#page43#pwu17#ln78#par360" name="oid_Key Condition [oid]" source="data[].ent6#att23" target="mov1#mpkg5#hym2#page44#enu26.ent7#att24"/>
-        <LinkParameter id="mov1#mpkg5#hym2#page43#pwu17#ln78#par366" name="AcquistoPendenteToAutovettura.disponibilit&#224;_Disponibilit&#224;" source="data[].rel18#role35$ent1#att5" target="mov1#mpkg5#hym2#page44#enu26#fld147_slot"/>
         <LinkParameter id="mov1#mpkg5#hym2#page43#pwu17#ln78#par367" name="AcquistoPendenteToAutovettura.prezzo_Prezzo" source="data[].rel18#role35$ent1#att2" target="mov1#mpkg5#hym2#page44#enu26#fld152_slot"/>
         <LinkParameter id="mov1#mpkg5#hym2#page43#pwu17#ln78#par381" name="Acquisto_PendenteToUtente.oid_PASSING" source="data[].rel2#role4_userOID" passing="true"/>
         <LinkParameter id="mov1#mpkg5#hym2#page43#pwu17#ln78#par382" name="AcquistoPendenteToAutovettura.oid_PASSING" source="data[].rel18#role35_ent1#att1" passing="true"/>
-        <LinkParameter id="mov1#mpkg5#hym2#page43#pwu17#ln78#par390" name="quantita_PASSING" source="data[].ent6#att39" passing="true"/>
+        <LinkParameter id="mov1#mpkg5#hym2#page43#pwu17#ln78#par116" name="AcquistoPendenteToAutovettura.alimentazione_Alimentazione" source="data[].rel18#role35$ent1#att8" target="mov1#mpkg5#hym2#page44#enu26#fld3_slot"/>
+        <LinkParameter id="mov1#mpkg5#hym2#page43#pwu17#ln78#par117" name="AcquistoPendenteToAutovettura.anno_Anno di immatricolazione" source="data[].rel18#role35$ent1#att7" target="mov1#mpkg5#hym2#page44#enu26#fld20_slot"/>
+        <LinkParameter id="mov1#mpkg5#hym2#page43#pwu17#ln78#par118" name="AcquistoPendenteToAutovettura.cilindrata_Cilindrata" source="data[].rel18#role35$ent1#att9" target="mov1#mpkg5#hym2#page44#enu26#fld4_slot"/>
+        <LinkParameter id="mov1#mpkg5#hym2#page43#pwu17#ln78#par119" name="AcquistoPendenteToAutovettura.kilometri_Kilometri" source="data[].rel18#role35$ent1#att6" target="mov1#mpkg5#hym2#page44#enu26#fld5_slot"/>
+        <LinkParameter id="mov1#mpkg5#hym2#page43#pwu17#ln78#par158" name="oid_PASSING" source="data[].ent6#att23" passing="true"/>
+        <LinkParameter id="mov1#mpkg5#hym2#page43#pwu17#ln78#par173" name="AcquistoPendenteToAutovettura.usato_Usato" source="data[].rel18#role35$ent1#att4" target="mov1#mpkg5#hym2#page44#enu26#fld36_slot"/>
       </Link>
       <Link id="mov1#mpkg5#hym2#page43#pwu17#ln79" name="Rifiuta" to="mov1#mpkg5#hym2#miu42" type="normal" validate="true">
         <LinkParameter id="mov1#mpkg5#hym2#page43#pwu17#ln79#par356" name="oid_oid [oid]" source="data[].ent6#att23" target="mov1#mpkg5#hym2#miu42.mov2#mpkg38#mpkg41#opm83#icu86#icp413"/>
       </Link>
-      <SortAttribute attribute="rel2#role4.userName" order="ascending"/>
-      <SortAttribute attribute="ent6#att23" order="ascending"/>
-      <SortAttribute attribute="ent6#att39" order="ascending"/>
-      <SortAttribute attribute="rel18#role35.ent1#att46" order="ascending"/>
-      <SortAttribute attribute="rel18#role35.ent1#att2" order="ascending"/>
-      <SortAttribute attribute="rel18#role35.ent1#att5" order="ascending"/>
       <DefaultSortAttribute attribute="rel2#role4.userName" order="ascending"/>
       <DefaultSortAttribute attribute="ent6#att23" order="ascending"/>
       <DefaultSortAttribute attribute="ent6#att39" order="ascending"/>
       <DefaultSortAttribute attribute="rel18#role35.ent1#att46" order="ascending"/>
       <DefaultSortAttribute attribute="rel18#role35.ent1#att2" order="ascending"/>
-      <DefaultSortAttribute attribute="rel18#role35.ent1#att5" order="ascending"/>
+      <SortAttribute attribute="rel2#role4.userName" order="ascending"/>
+      <SortAttribute attribute="ent6#att23" order="ascending"/>
+      <SortAttribute attribute="ent6#att39" order="ascending"/>
+      <SortAttribute attribute="rel18#role35.ent1#att46" order="ascending"/>
+      <SortAttribute attribute="rel18#role35.ent1#att2" order="ascending"/>
+      <SortAttribute attribute="rel18#role35.ent1#att7" order="ascending"/>
+      <SortAttribute attribute="rel18#role35.ent1#att6" order="ascending"/>
+      <SortAttribute attribute="rel18#role35.ent1#att8" order="ascending"/>
+      <SortAttribute attribute="rel18#role35.ent1#att9" order="ascending"/>
+      <SortAttribute attribute="rel18#role35.ent1#att4" order="ascending"/>
+      <SortAttribute attribute="ent6#att25" order="ascending"/>
     </PowerIndexUnit>
     <MultiMessageUnit id="mov1#mpkg5#hym2#page43#mssu14" name="KoMessage" gr:x="180" gr:y="150"/>
     <MultiMessageUnit id="mov1#mpkg5#hym2#page43#mssu25" name="OkMessage" gr:x="180" gr:y="85"/>
@@ -70,25 +78,31 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#mpkg5#hym2#page43#pwu17">
+          <layout:Attribute label="Codice" attribute="ent6#att23"/>
+          <layout:Attribute label="Utente" attribute="rel2#role4.userName"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att46" label="Autovettura"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att2" label="Prezzo"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att7" label="Anno"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att6" label="Kilometri"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att8" label="Alimentazione"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att9" label="Cilindrata"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att4" label="Usato"/>
           <layout:Link link="mov1#mpkg5#hym2#page43#pwu17#ln78"/>
           <layout:Link link="mov1#mpkg5#hym2#page43#pwu17#ln79"/>
           <layout:Link link="mov1#mpkg5#hym2#page43#pwu17rel2#role4$userName"/>
           <layout:Link link="mov1#mpkg5#hym2#page43#pwu17ent6#att23"/>
-          <layout:Link link="mov1#mpkg5#hym2#page43#pwu17ent6#att39"/>
           <layout:Link link="mov1#mpkg5#hym2#page43#pwu17rel18#role35$ent1#att46"/>
           <layout:Link link="mov1#mpkg5#hym2#page43#pwu17rel18#role35$ent1#att2"/>
-          <layout:Link link="mov1#mpkg5#hym2#page43#pwu17rel18#role35$ent1#att5"/>
+          <layout:Link link="mov1#mpkg5#hym2#page43#pwu17rel18#role35$ent1#att7"/>
+          <layout:Link link="mov1#mpkg5#hym2#page43#pwu17rel18#role35$ent1#att6"/>
+          <layout:Link link="mov1#mpkg5#hym2#page43#pwu17rel18#role35$ent1#att8"/>
+          <layout:Link link="mov1#mpkg5#hym2#page43#pwu17rel18#role35$ent1#att9"/>
+          <layout:Link link="mov1#mpkg5#hym2#page43#pwu17rel18#role35$ent1#att4"/>
           <layout:Link link="mov1#mpkg5#hym2#page43#pwu17First"/>
           <layout:Link link="mov1#mpkg5#hym2#page43#pwu17Previous"/>
           <layout:Link link="mov1#mpkg5#hym2#page43#pwu17Block"/>
           <layout:Link link="mov1#mpkg5#hym2#page43#pwu17Next"/>
           <layout:Link link="mov1#mpkg5#hym2#page43#pwu17Last"/>
-          <layout:Attribute label="Codice" attribute="ent6#att23"/>
-          <layout:Attribute label="Utente" attribute="rel2#role4.userName"/>
-          <layout:Attribute attribute="rel18#role35.ent1#att46" label="Autovettura"/>
-          <layout:Attribute attribute="rel18#role35.ent1#att2" label="Prezzo"/>
-          <layout:Attribute label="Quantit&#224;" attribute="ent6#att39"/>
-          <layout:Attribute attribute="rel18#role35.ent1#att5" label="Disponibilit&#224;"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

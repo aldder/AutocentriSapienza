@@ -16,12 +16,14 @@
         <LinkParameter id="mov2#mpkg22#mpkg23#opm36#icu46#ln263#par935" name="id_orario_Orario.oid(AppuntamentoToOrario)" source="mov2#mpkg22#mpkg23#opm36#icu46#icp90" target="mov2#mpkg22#mpkg23#opm36#cru3.rel17#role33.ent15#att65"/>
         <LinkParameter id="mov2#mpkg22#mpkg23#opm36#icu46#ln263#par936" name="id_tipologia_Tipologia.oid(AppuntamentoToTipologia)" source="mov2#mpkg22#mpkg23#opm36#icu46#icp93" target="mov2#mpkg22#mpkg23#opm36#cru3.rel7#role14.ent3#att15"/>
         <LinkParameter id="mov2#mpkg22#mpkg23#opm36#icu46#ln263#par937" name="id_utente_Utente.oid(AppuntamentoToUtente)" source="mov2#mpkg22#mpkg23#opm36#icu46#icp89" target="mov2#mpkg22#mpkg23#opm36#cru3.rel6#role12.userOID"/>
+        <LinkParameter id="mov2#mpkg22#mpkg23#opm36#icu46#ln263#par58" name="targa_targa" source="mov2#mpkg22#mpkg23#opm36#icu46#icp4" target="mov2#mpkg22#mpkg23#opm36#cru3.ent2#att26"/>
       </Link>
       <Link id="mov2#mpkg22#mpkg23#opm36#icu46#ln269" name="Flow227" to="mov2#mpkg22#mpkg23#opm36#cru7" type="transport" validate="true" gr:bendpoints="198,208,-516,79;589,210,-125,81">
         <LinkParameter id="mov2#mpkg22#mpkg23#opm36#icu46#ln269#par938" name="descrizione_descrizione" source="mov2#mpkg22#mpkg23#opm36#icu46#icp92" target="mov2#mpkg22#mpkg23#opm36#cru7.ent4#att20"/>
         <LinkParameter id="mov2#mpkg22#mpkg23#opm36#icu46#ln269#par940" name="id_tipologia_Tipologia.oid(NotificaToTipologia)" source="mov2#mpkg22#mpkg23#opm36#icu46#icp93" target="mov2#mpkg22#mpkg23#opm36#cru7.rel16#role31.ent3#att15"/>
         <LinkParameter id="mov2#mpkg22#mpkg23#opm36#icu46#ln269#par942" name="id_utente_Utente.oid(NotificaToUtente)" source="mov2#mpkg22#mpkg23#opm36#icu46#icp89" target="mov2#mpkg22#mpkg23#opm36#cru7.rel14#role28.userOID"/>
       </Link>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg23#opm36#icu46#icp4" name="targa"/>
     </InputCollectorUnit>
     <OKCollectorUnit id="mov2#mpkg22#mpkg23#opm36#okcu44" name="OK Port12" gr:x="1070" gr:y="20"/>
     <DatesFunctionUnit id="mov2#mpkg22#mpkg23#opm36#dfu6" name="Data notifica" gr:x="725" gr:y="155" mode="removeDaysFromDate(s)">
