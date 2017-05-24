@@ -1,7 +1,7 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym8#page64" name="Inserisci intervento" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="530" gr:y="-115" layout:frameLayout="None">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym8#page64" name="Inserisci intervento" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="510" gr:y="-115" layout:frameLayout="None">
   <ContentUnits>
-    <EntryUnit id="mov1#mpkg6#hym8#page64#enu46" name="Inserisci intervento" linkOrder="mov1#mpkg6#hym8#page64#enu46#ln274" gr:x="50" gr:y="105" entity="ent8" fieldOrder="mov1#mpkg6#hym8#page64#enu46#fld175 mov1#mpkg6#hym8#page64#enu46#sfld22 mov1#mpkg6#hym8#page64#enu46#sfld23 mov1#mpkg6#hym8#page64#enu46#fld176">
-      <Field id="mov1#mpkg6#hym8#page64#enu46#fld175" name="Data" type="date" modifiable="true" attribute="ent8#att32">
+    <EntryUnit id="mov1#mpkg6#hym8#page64#enu46" name="Inserisci intervento" linkOrder="mov1#mpkg6#hym8#page64#enu46#ln274 mov1#mpkg6#hym8#page64#enu46#ln60" gr:x="70" gr:y="105" entity="ent8" fieldOrder="mov1#mpkg6#hym8#page64#enu46#sfld5 mov1#mpkg6#hym8#page64#enu46#sfld22 mov1#mpkg6#hym8#page64#enu46#fld175 mov1#mpkg6#hym8#page64#enu46#sfld23 mov1#mpkg6#hym8#page64#enu46#fld176">
+      <Field id="mov1#mpkg6#hym8#page64#enu46#fld175" name="Data inizio" type="date" modifiable="true" attribute="ent8#att32">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym8#page64#enu46#fld175#mnd220" name="Mandatory" errorMessage="campo obbligatorio"/>
           <TypeValidationRule id="mov1#mpkg6#hym8#page64#enu46#fld175#tvr17" name="Type Validation" type="date" errorMessage="valore non corretto"/>
@@ -23,24 +23,42 @@
         </VRules>
       </SelectionField>
       <Link id="mov1#mpkg6#hym8#page64#enu46#ln274" name="Inserisci" to="mov1#mpkg6#hym8#miu87" type="normal" validate="true">
-        <LinkParameter id="mov1#mpkg6#hym8#page64#enu46#ln274#par1763" name="Autovettura_Autovetture_Clienti.oid(InterventoToAutovetture_Clienti)" source="mov1#mpkg6#hym8#page64#enu46#sfld22" target="mov1#mpkg6#hym8#miu87.mov2#mpkg31#mpkg36#opm72#icu75#icp339"/>
-        <LinkParameter id="mov1#mpkg6#hym8#page64#enu46#ln274#par1764" name="Data_data" source="mov1#mpkg6#hym8#page64#enu46#fld175" target="mov1#mpkg6#hym8#miu87.mov2#mpkg31#mpkg36#opm72#icu75#icp343"/>
-        <LinkParameter id="mov1#mpkg6#hym8#page64#enu46#ln274#par1765" name="Descrizione_descrizione" source="mov1#mpkg6#hym8#page64#enu46#fld176" target="mov1#mpkg6#hym8#miu87.mov2#mpkg31#mpkg36#opm72#icu75#icp341"/>
-        <LinkParameter id="mov1#mpkg6#hym8#page64#enu46#ln274#par1766" name="Intervento Object_Intervento Object" source="entityBean" target="mov1#mpkg6#hym8#miu87.mov2#mpkg31#mpkg36#opm72#icu75#icp342"/>
-        <LinkParameter id="mov1#mpkg6#hym8#page64#enu46#ln274#par1767" name="0_stato" sourceValue="0" target="mov1#mpkg6#hym8#miu87.mov2#mpkg31#mpkg36#opm72#icu75#icp344"/>
-        <LinkParameter id="mov1#mpkg6#hym8#page64#enu46#ln274#par1768" name="Tipologia_Tipologia.oid(InterventoToTipologia)" source="mov1#mpkg6#hym8#page64#enu46#sfld23" target="mov1#mpkg6#hym8#miu87.mov2#mpkg31#mpkg36#opm72#icu75#icp340"/>
+        <LinkParameter id="mov1#mpkg6#hym8#page64#enu46#ln274#par492" name="Autovettura_Autovettura.oid(InterventoToAutovettura)" source="mov1#mpkg6#hym8#page64#enu46#sfld22" target="mov1#mpkg6#hym8#miu87.mov2#mpkg31#mpkg36#opm72#icu75#icp82"/>
+        <LinkParameter id="mov1#mpkg6#hym8#page64#enu46#ln274#par493" name="Data_data_inizio" source="mov1#mpkg6#hym8#page64#enu46#fld175" target="mov1#mpkg6#hym8#miu87.mov2#mpkg31#mpkg36#opm72#icu75#icp86"/>
+        <LinkParameter id="mov1#mpkg6#hym8#page64#enu46#ln274#par494" name="Descrizione_descrizione" source="mov1#mpkg6#hym8#page64#enu46#fld176" target="mov1#mpkg6#hym8#miu87.mov2#mpkg31#mpkg36#opm72#icu75#icp87"/>
+        <LinkParameter id="mov1#mpkg6#hym8#page64#enu46#ln274#par495" name="0_stato" sourceValue="0" target="mov1#mpkg6#hym8#miu87.mov2#mpkg31#mpkg36#opm72#icu75#icp88"/>
+        <LinkParameter id="mov1#mpkg6#hym8#page64#enu46#ln274#par496" name="Tipologia_Tipologia.oid(InterventoToTipologia)" source="mov1#mpkg6#hym8#page64#enu46#sfld23" target="mov1#mpkg6#hym8#miu87.mov2#mpkg31#mpkg36#opm72#icu75#icp83"/>
+        <LinkParameter id="mov1#mpkg6#hym8#page64#enu46#ln274#par509" name="UTente_Utente.oid(InterventoToUtente)" source="mov1#mpkg6#hym8#page64#enu46#sfld5" target="mov1#mpkg6#hym8#miu87.mov2#mpkg31#mpkg36#opm72#icu75#icp84"/>
       </Link>
+      <SelectionField id="mov1#mpkg6#hym8#page64#enu46#sfld5" name="Utente" type="string" role="rel4#role8">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym8#page64#enu46#sfld5#mnd33" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </SelectionField>
+      <Link id="mov1#mpkg6#hym8#page64#enu46#ln60" name="Nuovo utente" to="mov1#mpkg6#hym8#page4" automaticCoupling="true" type="normal" validate="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserisci utente" ajaxWindowWidth="600" ajaxWindowHeight="400" ajaxWindowClosable="true" ajaxWindowModal="true"/>
     </EntryUnit>
-    <SelectorUnit id="mov1#mpkg6#hym8#page64#seu97" name="AutovetturaC" gr:x="0" gr:y="0">
-      <Link id="mov1#mpkg6#hym8#page64#seu97#ln275" name="Flow147" to="mov1#mpkg6#hym8#page64#enu46" type="transport" validate="true">
-        <LinkParameter id="mov1#mpkg6#hym8#page64#seu97#ln275#par1737" name="targa_Autovettura [label]" source="ent11#att52Array" target="mov1#mpkg6#hym8#page64#enu46#sfld22_label"/>
-        <LinkParameter id="mov1#mpkg6#hym8#page64#seu97#ln275#par1738" name="oid_Autovettura [output]" source="ent11#att51Array" target="mov1#mpkg6#hym8#page64#enu46#sfld22_output"/>
-      </Link>
-    </SelectorUnit>
-    <SelectorUnit id="mov1#mpkg6#hym8#page64#seu98" name="Tipologia" gr:x="120" gr:y="0" entity="ent3">
+    <SelectorUnit id="mov1#mpkg6#hym8#page64#seu98" name="Tipologia" gr:x="115" gr:y="0" entity="ent3">
       <Link id="mov1#mpkg6#hym8#page64#seu98#ln276" name="Flow184" to="mov1#mpkg6#hym8#page64#enu46" type="transport" validate="true">
         <LinkParameter id="mov1#mpkg6#hym8#page64#seu98#ln276#par1739" name="nome_Tipologia [label]" source="ent3#att16Array" target="mov1#mpkg6#hym8#page64#enu46#sfld23_label"/>
         <LinkParameter id="mov1#mpkg6#hym8#page64#seu98#ln276#par1740" name="oid_Tipologia [output]" source="ent3#att15Array" target="mov1#mpkg6#hym8#page64#enu46#sfld23_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="0" gr:y="0" id="mov1#mpkg6#hym8#page64#seu11" name="Utente" entity="User">
+      <Link id="mov1#mpkg6#hym8#page64#seu11#ln51" name="Flow51" to="mov1#mpkg6#hym8#page64#enu46" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg6#hym8#page64#seu11#ln51#par497" name="nome_utente_UTente [label]" source="userNameArray" target="mov1#mpkg6#hym8#page64#enu46#sfld5_label"/>
+        <LinkParameter id="mov1#mpkg6#hym8#page64#seu11#ln51#par498" name="oid_UTente [output]" source="userOIDArray" target="mov1#mpkg6#hym8#page64#enu46#sfld5_output"/>
+      </Link>
+      <Selector id="mov1#mpkg6#hym8#page64#seu11#su51" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#mpkg6#hym8#page64#seu11#su51#acond13" name="AttCondition13" predicate="eq" booleanOperator="or" implied="false" attributes="User2DefaultGroup.groupOID" value="4"/>
+      </Selector>
+    </SelectorUnit>
+    <SelectorUnit gr:x="200" gr:y="0" id="mov1#mpkg6#hym8#page64#seu12" name="Autovettura" entity="ent1">
+      <Selector id="mov1#mpkg6#hym8#page64#seu12#su52" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#mpkg6#hym8#page64#seu12#su52#acond14" name="officina" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att5" value="1"/>
+      </Selector>
+      <Link id="mov1#mpkg6#hym8#page64#seu12#ln55" name="Flow55" to="mov1#mpkg6#hym8#page64#enu46" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg6#hym8#page64#seu12#ln55#par505" name="targa_Autovettura [label]" source="ent1#att30Array" target="mov1#mpkg6#hym8#page64#enu46#sfld22_label"/>
+        <LinkParameter id="mov1#mpkg6#hym8#page64#seu12#ln55#par508" name="oid_Autovettura [output]" source="ent1#att1Array" target="mov1#mpkg6#hym8#page64#enu46#sfld22_output"/>
       </Link>
     </SelectorUnit>
   </ContentUnits>
@@ -48,11 +66,13 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#mpkg6#hym8#page64#enu46">
-          <layout:Field field="mov1#mpkg6#hym8#page64#enu46#fld175"/>
+          <layout:Field field="mov1#mpkg6#hym8#page64#enu46#sfld5"/>
           <layout:Field field="mov1#mpkg6#hym8#page64#enu46#sfld22"/>
+          <layout:Field field="mov1#mpkg6#hym8#page64#enu46#fld175"/>
           <layout:Field field="mov1#mpkg6#hym8#page64#enu46#sfld23"/>
           <layout:Field field="mov1#mpkg6#hym8#page64#enu46#fld176"/>
           <layout:Link link="mov1#mpkg6#hym8#page64#enu46#ln274"/>
+          <layout:Link link="mov1#mpkg6#hym8#page64#enu46#ln60"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

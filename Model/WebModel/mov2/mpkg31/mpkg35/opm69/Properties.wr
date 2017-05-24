@@ -6,12 +6,11 @@
       <InputCollectorParameter id="mov2#mpkg31#mpkg35#opm69#icu72#icp329" name="data"/>
       <InputCollectorParameter id="mov2#mpkg31#mpkg35#opm69#icu72#icp330" name="descrizione"/>
       <InputCollectorParameter id="mov2#mpkg31#mpkg35#opm69#icu72#icp331" name="id_tipologia"/>
-      <OKLink id="mov2#mpkg31#mpkg35#opm69#icu72#oln258" name="Inserisci" to="mov2#mpkg31#mpkg35#opm69#pcu7">
-        <LinkParameter id="mov2#mpkg31#mpkg35#opm69#icu72#oln258#par1255" name="Ora_id_orario" source="mov2#mpkg31#mpkg35#opm69#icu72#icp328" target="mov2#mpkg31#mpkg35#opm69#pcu7#pcp14"/>
-        <LinkParameter id="mov2#mpkg31#mpkg35#opm69#icu72#oln258#par1256" name="Data_data" source="mov2#mpkg31#mpkg35#opm69#icu72#icp329" target="mov2#mpkg31#mpkg35#opm69#pcu7#pcp13"/>
-        <LinkParameter id="mov2#mpkg31#mpkg35#opm69#icu72#oln258#par1257" name="Tipologia_id_tipologia" source="mov2#mpkg31#mpkg35#opm69#icu72#icp331" target="mov2#mpkg31#mpkg35#opm69#pcu7#pcp15"/>
-        <LinkParameter id="mov2#mpkg31#mpkg35#opm69#icu72#oln258#par1258" name="Descrizione_descrizione" source="mov2#mpkg31#mpkg35#opm69#icu72#icp330" target="mov2#mpkg31#mpkg35#opm69#pcu7#pcp20"/>
-        <LinkParameter id="mov2#mpkg31#mpkg35#opm69#icu72#oln258#par1259" name="Utente_id_utente" source="mov2#mpkg31#mpkg35#opm69#icu72#icp327" target="mov2#mpkg31#mpkg35#opm69#pcu7#pcp12"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg35#opm69#icu72#icp59" name="id_auto"/>
+      <InputCollectorParameter id="mov2#mpkg31#mpkg35#opm69#icu72#icp52" name="targa"/>
+      <OKLink id="mov2#mpkg31#mpkg35#opm69#icu72#oln51" name="OKFlow275" to="mov2#mpkg31#mpkg35#opm69#seu42">
+        <LinkParameter id="mov2#mpkg31#mpkg35#opm69#icu72#oln51#par269" name="data_data" source="mov2#mpkg31#mpkg35#opm69#icu72#icp329" target="mov2#mpkg31#mpkg35#opm69#seu42#su112#acond34"/>
+        <LinkParameter id="mov2#mpkg31#mpkg35#opm69#icu72#oln51#par270" name="id_orario_ora" source="mov2#mpkg31#mpkg35#opm69#icu72#icp328" target="mov2#mpkg31#mpkg35#opm69#seu42#su112#acond36"/>
       </OKLink>
     </InputCollectorUnit>
     <OKCollectorUnit id="mov2#mpkg31#mpkg35#opm69#okcu68" name="OK Port36" gr:x="1335" gr:y="40"/>
@@ -53,10 +52,6 @@
       <CollectorParameter id="mov2#mpkg31#mpkg35#opm69#pcu7#pcp14" name="id_orario"/>
       <CollectorParameter id="mov2#mpkg31#mpkg35#opm69#pcu7#pcp15" name="id_tipologia"/>
       <CollectorParameter id="mov2#mpkg31#mpkg35#opm69#pcu7#pcp20" name="descrizione"/>
-      <OKLink id="mov2#mpkg31#mpkg35#opm69#pcu7#oln275" name="OKFlow275" to="mov2#mpkg31#mpkg35#opm69#seu42">
-        <LinkParameter id="mov2#mpkg31#mpkg35#opm69#pcu7#oln275#par1267" name="data_data" source="mov2#mpkg31#mpkg35#opm69#pcu7#pcp13" target="mov2#mpkg31#mpkg35#opm69#seu42#su112#acond34"/>
-        <LinkParameter id="mov2#mpkg31#mpkg35#opm69#pcu7#oln275#par1268" name="id_orario_ora" source="mov2#mpkg31#mpkg35#opm69#pcu7#pcp14" target="mov2#mpkg31#mpkg35#opm69#seu42#su112#acond36"/>
-      </OKLink>
       <Link id="mov2#mpkg31#mpkg35#opm69#pcu7#ln192" name="Flow226" to="mov2#mpkg31#mpkg35#opm69#cru30" type="transport" validate="true" gr:bendpoints="204,87,-315,87;382,85,-137,85">
         <LinkParameter id="mov2#mpkg31#mpkg35#opm69#pcu7#ln192#par1269" name="data_data_intervento" source="mov2#mpkg31#mpkg35#opm69#pcu7#pcp13" target="mov2#mpkg31#mpkg35#opm69#cru30.ent2#att13"/>
         <LinkParameter id="mov2#mpkg31#mpkg35#opm69#pcu7#ln192#par1270" name="descrizione_descrizione" source="mov2#mpkg31#mpkg35#opm69#pcu7#pcp20" target="mov2#mpkg31#mpkg35#opm69#cru30.ent2#att14"/>

@@ -1,9 +1,9 @@
 <HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="55" id="mov1#mpkg3#hym13" name="Gestione Notifiche" landmarks="mov1#mpkg3#hym13#page74">
   <OperationUnits>
-    <InputCollectorUnit gr:x="15" gr:y="30" id="mov1#mpkg3#hym13#icu9" name="Input Port">
+    <InputCollectorUnit gr:x="15" gr:y="5" id="mov1#mpkg3#hym13#icu9" name="Input Port">
       <OKLink id="mov1#mpkg3#hym13#icu9#oln140" to="mov1#mpkg3#hym13#page74" name="Landmark"/>
     </InputCollectorUnit>
-    <ModuleInstanceUnit id="mov1#mpkg3#hym13#miu99" gr:x="375" gr:y="190" moduleId="mov2#mpkg22#mpkg25#opm49">
+    <ModuleInstanceUnit id="mov1#mpkg3#hym13#miu99" gr:x="375" gr:y="210" moduleId="mov2#mpkg22#mpkg25#opm49">
       <OKLink id="mov1#mpkg3#hym13#miu99#oln142" name="OKFlow37" to="mov1#mpkg3#hym13#page74"/>
     </ModuleInstanceUnit>
   </OperationUnits>

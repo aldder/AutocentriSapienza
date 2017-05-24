@@ -1,0 +1,95 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym4#page3" name="Inserisci autovettura" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" layout:frameLayout="None" gr:x="750" gr:y="150">
+  <ContentUnits>
+    <EntryUnit id="mov1#mpkg6#hym4#page3#enu2" name="Inserisci autovettura" ajaxEnableExpandedLinks="false" gr:x="0" gr:y="0" entity="ent1" fieldOrder="mov1#mpkg6#hym4#page3#enu2#fld30 mov1#mpkg6#hym4#page3#enu2#fld29 mov1#mpkg6#hym4#page3#enu2#fld31 mov1#mpkg6#hym4#page3#enu2#fld32 mov1#mpkg6#hym4#page3#enu2#fld34 mov1#mpkg6#hym4#page3#enu2#fld68 mov1#mpkg6#hym4#page3#enu2#fld69 mov1#mpkg6#hym4#page3#enu2#fld70 mov1#mpkg6#hym4#page3#enu2#fld72 mov1#mpkg6#hym4#page3#enu2#fld73" linkOrder="mov1#mpkg6#hym4#page3#enu2#ln44">
+      <Field id="mov1#mpkg6#hym4#page3#enu2#fld29" name="Nome" type="string" modifiable="true" attribute="ent1#att46">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym4#page3#enu2#fld29#mnd8" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym4#page3#enu2#fld30" name="Targa" ajaxEventEnabled="false" ajaxEventIndicator="true" type="string" attribute="ent1#att30" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym4#page3#enu2#fld30#mnd9" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <CollectionValidationRule id="mov1#mpkg6#hym4#page3#enu2#fld30#clc3" name="Unique" predicate="notIn" entity="ent1" attribute="ent1#att30" errorMessage="valore gi&#224; presente"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym4#page3#enu2#fld31" name="Foto" type="blob" modifiable="true" contentType="image" attribute="ent1#att3"/>
+      <Field id="mov1#mpkg6#hym4#page3#enu2#fld32" name="Prezzo" type="float" modifiable="true" attribute="ent1#att2"/>
+      <Field id="mov1#mpkg6#hym4#page3#enu2#fld34" name="Anno di immatricolazione" type="date" modifiable="true" attribute="ent1#att7">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym4#page3#enu2#fld34#mnd10" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym4#page3#enu2#fld68" name="Kilometri" type="integer" modifiable="true" attribute="ent1#att6">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym4#page3#enu2#fld68#mnd11" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym4#page3#enu2#fld69" name="Alimentazione" type="string" modifiable="true" attribute="ent1#att8">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym4#page3#enu2#fld69#mnd30" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym4#page3#enu2#fld70" name="Cilindrata" type="integer" modifiable="true" attribute="ent1#att9">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym4#page3#enu2#fld70#mnd31" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym4#page3#enu2#fld72" name="Numero di porte" type="integer" modifiable="true" attribute="ent1#att10">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym4#page3#enu2#fld72#mnd32" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym4#page3#enu2#fld73" name="Descrizione" type="text" modifiable="true" attribute="ent1#att11"/>
+      <Link id="mov1#mpkg6#hym4#page3#enu2#ln44" name="Inserisci autovettura" to="mov1#mpkg6#hym4#cru6" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par359" name="Alimentazione_alimentazione" source="mov1#mpkg6#hym4#page3#enu2#fld69" target="mov1#mpkg6#hym4#cru6.ent1#att8"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par363" name="Anno di immatricolazione_anno" source="mov1#mpkg6#hym4#page3#enu2#fld34" target="mov1#mpkg6#hym4#cru6.ent1#att7"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par366" name="0_catalogo" sourceValue="0" target="mov1#mpkg6#hym4#cru6.ent1#att50"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par368" name="Cilindrata_cilindrata" source="mov1#mpkg6#hym4#page3#enu2#fld70" target="mov1#mpkg6#hym4#cru6.ent1#att9"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par369" name="Descrizione_descrizione" source="mov1#mpkg6#hym4#page3#enu2#fld73" target="mov1#mpkg6#hym4#cru6.ent1#att11"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par370" name="Foto_foto" source="mov1#mpkg6#hym4#page3#enu2#fld31" target="mov1#mpkg6#hym4#cru6.ent1#att3"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par371" name="Kilometri_kilometri" source="mov1#mpkg6#hym4#page3#enu2#fld68" target="mov1#mpkg6#hym4#cru6.ent1#att6"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par372" name="Nome_nome" source="mov1#mpkg6#hym4#page3#enu2#fld29" target="mov1#mpkg6#hym4#cru6.ent1#att46"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par374" name="1_officina" sourceValue="1" target="mov1#mpkg6#hym4#cru6.ent1#att5"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par375" name="Numero di porte_porte" source="mov1#mpkg6#hym4#page3#enu2#fld72" target="mov1#mpkg6#hym4#cru6.ent1#att10"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par376" name="Prezzo_prezzo" source="mov1#mpkg6#hym4#page3#enu2#fld32" target="mov1#mpkg6#hym4#cru6.ent1#att2"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par377" name="Targa_targa" source="mov1#mpkg6#hym4#page3#enu2#fld30" target="mov1#mpkg6#hym4#cru6.ent1#att30"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par378" name="1_usato" sourceValue="1" target="mov1#mpkg6#hym4#cru6.ent1#att4"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par429" name="AppuntamentoToTipologia.oid_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#inn6#kln16#par423" passing="true"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par430" name="AppuntamentoToUtente.oid_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#inn6#kln16#par424" passing="true"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par431" name="data_inizio_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#inn6#kln16#par425" passing="true"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par432" name="descrizione_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#inn6#kln16#par426" passing="true"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par433" name="id_appuntamento_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#inn6#kln16#par427" passing="true"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg6#hym4#page3#enu2">
+          <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld30"/>
+          <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld29"/>
+          <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld31"/>
+          <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld32"/>
+          <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld34"/>
+          <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld68"/>
+          <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld69"/>
+          <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld70"/>
+          <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld72"/>
+          <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld73"/>
+          <layout:Link link="mov1#mpkg6#hym4#page3#enu2#ln44"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

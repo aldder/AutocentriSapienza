@@ -1,17 +1,19 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym9#page69" name="Gestione appuntamenti" landmark="true" ajaxEnabled="true" gr:x="495" gr:y="0">
   <ContentUnits>
-    <EventCalendarUnit id="mov1#mpkg6#hym9#page69#ecu3" name="Calendario" linkOrder="mov1#mpkg6#hym9#page69#ecu3#ln300" gr:x="10" gr:y="220" entityBased="true" entity="ent2" dateAttribute="ent2#att13" years="1" displayAttributes="rel17#role33.ent15#att66">
+    <EventCalendarUnit id="mov1#mpkg6#hym9#page69#ecu3" name="Calendario" linkOrder="mov1#mpkg6#hym9#page69#ecu3#ln300" gr:x="10" gr:y="220" entityBased="true" entity="ent2" dateAttribute="ent2#att13" years="1" displayAttributes="rel17#role33.ent15#att66 rel6#role12.userName rel7#role14.ent3#att16">
       <Link id="mov1#mpkg6#hym9#page69#ecu3#ln300" name="Flow105" to="mov1#mpkg6#hym9#page68#enu49" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="500" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli appuntamento">
         <LinkParameter id="mov1#mpkg6#hym9#page69#ecu3#ln300#par1862" name="oid_Key Condition [oid]" source="date[].data[].ent2#att12" target="mov1#mpkg6#hym9#page68#enu49.ent2#att12"/>
-        <LinkParameter id="mov1#mpkg6#hym9#page69#ecu3#ln300#par1863" name="AppuntamentoToUtente.oid_AppuntamentoToUtente - Preselection" source="date[].data[].rel6#role12_userOID" target="mov1#mpkg6#hym9#page68#enu49#sfld28_presel"/>
         <LinkParameter id="mov1#mpkg6#hym9#page69#ecu3#ln300#par1864" name="AppuntamentoToOrario.oid_AppuntamentoToOrario - Preselection" source="date[].data[].rel17#role33_ent15#att65" target="mov1#mpkg6#hym9#page68#enu49#sfld29_presel"/>
         <LinkParameter id="mov1#mpkg6#hym9#page69#ecu3#ln300#par1865" name="AppuntamentoToTipologia.oid_Tipologia - Preselection" source="date[].data[].rel7#role14_ent3#att15" target="mov1#mpkg6#hym9#page68#enu49#sfld27_presel"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page69#ecu3#ln300#par323" name="AppuntamentoToUtente.nome_utente_Utente" source="date[].data[].rel6#role12$userName" target="mov1#mpkg6#hym9#page68#enu49#fld27_slot"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page69#ecu3#ln300#par327" name="AppuntamentoToUtente.oid_id_utente" source="date[].data[].rel6#role12_userOID" target="mov1#mpkg6#hym9#page68#enu49#fld28_slot"/>
       </Link>
+      <SortAttribute attribute="rel17#role33.ent15#att66" order="ascending"/>
     </EventCalendarUnit>
     <SelectorUnit id="mov1#mpkg6#hym9#page69#seu106" name="Appuntamenti" gr:x="0" gr:y="105" entity="ent2">
       <Link id="mov1#mpkg6#hym9#page69#seu106#ln301" name="Flow3" to="mov1#mpkg6#hym9#page69#ecu3" type="transport" validate="true"/>
     </SelectorUnit>
-    <EntryUnit id="mov1#mpkg6#hym9#page69#enu50" name="Nuovo appuntamento" linkOrder="mov1#mpkg6#hym9#page69#enu50#ln302" ajaxEnableExpandedLinks="false" gr:x="305" gr:y="110" entity="ent2" fieldOrder="mov1#mpkg6#hym9#page69#enu50#sfld32 mov1#mpkg6#hym9#page69#enu50#fld187 mov1#mpkg6#hym9#page69#enu50#sfld31 mov1#mpkg6#hym9#page69#enu50#sfld30 mov1#mpkg6#hym9#page69#enu50#fld188">
+    <EntryUnit id="mov1#mpkg6#hym9#page69#enu50" name="Nuovo appuntamento" linkOrder="mov1#mpkg6#hym9#page69#enu50#ln302 mov1#mpkg6#hym9#page69#enu50#ln32" ajaxEnableExpandedLinks="false" gr:x="305" gr:y="110" entity="ent2" fieldOrder="mov1#mpkg6#hym9#page69#enu50#sfld32 mov1#mpkg6#hym9#page69#enu50#fld24 mov1#mpkg6#hym9#page69#enu50#fld25 mov1#mpkg6#hym9#page69#enu50#fld187 mov1#mpkg6#hym9#page69#enu50#sfld31 mov1#mpkg6#hym9#page69#enu50#sfld30 mov1#mpkg6#hym9#page69#enu50#fld188">
       <Field id="mov1#mpkg6#hym9#page69#enu50#fld187" name="Data" ajaxEventEnabled="false" type="date" modifiable="true" attribute="ent2#att13">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page69#enu50#fld187#mnd151" name="Mandatory" errorMessage="campo obbligatorio"/>
@@ -29,13 +31,30 @@
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page69#enu50#sfld31#mnd153" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
       </SelectionField>
-      <SelectionField id="mov1#mpkg6#hym9#page69#enu50#sfld32" name="Utente" type="string" role="rel6#role12"/>
+      <SelectionField id="mov1#mpkg6#hym9#page69#enu50#sfld32" name="Utente" type="string" role="rel6#role12" ajaxEventEnabled="true" ajaxEventLink="mov1#mpkg6#hym9#page69#enu50#ln32" ajaxEventIndicator="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym9#page69#enu50#sfld32#mnd4" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </SelectionField>
       <Link id="mov1#mpkg6#hym9#page69#enu50#ln302" name="Inserisci" to="mov1#mpkg6#hym9#miu94" type="normal" validate="true">
-        <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln302#par1892" name="Data_data" source="mov1#mpkg6#hym9#page69#enu50#fld187" target="mov1#mpkg6#hym9#miu94.mov2#mpkg31#mpkg35#opm69#icu72#icp329"/>
-        <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln302#par1893" name="Descrizione_descrizione" source="mov1#mpkg6#hym9#page69#enu50#fld188" target="mov1#mpkg6#hym9#miu94.mov2#mpkg31#mpkg35#opm69#icu72#icp330"/>
-        <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln302#par1894" name="Ora_id_orario" source="mov1#mpkg6#hym9#page69#enu50#sfld31" target="mov1#mpkg6#hym9#miu94.mov2#mpkg31#mpkg35#opm69#icu72#icp328"/>
-        <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln302#par1895" name="Tipologia_id_tipologia" source="mov1#mpkg6#hym9#page69#enu50#sfld30" target="mov1#mpkg6#hym9#miu94.mov2#mpkg31#mpkg35#opm69#icu72#icp331"/>
-        <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln302#par1896" name="Utente_id_utente" source="mov1#mpkg6#hym9#page69#enu50#sfld32" target="mov1#mpkg6#hym9#miu94.mov2#mpkg31#mpkg35#opm69#icu72#icp327"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln302#par271" name="Data_data" source="mov1#mpkg6#hym9#page69#enu50#fld187" target="mov1#mpkg6#hym9#miu94.mov2#mpkg22#mpkg23#opm36#icu46#icp91"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln302#par272" name="Descrizione_descrizione" source="mov1#mpkg6#hym9#page69#enu50#fld188" target="mov1#mpkg6#hym9#miu94.mov2#mpkg22#mpkg23#opm36#icu46#icp92"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln302#par273" name="oid_PASSING_id_auto" sourceLinkParameter="mov1#mpkg6#hym9#seu8#oln49#par268" target="mov1#mpkg6#hym9#miu94.mov2#mpkg22#mpkg23#opm36#icu46#icp41"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln302#par286" name="Ora_id_orario" source="mov1#mpkg6#hym9#page69#enu50#sfld31" target="mov1#mpkg6#hym9#miu94.mov2#mpkg22#mpkg23#opm36#icu46#icp90"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln302#par287" name="Tipologia_id_tipologia" source="mov1#mpkg6#hym9#page69#enu50#sfld30" target="mov1#mpkg6#hym9#miu94.mov2#mpkg22#mpkg23#opm36#icu46#icp93"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln302#par288" name="Utente_id_utente" source="mov1#mpkg6#hym9#page69#enu50#sfld32" target="mov1#mpkg6#hym9#miu94.mov2#mpkg22#mpkg23#opm36#icu46#icp89"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln302#par289" name="Targa_targa" source="mov1#mpkg6#hym9#page69#enu50#fld24" target="mov1#mpkg6#hym9#miu94.mov2#mpkg22#mpkg23#opm36#icu46#icp4"/>
+      </Link>
+      <Field id="mov1#mpkg6#hym9#page69#enu50#fld24" name="Targa" type="string" modifiable="true" attribute="ent2#att26" ajaxEventEnabled="true" ajaxEventLink="mov1#mpkg6#hym9#page69#enu50#ln32" ajaxEventIndicator="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym9#page69#enu50#fld24#mnd3" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym9#page69#enu50#fld25" name="Autovettura" type="string" preloaded="true"/>
+      <Link id="mov1#mpkg6#hym9#page69#enu50#ln32" name="Flow32" to="mov1#mpkg6#hym9#seu8" type="normal" validate="false" ajaxEnabled="true">
+        <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln32#par264" name="Targa_targa" source="mov1#mpkg6#hym9#page69#enu50#fld24" target="mov1#mpkg6#hym9#seu8#su11#acond3"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln32#par265" name="Utente_utente2intervento2auto [oid]" source="mov1#mpkg6#hym9#page69#enu50#sfld32" target="mov1#mpkg6#hym9#seu8#su11#rcond28.userOID"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln32#par266" name="Utente_utente2storico2auto [oid]" source="mov1#mpkg6#hym9#page69#enu50#sfld32" target="mov1#mpkg6#hym9#seu8#su11#rcond12.userOID"/>
       </Link>
     </EntryUnit>
     <SelectorUnit id="mov1#mpkg6#hym9#page69#seu107" name="Tipologia" gr:x="260" gr:y="0" entity="ent3">
@@ -50,26 +69,30 @@
         <LinkParameter id="mov1#mpkg6#hym9#page69#seu108#ln304#par1874" name="oid_Ora [output]" source="ent15#att65Array" target="mov1#mpkg6#hym9#page69#enu50#sfld31_output"/>
       </Link>
     </SelectorUnit>
-    <PowerIndexUnit id="mov1#mpkg6#hym9#page69#pwu27" name="Appuntamenti di oggi" linkOrder="mov1#mpkg6#hym9#page69#pwu27#ln305" gr:x="115" gr:y="215" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att13 rel6#role12.userName rel17#role33.ent15#att66 rel7#role14.ent3#att16" blockFactor="5">
+    <PowerIndexUnit id="mov1#mpkg6#hym9#page69#pwu27" name="Appuntamenti di oggi" linkOrder="mov1#mpkg6#hym9#page69#pwu27#ln305" gr:x="115" gr:y="215" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att13 rel6#role12.userName ent2#att26 rel17#role33.ent15#att66 rel7#role14.ent3#att16" blockFactor="5">
+      <Selector id="mov1#mpkg6#hym9#page69#pwu27#su200" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#mpkg6#hym9#page69#pwu27#su200#acond90" name="data" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att13"/>
+        <AttributesCondition id="mov1#mpkg6#hym9#page69#pwu27#su200#acond12" name="AttCondition12" predicate="null" booleanOperator="or" implied="false" attributes="rel10#role19.ent8#att31"/>
+      </Selector>
+      <Link id="mov1#mpkg6#hym9#page69#pwu27#ln305" name="Visualizza" to="mov1#mpkg6#hym9#page68#enu49" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="500" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli appuntamento">
+        <LinkParameter id="mov1#mpkg6#hym9#page69#pwu27#ln305#par1875" name="oid_Key Condition [oid]" source="data[].ent2#att12" target="mov1#mpkg6#hym9#page68#enu49.ent2#att12"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page69#pwu27#ln305#par1877" name="AppuntamentoToOrario.oid_AppuntamentoToOrario - Preselection" source="data[].rel17#role33_ent15#att65" target="mov1#mpkg6#hym9#page68#enu49#sfld29_presel"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page69#pwu27#ln305#par1878" name="AppuntamentoToTipologia.oid_Tipologia - Preselection" source="data[].rel7#role14_ent3#att15" target="mov1#mpkg6#hym9#page68#enu49#sfld27_presel"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page69#pwu27#ln305#par322" name="AppuntamentoToUtente.nome_utente_Utente" source="data[].rel6#role12$userName" target="mov1#mpkg6#hym9#page68#enu49#fld27_slot"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page69#pwu27#ln305#par326" name="AppuntamentoToUtente.oid_id_utente" source="data[].rel6#role12_userOID" target="mov1#mpkg6#hym9#page68#enu49#fld28_slot"/>
+      </Link>
       <SortAttribute attribute="rel17#role33.ent15#att66" order="ascending"/>
       <SortAttribute attribute="ent2#att12" order="ascending"/>
       <SortAttribute attribute="ent2#att13" order="ascending"/>
       <SortAttribute attribute="rel7#role14.ent3#att16" order="ascending"/>
       <SortAttribute attribute="rel6#role12.userName" order="ascending"/>
+      <SortAttribute attribute="ent2#att26" order="ascending"/>
       <DefaultSortAttribute attribute="rel17#role33.ent15#att66" order="ascending"/>
       <DefaultSortAttribute attribute="ent2#att12" order="ascending"/>
       <DefaultSortAttribute attribute="ent2#att13" order="ascending"/>
       <DefaultSortAttribute attribute="rel7#role14.ent3#att16" order="ascending"/>
       <DefaultSortAttribute attribute="rel6#role12.userName" order="ascending"/>
-      <Selector id="mov1#mpkg6#hym9#page69#pwu27#su200" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="mov1#mpkg6#hym9#page69#pwu27#su200#acond90" name="data" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att13"/>
-      </Selector>
-      <Link id="mov1#mpkg6#hym9#page69#pwu27#ln305" name="Visualizza" to="mov1#mpkg6#hym9#page68#enu49" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="500" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli appuntamento">
-        <LinkParameter id="mov1#mpkg6#hym9#page69#pwu27#ln305#par1875" name="oid_Key Condition [oid]" source="data[].ent2#att12" target="mov1#mpkg6#hym9#page68#enu49.ent2#att12"/>
-        <LinkParameter id="mov1#mpkg6#hym9#page69#pwu27#ln305#par1876" name="AppuntamentoToUtente.oid_AppuntamentoToUtente - Preselection" source="data[].rel6#role12_userOID" target="mov1#mpkg6#hym9#page68#enu49#sfld28_presel"/>
-        <LinkParameter id="mov1#mpkg6#hym9#page69#pwu27#ln305#par1877" name="AppuntamentoToOrario.oid_AppuntamentoToOrario - Preselection" source="data[].rel17#role33_ent15#att65" target="mov1#mpkg6#hym9#page68#enu49#sfld29_presel"/>
-        <LinkParameter id="mov1#mpkg6#hym9#page69#pwu27#ln305#par1878" name="AppuntamentoToTipologia.oid_Tipologia - Preselection" source="data[].rel7#role14_ent3#att15" target="mov1#mpkg6#hym9#page68#enu49#sfld27_presel"/>
-      </Link>
+      <DefaultSortAttribute attribute="ent2#att26" order="ascending"/>
     </PowerIndexUnit>
     <SelectorUnit id="mov1#mpkg6#hym9#page69#seu109" name="Utente" gr:x="420" gr:y="0" entity="User">
       <Link id="mov1#mpkg6#hym9#page69#seu109#ln306" name="Flow101" to="mov1#mpkg6#hym9#page69#enu50" type="transport" validate="true">
@@ -130,6 +153,7 @@
         <layout:Unit unitId="mov1#mpkg6#hym9#page69#pwu27">
           <layout:Attribute label="Data" attribute="ent2#att13"/>
           <layout:Attribute attribute="rel6#role12.userName" label="Utente"/>
+          <layout:Attribute attribute="ent2#att26" label="Autovettura"/>
           <layout:Attribute label="Ora" attribute="rel17#role33.ent15#att66"/>
           <layout:Attribute label="Tipologia" attribute="rel7#role14.ent3#att16"/>
           <layout:Link link="mov1#mpkg6#hym9#page69#pwu27#ln305"/>
@@ -137,6 +161,7 @@
           <layout:Link link="mov1#mpkg6#hym9#page69#pwu27ent2#att13"/>
           <layout:Link link="mov1#mpkg6#hym9#page69#pwu27rel7#role14$ent3#att16"/>
           <layout:Link link="mov1#mpkg6#hym9#page69#pwu27rel6#role12$userName"/>
+          <layout:Link link="mov1#mpkg6#hym9#page69#pwu27ent2#att26"/>
           <layout:Link link="mov1#mpkg6#hym9#page69#pwu27First"/>
           <layout:Link link="mov1#mpkg6#hym9#page69#pwu27Previous"/>
           <layout:Link link="mov1#mpkg6#hym9#page69#pwu27Block"/>
@@ -159,7 +184,6 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#mpkg6#hym9#page69#ecu3">
-          <layout:Attribute attribute="rel17#role33.ent15#att66"/>
           <layout:Link link="mov1#mpkg6#hym9#page69#ecu3#ln300"/>
           <layout:Link link="mov1#mpkg6#hym9#page69#ecu3-month-0"/>
           <layout:Link link="mov1#mpkg6#hym9#page69#ecu3-month-1"/>
@@ -174,6 +198,9 @@
           <layout:Link link="mov1#mpkg6#hym9#page69#ecu3-month-10"/>
           <layout:Link link="mov1#mpkg6#hym9#page69#ecu3-month-11"/>
           <layout:Link link="mov1#mpkg6#hym9#page69#ecu3-year"/>
+          <layout:Attribute attribute="rel17#role33.ent15#att66"/>
+          <layout:Attribute attribute="rel6#role12.userName"/>
+          <layout:Attribute attribute="rel7#role14.ent3#att16"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -224,11 +251,14 @@
           <layout:Unit unitId="mov1#mpkg6#hym9#page69#enu50">
             <layout:LayoutParameter name="show-label" value="top" type="unit"/>
             <layout:Field field="mov1#mpkg6#hym9#page69#enu50#sfld32"/>
+            <layout:Field field="mov1#mpkg6#hym9#page69#enu50#fld24"/>
+            <layout:Field field="mov1#mpkg6#hym9#page69#enu50#fld25"/>
             <layout:Field field="mov1#mpkg6#hym9#page69#enu50#fld187"/>
             <layout:Field field="mov1#mpkg6#hym9#page69#enu50#sfld31"/>
             <layout:Field field="mov1#mpkg6#hym9#page69#enu50#sfld30"/>
             <layout:Field field="mov1#mpkg6#hym9#page69#enu50#fld188"/>
             <layout:Link link="mov1#mpkg6#hym9#page69#enu50#ln302"/>
+            <layout:Link link="mov1#mpkg6#hym9#page69#enu50#ln32"/>
           </layout:Unit>
         </layout:Cell>
       </layout:Row>

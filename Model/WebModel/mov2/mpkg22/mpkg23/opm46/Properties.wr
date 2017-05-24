@@ -5,7 +5,7 @@
         <LinkParameter id="mov2#mpkg22#mpkg23#opm46#icu48#oln70#par450" name="Key [oid]_appuntamento2notifica [oid]" source="mov2#mpkg22#mpkg23#opm46#icu48#icp9" target="mov2#mpkg22#mpkg23#opm46#seu20#su43#rcond11.ent2#att12"/>
       </OKLink>
       <InputCollectorParameter id="mov2#mpkg22#mpkg23#opm46#icu48#icp9" name="id_appuntamento"/>
-      <Link id="mov2#mpkg22#mpkg23#opm46#icu48#ln270" name="Flow270" to="mov2#mpkg22#mpkg23#opm46#dlu18" type="transport" validate="true" gr:bendpoints="203,86,-377,86;461,85,-119,85">
+      <Link id="mov2#mpkg22#mpkg23#opm46#icu48#ln270" name="Flow270" to="mov2#mpkg22#mpkg23#opm46#dlu18" type="transport" validate="true" gr:bendpoints="203,86,-377,86;454,86,-126,86">
         <LinkParameter id="mov2#mpkg22#mpkg23#opm46#icu48#ln270#par956" name="id_appuntamento_KeyCondition8 [oid]" source="mov2#mpkg22#mpkg23#opm46#icu48#icp9" target="mov2#mpkg22#mpkg23#opm46#dlu18#su42#kcond22.ent2#att12"/>
       </Link>
     </InputCollectorUnit>

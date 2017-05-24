@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym9#page68" name="Dettagli appuntamento" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="445" gr:y="400" layout:frameLayout="None">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym9#page68" name="Dettagli appuntamento" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="480" gr:y="425" layout:frameLayout="None">
   <ContentUnits>
-    <EntryUnit id="mov1#mpkg6#hym9#page68#enu49" name="Dettagli appuntamento" linkOrder="mov1#mpkg6#hym9#page68#enu49#ln294 mov1#mpkg6#hym9#page68#enu49#ln296 mov1#mpkg6#hym9#page68#enu49#ln41" gr:x="145" gr:y="95" entity="ent2" fieldOrder="mov1#mpkg6#hym9#page68#enu49#sfld28 mov1#mpkg6#hym9#page68#enu49#fld185 mov1#mpkg6#hym9#page68#enu49#sfld29 mov1#mpkg6#hym9#page68#enu49#sfld27 mov1#mpkg6#hym9#page68#enu49#fld186">
+    <EntryUnit id="mov1#mpkg6#hym9#page68#enu49" name="Dettagli appuntamento" linkOrder="mov1#mpkg6#hym9#page68#enu49#ln294 mov1#mpkg6#hym9#page68#enu49#ln296 mov1#mpkg6#hym9#page68#enu49#ln41" gr:x="125" gr:y="55" entity="ent2" fieldOrder="mov1#mpkg6#hym9#page68#enu49#fld27 mov1#mpkg6#hym9#page68#enu49#fld26 mov1#mpkg6#hym9#page68#enu49#fld185 mov1#mpkg6#hym9#page68#enu49#sfld29 mov1#mpkg6#hym9#page68#enu49#sfld27 mov1#mpkg6#hym9#page68#enu49#fld186">
       <Field id="mov1#mpkg6#hym9#page68#enu49#fld185" name="Data" type="date" modifiable="true" attribute="ent2#att13">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page68#enu49#fld185#mnd228" name="Mandatory" errorMessage="campo obbligatorio"/>
@@ -13,29 +13,40 @@
         </VRules>
       </SelectionField>
       <Field id="mov1#mpkg6#hym9#page68#enu49#fld186" name="Descrizione" type="text" modifiable="true" attribute="ent2#att14"/>
-      <SelectionField id="mov1#mpkg6#hym9#page68#enu49#sfld28" name="Utente" type="string" role="rel6#role12"/>
       <SelectionField id="mov1#mpkg6#hym9#page68#enu49#sfld29" name="Ora" type="string" role="rel17#role33">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page68#enu49#sfld29#mnd229" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
       </SelectionField>
       <Link id="mov1#mpkg6#hym9#page68#enu49#ln294" name="Salva modifiche" to="mov1#mpkg6#hym9#miu96" type="normal" validate="true">
-        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln294#par1897" name="Data_data" source="mov1#mpkg6#hym9#page68#enu49#fld185" target="mov1#mpkg6#hym9#miu96.mov2#mpkg31#mpkg35#opm70#icu73#icp333"/>
-        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln294#par1898" name="Descrizione_descrizione" source="mov1#mpkg6#hym9#page68#enu49#fld186" target="mov1#mpkg6#hym9#miu96.mov2#mpkg31#mpkg35#opm70#icu73#icp334"/>
-        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln294#par1899" name="Key [oid]_id_appuntamento" source="key.ent2#att12" target="mov1#mpkg6#hym9#miu96.mov2#mpkg31#mpkg35#opm70#icu73#icp332"/>
-        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln294#par1900" name="Tipologia_id_tipologia" source="mov1#mpkg6#hym9#page68#enu49#sfld27" target="mov1#mpkg6#hym9#miu96.mov2#mpkg31#mpkg35#opm70#icu73#icp335"/>
-        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln294#par1901" name="Utente_id_utente" source="mov1#mpkg6#hym9#page68#enu49#sfld28" target="mov1#mpkg6#hym9#miu96.mov2#mpkg31#mpkg35#opm70#icu73#icp336"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln294#par314" name="Data_data" source="mov1#mpkg6#hym9#page68#enu49#fld185" target="mov1#mpkg6#hym9#miu96.mov2#mpkg22#mpkg23#opm45#icu47#icp95"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln294#par315" name="Descrizione_descrizione" source="mov1#mpkg6#hym9#page68#enu49#fld186" target="mov1#mpkg6#hym9#miu96.mov2#mpkg22#mpkg23#opm45#icu47#icp202"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln294#par317" name="Key [oid]_id_appuntamento" source="key.ent2#att12" target="mov1#mpkg6#hym9#miu96.mov2#mpkg22#mpkg23#opm45#icu47#icp146"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln294#par318" name="Ora_id_orario" source="mov1#mpkg6#hym9#page68#enu49#sfld29" target="mov1#mpkg6#hym9#miu96.mov2#mpkg22#mpkg23#opm45#icu47#icp94"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln294#par319" name="Tipologia_id_tipologia" source="mov1#mpkg6#hym9#page68#enu49#sfld27" target="mov1#mpkg6#hym9#miu96.mov2#mpkg22#mpkg23#opm45#icu47#icp203"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln294#par320" name="Utente_id_utente" target="mov1#mpkg6#hym9#miu96.mov2#mpkg22#mpkg23#opm45#icu47#icp96" source="mov1#mpkg6#hym9#page68#enu49#fld28"/>
       </Link>
       <Link id="mov1#mpkg6#hym9#page68#enu49#ln296" name="Elimina" to="mov1#mpkg6#hym9#miu95" type="normal" validate="true">
-        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln296#par1902" name="Key [oid]_Key [oid]_PASSING" source="key.ent2#att12" target="mov1#mpkg6#hym9#miu95.mov2#mpkg31#mpkg35#opm71#icu74#icp337"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln296#par321" name="Key [oid]_id_appuntamento" source="key.ent2#att12" target="mov1#mpkg6#hym9#miu95.mov2#mpkg22#mpkg23#opm46#icu48#icp9"/>
       </Link>
-      <Link id="mov1#mpkg6#hym9#page68#enu49#ln41" name="Prendi in consegna" to="mov1#mpkg6#hym9#seu3" type="normal" validate="true">
-        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln41#par83" name="Key [oid]_appuntamento [oid]" source="key.ent2#att12" target="mov1#mpkg6#hym9#seu3#su1#rcond2.ent2#att12"/>
-        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln41#par84" name="Data_PASSING" source="mov1#mpkg6#hym9#page68#enu49#fld185" passing="true"/>
-        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln41#par86" name="Descrizione_PASSING" source="mov1#mpkg6#hym9#page68#enu49#fld186" passing="true"/>
-        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln41#par87" name="Key [oid]_PASSING" source="key.ent2#att12" passing="true"/>
-        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln41#par88" name="Tipologia_PASSING" source="mov1#mpkg6#hym9#page68#enu49#sfld27" passing="true"/>
+      <Link id="mov1#mpkg6#hym9#page68#enu49#ln41" name="Prendi in consegna" to="mov1#mpkg6#hym9#miu7" type="normal" validate="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserisci autovettura" ajaxWindowWidth="800" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowModal="true">
+        <LinkParameter id="mov1#mpkg6#hym9#page68#enu49#ln41#par380" name="Key [oid]_id_appuntamento" source="key.ent2#att12" target="mov1#mpkg6#hym9#miu7.mov1#mpkg6#hym4#icu6#icp80"/>
       </Link>
+      <Field id="mov1#mpkg6#hym9#page68#enu49#fld26" name="Targa" type="string" attribute="ent2#att26">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym9#page68#enu49#fld26#mnd5" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym9#page68#enu49#fld27" name="Utente" type="string" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym9#page68#enu49#fld27#mnd7" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym9#page68#enu49#fld28" name="id_utente" type="string" preloaded="true" hidden="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym9#page68#enu49#fld28#mnd6" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
     </EntryUnit>
     <SelectorUnit id="mov1#mpkg6#hym9#page68#seu103" name="Tipologia" gr:x="0" gr:y="85" entity="ent3">
       <Link id="mov1#mpkg6#hym9#page68#seu103#ln297" name="Flow38" to="mov1#mpkg6#hym9#page68#enu49" type="transport" validate="true">
@@ -49,15 +60,11 @@
         <LinkParameter id="mov1#mpkg6#hym9#page68#seu104#ln298#par1859" name="oid_AppuntamentoToOrario [output]" source="ent15#att65Array" target="mov1#mpkg6#hym9#page68#enu49#sfld29_output"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit id="mov1#mpkg6#hym9#page68#seu105" name="Utente" gr:x="0" gr:y="170" entity="User">
-      <Selector id="mov1#mpkg6#hym9#page68#seu105#su199" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="mov1#mpkg6#hym9#page68#seu105#su199#acond89" name="gruppo" predicate="eq" booleanOperator="or" implied="false" attributes="User2DefaultGroup.groupOID" value="4"/>
-      </Selector>
-      <Link id="mov1#mpkg6#hym9#page68#seu105#ln299" name="Flow112" to="mov1#mpkg6#hym9#page68#enu49" type="transport" validate="true">
-        <LinkParameter id="mov1#mpkg6#hym9#page68#seu105#ln299#par1860" name="nome_utente_AppuntamentoToUtente [label]" source="userNameArray" target="mov1#mpkg6#hym9#page68#enu49#sfld28_label"/>
-        <LinkParameter id="mov1#mpkg6#hym9#page68#seu105#ln299#par1861" name="oid_AppuntamentoToUtente [output]" source="userOIDArray" target="mov1#mpkg6#hym9#page68#enu49#sfld28_output"/>
+    <TimeUnit id="mov1#mpkg6#hym9#page68#tmu7" name="Today" gr:x="220" gr:y="160">
+      <Link id="mov1#mpkg6#hym9#page68#tmu7#ln49" name="Flow46" to="mov1#mpkg6#hym9#miu7" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg6#hym9#page68#tmu7#ln49#par406" name="Current/Input Date_data_inizio" source="currentDate" target="mov1#mpkg6#hym9#miu7.mov1#mpkg6#hym4#icu6#icp81"/>
       </Link>
-    </SelectorUnit>
+    </TimeUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -77,16 +84,17 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#mpkg6#hym9#page68#enu49">
-          <layout:Field field="mov1#mpkg6#hym9#page68#enu49#sfld28"/>
-          <layout:Field field="mov1#mpkg6#hym9#page68#enu49#fld185"/>
-          <layout:Field field="mov1#mpkg6#hym9#page68#enu49#sfld29"/>
-          <layout:Field field="mov1#mpkg6#hym9#page68#enu49#sfld27"/>
-          <layout:Field field="mov1#mpkg6#hym9#page68#enu49#fld186"/>
           <layout:Link link="mov1#mpkg6#hym9#page68#enu49#ln294"/>
           <layout:Link link="mov1#mpkg6#hym9#page68#enu49#ln296"/>
           <layout:Link link="mov1#mpkg6#hym9#page68#enu49#ln41" styleClass="pull-right">
             <layout:LayoutParameter name="btn-style" value="info" type="link"/>
           </layout:Link>
+          <layout:Field field="mov1#mpkg6#hym9#page68#enu49#fld27"/>
+          <layout:Field field="mov1#mpkg6#hym9#page68#enu49#fld26"/>
+          <layout:Field field="mov1#mpkg6#hym9#page68#enu49#fld185"/>
+          <layout:Field field="mov1#mpkg6#hym9#page68#enu49#sfld29"/>
+          <layout:Field field="mov1#mpkg6#hym9#page68#enu49#sfld27"/>
+          <layout:Field field="mov1#mpkg6#hym9#page68#enu49#fld186"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

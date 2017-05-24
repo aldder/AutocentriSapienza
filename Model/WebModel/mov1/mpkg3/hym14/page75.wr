@@ -4,7 +4,7 @@
     <SelectorUnit id="mov1#mpkg3#hym14#page75#seu30" name="Appuntamenti" gr:x="0" gr:y="140" entity="ent2">
       <Link id="mov1#mpkg3#hym14#page75#seu30#ln238" name="Flow3" to="mov1#mpkg3#hym14#page75#ecu2" type="transport" validate="true"/>
     </SelectorUnit>
-    <EntryUnit id="mov1#mpkg3#hym14#page75#enu48" name="Nuovo appuntamento" linkOrder="mov1#mpkg3#hym14#page75#enu48#ln239" ajaxEnableExpandedLinks="false" gr:x="320" gr:y="140" entity="ent2" fieldOrder="mov1#mpkg3#hym14#page75#enu48#sfld1 mov1#mpkg3#hym14#page75#enu48#fld226 mov1#mpkg3#hym14#page75#enu48#sfld37 mov1#mpkg3#hym14#page75#enu48#sfld36 mov1#mpkg3#hym14#page75#enu48#fld227">
+    <EntryUnit id="mov1#mpkg3#hym14#page75#enu48" name="Nuovo appuntamento" linkOrder="mov1#mpkg3#hym14#page75#enu48#ln239 mov1#mpkg3#hym14#page75#enu48#ln19" ajaxEnableExpandedLinks="false" gr:x="320" gr:y="140" entity="ent2" fieldOrder="mov1#mpkg3#hym14#page75#enu48#fld21 mov1#mpkg3#hym14#page75#enu48#fld22 mov1#mpkg3#hym14#page75#enu48#fld226 mov1#mpkg3#hym14#page75#enu48#sfld37 mov1#mpkg3#hym14#page75#enu48#sfld36 mov1#mpkg3#hym14#page75#enu48#fld227">
       <Field id="mov1#mpkg3#hym14#page75#enu48#fld226" name="Data" ajaxEventEnabled="false" type="date" modifiable="true" attribute="ent2#att13">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg3#hym14#page75#enu48#fld226#mnd187" name="Mandatory" errorMessage="campo obbligatorio"/>
@@ -27,9 +27,18 @@
         <LinkParameter id="mov1#mpkg3#hym14#page75#enu48#ln239#par928" name="Descrizione_descrizione" source="mov1#mpkg3#hym14#page75#enu48#fld227" target="mov1#mpkg3#hym14#miu106.mov2#mpkg22#mpkg23#opm36#icu46#icp92"/>
         <LinkParameter id="mov1#mpkg3#hym14#page75#enu48#ln239#par929" name="Ora_id_orario" source="mov1#mpkg3#hym14#page75#enu48#sfld37" target="mov1#mpkg3#hym14#miu106.mov2#mpkg22#mpkg23#opm36#icu46#icp90"/>
         <LinkParameter id="mov1#mpkg3#hym14#page75#enu48#ln239#par930" name="Tipologia_id_tipologia" source="mov1#mpkg3#hym14#page75#enu48#sfld36" target="mov1#mpkg3#hym14#miu106.mov2#mpkg22#mpkg23#opm36#icu46#icp93"/>
-        <LinkParameter id="mov1#mpkg3#hym14#page75#enu48#ln239#par57" name="Autovettura_targa" source="mov1#mpkg3#hym14#page75#enu48#sfld1" target="mov1#mpkg3#hym14#miu106.mov2#mpkg22#mpkg23#opm36#icu46#icp4"/>
+        <LinkParameter id="mov1#mpkg3#hym14#page75#enu48#ln239#par57" name="Autovettura_targa" source="mov1#mpkg3#hym14#page75#enu48#fld21" target="mov1#mpkg3#hym14#miu106.mov2#mpkg22#mpkg23#opm36#icu46#icp4"/>
+        <LinkParameter id="mov1#mpkg3#hym14#page75#enu48#ln239#par63" name="oid_PASSING_id_auto" sourceLinkParameter="mov1#mpkg3#hym14#seu7#oln41#par62" target="mov1#mpkg3#hym14#miu106.mov2#mpkg22#mpkg23#opm36#icu46#icp41"/>
       </Link>
-      <SelectionField id="mov1#mpkg3#hym14#page75#enu48#sfld1" name="Autovettura" type="string"/>
+      <Link id="mov1#mpkg3#hym14#page75#enu48#ln19" name="Flow19" to="mov1#mpkg3#hym14#seu7" type="normal" validate="false" ajaxEnabled="true">
+        <LinkParameter id="mov1#mpkg3#hym14#page75#enu48#ln19#par55" name="Targa_targa" source="mov1#mpkg3#hym14#page75#enu48#fld21" target="mov1#mpkg3#hym14#seu7#su8#acond2"/>
+      </Link>
+      <Field id="mov1#mpkg3#hym14#page75#enu48#fld21" name="Targa" type="string" modifiable="true" attribute="ent2#att26" ajaxEventEnabled="true" ajaxEventLink="mov1#mpkg3#hym14#page75#enu48#ln19" ajaxEventIndicator="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym14#page75#enu48#fld21#mnd1" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg3#hym14#page75#enu48#fld22" name="Autovettura" type="string" preloaded="true"/>
     </EntryUnit>
     <SelectorUnit id="mov1#mpkg3#hym14#page75#seu31" name="Tipologia" gr:x="410" gr:y="0" entity="ent3">
       <Link id="mov1#mpkg3#hym14#page75#seu31#ln242" name="Flow4" to="mov1#mpkg3#hym14#page75#enu48" type="transport" validate="true">
@@ -68,20 +77,6 @@
     </GetUnit>
     <MultiMessageUnit id="mov1#mpkg3#hym14#page75#mssu40" name="OkMessage" gr:x="390" gr:y="270"/>
     <MultiMessageUnit id="mov1#mpkg3#hym14#page75#mssu41" name="KoMessage" gr:x="390" gr:y="335"/>
-    <SelectorUnit gr:x="185" gr:y="0" id="mov1#mpkg3#hym14#page75#seu2" name="Storico" entity="ent7">
-      <Link id="mov1#mpkg3#hym14#page75#seu2#ln9" name="Flow9" to="mov1#mpkg3#hym14#page75#enu48" type="transport" validate="true">
-        <LinkParameter id="mov1#mpkg3#hym14#page75#seu2#ln9#par54" name="targa_Autovettura [label]" source="ent7#att56Array" target="mov1#mpkg3#hym14#page75#enu48#sfld1_label"/>
-        <LinkParameter id="mov1#mpkg3#hym14#page75#seu2#ln9#par55" name="oid_Autovettura [output]" source="ent7#att24Array" target="mov1#mpkg3#hym14#page75#enu48#sfld1_output"/>
-      </Link>
-      <Selector id="mov1#mpkg3#hym14#page75#seu2#su11" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="mov1#mpkg3#hym14#page75#seu2#su11#rcond1" name="RoleCondition1" predicate="in" implied="false" role="rel12#role24"/>
-      </Selector>
-    </SelectorUnit>
-    <GetUnit gr:x="45" gr:y="10" id="mov1#mpkg3#hym14#page75#gtu1" name="utente" contextParameters="UserCtxParam">
-      <Link id="mov1#mpkg3#hym14#page75#gtu1#ln12" name="Flow12" to="mov1#mpkg3#hym14#page75#seu2" type="transport" validate="true">
-        <LinkParameter id="mov1#mpkg3#hym14#page75#gtu1#ln12#par56" name="UserCtxParam.oid_RoleCondition1 [oid]" source="mov1#mpkg3#hym14#page75#gtu1.UserCtxParam" target="mov1#mpkg3#hym14#page75#seu2#su11#rcond1.userOID"/>
-      </Link>
-    </GetUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -204,7 +199,9 @@
           <layout:Unit unitId="mov1#mpkg3#hym14#page75#enu48">
             <layout:LayoutParameter name="show-label" value="top" type="unit"/>
             <layout:Link link="mov1#mpkg3#hym14#page75#enu48#ln239"/>
-            <layout:Field field="mov1#mpkg3#hym14#page75#enu48#sfld1"/>
+            <layout:Link link="mov1#mpkg3#hym14#page75#enu48#ln19"/>
+            <layout:Field field="mov1#mpkg3#hym14#page75#enu48#fld21"/>
+            <layout:Field field="mov1#mpkg3#hym14#page75#enu48#fld22"/>
             <layout:Field field="mov1#mpkg3#hym14#page75#enu48#fld226"/>
             <layout:Field field="mov1#mpkg3#hym14#page75#enu48#sfld37"/>
             <layout:Field field="mov1#mpkg3#hym14#page75#enu48#sfld36"/>

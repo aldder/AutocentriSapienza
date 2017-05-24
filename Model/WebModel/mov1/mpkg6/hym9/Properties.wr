@@ -3,71 +3,39 @@
     <InputCollectorUnit gr:x="100" gr:y="155" id="mov1#mpkg6#hym9#icu94" name="Input Port">
       <OKLink id="mov1#mpkg6#hym9#icu94#oln497" to="mov1#mpkg6#hym9#page69" name="Landmark"/>
     </InputCollectorUnit>
-    <ModuleInstanceUnit id="mov1#mpkg6#hym9#miu94" gr:x="1085" gr:y="225" moduleId="mov2#mpkg31#mpkg35#opm69">
+    <ModuleInstanceUnit id="mov1#mpkg6#hym9#miu94" gr:x="1085" gr:y="240" moduleId="mov2#mpkg22#mpkg23#opm36">
       <OKLink id="mov1#mpkg6#hym9#miu94#oln499" name="OKFlow99" to="mov1#mpkg6#hym9#page69"/>
       <KOLink id="mov1#mpkg6#hym9#miu94#kln228" name="KOFlow120" to="mov1#mpkg6#hym9#page69#mssu59">
         <LinkParameter id="mov1#mpkg6#hym9#miu94#kln228#par1827" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg6#hym9#page69#mssu59.shownMessages" sourceValue="Si e' verificato un errore."/>
       </KOLink>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit id="mov1#mpkg6#hym9#miu95" gr:x="860" gr:y="525" moduleId="mov2#mpkg31#mpkg35#opm71">
+    <ModuleInstanceUnit id="mov1#mpkg6#hym9#miu95" gr:x="860" gr:y="525" moduleId="mov2#mpkg22#mpkg23#opm46">
       <OKLink id="mov1#mpkg6#hym9#miu95#oln500" name="OKFlow108" to="mov1#mpkg6#hym9#page69"/>
-      <KOLink id="mov1#mpkg6#hym9#miu95#kln229" name="KOFlow122" to="mov1#mpkg6#hym9#page69#mssu59">
+      <KOLink id="mov1#mpkg6#hym9#miu95#kln229" name="KOFlow122" to="mov1#mpkg6#hym9#page69#mssu59" gr:bendpoints="187,-148,247,72">
         <LinkParameter id="mov1#mpkg6#hym9#miu95#kln229#par1835" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg6#hym9#page69#mssu59.shownMessages" sourceValue="Si e' verificato un errore."/>
       </KOLink>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit id="mov1#mpkg6#hym9#miu96" gr:x="860" gr:y="450" moduleId="mov2#mpkg31#mpkg35#opm70">
+    <ModuleInstanceUnit id="mov1#mpkg6#hym9#miu96" gr:x="860" gr:y="450" moduleId="mov2#mpkg22#mpkg23#opm45">
       <OKLink id="mov1#mpkg6#hym9#miu96#oln501" name="OKFlow110" to="mov1#mpkg6#hym9#page69"/>
-      <KOLink id="mov1#mpkg6#hym9#miu96#kln230" name="KOFlow121" to="mov1#mpkg6#hym9#page69#mssu59">
+      <KOLink id="mov1#mpkg6#hym9#miu96#kln230" name="KOFlow121" to="mov1#mpkg6#hym9#page69#mssu59" gr:bendpoints="138,-73,183,72">
         <LinkParameter id="mov1#mpkg6#hym9#miu96#kln230#par1836" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg6#hym9#page69#mssu59.shownMessages" sourceValue="Si e' verificato un errore."/>
       </KOLink>
     </ModuleInstanceUnit>
-    <SelectorUnit id="mov1#mpkg6#hym9#seu3" name="Interventi" gr:x="635" gr:y="710" entity="ent8">
-      <Selector id="mov1#mpkg6#hym9#seu3#su1" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="mov1#mpkg6#hym9#seu3#su1#rcond2" name="appuntamento" predicate="in" implied="false" role="rel10#role19"/>
+    <SelectorUnit gr:x="1125" gr:y="25" id="mov1#mpkg6#hym9#seu8" name="SelectAuto" entity="ent1">
+      <Selector id="mov1#mpkg6#hym9#seu8#su11" defaultPolicy="fill" booleanOperator="and" expression="( mov1#mpkg6#hym9#seu8#su11#rcond12 OR mov1#mpkg6#hym9#seu8#su11#rcond28 ) AND mov1#mpkg6#hym9#seu8#su11#acond3">
+        <RelationshipRoleCondition id="mov1#mpkg6#hym9#seu8#su11#rcond12" name="utente2storico2auto" predicate="in" implied="false" role="rel12#role24.rel19#role37"/>
+        <RelationshipRoleCondition id="mov1#mpkg6#hym9#seu8#su11#rcond28" name="utente2intervento2auto" predicate="in" implied="false" role="rel4#role7.rel9#role18"/>
+        <AttributesCondition id="mov1#mpkg6#hym9#seu8#su11#acond3" name="targa" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att30" ignoreCase="true"/>
       </Selector>
-      <OKLink id="mov1#mpkg6#hym9#seu3#oln2" name="OKFlow8" to="mov1#mpkg6#hym9#inn1">
-        <LinkParameter id="mov1#mpkg6#hym9#seu3#oln2#par3" name="oid_Input" source="ent8#att31Array" target="mov1#mpkg6#hym9#inn1.isnotnull"/>
+      <OKLink id="mov1#mpkg6#hym9#seu8#oln49" name="OKFlow49" to="mov1#mpkg6#hym9#page69#enu50" gr:bendpoints="-125,91,180,-14">
+        <LinkParameter id="mov1#mpkg6#hym9#seu8#oln49#par267" name="nome_Autovettura" source="ent1#att46Array" target="mov1#mpkg6#hym9#page69#enu50#fld25_slot"/>
+        <LinkParameter id="mov1#mpkg6#hym9#seu8#oln49#par268" name="oid_PASSING" source="ent1#att1Array" passing="true"/>
       </OKLink>
-      <Link id="mov1#mpkg6#hym9#seu3#ln10" name="Flow346" to="mov1#mpkg6#hym9#pcu3" type="transport" validate="true" gr:bendpoints="156,173,-324,-2">
-        <LinkParameter id="mov1#mpkg6#hym9#seu3#ln10#par6" name="Data_PASSING_data" sourceLinkParameter="mov1#mpkg6#hym9#page68#enu49#ln41#par84" target="mov1#mpkg6#hym9#pcu3#pcp18"/>
-        <LinkParameter id="mov1#mpkg6#hym9#seu3#ln10#par7" name="Descrizione_PASSING_desc" sourceLinkParameter="mov1#mpkg6#hym9#page68#enu49#ln41#par86" target="mov1#mpkg6#hym9#pcu3#pcp19"/>
-        <LinkParameter id="mov1#mpkg6#hym9#seu3#ln10#par9" name="Key [oid]_PASSING_id_app" sourceLinkParameter="mov1#mpkg6#hym9#page68#enu49#ln41#par87" target="mov1#mpkg6#hym9#pcu3#pcp16"/>
-        <LinkParameter id="mov1#mpkg6#hym9#seu3#ln10#par12" name="Tipologia_PASSING_id_tipo" sourceLinkParameter="mov1#mpkg6#hym9#page68#enu49#ln41#par88" target="mov1#mpkg6#hym9#pcu3#pcp17"/>
-      </Link>
     </SelectorUnit>
-    <CreateUnit id="mov1#mpkg6#hym9#cru2" name="InserisciIntervento" gr:x="1670" gr:y="695" entity="ent8">
-      <OKLink id="mov1#mpkg6#hym9#cru2#oln5" name="OKFlow5" to="mov1#mpkg6#hym9#page69"/>
-      <KOLink id="mov1#mpkg6#hym9#cru2#kln4" name="KOFlow4" to="mov1#mpkg6#hym9#page69#mssu59">
-        <LinkParameter id="mov1#mpkg6#hym9#cru2#kln4#par89" name="Si e' verificato un errore._Shown Messages" sourceValue="Si e' verificato un errore." target="mov1#mpkg6#hym9#page69#mssu59.shownMessages"/>
-      </KOLink>
-    </CreateUnit>
-    <ParameterCollectorUnit id="mov1#mpkg6#hym9#pcu3" name="Parameter Collector" gr:x="1290" gr:y="870">
-      <CollectorParameter id="mov1#mpkg6#hym9#pcu3#pcp16" name="id_app"/>
-      <CollectorParameter id="mov1#mpkg6#hym9#pcu3#pcp17" name="id_tipo"/>
-      <CollectorParameter id="mov1#mpkg6#hym9#pcu3#pcp18" name="data"/>
-      <CollectorParameter id="mov1#mpkg6#hym9#pcu3#pcp19" name="desc"/>
-      <CollectorParameter id="mov1#mpkg6#hym9#pcu3#pcp21" name="id_auto"/>
-      <OKLink id="mov1#mpkg6#hym9#pcu3#oln4" name="OKFlow532" to="mov1#mpkg6#hym9#cru2">
-        <LinkParameter id="mov1#mpkg6#hym9#pcu3#oln4#par23" name="id_app_Appuntamento.oid(InterventoToAppuntamento)" source="mov1#mpkg6#hym9#pcu3#pcp16" target="mov1#mpkg6#hym9#cru2.rel10#role20.ent2#att12"/>
-        <LinkParameter id="mov1#mpkg6#hym9#pcu3#oln4#par27" name="id_auto_Autovetture_Clienti.oid(InterventoToAutovetture_Clienti)" source="mov1#mpkg6#hym9#pcu3#pcp21" target="mov1#mpkg6#hym9#cru2.rel11#role22.ent11#att51"/>
-        <LinkParameter id="mov1#mpkg6#hym9#pcu3#oln4#par31" name="data_data" source="mov1#mpkg6#hym9#pcu3#pcp18" target="mov1#mpkg6#hym9#cru2.ent8#att32"/>
-        <LinkParameter id="mov1#mpkg6#hym9#pcu3#oln4#par34" name="desc_descrizione" source="mov1#mpkg6#hym9#pcu3#pcp19" target="mov1#mpkg6#hym9#cru2.ent8#att55"/>
-        <LinkParameter id="mov1#mpkg6#hym9#pcu3#oln4#par35" name="0_stato" target="mov1#mpkg6#hym9#cru2.ent8#att33" sourceValue="0"/>
-        <LinkParameter id="mov1#mpkg6#hym9#pcu3#oln4#par38" name="id_tipo_Tipologia.oid(InterventoToTipologia)" source="mov1#mpkg6#hym9#pcu3#pcp17" target="mov1#mpkg6#hym9#cru2.rel5#role10.ent3#att15"/>
-      </OKLink>
-    </ParameterCollectorUnit>
-    <IsNotNullUnit id="mov1#mpkg6#hym9#inn1" name="Is Not Null" gr:x="810" gr:y="725">
-      <KOLink id="mov1#mpkg6#hym9#inn1#kln3" name="KOFlow240" to="mov1#mpkg6#hym9#page2" ajaxOpenWindow="true" ajaxReplaceWindow="false" ajaxWindowUseTitle="true" ajaxWindowTitle="Presa in consegna" ajaxWindowWidth="800" ajaxWindowHeight="500" ajaxWindowClosable="true" ajaxWindowModal="true"/>
-      <OKLink id="mov1#mpkg6#hym9#inn1#oln6" name="OKFlow6" to="mov1#mpkg6#hym9#page69#mssu59" gr:bendpoints="280,-226,194,188">
-        <LinkParameter id="mov1#mpkg6#hym9#inn1#oln6#par91" name="Si e' verificato un errore._Shown Messages" sourceValue="Si e' verificato un errore." target="mov1#mpkg6#hym9#page69#mssu59.shownMessages"/>
-      </OKLink>
-    </IsNotNullUnit>
-    <ModuleInstanceUnit gr:x="1375" gr:y="695" id="mov1#mpkg6#hym9#miu131" action="true" moduleId="mov2#mpkg38#mpkg40#opm80">
-      <OKLink id="mov1#mpkg6#hym9#miu131#oln183" name="OKFlow525" to="mov1#mpkg6#hym9#pcu3">
-        <LinkParameter id="mov1#mpkg6#hym9#miu131#oln183#par1162" name="oid_id_auto" source="mov2#mpkg31#mpkg33#opm63#okcu62#ocp1" target="mov1#mpkg6#hym9#pcu3#pcp21"/>
-      </OKLink>
-      <KOLink id="mov1#mpkg6#hym9#miu131#kln93" name="KOFlow5" to="mov1#mpkg6#hym9#page69#mssu59">
-        <LinkParameter id="mov1#mpkg6#hym9#miu131#kln93#par1165" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg6#hym9#page69#mssu59.shownMessages" sourceValue="Si e' verificato un errore."/>
+    <ModuleInstanceUnit gr:x="895" gr:y="650" id="mov1#mpkg6#hym9#miu7" action="false" moduleId="mov1#mpkg6#hym4">
+      <OKLink id="mov1#mpkg6#hym9#miu7#oln132" name="OKFlow132" to="mov1#mpkg6#hym9#page69"/>
+      <KOLink id="mov1#mpkg6#hym9#miu7#kln29" name="KOFlow29" to="mov1#mpkg6#hym9#page69#mssu59" gr:bendpoints="236,-297,301,48">
+        <LinkParameter id="mov1#mpkg6#hym9#miu7#kln29#par383" name="Si e' verificato un errore._Shown Messages" sourceValue="Si e' verificato un errore." target="mov1#mpkg6#hym9#page69#mssu59.shownMessages"/>
       </KOLink>
     </ModuleInstanceUnit>
   </OperationUnits>

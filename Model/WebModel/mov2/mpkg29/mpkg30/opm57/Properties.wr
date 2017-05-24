@@ -5,11 +5,9 @@
       <InputCollectorParameter id="mov2#mpkg29#mpkg30#opm57#icu59#icp282" name="password"/>
       <InputCollectorParameter id="mov2#mpkg29#mpkg30#opm57#icu59#icp283" name="Group.oid(defaultGroup)"/>
       <InputCollectorParameter id="mov2#mpkg29#mpkg30#opm57#icu59#icp284" name="Group.oid(groups)"/>
-      <InputCollectorParameter id="mov2#mpkg29#mpkg30#opm57#icu59#icp285" name="Utente Object"/>
       <InputCollectorParameter id="mov2#mpkg29#mpkg30#opm57#icu59#icp287" name="email"/>
       <OKLink id="mov2#mpkg29#mpkg30#opm57#icu59#oln105" name="Inserisci" to="mov2#mpkg29#mpkg30#opm57#cru22">
         <LinkParameter id="mov2#mpkg29#mpkg30#opm57#icu59#oln105#par805" name="groups_Group.oid(groups)" source="mov2#mpkg29#mpkg30#opm57#icu59#icp284" target="mov2#mpkg29#mpkg30#opm57#cru22.User2Group.groupOID"/>
-        <LinkParameter id="mov2#mpkg29#mpkg30#opm57#icu59#oln105#par806" name="Utente Object_Utente Object" source="mov2#mpkg29#mpkg30#opm57#icu59#icp285" target="mov2#mpkg29#mpkg30#opm57#cru22.entityBeans"/>
         <LinkParameter id="mov2#mpkg29#mpkg30#opm57#icu59#oln105#par939" name="password_password" source="mov2#mpkg29#mpkg30#opm57#icu59#icp282" target="mov2#mpkg29#mpkg30#opm57#cru22.password"/>
         <LinkParameter id="mov2#mpkg29#mpkg30#opm57#icu59#oln105#par941" name="email_email" source="mov2#mpkg29#mpkg30#opm57#icu59#icp287" target="mov2#mpkg29#mpkg30#opm57#cru22.email"/>
         <LinkParameter id="mov2#mpkg29#mpkg30#opm57#icu59#oln105#par943" name="nome_utente_nome_utente" source="mov2#mpkg29#mpkg30#opm57#icu59#icp281" target="mov2#mpkg29#mpkg30#opm57#cru22.userName"/>

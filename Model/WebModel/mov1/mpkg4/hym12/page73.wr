@@ -30,7 +30,6 @@
         <LinkParameter id="mov1#mpkg4#hym12#page73#enu38#ln195#par846" name="Gruppo_Group.oid(groups)" source="mov1#mpkg4#hym12#page73#enu38#sfld35" target="mov1#mpkg4#hym12#miu83.mov2#mpkg29#mpkg30#opm57#icu59#icp284"/>
         <LinkParameter id="mov1#mpkg4#hym12#page73#enu38#ln195#par847" name="Nome Utente_nome_utente" source="mov1#mpkg4#hym12#page73#enu38#fld223" target="mov1#mpkg4#hym12#miu83.mov2#mpkg29#mpkg30#opm57#icu59#icp281"/>
         <LinkParameter id="mov1#mpkg4#hym12#page73#enu38#ln195#par848" name="Password_password" source="mov1#mpkg4#hym12#page73#enu38#fld224" target="mov1#mpkg4#hym12#miu83.mov2#mpkg29#mpkg30#opm57#icu59#icp282"/>
-        <LinkParameter id="mov1#mpkg4#hym12#page73#enu38#ln195#par849" name="Utente Object_Utente Object" source="entityBean" target="mov1#mpkg4#hym12#miu83.mov2#mpkg29#mpkg30#opm57#icu59#icp285"/>
       </Link>
     </EntryUnit>
     <SelectorUnit id="mov1#mpkg4#hym12#page73#seu28" name="SelectorGruppi" gr:x="0" gr:y="0" entity="Group" distinctAttributes="groupName groupOID">
