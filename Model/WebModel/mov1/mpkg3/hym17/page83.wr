@@ -4,7 +4,7 @@
       <Message xml:space="preserve">Clicca per inserire un annuncio di vendita della tua auto.</Message>
       <Link id="mov1#mpkg3#hym17#page83#mssu46#ln331" name="Inserisci annuncio" to="mov1#mpkg3#hym17#page81#enu52" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserisci annuncio di vendita"/>
     </MultiMessageUnit>
-    <PowerIndexUnit id="mov1#mpkg3#hym17#page83#pwu33" name="Annunci" linkOrder="mov1#mpkg3#hym17#page83#pwu33#ln332" gr:showAllParts="false" gr:x="0" gr:y="110" sortable="true" checkable="false" useCountQuery="false" entity="ent10" blockFactor="10" displayAttributes="ent10#att35 rel3#role5.ent1#att46 rel3#role5.ent1#att2 rel3#role5.ent1#att7 rel3#role5.ent1#att6 rel3#role5.ent1#att8 rel3#role5.ent1#att9 rel3#role5.ent1#att10">
+    <PowerIndexUnit id="mov1#mpkg3#hym17#page83#pwu33" name="Annunci" linkOrder="mov1#mpkg3#hym17#page83#pwu33#ln332" gr:showAllParts="false" gr:x="0" gr:y="110" sortable="true" checkable="false" useCountQuery="false" entity="ent10" blockFactor="10" displayAttributes="rel3#role5.ent1#att46 rel3#role5.ent1#att30 rel3#role5.ent1#att2 rel3#role5.ent1#att7 rel3#role5.ent1#att6 rel3#role5.ent1#att8 rel3#role5.ent1#att9 rel3#role5.ent1#att10">
       <Link id="mov1#mpkg3#hym17#page83#pwu33#ln332" name="Visualizza" to="mov1#mpkg3#hym17#page82#enu53" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli annuncio">
         <LinkParameter id="mov1#mpkg3#hym17#page83#pwu33#ln332#par40" name="AnnuncioToAutovettura.oid_Key Condition [oid]" source="data[].rel3#role5_ent1#att1" target="mov1#mpkg3#hym17#page82#enu53.ent1#att1"/>
         <LinkParameter id="mov1#mpkg3#hym17#page83#pwu33#ln332#par51" name="oid_PASSING" source="data[].ent10#att35" passing="true"/>
@@ -12,14 +12,6 @@
       <Selector id="mov1#mpkg3#hym17#page83#pwu33#su37" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="mov1#mpkg3#hym17#page83#pwu33#su37#rcond20" name="utente2annuncio" role="rel13#role25" predicate="in" implied="false"/>
       </Selector>
-      <DefaultSortAttribute attribute="ent10#att35" order="ascending"/>
-      <DefaultSortAttribute attribute="rel3#role5.ent1#att46" order="ascending"/>
-      <DefaultSortAttribute attribute="rel3#role5.ent1#att2" order="ascending"/>
-      <DefaultSortAttribute attribute="rel3#role5.ent1#att7" order="ascending"/>
-      <DefaultSortAttribute attribute="rel3#role5.ent1#att6" order="ascending"/>
-      <DefaultSortAttribute attribute="rel3#role5.ent1#att8" order="ascending"/>
-      <DefaultSortAttribute attribute="rel3#role5.ent1#att9" order="ascending"/>
-      <DefaultSortAttribute attribute="rel3#role5.ent1#att10" order="ascending"/>
       <SortAttribute attribute="ent10#att35" order="ascending"/>
       <SortAttribute attribute="rel3#role5.ent1#att46" order="ascending"/>
       <SortAttribute attribute="rel3#role5.ent1#att2" order="ascending"/>
@@ -28,6 +20,8 @@
       <SortAttribute attribute="rel3#role5.ent1#att8" order="ascending"/>
       <SortAttribute attribute="rel3#role5.ent1#att9" order="ascending"/>
       <SortAttribute attribute="rel3#role5.ent1#att10" order="ascending"/>
+      <SortAttribute attribute="rel3#role5.ent1#att30" order="ascending"/>
+      <DefaultSortAttribute attribute="ent10#att35" order="descending"/>
     </PowerIndexUnit>
     <GetUnit id="mov1#mpkg3#hym17#page83#gtu10" name="utente" gr:x="10" gr:y="0" contextParameters="UserCtxParam">
       <Link id="mov1#mpkg3#hym17#page83#gtu10#ln333" name="Flow162" to="mov1#mpkg3#hym17#page83#pwu33" type="transport" validate="true">
@@ -95,8 +89,15 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#mpkg3#hym17#page83#pwu33">
+          <layout:Attribute attribute="rel3#role5.ent1#att46" label="Nome"/>
+          <layout:Attribute attribute="rel3#role5.ent1#att30" label="Targa"/>
+          <layout:Attribute attribute="rel3#role5.ent1#att2" label="Prezzo"/>
+          <layout:Attribute attribute="rel3#role5.ent1#att7" label="Anno"/>
+          <layout:Attribute attribute="rel3#role5.ent1#att6" label="Kilometri"/>
+          <layout:Attribute attribute="rel3#role5.ent1#att8" label="Alimentazione"/>
+          <layout:Attribute attribute="rel3#role5.ent1#att9" label="Cilindrata"/>
+          <layout:Attribute attribute="rel3#role5.ent1#att10" label="Porte"/>
           <layout:Link link="mov1#mpkg3#hym17#page83#pwu33#ln332"/>
-          <layout:Link link="mov1#mpkg3#hym17#page83#pwu33ent10#att35"/>
           <layout:Link link="mov1#mpkg3#hym17#page83#pwu33rel3#role5$ent1#att46"/>
           <layout:Link link="mov1#mpkg3#hym17#page83#pwu33rel3#role5$ent1#att2"/>
           <layout:Link link="mov1#mpkg3#hym17#page83#pwu33rel3#role5$ent1#att7"/>
@@ -104,19 +105,12 @@
           <layout:Link link="mov1#mpkg3#hym17#page83#pwu33rel3#role5$ent1#att8"/>
           <layout:Link link="mov1#mpkg3#hym17#page83#pwu33rel3#role5$ent1#att9"/>
           <layout:Link link="mov1#mpkg3#hym17#page83#pwu33rel3#role5$ent1#att10"/>
+          <layout:Link link="mov1#mpkg3#hym17#page83#pwu33rel3#role5$ent1#att30"/>
           <layout:Link link="mov1#mpkg3#hym17#page83#pwu33First"/>
           <layout:Link link="mov1#mpkg3#hym17#page83#pwu33Previous"/>
           <layout:Link link="mov1#mpkg3#hym17#page83#pwu33Block"/>
           <layout:Link link="mov1#mpkg3#hym17#page83#pwu33Next"/>
           <layout:Link link="mov1#mpkg3#hym17#page83#pwu33Last"/>
-          <layout:Attribute attribute="ent10#att35"/>
-          <layout:Attribute attribute="rel3#role5.ent1#att46"/>
-          <layout:Attribute attribute="rel3#role5.ent1#att2"/>
-          <layout:Attribute attribute="rel3#role5.ent1#att7"/>
-          <layout:Attribute attribute="rel3#role5.ent1#att6"/>
-          <layout:Attribute attribute="rel3#role5.ent1#att8"/>
-          <layout:Attribute attribute="rel3#role5.ent1#att9"/>
-          <layout:Attribute attribute="rel3#role5.ent1#att10"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

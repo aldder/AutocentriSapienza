@@ -3,16 +3,25 @@
     <InputCollectorUnit gr:x="0" gr:y="100" id="mov1#mpkg3#hym16#icu12">
       <OKLink id="mov1#mpkg3#hym16#icu12#oln162" to="mov1#mpkg3#hym16#page80" name="Landmark"/>
     </InputCollectorUnit>
-    <ModuleInstanceUnit id="mov1#mpkg3#hym16#miu115" gr:x="735" gr:y="190" moduleId="mov2#mpkg22#mpkg28#opm56">
+    <ModuleInstanceUnit id="mov1#mpkg3#hym16#miu115" gr:x="720" gr:y="300" moduleId="mov2#mpkg22#mpkg28#opm56">
       <OKLink id="mov1#mpkg3#hym16#miu115#oln163" name="OKFlow305" to="mov1#mpkg3#hym16#page80"/>
       <KOLink id="mov1#mpkg3#hym16#miu115#kln75" name="KOFlow41" to="mov1#mpkg3#hym16#page80#mssu45">
         <LinkParameter id="mov1#mpkg3#hym16#miu115#kln75#par988" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg3#hym16#page80#mssu45.shownMessages" sourceValue="Si e' verificato un errore."/>
       </KOLink>
     </ModuleInstanceUnit>
-    <GetUnit gr:x="800" gr:y="285" id="mov1#mpkg3#hym16#gtu9" name="UtenteCorrente" contextParameters="UserCtxParam" linkOrder="mov1#mpkg3#hym16#gtu9#ln321">
+    <GetUnit gr:x="1010" gr:y="260" id="mov1#mpkg3#hym16#gtu9" name="UtenteCorrente" contextParameters="UserCtxParam" linkOrder="mov1#mpkg3#hym16#gtu9#ln321 mov1#mpkg3#hym16#gtu9#ln9">
       <Link id="mov1#mpkg3#hym16#gtu9#ln321" name="Flow321" to="mov1#mpkg3#hym16#miu115" type="transport" validate="true">
         <LinkParameter id="mov1#mpkg3#hym16#gtu9#ln321#par990" name="UserCtxParam.oid_utente [oid]" source="mov1#mpkg3#hym16#gtu9.UserCtxParam" target="mov1#mpkg3#hym16#miu115.mov2#mpkg22#mpkg28#opm56#icu58#icp280"/>
       </Link>
+      <Link id="mov1#mpkg3#hym16#gtu9#ln9" name="Flow9" to="mov1#mpkg3#hym16#miu5" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym16#gtu9#ln9#par6" name="UserCtxParam.oid_id_utente" source="mov1#mpkg3#hym16#gtu9.UserCtxParam" target="mov1#mpkg3#hym16#miu5.mov2#mpkg22#mpkg26#opm50#icu52#icp247"/>
+      </Link>
     </GetUnit>
+    <ModuleInstanceUnit gr:x="735" gr:y="175" id="mov1#mpkg3#hym16#miu5" action="true" moduleId="mov2#mpkg22#mpkg26#opm50">
+      <OKLink id="mov1#mpkg3#hym16#miu5#oln2" name="OKFlow2" to="mov1#mpkg3#hym16#page80"/>
+      <KOLink id="mov1#mpkg3#hym16#miu5#kln3" name="KOFlow3" to="mov1#mpkg3#hym16#page80#mssu45">
+        <LinkParameter id="mov1#mpkg3#hym16#miu5#kln3#par7" name="Si e' verificato un errore._Shown Messages" sourceValue="Si e' verificato un errore." target="mov1#mpkg3#hym16#page80#mssu45.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
   </OperationUnits>
 </HybridModule>

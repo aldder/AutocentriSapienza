@@ -8,7 +8,7 @@
         <LinkParameter id="mov2#mpkg37#opm76#lpu2#oln378#par1338" name="Next Element_KeyCondition14 [oid]" source="next" target="mov2#mpkg37#opm76#seu66#su151#kcond86.ent4#att18"/>
       </OKLink>
     </LoopUnit>
-    <SelectorUnit id="mov2#mpkg37#opm76#seu63" name="SelectAppuntamento" gr:x="975" gr:y="160" entity="ent2">
+    <SelectorUnit id="mov2#mpkg37#opm76#seu63" name="SelectAppuntamento" gr:x="975" gr:y="155" entity="ent2">
       <Selector id="mov2#mpkg37#opm76#seu63#su139" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg37#opm76#seu63#su139#kcond76" name="KeyCondition61" predicate="in" implied="false"/>
       </Selector>
@@ -26,12 +26,12 @@
         <AttributesCondition id="mov2#mpkg37#opm76#seu64#su147#acond61" name="stato" predicate="eq" booleanOperator="or" implied="false" attributes="ent4#att28" value="1"/>
       </Selector>
     </SelectorUnit>
-    <MailUnit id="mov2#mpkg37#opm76#mlu8" name="NotificaAppuntamento" gr:x="1170" gr:y="175" format="plainText" smtpServer="smtp1">
+    <MailUnit id="mov2#mpkg37#opm76#mlu8" name="NotificaAppuntamento" gr:x="1170" gr:y="170" format="plainText" smtpServer="smtp1">
       <Placeholder id="mov2#mpkg37#opm76#mlu8#ph8" name="tipologia"/>
       <Placeholder id="mov2#mpkg37#opm76#mlu8#ph17" name="utente"/>
       <Placeholder id="mov2#mpkg37#opm76#mlu8#ph18" name="descrizione"/>
       <Placeholder id="mov2#mpkg37#opm76#mlu8#ph19" name="data"/>
-      <OKLink id="mov2#mpkg37#opm76#mlu8#oln381" name="OKFlow141" to="mov2#mpkg37#opm76#lpu2" gr:bendpoints="-214,-160,366,-5"/>
+      <OKLink id="mov2#mpkg37#opm76#mlu8#oln381" name="OKFlow141" to="mov2#mpkg37#opm76#lpu2" gr:bendpoints="-214,-152,366,-2"/>
       <BodyTemplate xml:space="preserve">Ciao $$utente$$.
 
 Ti ricordiamo che in data $$data$$ hai preso un appuntamento presso l'officina per svolgere il seguente tipo di intervento:
@@ -47,7 +47,7 @@ $$descrizione$$</BodyTemplate>
       <CollectorParameter id="mov2#mpkg37#opm76#pcu12#pcp68" name="nome_utente"/>
       <CollectorParameter id="mov2#mpkg37#opm76#pcu12#pcp69" name="tipologia"/>
       <CollectorParameter id="mov2#mpkg37#opm76#pcu12#pcp70" name="descrizione"/>
-      <Link id="mov2#mpkg37#opm76#pcu12#ln210" name="Flow140" to="mov2#mpkg37#opm76#mlu8" type="transport" validate="true" gr:bendpoints="146,123,-369,78;357,106,-43,111">
+      <Link id="mov2#mpkg37#opm76#pcu12#ln210" name="Flow140" to="mov2#mpkg37#opm76#mlu8" type="transport" validate="true" gr:bendpoints="146,123,-369,78;326,109,-74,109">
         <LinkParameter id="mov2#mpkg37#opm76#pcu12#ln210#par1341" name="descrizione_descrizione" source="mov2#mpkg37#opm76#pcu12#pcp70" target="mov2#mpkg37#opm76#mlu8.descrizione"/>
         <LinkParameter id="mov2#mpkg37#opm76#pcu12#ln210#par1342" name="email_Mail - To" source="mov2#mpkg37#opm76#pcu12#pcp71" target="mov2#mpkg37#opm76#mlu8.to"/>
         <LinkParameter id="mov2#mpkg37#opm76#pcu12#ln210#par1343" name="tipologia_tipologia" source="mov2#mpkg37#opm76#pcu12#pcp69" target="mov2#mpkg37#opm76#mlu8.tipologia"/>

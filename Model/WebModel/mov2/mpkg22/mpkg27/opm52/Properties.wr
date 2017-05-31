@@ -15,6 +15,7 @@
         <LinkParameter id="mov2#mpkg22#mpkg27#opm52#icu54#oln94#par33" name="prezzo_prezzo" source="mov2#mpkg22#mpkg27#opm52#icu54#icp66" target="mov2#mpkg22#mpkg27#opm52#cru1.ent1#att2"/>
         <LinkParameter id="mov2#mpkg22#mpkg27#opm52#icu54#oln94#par36" name="1_usato" sourceValue="1" target="mov2#mpkg22#mpkg27#opm52#cru1.ent1#att4"/>
         <LinkParameter id="mov2#mpkg22#mpkg27#opm52#icu54#oln94#par262" name="_targa" target="mov2#mpkg22#mpkg27#opm52#cru1.ent1#att30" source="mov2#mpkg22#mpkg27#opm52#icu54#icp67"/>
+        <LinkParameter id="mov2#mpkg22#mpkg27#opm52#icu54#oln94#par396" name="1_disponibilit&#224;" sourceValue="1" target="mov2#mpkg22#mpkg27#opm52#cru1.ent1#att27"/>
       </OKLink>
       <Link id="mov2#mpkg22#mpkg27#opm52#icu54#ln3" name="Flow3" to="mov2#mpkg22#mpkg27#opm52#cru19" type="transport" validate="true" gr:bendpoints="226,-78,-349,-68;392,-76,-183,-76">
         <LinkParameter id="mov2#mpkg22#mpkg27#opm52#icu54#ln3#par37" name="Utente.oid(AnnuncioToUtente)_Utente.oid(AnnuncioToUtente)" source="mov2#mpkg22#mpkg27#opm52#icu54#icp68" target="mov2#mpkg22#mpkg27#opm52#cru19.rel13#role26.userOID"/>

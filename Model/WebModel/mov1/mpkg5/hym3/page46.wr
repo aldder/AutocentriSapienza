@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg5#hym3#page46" name="Dettagli annuncio" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="305" gr:y="190" layout:frameLayout="None">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg5#hym3#page46" name="Dettagli annuncio" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="300" gr:y="190" layout:frameLayout="None">
   <ContentUnits>
-    <EntryUnit id="mov1#mpkg5#hym3#page46#enu27" name="Dettagli annuncio" linkOrder="mov1#mpkg5#hym3#page46#enu27#ln99 mov1#mpkg5#hym3#page46#enu27#ln98" gr:x="105" gr:y="0" fieldOrder="mov1#mpkg5#hym3#page46#enu27#fld190 mov1#mpkg5#hym3#page46#enu27#fld189 mov1#mpkg5#hym3#page46#enu27#fld154 mov1#mpkg5#hym3#page46#enu27#fld155 mov1#mpkg5#hym3#page46#enu27#fld156 mov1#mpkg5#hym3#page46#enu27#fld180 mov1#mpkg5#hym3#page46#enu27#fld181 mov1#mpkg5#hym3#page46#enu27#fld182 mov1#mpkg5#hym3#page46#enu27#fld183 mov1#mpkg5#hym3#page46#enu27#fld35 mov1#mpkg5#hym3#page46#enu27#fld33 mov1#mpkg5#hym3#page46#enu27#fld184" entity="ent1">
+    <EntryUnit id="mov1#mpkg5#hym3#page46#enu27" name="Dettagli annuncio" linkOrder="mov1#mpkg5#hym3#page46#enu27#ln99 mov1#mpkg5#hym3#page46#enu27#ln98" gr:x="110" gr:y="0" fieldOrder="mov1#mpkg5#hym3#page46#enu27#fld190 mov1#mpkg5#hym3#page46#enu27#fld189 mov1#mpkg5#hym3#page46#enu27#fld154 mov1#mpkg5#hym3#page46#enu27#fld155 mov1#mpkg5#hym3#page46#enu27#fld156 mov1#mpkg5#hym3#page46#enu27#fld180 mov1#mpkg5#hym3#page46#enu27#fld181 mov1#mpkg5#hym3#page46#enu27#fld182 mov1#mpkg5#hym3#page46#enu27#fld183 mov1#mpkg5#hym3#page46#enu27#fld35 mov1#mpkg5#hym3#page46#enu27#fld33 mov1#mpkg5#hym3#page46#enu27#fld184" entity="ent1">
       <Field id="mov1#mpkg5#hym3#page46#enu27#fld154" name="Prezzo" type="integer" modifiable="true" preloaded="true" attribute="ent1#att10">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg5#hym3#page46#enu27#fld154#mnd125" name="Mandatory" errorMessage="campo obbligatorio"/>
@@ -82,7 +82,11 @@
           <MandatoryValidationRule id="mov1#mpkg5#hym3#page46#enu27#fld33#mnd12" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
       </Field>
-      <Field id="mov1#mpkg5#hym3#page46#enu27#fld35" name="Usato" type="string" modifiable="true" preloaded="true"/>
+      <Field id="mov1#mpkg5#hym3#page46#enu27#fld35" name="Usato" type="boolean" modifiable="true" preloaded="true" attribute="ent1#att4">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg5#hym3#page46#enu27#fld35#mnd42" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
     </EntryUnit>
     <SelectorUnit gr:x="0" gr:y="0" id="mov1#mpkg5#hym3#page46#seu5" name="SelectAuto" entity="ent1">
       <Selector id="mov1#mpkg5#hym3#page46#seu5#su12" defaultPolicy="fill" booleanOperator="and">

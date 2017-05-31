@@ -50,7 +50,7 @@
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page69#enu50#fld24#mnd3" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
       </Field>
-      <Field id="mov1#mpkg6#hym9#page69#enu50#fld25" name="Autovettura" type="string" preloaded="true"/>
+      <Field id="mov1#mpkg6#hym9#page69#enu50#fld25" name="Autovettura" type="string" preloaded="true" modifiable="true"/>
       <Link id="mov1#mpkg6#hym9#page69#enu50#ln32" name="Flow32" to="mov1#mpkg6#hym9#seu8" type="normal" validate="false" ajaxEnabled="true">
         <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln32#par264" name="Targa_targa" source="mov1#mpkg6#hym9#page69#enu50#fld24" target="mov1#mpkg6#hym9#seu8#su11#acond3"/>
         <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln32#par265" name="Utente_utente2intervento2auto [oid]" source="mov1#mpkg6#hym9#page69#enu50#sfld32" target="mov1#mpkg6#hym9#seu8#su11#rcond28.userOID"/>
@@ -87,12 +87,7 @@
       <SortAttribute attribute="rel7#role14.ent3#att16" order="ascending"/>
       <SortAttribute attribute="rel6#role12.userName" order="ascending"/>
       <SortAttribute attribute="ent2#att26" order="ascending"/>
-      <DefaultSortAttribute attribute="rel17#role33.ent15#att66" order="ascending"/>
-      <DefaultSortAttribute attribute="ent2#att12" order="ascending"/>
-      <DefaultSortAttribute attribute="ent2#att13" order="ascending"/>
-      <DefaultSortAttribute attribute="rel7#role14.ent3#att16" order="ascending"/>
-      <DefaultSortAttribute attribute="rel6#role12.userName" order="ascending"/>
-      <DefaultSortAttribute attribute="ent2#att26" order="ascending"/>
+      <DefaultSortAttribute attribute="ent2#att12" order="descending"/>
     </PowerIndexUnit>
     <SelectorUnit id="mov1#mpkg6#hym9#page69#seu109" name="Utente" gr:x="420" gr:y="0" entity="User">
       <Link id="mov1#mpkg6#hym9#page69#seu109#ln306" name="Flow101" to="mov1#mpkg6#hym9#page69#enu50" type="transport" validate="true">

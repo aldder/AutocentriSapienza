@@ -1,37 +1,51 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg22#mpkg26#opm50" name="InserimentoAcquistoPendente" gr:x="0" gr:y="0">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg22#mpkg26#opm50#icu52" gr:x="40" gr:y="35" linkOrder="mov2#mpkg22#mpkg26#opm50#icu52#ln21">
+    <InputCollectorUnit id="mov2#mpkg22#mpkg26#opm50#icu52" gr:x="35" gr:y="90" linkOrder="mov2#mpkg22#mpkg26#opm50#icu52#ln83">
       <InputCollectorParameter id="mov2#mpkg22#mpkg26#opm50#icu52#icp247" name="id_utente"/>
       <InputCollectorParameter id="mov2#mpkg22#mpkg26#opm50#icu52#icp248" name="id_autovettura"/>
       <OKLink id="mov2#mpkg22#mpkg26#opm50#icu52#oln85" name="Acquista" to="mov2#mpkg22#mpkg26#opm50#seu6">
         <LinkParameter id="mov2#mpkg22#mpkg26#opm50#icu52#oln85#par166" name="id_autovettura_autovettura2acquisto [oid]" source="mov2#mpkg22#mpkg26#opm50#icu52#icp248" target="mov2#mpkg22#mpkg26#opm50#seu6#su20#rcond4.ent1#att1"/>
         <LinkParameter id="mov2#mpkg22#mpkg26#opm50#icu52#oln85#par167" name="id_utente_utente2acquisto [oid]" source="mov2#mpkg22#mpkg26#opm50#icu52#icp247" target="mov2#mpkg22#mpkg26#opm50#seu6#su20#rcond5.userOID"/>
       </OKLink>
-      <Link id="mov2#mpkg22#mpkg26#opm50#icu52#ln21" name="Flow21" to="mov2#mpkg22#mpkg26#opm50#cru18" type="transport" validate="true" gr:bendpoints="196,126,-344,126;401,125,-139,125">
+      <Link id="mov2#mpkg22#mpkg26#opm50#icu52#ln21" name="Flow21" to="mov2#mpkg22#mpkg26#opm50#cru18" type="transport" validate="true" gr:bendpoints="143,-85,-407,-5">
         <LinkParameter id="mov2#mpkg22#mpkg26#opm50#icu52#ln21#par169" name="id_autovettura_Autovettura.oid(AcquistoPendenteToAutovettura)" source="mov2#mpkg22#mpkg26#opm50#icu52#icp248" target="mov2#mpkg22#mpkg26#opm50#cru18.rel18#role35.ent1#att1"/>
         <LinkParameter id="mov2#mpkg22#mpkg26#opm50#icu52#ln21#par170" name="1_notifica" sourceValue="1" target="mov2#mpkg22#mpkg26#opm50#cru18.ent6#att25"/>
-        <LinkParameter id="mov2#mpkg22#mpkg26#opm50#icu52#ln21#par171" name="1_quantita" sourceValue="1" target="mov2#mpkg22#mpkg26#opm50#cru18.ent6#att39"/>
+        <LinkParameter id="mov2#mpkg22#mpkg26#opm50#icu52#ln21#par171" name="1_quantita" target="mov2#mpkg22#mpkg26#opm50#cru18.ent6#att39" source="mov2#mpkg22#mpkg26#opm50#icu52#icp105"/>
         <LinkParameter id="mov2#mpkg22#mpkg26#opm50#icu52#ln21#par172" name="id_utente_Utente.oid(Acquisto_PendenteToUtente)" source="mov2#mpkg22#mpkg26#opm50#icu52#icp247" target="mov2#mpkg22#mpkg26#opm50#cru18.rel2#role4.userOID"/>
       </Link>
+      <InputCollectorParameter id="mov2#mpkg22#mpkg26#opm50#icu52#icp105" name="quantit&#224;"/>
+      <Link id="mov2#mpkg22#mpkg26#opm50#icu52#ln83" name="Flow83" to="mov2#mpkg22#mpkg26#opm50#mfu3" type="transport" validate="true" gr:bendpoints="147,80,-413,0">
+        <LinkParameter id="mov2#mpkg22#mpkg26#opm50#icu52#ln83#par400" name="quantit&#224;_quantita" source="mov2#mpkg22#mpkg26#opm50#icu52#icp105" target="mov2#mpkg22#mpkg26#opm50#mfu3.ent6#att39"/>
+      </Link>
     </InputCollectorUnit>
-    <OKCollectorUnit id="mov2#mpkg22#mpkg26#opm50#okcu49" name="OK Port1" gr:x="935" gr:y="-20"/>
-    <CreateUnit id="mov2#mpkg22#mpkg26#opm50#cru18" name="Inserimento" gr:x="635" gr:y="35" entity="ent6" skipBlankRecords="true" notBlankAttributes="ent6#att23 ent6#att25">
+    <OKCollectorUnit id="mov2#mpkg22#mpkg26#opm50#okcu49" name="OK Port1" gr:x="880" gr:y="30"/>
+    <CreateUnit id="mov2#mpkg22#mpkg26#opm50#cru18" name="Inserimento" gr:x="640" gr:y="15" entity="ent6" skipBlankRecords="true" notBlankAttributes="ent6#att23 ent6#att25">
       <OKLink id="mov2#mpkg22#mpkg26#opm50#cru18#oln88" name="OKFlow23" to="mov2#mpkg22#mpkg26#opm50#okcu49"/>
       <KOLink id="mov2#mpkg22#mpkg26#opm50#cru18#kln132" name="KOFlow29" to="mov2#mpkg22#mpkg26#opm50#kocu43"/>
     </CreateUnit>
-    <KOCollectorUnit id="mov2#mpkg22#mpkg26#opm50#kocu43" name="KO Port5" gr:x="935" gr:y="65"/>
-    <SelectorUnit gr:x="305" gr:y="25" id="mov2#mpkg22#mpkg26#opm50#seu6" name="SelectAcquistoP" entity="ent6">
+    <KOCollectorUnit id="mov2#mpkg22#mpkg26#opm50#kocu43" name="KO Port5" gr:x="880" gr:y="165"/>
+    <SelectorUnit gr:x="310" gr:y="95" id="mov2#mpkg22#mpkg26#opm50#seu6" name="SelectAcquistoP" entity="ent6">
       <Selector id="mov2#mpkg22#mpkg26#opm50#seu6#su20" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="mov2#mpkg22#mpkg26#opm50#seu6#su20#rcond4" name="autovettura2acquisto" predicate="in" implied="false" role="rel18#role36"/>
         <RelationshipRoleCondition id="mov2#mpkg22#mpkg26#opm50#seu6#su20#rcond5" name="utente2acquisto" predicate="in" implied="false" role="rel2#role3"/>
       </Selector>
       <OKLink id="mov2#mpkg22#mpkg26#opm50#seu6#oln34" name="OKFlow34" to="mov2#mpkg22#mpkg26#opm50#inn2">
         <LinkParameter id="mov2#mpkg22#mpkg26#opm50#seu6#oln34#par168" name="oid_Input" source="ent6#att23Array" target="mov2#mpkg22#mpkg26#opm50#inn2.isnotnull"/>
+        <LinkParameter id="mov2#mpkg22#mpkg26#opm50#seu6#oln34#par336" name="oid_PASSING" source="ent6#att23Array" passing="true"/>
       </OKLink>
     </SelectorUnit>
-    <IsNotNullUnit gr:x="500" gr:y="45" id="mov2#mpkg22#mpkg26#opm50#inn2" name="Is Not Null">
+    <IsNotNullUnit gr:x="505" gr:y="115" id="mov2#mpkg22#mpkg26#opm50#inn2" name="Is Not Null">
       <KOLink id="mov2#mpkg22#mpkg26#opm50#inn2#kln12" name="KOFlow12" to="mov2#mpkg22#mpkg26#opm50#cru18"/>
-      <OKLink id="mov2#mpkg22#mpkg26#opm50#inn2#oln36" name="OKFlow36" to="mov2#mpkg22#mpkg26#opm50#okcu49" gr:bendpoints="92,-78,-408,-23"/>
+      <OKLink id="mov2#mpkg22#mpkg26#opm50#inn2#oln63" name="OKFlow63" to="mov2#mpkg22#mpkg26#opm50#mfu3">
+        <LinkParameter id="mov2#mpkg22#mpkg26#opm50#inn2#oln63#par399" name="oid_PASSING_KeyCondition7 [oid]" sourceLinkParameter="mov2#mpkg22#mpkg26#opm50#seu6#oln34#par336" target="mov2#mpkg22#mpkg26#opm50#mfu3#su56#kcond7.ent6#att23"/>
+      </OKLink>
     </IsNotNullUnit>
+    <ModifyUnit gr:x="640" gr:y="180" id="mov2#mpkg22#mpkg26#opm50#mfu3" name="ModificaAcquisto" entity="ent6">
+      <Selector id="mov2#mpkg22#mpkg26#opm50#mfu3#su56" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg22#mpkg26#opm50#mfu3#su56#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg22#mpkg26#opm50#mfu3#oln36" name="OKFlow36" to="mov2#mpkg22#mpkg26#opm50#okcu49"/>
+      <KOLink id="mov2#mpkg22#mpkg26#opm50#mfu3#kln35" name="KOFlow35" to="mov2#mpkg22#mpkg26#opm50#kocu43"/>
+    </ModifyUnit>
   </OperationUnits>
 </OperationModule>

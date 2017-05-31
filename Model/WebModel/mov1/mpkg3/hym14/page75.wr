@@ -29,6 +29,7 @@
         <LinkParameter id="mov1#mpkg3#hym14#page75#enu48#ln239#par930" name="Tipologia_id_tipologia" source="mov1#mpkg3#hym14#page75#enu48#sfld36" target="mov1#mpkg3#hym14#miu106.mov2#mpkg22#mpkg23#opm36#icu46#icp93"/>
         <LinkParameter id="mov1#mpkg3#hym14#page75#enu48#ln239#par57" name="Autovettura_targa" source="mov1#mpkg3#hym14#page75#enu48#fld21" target="mov1#mpkg3#hym14#miu106.mov2#mpkg22#mpkg23#opm36#icu46#icp4"/>
         <LinkParameter id="mov1#mpkg3#hym14#page75#enu48#ln239#par63" name="oid_PASSING_id_auto" sourceLinkParameter="mov1#mpkg3#hym14#seu7#oln41#par62" target="mov1#mpkg3#hym14#miu106.mov2#mpkg22#mpkg23#opm36#icu46#icp41"/>
+        <LinkParameter id="mov1#mpkg3#hym14#page75#enu48#ln239#par123" name="Autovettura_autovettura" source="mov1#mpkg3#hym14#page75#enu48#fld22" target="mov1#mpkg3#hym14#miu106.mov2#mpkg22#mpkg23#opm36#icu46#icp107"/>
       </Link>
       <Link id="mov1#mpkg3#hym14#page75#enu48#ln19" name="Flow19" to="mov1#mpkg3#hym14#seu7" type="normal" validate="false" ajaxEnabled="true">
         <LinkParameter id="mov1#mpkg3#hym14#page75#enu48#ln19#par55" name="Targa_targa" source="mov1#mpkg3#hym14#page75#enu48#fld21" target="mov1#mpkg3#hym14#seu7#su8#acond2"/>
@@ -38,7 +39,7 @@
           <MandatoryValidationRule id="mov1#mpkg3#hym14#page75#enu48#fld21#mnd1" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
       </Field>
-      <Field id="mov1#mpkg3#hym14#page75#enu48#fld22" name="Autovettura" type="string" preloaded="true"/>
+      <Field id="mov1#mpkg3#hym14#page75#enu48#fld22" name="Autovettura" type="string" preloaded="true" modifiable="true"/>
     </EntryUnit>
     <SelectorUnit id="mov1#mpkg3#hym14#page75#seu31" name="Tipologia" gr:x="410" gr:y="0" entity="ent3">
       <Link id="mov1#mpkg3#hym14#page75#seu31#ln242" name="Flow4" to="mov1#mpkg3#hym14#page75#enu48" type="transport" validate="true">
@@ -58,25 +59,27 @@
       </Link>
       <Selector id="mov1#mpkg3#hym14#page75#pwu30#su30" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="mov1#mpkg3#hym14#page75#pwu30#su30#rcond9" name="utente2appuntamento" predicate="in" implied="false" role="rel6#role11"/>
+        <AttributesCondition id="mov1#mpkg3#hym14#page75#pwu30#su30#acond17" name="data" predicate="gteq" booleanOperator="or" implied="false" attributes="ent2#att13"/>
       </Selector>
       <SortAttribute attribute="rel17#role33.ent15#att66" order="ascending"/>
       <SortAttribute attribute="ent2#att12" order="ascending"/>
       <SortAttribute attribute="ent2#att13" order="ascending"/>
       <SortAttribute attribute="rel7#role14.ent3#att16" order="ascending"/>
       <SortAttribute attribute="ent2#att26" order="ascending"/>
-      <DefaultSortAttribute attribute="rel17#role33.ent15#att66" order="ascending"/>
-      <DefaultSortAttribute attribute="ent2#att12" order="ascending"/>
-      <DefaultSortAttribute attribute="ent2#att13" order="ascending"/>
-      <DefaultSortAttribute attribute="rel7#role14.ent3#att16" order="ascending"/>
-      <DefaultSortAttribute attribute="ent2#att26" order="ascending"/>
+      <DefaultSortAttribute attribute="ent2#att12" order="descending"/>
     </PowerIndexUnit>
-    <GetUnit id="mov1#mpkg3#hym14#page75#gtu4" name="utente" gr:x="5" gr:y="285" contextParameters="UserCtxParam">
+    <GetUnit id="mov1#mpkg3#hym14#page75#gtu4" name="utente" gr:x="5" gr:y="325" contextParameters="UserCtxParam">
       <Link id="mov1#mpkg3#hym14#page75#gtu4#ln248" name="Flow26" to="mov1#mpkg3#hym14#page75#pwu30" type="transport" validate="true">
         <LinkParameter id="mov1#mpkg3#hym14#page75#gtu4#ln248#par907" name="UserCtxParam.oid_utente2appuntamento [oid]" source="mov1#mpkg3#hym14#page75#gtu4.UserCtxParam" target="mov1#mpkg3#hym14#page75#pwu30#su30#rcond9.userOID"/>
       </Link>
     </GetUnit>
     <MultiMessageUnit id="mov1#mpkg3#hym14#page75#mssu40" name="OkMessage" gr:x="390" gr:y="270"/>
     <MultiMessageUnit id="mov1#mpkg3#hym14#page75#mssu41" name="KoMessage" gr:x="390" gr:y="335"/>
+    <TimeUnit gr:x="15" gr:y="250" id="mov1#mpkg3#hym14#page75#tmu5" name="Today">
+      <Link id="mov1#mpkg3#hym14#page75#tmu5#ln8" name="Flow8" to="mov1#mpkg3#hym14#page75#pwu30" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym14#page75#tmu5#ln8#par3" name="Current/Input Date_data" source="currentDate" target="mov1#mpkg3#hym14#page75#pwu30#su30#acond17"/>
+      </Link>
+    </TimeUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -101,6 +104,37 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#mpkg3#hym14#page75#mssu41">
           <layout:LayoutParameter name="messageType" value="danger" type="unit"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg3#hym14#page75#pwu30">
+          <layout:Attribute attribute="ent2#att26" label="Autovettura"/>
+          <layout:Attribute label="Data" attribute="ent2#att13"/>
+          <layout:Attribute label="Ora" attribute="rel17#role33.ent15#att66"/>
+          <layout:Attribute label="Tipologia" attribute="rel7#role14.ent3#att16"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30#ln247"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30rel17#role33$ent15#att66"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30ent2#att13"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30rel7#role14$ent3#att16"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30ent2#att26"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30First"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30Previous"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30Block"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30Next"/>
+          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30Last"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -147,24 +181,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="mov1#mpkg3#hym14#page75#pwu30">
-          <layout:Attribute attribute="ent2#att26" label="Autovettura"/>
-          <layout:Attribute label="Data" attribute="ent2#att13"/>
-          <layout:Attribute label="Ora" attribute="rel17#role33.ent15#att66"/>
-          <layout:Attribute label="Tipologia" attribute="rel7#role14.ent3#att16"/>
-          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30#ln247"/>
-          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30rel17#role33$ent15#att66"/>
-          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30ent2#att13"/>
-          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30rel7#role14$ent3#att16"/>
-          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30ent2#att26"/>
-          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30First"/>
-          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30Previous"/>
-          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30Block"/>
-          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30Next"/>
-          <layout:Link link="mov1#mpkg3#hym14#page75#pwu30Last"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

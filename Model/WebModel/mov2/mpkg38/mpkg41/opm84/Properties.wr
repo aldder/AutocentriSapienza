@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg38#mpkg41#opm84" name="RegistraAcquistoPendente" gr:x="0" gr:y="0">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg38#mpkg41#opm84#icu87" gr:x="575" gr:y="150">
+    <InputCollectorUnit id="mov2#mpkg38#mpkg41#opm84#icu87" gr:x="-265" gr:y="140" linkOrder="mov2#mpkg38#mpkg41#opm84#icu87#ln47">
       <InputCollectorParameter id="mov2#mpkg38#mpkg41#opm84#icu87#icp414" name="targa"/>
       <InputCollectorParameter id="mov2#mpkg38#mpkg41#opm84#icu87#icp415" name="descrizione"/>
       <InputCollectorParameter id="mov2#mpkg38#mpkg41#opm84#icu87#icp416" name="prezzo"/>
@@ -8,62 +8,129 @@
       <InputCollectorParameter id="mov2#mpkg38#mpkg41#opm84#icu87#icp418" name="id_autovettura"/>
       <InputCollectorParameter id="mov2#mpkg38#mpkg41#opm84#icu87#icp419" name="id_acquisto"/>
       <InputCollectorParameter id="mov2#mpkg38#mpkg41#opm84#icu87#icp423" name="data"/>
-      <Link id="mov2#mpkg38#mpkg41#opm84#icu87#ln17" name="Flow67" to="mov2#mpkg38#mpkg41#opm84#miu4" type="transport" validate="true" gr:bendpoints="189,-156,-751,-156;820,-155,-120,-155">
+      <Link id="mov2#mpkg38#mpkg41#opm84#icu87#ln17" name="Flow67" to="mov2#mpkg38#mpkg41#opm84#miu4" type="transport" validate="true" gr:bendpoints="384,-229,-1201,-224;1267,-229,-318,-224">
         <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln17#par236" name="data_data" source="mov2#mpkg38#mpkg41#opm84#icu87#icp423" target="mov2#mpkg38#mpkg41#opm84#miu4.mov2#mpkg22#mpkg25#opm2#icu7#icp7"/>
         <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln17#par238" name="id_utente_id_utente" source="mov2#mpkg38#mpkg41#opm84#icu87#icp417" target="mov2#mpkg38#mpkg41#opm84#miu4.mov2#mpkg22#mpkg25#opm2#icu7#icp6"/>
-      </Link>
-      <Link id="mov2#mpkg38#mpkg41#opm84#icu87#ln18" name="Flow66" to="mov2#mpkg38#mpkg41#opm84#dlu42" type="transport" validate="true" gr:bendpoints="205,-116,-451,-116;516,-115,-140,-115">
-        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln18#par123" name="id_acquisto_KeyCondition25 [oid]" source="mov2#mpkg38#mpkg41#opm84#icu87#icp419" target="mov2#mpkg38#mpkg41#opm84#dlu42#su182#kcond110.ent6#att23"/>
-      </Link>
-      <OKLink id="mov2#mpkg38#mpkg41#opm84#icu87#oln31" name="OKFlow47" to="mov2#mpkg38#mpkg41#opm84#cru41">
-        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#oln31#par125" name="id_utente_Utente.oid(Storico_AcquistoToUtente)" source="mov2#mpkg38#mpkg41#opm84#icu87#icp417" target="mov2#mpkg38#mpkg41#opm84#cru41.rel12#role23.userOID"/>
-        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#oln31#par126" name="data_data" source="mov2#mpkg38#mpkg41#opm84#icu87#icp423" target="mov2#mpkg38#mpkg41#opm84#cru41.ent7#att48"/>
-        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#oln31#par127" name="descrizione_descrizione" source="mov2#mpkg38#mpkg41#opm84#icu87#icp415" target="mov2#mpkg38#mpkg41#opm84#cru41.ent7#att60"/>
-        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#oln31#par130" name="id_autovettura_Autovettura.oid(StoricoAcquistoToAutovettura)" source="mov2#mpkg38#mpkg41#opm84#icu87#icp418" target="mov2#mpkg38#mpkg41#opm84#cru41.rel19#role37.ent1#att1"/>
-      </OKLink>
-      <Link id="mov2#mpkg38#mpkg41#opm84#icu87#ln20" name="Flow20" to="mov2#mpkg38#mpkg41#opm84#mfu3" type="transport" validate="true" gr:bendpoints="206,-72,-250,-72;334,-72,-122,-72">
-        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln20#par156" name="0_catalogo" sourceValue="0" target="mov2#mpkg38#mpkg41#opm84#mfu3.ent1#att50"/>
-        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln20#par157" name="targa_targa" source="mov2#mpkg38#mpkg41#opm84#icu87#icp414" target="mov2#mpkg38#mpkg41#opm84#mfu3.ent1#att30"/>
-        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln20#par174" name="alimentazione" source="mov2#mpkg38#mpkg41#opm84#icu87#icp36" target="mov2#mpkg38#mpkg41#opm84#mfu3.ent1#att8"/>
-        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln20#par175" name="anno" source="mov2#mpkg38#mpkg41#opm84#icu87#icp37" target="mov2#mpkg38#mpkg41#opm84#mfu3.ent1#att7"/>
-        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln20#par176" name="cilindrata" source="mov2#mpkg38#mpkg41#opm84#icu87#icp38" target="mov2#mpkg38#mpkg41#opm84#mfu3.ent1#att9"/>
-        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln20#par177" name="kilometri" source="mov2#mpkg38#mpkg41#opm84#icu87#icp39" target="mov2#mpkg38#mpkg41#opm84#mfu3.ent1#att6"/>
-        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln20#par178" name="usato" source="mov2#mpkg38#mpkg41#opm84#icu87#icp40" target="mov2#mpkg38#mpkg41#opm84#mfu3.ent1#att4"/>
-        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln20#par179" name="id_autovettura_KeyCondition14 [oid]" source="mov2#mpkg38#mpkg41#opm84#icu87#icp418" target="mov2#mpkg38#mpkg41#opm84#mfu3#su13#kcond14.ent1#att1"/>
-        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln20#par184" name="prezzo_prezzo" source="mov2#mpkg38#mpkg41#opm84#icu87#icp416" target="mov2#mpkg38#mpkg41#opm84#mfu3.ent1#att2"/>
       </Link>
       <InputCollectorParameter id="mov2#mpkg38#mpkg41#opm84#icu87#icp36" name="alimentazione"/>
       <InputCollectorParameter id="mov2#mpkg38#mpkg41#opm84#icu87#icp37" name="anno"/>
       <InputCollectorParameter id="mov2#mpkg38#mpkg41#opm84#icu87#icp38" name="cilindrata"/>
       <InputCollectorParameter id="mov2#mpkg38#mpkg41#opm84#icu87#icp39" name="kilometri"/>
       <InputCollectorParameter id="mov2#mpkg38#mpkg41#opm84#icu87#icp40" name="usato"/>
-    </InputCollectorUnit>
-    <OKCollectorUnit id="mov2#mpkg38#mpkg41#opm84#okcu81" name="OK Port23" gr:x="1910" gr:y="135"/>
-    <DeleteUnit id="mov2#mpkg38#mpkg41#opm84#dlu42" name="RimuoviAcquisto" gr:x="1275" gr:y="225" entity="ent6">
-      <Selector id="mov2#mpkg38#mpkg41#opm84#dlu42#su182" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="mov2#mpkg38#mpkg41#opm84#dlu42#su182#kcond110" name="KeyCondition25" predicate="in" implied="false"/>
-      </Selector>
-      <OKLink id="mov2#mpkg38#mpkg41#opm84#dlu42#oln432" name="OKFlow60" to="mov2#mpkg38#mpkg41#opm84#miu4"/>
-      <KOLink id="mov2#mpkg38#mpkg41#opm84#dlu42#kln186" name="KOFlow74" to="mov2#mpkg38#mpkg41#opm84#kocu74" gr:bendpoints="162,104,-518,49;438,100,-242,45"/>
-    </DeleteUnit>
-    <CreateUnit id="mov2#mpkg38#mpkg41#opm84#cru41" name="InserisciStorico" gr:x="885" gr:y="230" entity="ent7">
-      <Link id="mov2#mpkg38#mpkg41#opm84#cru41#ln234" name="Flow68" to="mov2#mpkg38#mpkg41#opm84#miu4" type="transport" validate="true" gr:bendpoints="140,113,-540,113;517,113,-163,113">
-        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#cru41#ln234#par239" name="oid_id_acquisto" source="ent7#att24Array" target="mov2#mpkg38#mpkg41#opm84#miu4.mov2#mpkg22#mpkg25#opm2#icu7#icp8"/>
+      <Link id="mov2#mpkg38#mpkg41#opm84#icu87#ln36" name="Flow36" to="mov2#mpkg38#mpkg41#opm84#mfu8" type="transport" validate="true" gr:bendpoints="224,79,-287,79;388,79,-123,79">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln36#par54" name="id_autovettura_KeyCondition19 [oid]" source="mov2#mpkg38#mpkg41#opm84#icu87#icp418" target="mov2#mpkg38#mpkg41#opm84#mfu8#su1#kcond19.ent1#att1"/>
       </Link>
-      <KOLink id="mov2#mpkg38#mpkg41#opm84#cru41#kln190" name="KOFlow72" to="mov2#mpkg38#mpkg41#opm84#kocu74" gr:bendpoints="226,208,-850,153;858,207,-218,152"/>
-      <OKLink id="mov2#mpkg38#mpkg41#opm84#cru41#oln27" name="OKFlow27" to="mov2#mpkg38#mpkg41#opm84#mfu3"/>
-    </CreateUnit>
-    <KOCollectorUnit id="mov2#mpkg38#mpkg41#opm84#kocu74" name="KO Port20" gr:x="1910" gr:y="285"/>
-    <ModifyUnit gr:x="1075" gr:y="225" id="mov2#mpkg38#mpkg41#opm84#mfu3" name="ModifcaAuto" entity="ent1">
-      <Selector id="mov2#mpkg38#mpkg41#opm84#mfu3#su13" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="mov2#mpkg38#mpkg41#opm84#mfu3#su13#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
-      </Selector>
-      <OKLink id="mov2#mpkg38#mpkg41#opm84#mfu3#oln33" name="OKFlow33" to="mov2#mpkg38#mpkg41#opm84#dlu42"/>
-      <KOLink id="mov2#mpkg38#mpkg41#opm84#mfu3#kln6" name="KOFlow6" to="mov2#mpkg38#mpkg41#opm84#kocu74" gr:bendpoints="186,175,-710,120;645,175,-251,120"/>
-    </ModifyUnit>
-    <ModuleInstanceUnit gr:x="1510" gr:y="235" id="mov2#mpkg38#mpkg41#opm84#miu4" action="true" moduleId="mov2#mpkg22#mpkg25#opm2">
+      <Link id="mov2#mpkg38#mpkg41#opm84#icu87#ln37" name="Flow37" to="mov2#mpkg38#mpkg41#opm84#cru2" type="transport" validate="true" gr:bendpoints="300,-94,-395,-100;565,-89,-130,-95">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln37#par56" name="alimentazione_alimentazione" source="mov2#mpkg38#mpkg41#opm84#icu87#icp36" target="mov2#mpkg38#mpkg41#opm84#cru2.ent1#att8"/>
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln37#par59" name="anno_anno" source="mov2#mpkg38#mpkg41#opm84#icu87#icp37" target="mov2#mpkg38#mpkg41#opm84#cru2.ent1#att7"/>
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln37#par60" name="0_catalogo" sourceValue="0" target="mov2#mpkg38#mpkg41#opm84#cru2.ent1#att50"/>
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln37#par83" name="cilindrata_cilindrata" source="mov2#mpkg38#mpkg41#opm84#icu87#icp38" target="mov2#mpkg38#mpkg41#opm84#cru2.ent1#att9"/>
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln37#par86" name="kilometri_kilometri" source="mov2#mpkg38#mpkg41#opm84#icu87#icp39" target="mov2#mpkg38#mpkg41#opm84#cru2.ent1#att6"/>
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln37#par87" name="0_officina" sourceValue="0" target="mov2#mpkg38#mpkg41#opm84#cru2.ent1#att5"/>
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln37#par88" name="prezzo_prezzo" source="mov2#mpkg38#mpkg41#opm84#icu87#icp416" target="mov2#mpkg38#mpkg41#opm84#cru2.ent1#att2"/>
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln37#par89" name="targa_targa" source="mov2#mpkg38#mpkg41#opm84#icu87#icp414" target="mov2#mpkg38#mpkg41#opm84#cru2.ent1#att30"/>
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln37#par91" name="usato_usato" source="mov2#mpkg38#mpkg41#opm84#icu87#icp40" target="mov2#mpkg38#mpkg41#opm84#cru2.ent1#att4"/>
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln37#par351" name="descrizione_descrizione" source="mov2#mpkg38#mpkg41#opm84#icu87#icp415" target="mov2#mpkg38#mpkg41#opm84#cru2.ent1#att11"/>
+      </Link>
+      <Link id="mov2#mpkg38#mpkg41#opm84#icu87#ln39" name="Flow39" to="mov2#mpkg38#mpkg41#opm84#dlu6" type="transport" validate="true" gr:bendpoints="347,-141,-813,-101;820,-142,-340,-102">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln39#par325" name="id_acquisto_KeyCondition26 [oid]" source="mov2#mpkg38#mpkg41#opm84#icu87#icp419" target="mov2#mpkg38#mpkg41#opm84#dlu6#su21#kcond26.ent6#att23"/>
+      </Link>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg41#opm84#icu87#icp106" name="quantit&#224;"/>
+      <Link id="mov2#mpkg38#mpkg41#opm84#icu87#ln42" name="Flow42" to="mov2#mpkg38#mpkg41#opm84#mathu3" type="transport" validate="true" gr:bendpoints="205,92,-646,86;768,92,-83,86">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln42#par334" name="quantit&#224;_quantit&#224;" source="mov2#mpkg38#mpkg41#opm84#icu87#icp106" target="mov2#mpkg38#mpkg41#opm84#mathu3#mathv3"/>
+      </Link>
+      <Link id="mov2#mpkg38#mpkg41#opm84#icu87#ln45" name="Flow45" to="mov2#mpkg38#mpkg41#opm84#mfu9" type="transport" validate="true" gr:bendpoints="227,139,-933,79;987,139,-173,79">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln45#par337" name="id_acquisto_KeyCondition27 [oid]" source="mov2#mpkg38#mpkg41#opm84#icu87#icp419" target="mov2#mpkg38#mpkg41#opm84#mfu9#su50#kcond27.ent6#att23"/>
+      </Link>
+      <OKLink id="mov2#mpkg38#mpkg41#opm84#icu87#oln154" name="OKFlow154" to="mov2#mpkg38#mpkg41#opm84#seu3">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#oln154#par339" name="id_autovettura_KeyCondition28 [oid]" source="mov2#mpkg38#mpkg41#opm84#icu87#icp418" target="mov2#mpkg38#mpkg41#opm84#seu3#su53#kcond28.ent1#att1"/>
+      </OKLink>
+      <Link id="mov2#mpkg38#mpkg41#opm84#icu87#ln47" name="Flow47" to="mov2#mpkg38#mpkg41#opm84#cru9" type="transport" validate="true" gr:bendpoints="388,-197,-967,-192;1172,-196,-183,-191">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln47#par347" name="data_data" source="mov2#mpkg38#mpkg41#opm84#icu87#icp423" target="mov2#mpkg38#mpkg41#opm84#cru9.ent7#att48"/>
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln47#par348" name="descrizione_descrizione" source="mov2#mpkg38#mpkg41#opm84#icu87#icp415" target="mov2#mpkg38#mpkg41#opm84#cru9.ent7#att60"/>
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#icu87#ln47#par349" name="id_utente_Utente.oid(Storico_AcquistoToUtente)" source="mov2#mpkg38#mpkg41#opm84#icu87#icp417" target="mov2#mpkg38#mpkg41#opm84#cru9.rel12#role23.userOID"/>
+      </Link>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov2#mpkg38#mpkg41#opm84#okcu81" name="OK Port23" gr:x="1735" gr:y="150"/>
+    <KOCollectorUnit id="mov2#mpkg38#mpkg41#opm84#kocu74" name="KO Port20" gr:x="1735" gr:y="300"/>
+    <ModuleInstanceUnit gr:x="1440" gr:y="235" id="mov2#mpkg38#mpkg41#opm84#miu4" action="true" moduleId="mov2#mpkg22#mpkg25#opm2">
       <OKLink id="mov2#mpkg38#mpkg41#opm84#miu4#oln38" name="OKFlow38" to="mov2#mpkg38#mpkg41#opm84#okcu81"/>
       <KOLink id="mov2#mpkg38#mpkg41#opm84#miu4#kln14" name="KOFlow14" to="mov2#mpkg38#mpkg41#opm84#kocu74"/>
     </ModuleInstanceUnit>
+    <ModifyUnit gr:x="415" gr:y="230" id="mov2#mpkg38#mpkg41#opm84#mfu8" name="ModificaAutoCat" entity="ent1">
+      <Selector id="mov2#mpkg38#mpkg41#opm84#mfu8#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg38#mpkg41#opm84#mfu8#su1#kcond19" name="KeyCondition19" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg38#mpkg41#opm84#mfu8#oln156" name="OKFlow156" to="mov2#mpkg38#mpkg41#opm84#cru2"/>
+      <KOLink id="mov2#mpkg38#mpkg41#opm84#mfu8#kln6" name="KOFlow6" to="mov2#mpkg38#mpkg41#opm84#kocu74" gr:bendpoints="110,154,-1254,88;1105,154,-259,88"/>
+    </ModifyUnit>
+    <CreateUnit gr:x="600" gr:y="240" id="mov2#mpkg38#mpkg41#opm84#cru2" name="InserisciAutoAcq" entity="ent1" linkOrder="mov2#mpkg38#mpkg41#opm84#cru2#ln48">
+      <OKLink id="mov2#mpkg38#mpkg41#opm84#cru2#oln5" name="OKFlow5" to="mov2#mpkg38#mpkg41#opm84#mathu3"/>
+      <Link id="mov2#mpkg38#mpkg41#opm84#cru2#ln48" name="Flow48" to="mov2#mpkg38#mpkg41#opm84#cru9" type="transport" validate="true" gr:bendpoints="190,-140,-470,-129;484,-135,-176,-124">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#cru2#ln48#par350" name="oid_Autovettura.oid(StoricoAcquistoToAutovettura)" source="ent1#att1Array" target="mov2#mpkg38#mpkg41#opm84#cru9.rel19#role37.ent1#att1"/>
+      </Link>
+      <KOLink id="mov2#mpkg38#mpkg41#opm84#cru2#kln18" name="KOFlow18" to="mov2#mpkg38#mpkg41#opm84#kocu74" gr:bendpoints="90,149,-1090,89;917,150,-263,90"/>
+    </CreateUnit>
+    <SwitchUnit gr:x="900" gr:y="250" id="mov2#mpkg38#mpkg41#opm84#switch1" name="quantit&#224;">
+      <Case value="0"/>
+      <OKLink id="mov2#mpkg38#mpkg41#opm84#switch1#oln74" name="OKFlow74" to="mov2#mpkg38#mpkg41#opm84#dlu6" code="0"/>
+      <OKLink id="mov2#mpkg38#mpkg41#opm84#switch1#oln158" name="OKFlow143" to="mov2#mpkg38#mpkg41#opm84#mfu9"/>
+    </SwitchUnit>
+    <DeleteUnit gr:x="1065" gr:y="190" id="mov2#mpkg38#mpkg41#opm84#dlu6" name="RimuoviAcquisto" entity="ent6">
+      <Selector id="mov2#mpkg38#mpkg41#opm84#dlu6#su21" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg38#mpkg41#opm84#dlu6#su21#kcond26" name="KeyCondition26" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg38#mpkg41#opm84#dlu6#oln146" name="OKFlow146" to="mov2#mpkg38#mpkg41#opm84#cru9"/>
+      <KOLink id="mov2#mpkg38#mpkg41#opm84#dlu6#kln33" name="KOFlow33" to="mov2#mpkg38#mpkg41#opm84#kocu74" gr:bendpoints="97,196,-618,90;453,196,-262,90"/>
+    </DeleteUnit>
+    <ModifyUnit gr:x="1065" gr:y="290" id="mov2#mpkg38#mpkg41#opm84#mfu9" name="ModificaAcquisto" entity="ent6">
+      <Selector id="mov2#mpkg38#mpkg41#opm84#mfu9#su50" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg38#mpkg41#opm84#mfu9#su50#kcond27" name="KeyCondition27" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#mpkg38#mpkg41#opm84#mfu9#oln148" name="OKFlow148" to="mov2#mpkg38#mpkg41#opm84#cru9"/>
+      <KOLink id="mov2#mpkg38#mpkg41#opm84#mfu9#kln32" name="KOFlow32" to="mov2#mpkg38#mpkg41#opm84#kocu74" gr:bendpoints="43,94,-672,88;456,96,-259,90"/>
+    </ModifyUnit>
+    <CreateUnit gr:x="1265" gr:y="230" id="mov2#mpkg38#mpkg41#opm84#cru9" name="InserisciStorico" entity="ent7">
+      <OKLink id="mov2#mpkg38#mpkg41#opm84#cru9#oln153" name="OKFlow153" to="mov2#mpkg38#mpkg41#opm84#miu4">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#cru9#oln153#par338" name="oid_id_acquisto" source="ent7#att24Array" target="mov2#mpkg38#mpkg41#opm84#miu4.mov2#mpkg22#mpkg25#opm2#icu7#icp8"/>
+      </OKLink>
+      <KOLink id="mov2#mpkg38#mpkg41#opm84#cru9#kln30" name="KOFlow30" to="mov2#mpkg38#mpkg41#opm84#kocu74" gr:bendpoints="76,159,-444,88;258,161,-262,90"/>
+    </CreateUnit>
+    <MathUnit gr:x="280" gr:y="240" id="mov2#mpkg38#mpkg41#opm84#mathu2" name="decrDisp" resultType="integer" defaultExpression="disponibilit&#224; - 1">
+      <MathVariable id="mov2#mpkg38#mpkg41#opm84#mathu2#mathv2" name="disponibilit&#224;"/>
+      <OKLink id="mov2#mpkg38#mpkg41#opm84#mathu2#oln6" name="OKFlow6" to="mov2#mpkg38#mpkg41#opm84#mfu8">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#mathu2#oln6#par38" name="Result_disponibilit&#224;" source="result" target="mov2#mpkg38#mpkg41#opm84#mfu8.ent1#att27"/>
+      </OKLink>
+    </MathUnit>
+    <SelectorUnit gr:x="10" gr:y="230" id="mov2#mpkg38#mpkg41#opm84#seu3" name="SelectAutoCat" entity="ent1" linkOrder="mov2#mpkg38#mpkg41#opm84#seu3#ln71">
+      <Selector id="mov2#mpkg38#mpkg41#opm84#seu3#su53" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg38#mpkg41#opm84#seu3#su53#kcond28" name="KeyCondition28" predicate="in" implied="false"/>
+        <AttributesCondition id="mov2#mpkg38#mpkg41#opm84#seu3#su53#acond16" name="disponibilit&#224;" predicate="gteq" booleanOperator="or" implied="false" attributes="ent1#att27" value="1"/>
+      </Selector>
+      <OKLink id="mov2#mpkg38#mpkg41#opm84#seu3#oln155" name="OKFlow155" to="mov2#mpkg38#mpkg41#opm84#inn1">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#seu3#oln155#par393" name="oid_Input" source="ent1#att1Array" target="mov2#mpkg38#mpkg41#opm84#inn1.isnotnull"/>
+      </OKLink>
+      <Link id="mov2#mpkg38#mpkg41#opm84#seu3#ln46" name="Flow46" to="mov2#mpkg38#mpkg41#opm84#cru2" type="transport" validate="true" gr:bendpoints="118,-74,-482,-74;325,-68,-150,-74">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#seu3#ln46#par342" name="foto_foto" source="ent1#att3Array" target="mov2#mpkg38#mpkg41#opm84#cru2.ent1#att3"/>
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#seu3#ln46#par344" name="nome_nome" source="ent1#att46Array" target="mov2#mpkg38#mpkg41#opm84#cru2.ent1#att46"/>
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#seu3#ln46#par345" name="porte_porte" source="ent1#att10Array" target="mov2#mpkg38#mpkg41#opm84#cru2.ent1#att10"/>
+      </Link>
+      <Link id="mov2#mpkg38#mpkg41#opm84#seu3#ln71" name="Flow71" to="mov2#mpkg38#mpkg41#opm84#mathu2" type="transport" validate="true" gr:bendpoints="116,-48,-144,-42;169,-47,-91,-41">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#seu3#ln71#par394" name="disponibilit&#224;_disponibilit&#224;" source="ent1#att27Array" target="mov2#mpkg38#mpkg41#opm84#mathu2#mathv2"/>
+      </Link>
+    </SelectorUnit>
+    <MathUnit gr:x="775" gr:y="245" id="mov2#mpkg38#mpkg41#opm84#mathu3" name="decrQuan" resultType="float" defaultExpression="quantit&#224; - 1" linkOrder="mov2#mpkg38#mpkg41#opm84#mathu3#ln72">
+      <MathVariable id="mov2#mpkg38#mpkg41#opm84#mathu3#mathv3" name="quantit&#224;"/>
+      <OKLink id="mov2#mpkg38#mpkg41#opm84#mathu3#oln160" name="OKFlow160" to="mov2#mpkg38#mpkg41#opm84#switch1">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#mathu3#oln160#par353" name="Result_Switch" source="result" target="mov2#mpkg38#mpkg41#opm84#switch1.switch"/>
+      </OKLink>
+      <Link id="mov2#mpkg38#mpkg41#opm84#mathu3#ln72" name="Flow72" to="mov2#mpkg38#mpkg41#opm84#mfu9" type="transport" validate="true" gr:bendpoints="64,57,-245,3">
+        <LinkParameter id="mov2#mpkg38#mpkg41#opm84#mathu3#ln72#par395" name="Result_quantita" source="result" target="mov2#mpkg38#mpkg41#opm84#mfu9.ent6#att39"/>
+      </Link>
+    </MathUnit>
+    <IsNotNullUnit gr:x="160" gr:y="250" id="mov2#mpkg38#mpkg41#opm84#inn1" name="Is Not Null">
+      <OKLink id="mov2#mpkg38#mpkg41#opm84#inn1#oln161" name="OKFlow161" to="mov2#mpkg38#mpkg41#opm84#mathu2"/>
+      <KOLink id="mov2#mpkg38#mpkg41#opm84#inn1#kln4" name="KOFlow4" to="mov2#mpkg38#mpkg41#opm84#kocu74" gr:bendpoints="82,149,-1558,89;1373,149,-267,89"/>
+    </IsNotNullUnit>
   </OperationUnits>
 </OperationModule>

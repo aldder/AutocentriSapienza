@@ -1,11 +1,5 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym7#page63" name="Gestione orari appuntamenti" landmark="true" gr:x="210" gr:y="35">
   <ContentUnits>
-    <IndexUnit id="mov1#mpkg6#hym7#page63#inu3" name="Orari" linkOrder="mov1#mpkg6#hym7#page63#inu3#ln266" gr:x="0" gr:y="35" entity="ent15" displayAttributes="ent15#att66">
-      <SortAttribute attribute="ent15#att66" order="ascending"/>
-      <Link id="mov1#mpkg6#hym7#page63#inu3#ln266" name="Visualizza" to="mov1#mpkg6#hym7#page62#enu44" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowWidth="600" ajaxWindowHeight="150" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli orario">
-        <LinkParameter id="mov1#mpkg6#hym7#page63#inu3#ln266#par1693" name="oid_Key Condition [oid]" source="data[].ent15#att65" target="mov1#mpkg6#hym7#page62#enu44.ent15#att65"/>
-      </Link>
-    </IndexUnit>
     <EntryUnit id="mov1#mpkg6#hym7#page63#enu45" name="Inserisci orario" linkOrder="mov1#mpkg6#hym7#page63#enu45#ln267" gr:x="95" gr:y="0" entity="ent15">
       <Field id="mov1#mpkg6#hym7#page63#enu45#fld174" name="Ora" type="time" modifiable="true" attribute="ent15#att66">
         <VRules>
@@ -21,6 +15,14 @@
     </EntryUnit>
     <MultiMessageUnit id="mov1#mpkg6#hym7#page63#mssu54" name="KoMessage" gr:x="240" gr:y="110"/>
     <MultiMessageUnit id="mov1#mpkg6#hym7#page63#mssu55" name="OkMessage" gr:x="240" gr:y="40"/>
+    <PowerIndexUnit id="mov1#mpkg6#hym7#page63#pwu2" entity="ent15" displayAttributes="ent15#att66" sortable="true" checkable="false" useCountQuery="false" name="Orari" linkOrder="mov1#mpkg6#hym7#page63#pwu2#ln10" gr:x="0" gr:y="35">
+      <Link id="mov1#mpkg6#hym7#page63#pwu2#ln10" name="Visualizza" to="mov1#mpkg6#hym7#page62#enu44" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli orario" ajaxWindowWidth="600" ajaxWindowHeight="150" ajaxWindowClosable="true" ajaxWindowModal="true">
+        <LinkParameter id="mov1#mpkg6#hym7#page63#pwu2#ln10#par34" name="oid_Key Condition [oid]" source="data[].ent15#att65" target="mov1#mpkg6#hym7#page62#enu44.ent15#att65"/>
+      </Link>
+      <SortAttribute attribute="ent15#att66" order="ascending"/>
+      <SortAttribute attribute="ent15#att65" order="ascending"/>
+      <DefaultSortAttribute attribute="ent15#att65" order="descending"/>
+    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -61,9 +63,10 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="mov1#mpkg6#hym7#page63#inu3">
+        <layout:Unit unitId="mov1#mpkg6#hym7#page63#pwu2">
           <layout:Attribute attribute="ent15#att66" label="Ora"/>
-          <layout:Link link="mov1#mpkg6#hym7#page63#inu3#ln266"/>
+          <layout:Link link="mov1#mpkg6#hym7#page63#pwu2#ln10"/>
+          <layout:Link link="mov1#mpkg6#hym7#page63#pwu2ent15#att66"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

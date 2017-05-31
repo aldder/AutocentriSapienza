@@ -1,11 +1,12 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg3#hym15#page78" name="Dettagli autovettura" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="735" gr:y="0" layout:frameLayout="None">
   <ContentUnits>
-    <DataUnit id="mov1#mpkg3#hym15#page78#dau3" name="Dettagli autovettura" linkOrder="mov1#mpkg3#hym15#page78#dau3#ln292" gr:x="0" gr:y="0" entity="ent1" displayAttributes="ent1#att46 ent1#att3 ent1#att2 ent1#att6 ent1#att7 ent1#att8 ent1#att9 ent1#att10 ent1#att4 ent1#att11">
+    <DataUnit id="mov1#mpkg3#hym15#page78#dau3" name="Dettagli autovettura" linkOrder="mov1#mpkg3#hym15#page78#dau3#ln292" gr:x="0" gr:y="0" entity="ent6" displayAttributes="rel18#role35.ent1#att46 rel18#role35.ent1#att3 rel18#role35.ent1#att2 rel18#role35.ent1#att7 rel18#role35.ent1#att6 rel18#role35.ent1#att8 rel18#role35.ent1#att9 rel18#role35.ent1#att10 rel18#role35.ent1#att27 ent6#att39 rel18#role35.ent1#att4 rel18#role35.ent1#att11">
       <Selector id="mov1#mpkg3#hym15#page78#dau3#su34" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov1#mpkg3#hym15#page78#dau3#su34#kcond6" name="KeyCondition18" predicate="in" implied="false"/>
       </Selector>
       <Link id="mov1#mpkg3#hym15#page78#dau3#ln292" name="Rimuovi acquisto" to="mov1#mpkg3#hym15#miu111" type="normal" validate="true">
-        <LinkParameter id="mov1#mpkg3#hym15#page78#dau3#ln292#par974" name="oid_autovettura2acquisto [oid]" source="data.ent1#att1" target="mov1#mpkg3#hym15#miu111.mov2#mpkg22#mpkg26#opm51#icu53#icp250"/>
+        <LinkParameter id="mov1#mpkg3#hym15#page78#dau3#ln292#par974" name="oid_autovettura2acquisto [oid]" source="data.rel18#role35_ent1#att1" target="mov1#mpkg3#hym15#miu111.mov2#mpkg22#mpkg26#opm51#icu53#icp250"/>
+        <LinkParameter id="mov1#mpkg3#hym15#page78#dau3#ln292#par31" name="Acquisto_PendenteToUtente.oid_id_utente" source="data.rel2#role4_userOID" target="mov1#mpkg3#hym15#miu111.mov2#mpkg22#mpkg26#opm51#icu53#icp249"/>
       </Link>
     </DataUnit>
   </ContentUnits>
@@ -14,19 +15,21 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#mpkg3#hym15#page78#dau3">
           <layout:Link link="mov1#mpkg3#hym15#page78#dau3#ln292"/>
-          <layout:Attribute label="Nome" attribute="ent1#att46"/>
-          <layout:Attribute label="Foto" attribute="ent1#att3">
+          <layout:Attribute attribute="rel18#role35.ent1#att46" label="Nome"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att3" label="Foto">
             <layout:LayoutParameter name="image-width" value="400" type="attribute"/>
             <layout:LayoutParameter name="image-height" value="300" type="attribute"/>
           </layout:Attribute>
-          <layout:Attribute label="Prezzo" attribute="ent1#att2"/>
-          <layout:Attribute label="Kilometri" attribute="ent1#att6"/>
-          <layout:Attribute label="Anno di immatricolazione" attribute="ent1#att7"/>
-          <layout:Attribute label="Alimentazione" attribute="ent1#att8"/>
-          <layout:Attribute label="Cilindrata" attribute="ent1#att9"/>
-          <layout:Attribute label="Numero di porte" attribute="ent1#att10"/>
-          <layout:Attribute label="Usato" attribute="ent1#att4"/>
-          <layout:Attribute label="Descrizione" attribute="ent1#att11"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att2" label="Prezzo"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att7" label="Anno di immatricolazione"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att6" label="Kilometri"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att8" label="Alimentazione"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att9" label="Cilindrata"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att10" label="Numero di porte"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att27" label="Disponibilit&#224;"/>
+          <layout:Attribute attribute="ent6#att39" label="Quantit&#224;"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att4" label="Usato"/>
+          <layout:Attribute attribute="rel18#role35.ent1#att11" label="Descrizione"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

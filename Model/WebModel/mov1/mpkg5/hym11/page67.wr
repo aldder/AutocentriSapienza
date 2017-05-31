@@ -14,15 +14,13 @@
         <LinkParameter id="mov1#mpkg5#hym11#page67#pwu22#ln152#par243" name="StoricoAcquistoToAutovettura.prezzo_Prezzo" source="data[].rel19#role37$ent1#att2" target="mov1#mpkg5#hym11#page71#enu36#fld46_slot"/>
         <LinkParameter id="mov1#mpkg5#hym11#page67#pwu22#ln152#par244" name="StoricoAcquistoToAutovettura.targa_Targa" source="data[].rel19#role37$ent1#att30" target="mov1#mpkg5#hym11#page71#enu36#fld45_slot"/>
       </Link>
-      <DefaultSortAttribute attribute="rel12#role23.userName" order="ascending"/>
-      <DefaultSortAttribute attribute="ent7#att24" order="ascending"/>
-      <DefaultSortAttribute attribute="ent7#att48" order="ascending"/>
       <SortAttribute attribute="rel12#role23.userName" order="ascending"/>
       <SortAttribute attribute="ent7#att24" order="ascending"/>
       <SortAttribute attribute="ent7#att48" order="ascending"/>
       <SortAttribute attribute="rel19#role37.ent1#att46" order="ascending"/>
       <SortAttribute attribute="rel19#role37.ent1#att30" order="ascending"/>
       <SortAttribute attribute="rel19#role37.ent1#att2" order="ascending"/>
+      <DefaultSortAttribute attribute="ent7#att24" order="descending"/>
     </PowerIndexUnit>
     <MultiMessageUnit id="mov1#mpkg5#hym11#page67#mssu34" name="OkMessage" gr:x="185" gr:y="70"/>
     <MultiMessageUnit id="mov1#mpkg5#hym11#page67#mssu37" name="KoMessage" gr:x="185" gr:y="135"/>

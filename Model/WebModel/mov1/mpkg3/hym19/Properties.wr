@@ -16,7 +16,7 @@
     <NoOpOperationUnit id="mov1#mpkg3#hym19#opu3" name="Ripristina" gr:x="300" gr:y="250">
       <OKLink id="mov1#mpkg3#hym19#opu3#oln178" name="OKFlow1" to="mov1#mpkg3#hym19#page87"/>
     </NoOpOperationUnit>
-    <ModuleInstanceUnit id="mov1#mpkg3#hym19#miu129" gr:x="875" gr:y="495" moduleId="mov2#mpkg22#mpkg28#opm55">
+    <ModuleInstanceUnit id="mov1#mpkg3#hym19#miu129" gr:x="895" gr:y="515" moduleId="mov2#mpkg22#mpkg28#opm55">
       <OKLink id="mov1#mpkg3#hym19#miu129#oln179" name="OKFlow24" to="mov1#mpkg3#hym19#page87#mssu65">
         <LinkParameter id="mov1#mpkg3#hym19#miu129#oln179#par1097" name="L'autovettura e' stata aggiunta ai preferiti._Shown Messages" target="mov1#mpkg3#hym19#page87#mssu65.shownMessages" sourceValue="L'autovettura e' stata aggiunta ai preferiti."/>
       </OKLink>
@@ -24,7 +24,7 @@
         <LinkParameter id="mov1#mpkg3#hym19#miu129#kln87#par1098" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg3#hym19#page87#mssu66.shownMessages" sourceValue="Si e' verificato un errore."/>
       </KOLink>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit id="mov1#mpkg3#hym19#miu130" gr:x="890" gr:y="410" moduleId="mov2#mpkg22#mpkg26#opm50">
+    <ModuleInstanceUnit id="mov1#mpkg3#hym19#miu130" gr:x="895" gr:y="410" moduleId="mov2#mpkg22#mpkg26#opm50">
       <OKLink id="mov1#mpkg3#hym19#miu130#oln180" name="OKFlow23" to="mov1#mpkg3#hym19#page87#mssu65">
         <LinkParameter id="mov1#mpkg3#hym19#miu130#oln180#par1099" name="L'autovettura e' stata aggiunta agli acquisti pendenti._Shown Messages" target="mov1#mpkg3#hym19#page87#mssu65.shownMessages" sourceValue="L'autovettura e' stata aggiunta agli acquisti pendenti."/>
       </OKLink>

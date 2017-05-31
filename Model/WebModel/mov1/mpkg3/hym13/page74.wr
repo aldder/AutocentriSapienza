@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg3#hym13#page74" name="Le tue notifiche" landmark="true" gr:x="275" gr:y="-75">
   <ContentUnits>
-    <PowerIndexUnit id="mov1#mpkg3#hym13#page74#pwu29" name="Notifiche appuntamenti" linkOrder="mov1#mpkg3#hym13#page74#pwu29#ln215 mov1#mpkg3#hym13#page74#pwu29#ln217" gr:x="0" gr:y="100" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att19 rel8#role16.ent2#att13 rel8#role16.rel11#role21.ent1#att30 rel16#role31.ent3#att16 ent4#att28" blockFactor="10">
+    <PowerIndexUnit id="mov1#mpkg3#hym13#page74#pwu29" name="Notifiche appuntamenti" linkOrder="mov1#mpkg3#hym13#page74#pwu29#ln215 mov1#mpkg3#hym13#page74#pwu29#ln217" gr:x="0" gr:y="100" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att19 rel8#role16.ent2#att13 rel8#role16.ent2#att26 rel16#role31.ent3#att16" blockFactor="10">
       <Selector id="mov1#mpkg3#hym13#page74#pwu29#su29" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="mov1#mpkg3#hym13#page74#pwu29#su29#rcond8" name="utente2notifica" predicate="in" implied="false" role="rel14#role27"/>
         <AttributesCondition id="mov1#mpkg3#hym13#page74#pwu29#su29#acond10" name="appuntamento" predicate="notNull" booleanOperator="or" implied="false" attributes="rel8#role16.ent2#att12"/>
@@ -13,17 +13,13 @@
         <LinkParameter id="mov1#mpkg3#hym13#page74#pwu29#ln217#par876" name="oid_KeyCondition9 [oid]" source="data[].ent4#att18" target="mov1#mpkg3#hym13#miu99.mov2#mpkg22#mpkg25#opm49#icu51#icp246"/>
         <LinkParameter id="mov1#mpkg3#hym13#page74#pwu29#ln217#par877" name="stato_stato" target="mov1#mpkg3#hym13#miu99.mov2#mpkg22#mpkg25#opm49#icu51#icp245" sourceValue="0"/>
       </Link>
-      <DefaultSortAttribute attribute="ent4#att18" order="ascending"/>
-      <DefaultSortAttribute attribute="ent4#att19" order="ascending"/>
-      <DefaultSortAttribute attribute="ent4#att28" order="ascending"/>
       <DefaultSortAttribute attribute="rel8#role16.ent2#att13" order="ascending"/>
-      <DefaultSortAttribute attribute="rel16#role31.ent3#att16" order="ascending"/>
       <SortAttribute attribute="ent4#att18" order="ascending"/>
       <SortAttribute attribute="ent4#att19" order="ascending"/>
       <SortAttribute attribute="ent4#att28" order="ascending"/>
       <SortAttribute attribute="rel8#role16.ent2#att13" order="ascending"/>
       <SortAttribute attribute="rel16#role31.ent3#att16" order="ascending"/>
-      <SortAttribute attribute="rel8#role16.rel11#role21.ent1#att30" order="ascending"/>
+      <SortAttribute attribute="rel8#role16.ent2#att26" order="ascending"/>
     </PowerIndexUnit>
     <GetUnit id="mov1#mpkg3#hym13#page74#gtu2" name="UtenteCorrente" gr:x="120" gr:y="0" contextParameters="UserCtxParam">
       <Link id="mov1#mpkg3#hym13#page74#gtu2#ln219" name="Flow48" to="mov1#mpkg3#hym13#page74#pwu29" type="transport" validate="true">
@@ -33,7 +29,7 @@
         <LinkParameter id="mov1#mpkg3#hym13#page74#gtu2#ln33#par290" name="UserCtxParam.oid_utente2notifica [oid]" source="mov1#mpkg3#hym13#page74#gtu2.UserCtxParam" target="mov1#mpkg3#hym13#page74#pwu1#su18#rcond30.userOID"/>
       </Link>
     </GetUnit>
-    <PowerIndexUnit gr:x="185" gr:y="100" id="mov1#mpkg3#hym13#page74#pwu1" name="Notifiche acquisti" sortable="true" checkable="false" useCountQuery="false" entity="ent4" linkOrder="mov1#mpkg3#hym13#page74#pwu1#ln34 mov1#mpkg3#hym13#page74#pwu1#ln35" displayAttributes="ent4#att19 rel15#role30.rel19#role37.ent1#att30 rel16#role31.ent3#att16 ent4#att28">
+    <PowerIndexUnit gr:x="185" gr:y="100" id="mov1#mpkg3#hym13#page74#pwu1" name="Notifiche acquisti" sortable="true" checkable="false" useCountQuery="false" entity="ent4" linkOrder="mov1#mpkg3#hym13#page74#pwu1#ln34 mov1#mpkg3#hym13#page74#pwu1#ln35" displayAttributes="ent4#att19 rel15#role30.rel19#role37.ent1#att30 rel16#role31.ent3#att16">
       <Selector id="mov1#mpkg3#hym13#page74#pwu1#su18" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="mov1#mpkg3#hym13#page74#pwu1#su18#rcond30" name="utente2notifica" predicate="in" implied="false" role="rel14#role27"/>
         <AttributesCondition id="mov1#mpkg3#hym13#page74#pwu1#su18#acond11" name="storico_acquisto" predicate="notNull" booleanOperator="or" implied="false" attributes="rel15#role30.ent7#att24"/>
@@ -51,6 +47,7 @@
       <SortAttribute attribute="ent4#att18" order="ascending"/>
       <SortAttribute attribute="ent4#att19" order="ascending"/>
       <SortAttribute attribute="ent4#att28" order="ascending"/>
+      <DefaultSortAttribute attribute="ent4#att19" order="ascending"/>
     </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -59,16 +56,14 @@
         <layout:Unit unitId="mov1#mpkg3#hym13#page74#pwu29">
           <layout:Attribute label="Data notifica" attribute="ent4#att19"/>
           <layout:Attribute label="Data appuntamento" attribute="rel8#role16.ent2#att13"/>
-          <layout:Attribute attribute="rel8#role16.rel11#role21.ent1#att30" label="Autovettura"/>
+          <layout:Attribute attribute="rel8#role16.ent2#att26" label="Targa"/>
           <layout:Attribute label="Tipologia" attribute="rel16#role31.ent3#att16"/>
-          <layout:Attribute label="Invio notifica" attribute="ent4#att28"/>
           <layout:Link link="mov1#mpkg3#hym13#page74#pwu29#ln215" layout:linkVisibilityConditionNegated="true" layout:linkDisableConditionVariable="mov1#mpkg3#hym13#page74#var1"/>
           <layout:Link link="mov1#mpkg3#hym13#page74#pwu29#ln217" layout:linkDisableConditionVariable="mov1#mpkg3#hym13#page74#var1" layout:linkDisableConditionNegated="true"/>
           <layout:Link link="mov1#mpkg3#hym13#page74#pwu29ent4#att19"/>
-          <layout:Link link="mov1#mpkg3#hym13#page74#pwu29ent4#att28"/>
           <layout:Link link="mov1#mpkg3#hym13#page74#pwu29rel8#role16$ent2#att13"/>
           <layout:Link link="mov1#mpkg3#hym13#page74#pwu29rel16#role31$ent3#att16"/>
-          <layout:Link link="mov1#mpkg3#hym13#page74#pwu29rel8#role16$rel11#role21$ent1#att30"/>
+          <layout:Link link="mov1#mpkg3#hym13#page74#pwu29rel8#role16$ent2#att26"/>
           <layout:Link link="mov1#mpkg3#hym13#page74#pwu29First"/>
           <layout:Link link="mov1#mpkg3#hym13#page74#pwu29Previous"/>
           <layout:Link link="mov1#mpkg3#hym13#page74#pwu29Block"/>
@@ -94,13 +89,11 @@
           <layout:Attribute attribute="ent4#att19" label="Data notifica"/>
           <layout:Attribute attribute="rel15#role30.rel19#role37.ent1#att30" label="Autovettura"/>
           <layout:Attribute attribute="rel16#role31.ent3#att16" label="Tipologia"/>
-          <layout:Attribute attribute="ent4#att28" label="Invio notifica"/>
-          <layout:Link link="mov1#mpkg3#hym13#page74#pwu1#ln34" layout:linkDisableConditionVariable="mov1#mpkg3#hym13#page74#var1"/>
-          <layout:Link link="mov1#mpkg3#hym13#page74#pwu1#ln35" layout:linkDisableConditionVariable="mov1#mpkg3#hym13#page74#var1" layout:linkDisableConditionNegated="true"/>
+          <layout:Link link="mov1#mpkg3#hym13#page74#pwu1#ln34" layout:linkDisableConditionVariable="mov1#mpkg3#hym13#page74#var2"/>
+          <layout:Link link="mov1#mpkg3#hym13#page74#pwu1#ln35" layout:linkDisableConditionVariable="mov1#mpkg3#hym13#page74#var2" layout:linkDisableConditionNegated="true"/>
           <layout:Link link="mov1#mpkg3#hym13#page74#pwu1rel15#role30$rel19#role37$ent1#att30"/>
           <layout:Link link="mov1#mpkg3#hym13#page74#pwu1rel16#role31$ent3#att16"/>
           <layout:Link link="mov1#mpkg3#hym13#page74#pwu1ent4#att19"/>
-          <layout:Link link="mov1#mpkg3#hym13#page74#pwu1ent4#att28"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -116,5 +109,6 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Variable id="mov1#mpkg3#hym13#page74#var1" name="isActive" type="boolean" unitId="mov1#mpkg3#hym13#page74#pwu29" parameter="data[].ent4#att28"/>
+  <Variable id="mov1#mpkg3#hym13#page74#var1" name="isActiveApp" type="boolean" unitId="mov1#mpkg3#hym13#page74#pwu29" parameter="data[].ent4#att28"/>
+  <Variable id="mov1#mpkg3#hym13#page74#var2" name="isActiveAcq" type="boolean" unitId="mov1#mpkg3#hym13#page74#pwu1" parameter="data[].ent4#att28"/>
 </Page>

@@ -4,7 +4,7 @@
       <InputCollectorParameter id="mov2#mpkg22#mpkg25#opm2#icu7#icp6" name="id_utente"/>
       <InputCollectorParameter id="mov2#mpkg22#mpkg25#opm2#icu7#icp7" name="data"/>
       <InputCollectorParameter id="mov2#mpkg22#mpkg25#opm2#icu7#icp8" name="id_acquisto"/>
-      <Link id="mov2#mpkg22#mpkg25#opm2#icu7#ln173" name="Flow93" to="mov2#mpkg22#mpkg25#opm2#dfu2" type="transport" validate="true" gr:bendpoints="190,166,-515,81;574,166,-131,81">
+      <Link id="mov2#mpkg22#mpkg25#opm2#icu7#ln173" name="Flow93" to="mov2#mpkg22#mpkg25#opm2#dfu2" type="transport" validate="true" gr:bendpoints="225,166,-465,81;574,166,-131,81">
         <LinkParameter id="mov2#mpkg22#mpkg25#opm2#icu7#ln173#par781" name="data_PASSING_Date(s)" source="mov2#mpkg22#mpkg25#opm2#icu7#icp7" target="mov2#mpkg22#mpkg25#opm2#dfu2.dateArray"/>
       </Link>
       <Link id="mov2#mpkg22#mpkg25#opm2#icu7#ln176" name="Flow92" to="mov2#mpkg22#mpkg25#opm2#cru5" type="transport" validate="true" gr:bendpoints="186,85,-349,0">
@@ -15,7 +15,7 @@
     </InputCollectorUnit>
     <KOCollectorUnit id="mov2#mpkg22#mpkg25#opm2#kocu3" name="KO Port1" gr:x="1020" gr:y="220"/>
     <OKCollectorUnit id="mov2#mpkg22#mpkg25#opm2#okcu2" name="OK Port1" gr:x="1020" gr:y="120"/>
-    <DatesFunctionUnit id="mov2#mpkg22#mpkg25#opm2#dfu2" name="addTime" gr:x="850" gr:y="260" mode="addDaysToDate(s)">
+    <DatesFunctionUnit id="mov2#mpkg22#mpkg25#opm2#dfu2" name="addTime" gr:x="835" gr:y="260" mode="addDaysToDate(s)">
       <OKLink id="mov2#mpkg22#mpkg25#opm2#dfu2#oln118" name="OKFlow64" to="mov2#mpkg22#mpkg25#opm2#cru5">
         <LinkParameter id="mov2#mpkg22#mpkg25#opm2#dfu2#oln118#par784" name="Result Date(s)_data_notifica" source="resultDates" target="mov2#mpkg22#mpkg25#opm2#cru5.ent4#att19"/>
         <LinkParameter id="mov2#mpkg22#mpkg25#opm2#dfu2#oln118#par785" name="Notifica automatica._descrizione" target="mov2#mpkg22#mpkg25#opm2#cru5.ent4#att20" sourceValue="Notifica automatica."/>

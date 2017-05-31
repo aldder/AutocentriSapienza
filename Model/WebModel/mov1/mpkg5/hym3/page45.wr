@@ -1,8 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg5#hym3#page45" name="Gestione Annunci di Vendita" landmark="true" gr:x="305" gr:y="0">
   <ContentUnits>
-    <PowerIndexUnit id="mov1#mpkg5#hym3#page45#pwu18" name="Annunci di vendita" gr:x="0" gr:y="45" sortable="true" checkable="false" useCountQuery="false" entity="ent10" displayAttributes="ent10#att35 rel13#role26.userName rel3#role5.ent1#att46 rel3#role5.ent1#att30 rel3#role5.ent1#att2 rel3#role5.ent1#att7 rel3#role5.ent1#att6 rel3#role5.ent1#att8 rel3#role5.ent1#att9" blockFactor="10" linkOrder="mov1#mpkg5#hym3#page45#pwu18#ln97">
-      <DefaultSortAttribute attribute="ent10#att35" order="ascending"/>
-      <DefaultSortAttribute attribute="rel13#role26.userName" order="ascending"/>
+    <PowerIndexUnit id="mov1#mpkg5#hym3#page45#pwu18" name="Annunci di vendita" gr:x="0" gr:y="45" sortable="true" checkable="false" useCountQuery="false" entity="ent10" displayAttributes="rel13#role26.userName rel3#role5.ent1#att46 rel3#role5.ent1#att30 rel3#role5.ent1#att2 rel3#role5.ent1#att7 rel3#role5.ent1#att6 rel3#role5.ent1#att8 rel3#role5.ent1#att9" blockFactor="10" linkOrder="mov1#mpkg5#hym3#page45#pwu18#ln97">
       <Link id="mov1#mpkg5#hym3#page45#pwu18#ln97" name="Visualizza" to="mov1#mpkg5#hym3#page46#seu5" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli annuncio">
         <LinkParameter id="mov1#mpkg5#hym3#page45#pwu18#ln97#par541" name="AnnuncioToUtente.oid_PASSING" source="data[].rel13#role26_userOID" passing="true"/>
         <LinkParameter id="mov1#mpkg5#hym3#page45#pwu18#ln97#par70" name="oid_PASSING" source="data[].ent10#att35" passing="true"/>
@@ -18,6 +16,7 @@
       <SortAttribute attribute="rel3#role5.ent1#att6" order="ascending"/>
       <SortAttribute attribute="rel3#role5.ent1#att8" order="ascending"/>
       <SortAttribute attribute="rel3#role5.ent1#att9" order="ascending"/>
+      <DefaultSortAttribute attribute="ent10#att35" order="descending"/>
     </PowerIndexUnit>
     <MultiMessageUnit id="mov1#mpkg5#hym3#page45#mssu26" name="KoMessage" gr:x="155" gr:y="65"/>
     <MultiMessageUnit id="mov1#mpkg5#hym3#page45#mssu28" name="OkMessage" gr:x="155" gr:y="0"/>
@@ -62,17 +61,15 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#mpkg5#hym3#page45#pwu18">
-          <layout:Attribute label="Codice" attribute="ent10#att35"/>
           <layout:Attribute label="Utente" attribute="rel13#role26.userName"/>
-          <layout:Attribute attribute="rel3#role5.ent1#att46"/>
-          <layout:Attribute attribute="rel3#role5.ent1#att30"/>
-          <layout:Attribute attribute="rel3#role5.ent1#att2"/>
-          <layout:Attribute attribute="rel3#role5.ent1#att7"/>
-          <layout:Attribute attribute="rel3#role5.ent1#att6"/>
-          <layout:Attribute attribute="rel3#role5.ent1#att8"/>
-          <layout:Attribute attribute="rel3#role5.ent1#att9"/>
+          <layout:Attribute attribute="rel3#role5.ent1#att46" label="Nome"/>
+          <layout:Attribute attribute="rel3#role5.ent1#att30" label="Targa"/>
+          <layout:Attribute attribute="rel3#role5.ent1#att2" label="Prezzo"/>
+          <layout:Attribute attribute="rel3#role5.ent1#att7" label="Anno"/>
+          <layout:Attribute attribute="rel3#role5.ent1#att6" label="Kilometri"/>
+          <layout:Attribute attribute="rel3#role5.ent1#att8" label="Aliementazione"/>
+          <layout:Attribute attribute="rel3#role5.ent1#att9" label="Cilindrata"/>
           <layout:Link link="mov1#mpkg5#hym3#page45#pwu18#ln97"/>
-          <layout:Link link="mov1#mpkg5#hym3#page45#pwu18ent10#att35"/>
           <layout:Link link="mov1#mpkg5#hym3#page45#pwu18rel13#role26$userName"/>
           <layout:Link link="mov1#mpkg5#hym3#page45#pwu18rel3#role5$ent1#att46"/>
           <layout:Link link="mov1#mpkg5#hym3#page45#pwu18rel3#role5$ent1#att30"/>

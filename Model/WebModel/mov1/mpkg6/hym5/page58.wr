@@ -3,11 +3,10 @@
     <PowerIndexUnit id="mov1#mpkg6#hym5#page58#pwu23" name="Tipologie interventi" linkOrder="mov1#mpkg6#hym5#page58#pwu23#ln244" gr:x="0" gr:y="90" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att15 ent3#att16 ent3#att17" blockFactor="10">
       <SortAttribute attribute="ent3#att15" order="ascending"/>
       <SortAttribute attribute="ent3#att16" order="ascending"/>
-      <DefaultSortAttribute attribute="ent3#att15" order="ascending"/>
-      <DefaultSortAttribute attribute="ent3#att16" order="ascending"/>
       <Link id="mov1#mpkg6#hym5#page58#pwu23#ln244" name="Visualizza" to="mov1#mpkg6#hym5#page57#enu40" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowWidth="600" ajaxWindowHeight="400" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli tipologia" ajaxWindowAutoResizing="false">
         <LinkParameter id="mov1#mpkg6#hym5#page58#pwu23#ln244#par1582" name="oid_Key Condition [oid]" source="data[].ent3#att15" target="mov1#mpkg6#hym5#page57#enu40.ent3#att15"/>
       </Link>
+      <DefaultSortAttribute attribute="ent3#att15" order="descending"/>
     </PowerIndexUnit>
     <EntryUnit id="mov1#mpkg6#hym5#page58#enu41" name="Nuova tipologia" linkOrder="mov1#mpkg6#hym5#page58#enu41#ln245" gr:x="235" gr:y="0" entity="ent3">
       <Field id="mov1#mpkg6#hym5#page58#enu41#fld160" name="Nome" type="string" modifiable="true" attribute="ent3#att16">

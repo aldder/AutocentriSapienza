@@ -1,0 +1,302 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg3#hym16#page1" name="Dettagli autovettura" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" layout:frameLayout="None" gr:x="700" gr:y="-120">
+  <ContentUnits>
+    <DataUnit id="mov1#mpkg3#hym16#page1#dau2" name="Dettagli autovettura" gr:x="0" gr:y="120" entity="ent1" displayAttributes="ent1#att46 ent1#att3 ent1#att2 ent1#att7 ent1#att6 ent1#att8 ent1#att9 ent1#att10 ent1#att4 ent1#att27 ent1#att11" linkOrder="mov1#mpkg3#hym16#page1#dau2#ln70">
+      <Selector id="mov1#mpkg3#hym16#page1#dau2#su54" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#mpkg3#hym16#page1#dau2#su54#kcond29" name="KeyCondition18" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="mov1#mpkg3#hym16#page1#dau2#ln67" name="Flow12" to="mov1#mpkg3#hym16#page1#enu4" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym16#page1#dau2#ln67#par357" name="oid_PASSING" source="data.ent1#att1" passing="true"/>
+        <LinkParameter id="mov1#mpkg3#hym16#page1#dau2#ln67#par384" name="disponibilit&#224;_Disponibilit&#224;" source="data.ent1#att27" target="mov1#mpkg3#hym16#page1#enu4#fld13_slot"/>
+      </Link>
+      <Link id="mov1#mpkg3#hym16#page1#dau2#ln70" name="Rimuovi dai preferiti" to="mov1#mpkg3#hym16#miu115" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym16#page1#dau2#ln70#par391" name="oid_autovettura [oid]" source="data.ent1#att1" target="mov1#mpkg3#hym16#miu115.mov2#mpkg22#mpkg28#opm56#icu58#icp279"/>
+      </Link>
+      <Link id="mov1#mpkg3#hym16#page1#dau2#ln86" name="Flow86" to="mov1#mpkg3#hym16#page1#seu18" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym16#page1#dau2#ln86#par402" name="oid_autovettura2acquisto [oid]" source="data.ent1#att1" target="mov1#mpkg3#hym16#page1#seu18#su58#rcond38.ent1#att1"/>
+      </Link>
+    </DataUnit>
+    <EntryUnit id="mov1#mpkg3#hym16#page1#enu4" name="Quantit&#224;" gr:x="200" gr:y="135" fieldOrder="mov1#mpkg3#hym16#page1#enu4#fld12" linkOrder="mov1#mpkg3#hym16#page1#enu4#ln68">
+      <Field id="mov1#mpkg3#hym16#page1#enu4#fld12" name="Quantit&#224;" type="integer" modifiable="true" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym16#page1#enu4#fld12#mnd41" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <CompareValidationRule id="mov1#mpkg3#hym16#page1#enu4#fld12#cmp4" name="Compare" predicate="lteq" valueField="mov1#mpkg3#hym16#page1#enu4#fld13"/>
+          <CompareValidationRule id="mov1#mpkg3#hym16#page1#enu4#fld12#cmp5" name="Positive" predicate="gteq" value="1" errorMessage="valore non consentito"/>
+        </VRules>
+        <Slot id="mov1#mpkg3#hym16#page1#enu4#fld12#slot1" name="Slot1" label="true" output="true" value="1"/>
+      </Field>
+      <VRules/>
+      <Field id="mov1#mpkg3#hym16#page1#enu4#fld13" name="Disponibilit&#224;" type="string" preloaded="true" modifiable="false" hidden="true"/>
+      <Link id="mov1#mpkg3#hym16#page1#enu4#ln68" name="Acqusita" to="mov1#mpkg3#hym16#miu5" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym16#page1#enu4#ln68#par387" name="oid_id_autovettura" target="mov1#mpkg3#hym16#miu5.mov2#mpkg22#mpkg26#opm50#icu52#icp248" sourceLinkParameter="mov1#mpkg3#hym16#page1#dau2#ln67#par357"/>
+        <LinkParameter id="mov1#mpkg3#hym16#page1#enu4#ln68#par388" name="Quantit&#224;_quantit&#224;" source="mov1#mpkg3#hym16#page1#enu4#fld12" target="mov1#mpkg3#hym16#miu5.mov2#mpkg22#mpkg26#opm50#icu52#icp105"/>
+      </Link>
+    </EntryUnit>
+    <GetUnit gr:x="0" gr:y="15" id="mov1#mpkg3#hym16#page1#gtu16" name="UtenteCorrente" contextParameters="UserCtxParam">
+      <Link id="mov1#mpkg3#hym16#page1#gtu16#ln85" name="Flow85" to="mov1#mpkg3#hym16#page1#seu18" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym16#page1#gtu16#ln85#par401" name="UserCtxParam.oid_utente2acquisto [oid]" source="mov1#mpkg3#hym16#page1#gtu16.UserCtxParam" target="mov1#mpkg3#hym16#page1#seu18#su58#rcond39.userOID"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit id="mov1#mpkg3#hym16#page1#seu18" name="SelectAcquisto" gr:x="170" gr:y="0" entity="ent6">
+      <Selector id="mov1#mpkg3#hym16#page1#seu18#su58" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#mpkg3#hym16#page1#seu18#su58#rcond38" name="autovettura2acquisto" predicate="in" implied="false" role="rel18#role36"/>
+        <RelationshipRoleCondition id="mov1#mpkg3#hym16#page1#seu18#su58#rcond39" name="utente2acquisto" predicate="in" implied="false" role="rel2#role3"/>
+      </Selector>
+      <Link id="mov1#mpkg3#hym16#page1#seu18#ln87" name="Flow87" to="mov1#mpkg3#hym16#page1#enu4" type="transport" validate="true">
+        <LinkParameter id="mov1#mpkg3#hym16#page1#seu18#ln87#par403" name="quantita_Quantit&#224;" source="ent6#att39Array" target="mov1#mpkg3#hym16#page1#enu4#fld12_slot"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell layout:cellLayout="Print Frame" colspan="12">
+        <layout:Grid label="Dettagli autovettura" containerType="grid">
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Attribute unitId="mov1#mpkg3#hym16#page1#dau2" attribute="ent1#att46" mode="full" label="Nome"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Attribute unitId="mov1#mpkg3#hym16#page1#dau2" attribute="ent1#att3" mode="full" label="Foto">
+                <layout:LayoutParameter name="image-width" value="400" type="attribute"/>
+                <layout:LayoutParameter name="image-height" value="300" type="attribute"/>
+              </layout:Attribute>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Attribute unitId="mov1#mpkg3#hym16#page1#dau2" attribute="ent1#att2" mode="full" label="Prezzo"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Attribute unitId="mov1#mpkg3#hym16#page1#dau2" attribute="ent1#att7" mode="full" label="Anno"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Attribute unitId="mov1#mpkg3#hym16#page1#dau2" attribute="ent1#att6" mode="full" label="Kilometri"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Attribute unitId="mov1#mpkg3#hym16#page1#dau2" attribute="ent1#att8" mode="full" label="Alimentazione"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Attribute unitId="mov1#mpkg3#hym16#page1#dau2" attribute="ent1#att9" mode="full" label="Cilindrata"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Attribute unitId="mov1#mpkg3#hym16#page1#dau2" attribute="ent1#att10" mode="full" label="Numero di porte"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Attribute unitId="mov1#mpkg3#hym16#page1#dau2" attribute="ent1#att4" mode="full" label="Usato"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Attribute unitId="mov1#mpkg3#hym16#page1#dau2" attribute="ent1#att27" mode="full" label="Disponibilit&#224;"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Attribute unitId="mov1#mpkg3#hym16#page1#dau2" attribute="ent1#att11" mode="full" label="Descrizione"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="4">
+        <layout:Link unitId="mov1#mpkg3#hym16#page1#enu4" link="mov1#mpkg3#hym16#page1#enu4#ln68">
+          <layout:LayoutParameter name="btn-style" value="success" type="link"/>
+        </layout:Link>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="2">
+        <layout:Unit unitId="mov1#mpkg3#hym16#page1#enu4" manualLinks="true">
+          <layout:Field field="mov1#mpkg3#hym16#page1#enu4#fld12"/>
+          <layout:LayoutParameter name="show-label" value="false" type="unit"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3">
+        <layout:Link unitId="mov1#mpkg3#hym16#page1#dau2" link="mov1#mpkg3#hym16#page1#dau2#ln70"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:LayoutParameter name="label-position" value="none" type="field"/>
+    <layout:LayoutParameter name="label-width" value="1" type="field"/>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

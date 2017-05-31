@@ -1,11 +1,11 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg3#hym16#page80" name="I tuoi preferiti" landmark="true" gr:x="300" gr:y="0">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg3#hym16#page80" name="I tuoi preferiti" landmark="true" gr:x="285" gr:y="0">
   <ContentUnits>
-    <PowerIndexUnit id="mov1#mpkg3#hym16#page80#pwu32" name="Autovetture preferite" linkOrder="mov1#mpkg3#hym16#page80#pwu32#ln318" gr:x="140" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att46 ent1#att2 ent1#att7 ent1#att9 ent1#att8 ent1#att6" blockFactor="10">
+    <PowerIndexUnit id="mov1#mpkg3#hym16#page80#pwu32" name="Autovetture preferite" linkOrder="mov1#mpkg3#hym16#page80#pwu32#ln318" gr:x="155" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att46 ent1#att2 ent1#att7 ent1#att9 ent1#att8 ent1#att6" blockFactor="10">
       <Selector id="mov1#mpkg3#hym16#page80#pwu32#su36" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="mov1#mpkg3#hym16#page80#pwu32#su36#rcond17" name="utente2preferito" predicate="in" implied="false" role="rel1#role2.rel20#role39"/>
       </Selector>
-      <Link id="mov1#mpkg3#hym16#page80#pwu32#ln318" name="Visualizza" to="mov1#mpkg3#hym16#page79#dau4" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="500" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli autovettura">
-        <LinkParameter id="mov1#mpkg3#hym16#page80#pwu32#ln318#par986" name="oid_KeyCondition18 [oid]" source="data[].ent1#att1" target="mov1#mpkg3#hym16#page79#dau4#su35#kcond7.ent1#att1"/>
+      <Link id="mov1#mpkg3#hym16#page80#pwu32#ln318" name="Visualizza" to="mov1#mpkg3#hym16#page1#dau2" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="500" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli autovettura">
+        <LinkParameter id="mov1#mpkg3#hym16#page80#pwu32#ln318#par392" name="oid_KeyCondition18 [oid]" source="data[].ent1#att1" target="mov1#mpkg3#hym16#page1#dau2#su54#kcond29.ent1#att1"/>
       </Link>
       <SortAttribute attribute="ent1#att1" order="ascending"/>
       <SortAttribute attribute="ent1#att46" order="ascending"/>
@@ -17,24 +17,19 @@
       <SortAttribute attribute="ent1#att9" order="ascending"/>
       <SortAttribute attribute="ent1#att10" order="ascending"/>
       <SortAttribute attribute="ent1#att50" order="ascending"/>
+      <SortAttribute attribute="ent1#att30" order="ascending"/>
+      <SortAttribute attribute="ent1#att3" order="ascending"/>
+      <SortAttribute attribute="ent1#att27" order="ascending"/>
+      <SortAttribute attribute="ent1#att5" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att1" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att46" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att2" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att7" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att4" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att6" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att8" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att9" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att10" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att50" order="ascending"/>
     </PowerIndexUnit>
-    <GetUnit id="mov1#mpkg3#hym16#page80#gtu8" name="utente" gr:x="0" gr:y="5" contextParameters="UserCtxParam">
+    <GetUnit id="mov1#mpkg3#hym16#page80#gtu8" name="UtenteCorrente" gr:x="0" gr:y="5" contextParameters="UserCtxParam">
       <Link id="mov1#mpkg3#hym16#page80#gtu8#ln319" name="Flow163" to="mov1#mpkg3#hym16#page80#pwu32" type="transport" validate="true">
         <LinkParameter id="mov1#mpkg3#hym16#page80#gtu8#ln319#par987" name="UserCtxParam.oid_utente2preferito [oid]" source="mov1#mpkg3#hym16#page80#gtu8.UserCtxParam" target="mov1#mpkg3#hym16#page80#pwu32#su36#rcond17.userOID"/>
       </Link>
     </GetUnit>
-    <MultiMessageUnit id="mov1#mpkg3#hym16#page80#mssu44" name="OkMessage" gr:x="215" gr:y="105"/>
-    <MultiMessageUnit id="mov1#mpkg3#hym16#page80#mssu45" name="KoMessage" gr:x="215" gr:y="170"/>
+    <MultiMessageUnit id="mov1#mpkg3#hym16#page80#mssu44" name="OkMessage" gr:x="230" gr:y="105"/>
+    <MultiMessageUnit id="mov1#mpkg3#hym16#page80#mssu45" name="KoMessage" gr:x="230" gr:y="170"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>

@@ -46,7 +46,7 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="775" gr:y="690" id="ent1" name="Autovettura" duration="persistent" attributeOrder="ent1#att1 ent1#att46 ent1#att30 ent1#att3 ent1#att2 ent1#att7 ent1#att6 ent1#att8 ent1#att9 ent1#att10 ent1#att4 ent1#att50 ent1#att5 ent1#att11" db:table="autovettura" db:database="db2">
+  <Entity gr:x="625" gr:y="490" id="ent1" name="Autovettura" duration="persistent" attributeOrder="ent1#att1 ent1#att46 ent1#att30 ent1#att3 ent1#att2 ent1#att7 ent1#att6 ent1#att8 ent1#att9 ent1#att10 ent1#att27 ent1#att4 ent1#att50 ent1#att5 ent1#att11" db:table="autovettura" db:database="db2" gr:hideAttributes="false">
     <Attribute id="ent1#att1" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent1#att2" name="prezzo" type="float" db:column="prezzo" key="false"/>
     <Attribute id="ent1#att3" name="foto" type="blob" contentType="image" db:column="foto" key="false"/>
@@ -61,35 +61,36 @@
     <Attribute id="ent1#att50" name="catalogo" type="boolean" db:column="catalogo" key="false"/>
     <Attribute id="ent1#att30" name="targa" type="string" key="false" db:column="targa"/>
     <Attribute id="ent1#att5" name="officina" type="boolean" key="false" db:column="officina"/>
+    <Attribute id="ent1#att27" name="disponibilit&#224;" type="integer" db:column="disponibilita"/>
   </Entity>
-  <Entity gr:x="1025" gr:y="325" id="ent2" name="Appuntamento" duration="persistent" attributeOrder="ent2#att12 ent2#att26 ent2#att13 ent2#att14" db:table="appuntamento" db:database="db2">
+  <Entity gr:x="1040" gr:y="310" id="ent2" name="Appuntamento" duration="persistent" attributeOrder="ent2#att12 ent2#att26 ent2#att13 ent2#att14" db:table="appuntamento" db:database="db2" gr:hideAttributes="false">
     <Attribute id="ent2#att12" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att13" name="data_intervento" type="date" db:column="data_intervento" key="false"/>
     <Attribute id="ent2#att14" name="descrizione" type="text" db:column="descrizione" key="false"/>
     <Attribute id="ent2#att26" name="targa" type="string" db:column="targa"/>
   </Entity>
-  <Entity gr:x="785" gr:y="490" id="ent3" name="Tipologia" duration="persistent" attributeOrder="ent3#att15 ent3#att16 ent3#att17 ent3#att38" db:table="tipologia" db:database="db2">
+  <Entity gr:x="1105" gr:y="545" id="ent3" name="Tipologia" duration="persistent" attributeOrder="ent3#att15 ent3#att16 ent3#att17 ent3#att38" db:table="tipologia" db:database="db2" gr:hideAttributes="false">
     <Attribute id="ent3#att15" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att16" name="nome" type="string" db:column="nome"/>
     <Attribute id="ent3#att17" name="ripetizione" type="integer" db:column="ripetizione"/>
     <Attribute id="ent3#att38" name="descrizione" type="text" db:column="descrizione"/>
   </Entity>
-  <Entity gr:x="780" gr:y="325" id="ent4" name="Notifica" duration="persistent" attributeOrder="ent4#att18 ent4#att19 ent4#att28 ent4#att20" db:table="notifica" db:database="db2">
+  <Entity gr:x="780" gr:y="310" id="ent4" name="Notifica" duration="persistent" attributeOrder="ent4#att18 ent4#att19 ent4#att28 ent4#att20" db:table="notifica" db:database="db2" gr:hideAttributes="false">
     <Attribute id="ent4#att18" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent4#att19" name="data_notifica" type="date" db:column="data_notifica"/>
     <Attribute id="ent4#att20" name="descrizione" type="text" db:column="descrizione"/>
     <Attribute id="ent4#att28" name="stato" type="boolean" db:column="stato"/>
   </Entity>
-  <Entity gr:x="155" gr:y="320" id="ent5" name="Preferito" duration="persistent" attributeOrder="ent5#att21 ent5#att22" db:table="preferito" db:database="db2">
+  <Entity gr:x="155" gr:y="320" id="ent5" name="Preferito" duration="persistent" attributeOrder="ent5#att21 ent5#att22" db:table="preferito" db:database="db2" gr:hideAttributes="false">
     <Attribute id="ent5#att21" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent5#att22" name="notifica" type="boolean" db:column="notifica"/>
   </Entity>
-  <Entity gr:x="340" gr:y="320" id="ent6" name="Acquisto_Pendente" duration="persistent" attributeOrder="ent6#att23 ent6#att25 ent6#att39" db:table="acquisto_pendente" db:database="db2">
+  <Entity gr:x="340" gr:y="320" id="ent6" name="Acquisto_Pendente" duration="persistent" attributeOrder="ent6#att23 ent6#att25 ent6#att39" db:table="acquisto_pendente" db:database="db2" gr:hideAttributes="false">
     <Attribute id="ent6#att23" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent6#att25" name="notifica" type="boolean" db:column="notifica"/>
     <Attribute id="ent6#att39" name="quantita" type="integer" db:column="quantita"/>
   </Entity>
-  <Entity gr:x="540" gr:y="320" id="ent7" name="Storico_Acquisto" duration="persistent" attributeOrder="ent7#att24 ent7#att48 ent7#att60" db:table="storico_acquisto" db:database="db2">
+  <Entity gr:x="540" gr:y="320" id="ent7" name="Storico_Acquisto" duration="persistent" attributeOrder="ent7#att24 ent7#att48 ent7#att60" db:table="storico_acquisto" db:database="db2" gr:hideAttributes="false">
     <Attribute id="ent7#att24" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent7#att48" name="data" type="date" db:column="data"/>
     <Attribute id="ent7#att60" name="descrizione" type="text" db:column="descrizione"/>
@@ -134,7 +135,7 @@
       <db:JoinColumn attribute="ent4#att18" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="1320" gr:y="310" id="ent8" name="Intervento" duration="persistent" attributeOrder="ent8#att31 ent8#att32 ent8#att29 ent8#att33 ent8#att55" db:table="intervento" db:database="db2">
+  <Entity gr:x="1320" gr:y="300" id="ent8" name="Intervento" duration="persistent" attributeOrder="ent8#att31 ent8#att32 ent8#att29 ent8#att33 ent8#att55" db:table="intervento" db:database="db2" gr:hideAttributes="false">
     <Attribute id="ent8#att31" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent8#att32" name="data_inizio" type="date" db:column="data_inizio"/>
     <Attribute id="ent8#att33" name="stato" type="boolean" db:column="stato"/>
@@ -149,7 +150,7 @@
       <db:JoinColumn attribute="ent8#att31" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity id="ent10" name="Annuncio" duration="persistent" attributeOrder="ent10#att35" gr:x="0" gr:y="320" db:table="annuncio" db:database="db2">
+  <Entity id="ent10" name="Annuncio" duration="persistent" attributeOrder="ent10#att35" gr:x="0" gr:y="320" db:table="annuncio" db:database="db2" gr:hideAttributes="false">
     <Attribute id="ent10#att35" name="oid" key="true" type="integer" db:column="oid"/>
   </Entity>
   <Relationship id="rel13" name="Utente_Annuncio" sourceEntity="User" targetEntity="ent10" db:table="annuncio" db:database="db2">
@@ -168,9 +169,8 @@
       <db:JoinColumn attribute="ent4#att18" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="Database" type="MySQL" url="jdbc:mysql://localhost:3306/autocentri_sapienza" username="root" password="cm9vdA==" cryptedPassword="true">
-  </db:Database>
-  <Entity gr:x="1060" gr:y="220" id="ent15" name="Orario" duration="persistent" attributeOrder="ent15#att65 ent15#att66" db:database="db2" db:table="orario">
+  <db:Database id="db2" name="Database" type="MySQL" url="jdbc:mysql://sql11.freemysqlhosting.net:3306/sql11176267" username="sql11176267" password="Ull6MVc1OHc1eg==" cryptedPassword="true"/>
+  <Entity gr:x="1125" gr:y="175" id="ent15" name="Orario" duration="persistent" attributeOrder="ent15#att65 ent15#att66" db:database="db2" db:table="orario" gr:hideAttributes="false">
     <Attribute id="ent15#att65" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent15#att66" name="ora" type="time" db:column="ora"/>
   </Entity>

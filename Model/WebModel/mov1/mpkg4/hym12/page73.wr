@@ -46,15 +46,13 @@
       <Link id="mov1#mpkg4#hym12#page73#pwu28#ln198" name="Visualizza" to="mov1#mpkg4#hym12#page72#enu37" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowWidth="600" ajaxWindowHeight="300" ajaxWindowAutoResizing="false" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowTitle="Dettagli utente">
         <LinkParameter id="mov1#mpkg4#hym12#page73#pwu28#ln198#par842" name="oid_Key Condition [oid]" source="data[].userOID" target="mov1#mpkg4#hym12#page72#enu37.userOID"/>
       </Link>
-      <DefaultSortAttribute attribute="userOID" order="ascending"/>
-      <DefaultSortAttribute attribute="userName" order="ascending"/>
-      <DefaultSortAttribute attribute="email" order="ascending"/>
       <SortAttribute attribute="userOID" order="ascending"/>
       <SortAttribute attribute="userName" order="ascending"/>
       <SortAttribute attribute="email" order="ascending"/>
       <Selector id="mov1#mpkg4#hym12#page73#pwu28#su28" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="mov1#mpkg4#hym12#page73#pwu28#su28#rcond6" name="gruppo" predicate="in" implied="true" role="Group2User"/>
       </Selector>
+      <DefaultSortAttribute attribute="userOID" order="ascending"/>
     </PowerIndexUnit>
     <EntryUnit id="mov1#mpkg4#hym12#page73#enu39" name="Filtri" linkOrder="mov1#mpkg4#hym12#page73#enu39#ln199" gr:x="15" gr:y="120" entity="User">
       <MultiSelectionField id="mov1#mpkg4#hym12#page73#enu39#msfld1" name="Gruppi" type="string" role="User2Group"/>

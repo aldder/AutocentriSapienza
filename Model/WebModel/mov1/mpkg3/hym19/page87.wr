@@ -19,29 +19,37 @@
         <LinkParameter id="mov1#mpkg3#hym19#page87#enu56#ln347#par1109" name="password_Password" source="mov1#mpkg3#hym19#page87#enu56#fld255" target="mov1#mpkg3#hym19#lgu3.password"/>
       </Link>
     </EntryUnit>
-    <MultiMessageUnit id="mov1#mpkg3#hym19#page87#mssu63" name="Login Message" gr:x="100" gr:y="45">
+    <MultiMessageUnit id="mov1#mpkg3#hym19#page87#mssu63" name="Login Message" gr:x="145" gr:y="60">
       <Message xml:space="preserve">Benvenuto nel nostro concessionario, accedi se hai gi&#224; un account, altrimenti creane uno!</Message>
     </MultiMessageUnit>
     <MultiMessageUnit id="mov1#mpkg3#hym19#page87#mssu64" name="Login Error" ajaxTooltipEnabled="false" gr:x="330" gr:y="0"/>
-    <PowerIndexUnit id="mov1#mpkg3#hym19#page87#pwu34" name="Il nostro catalogo" linkOrder="mov1#mpkg3#hym19#page87#pwu34#ln348" gr:x="140" gr:y="165" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att46 ent1#att3 ent1#att2 ent1#att9 ent1#att8" blockFactor="10" distinct="false">
+    <PowerIndexUnit id="mov1#mpkg3#hym19#page87#pwu34" name="Il nostro catalogo" linkOrder="mov1#mpkg3#hym19#page87#pwu34#ln348" gr:x="110" gr:y="165" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att46 ent1#att3 ent1#att2 ent1#att9 ent1#att8" blockFactor="10" distinct="false">
       <Link id="mov1#mpkg3#hym19#page87#pwu34#ln348" name="Visualizza" to="mov1#mpkg3#hym19#page88#dau5" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowWidth="800" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowTitle="Dettagli autovettura">
         <LinkParameter id="mov1#mpkg3#hym19#page87#pwu34#ln348#par68" name="oid_KeyCondition18 [oid]" source="data[].ent1#att1" target="mov1#mpkg3#hym19#page88#dau5#su48#kcond8.ent1#att1"/>
       </Link>
-      <SortAttribute attribute="ent1#att2" order="ascending"/>
-      <SortAttribute attribute="ent1#att8" order="ascending"/>
-      <SortAttribute attribute="ent1#att9" order="ascending"/>
-      <SortAttribute attribute="ent1#att46" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att2" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att8" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att9" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att46" order="ascending"/>
       <Selector id="mov1#mpkg3#hym19#page87#pwu34#su45" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov1#mpkg3#hym19#page87#pwu34#su45#acond69" name="catalogo" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att50" value="1"/>
         <AttributesCondition id="mov1#mpkg3#hym19#page87#pwu34#su45#acond70" name="nome" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att46" ignoreCase="true"/>
         <AttributesCondition id="mov1#mpkg3#hym19#page87#pwu34#su45#acond71" name="usato" predicate="eq" booleanOperator="or" implied="true" attributes="ent1#att4" ignoreCase="false"/>
         <AttributesCondition id="mov1#mpkg3#hym19#page87#pwu34#su45#acond72" name="prezzomin" predicate="gteq" booleanOperator="or" implied="true" attributes="ent1#att2"/>
         <AttributesCondition id="mov1#mpkg3#hym19#page87#pwu34#su45#acond73" name="prezzomax" predicate="lteq" booleanOperator="or" implied="true" attributes="ent1#att2"/>
+        <AttributesCondition id="mov1#mpkg3#hym19#page87#pwu34#su45#acond15" name="disponibilit&#224;" predicate="gteq" booleanOperator="or" implied="false" attributes="ent1#att27" value="1"/>
       </Selector>
+      <DefaultSortAttribute attribute="ent1#att1" order="descending"/>
+      <SortAttribute attribute="ent1#att2" order="ascending"/>
+      <SortAttribute attribute="ent1#att8" order="ascending"/>
+      <SortAttribute attribute="ent1#att9" order="ascending"/>
+      <SortAttribute attribute="ent1#att46" order="ascending"/>
+      <SortAttribute attribute="ent1#att1" order="ascending"/>
+      <SortAttribute attribute="ent1#att30" order="ascending"/>
+      <SortAttribute attribute="ent1#att3" order="ascending"/>
+      <SortAttribute attribute="ent1#att7" order="ascending"/>
+      <SortAttribute attribute="ent1#att6" order="ascending"/>
+      <SortAttribute attribute="ent1#att10" order="ascending"/>
+      <SortAttribute attribute="ent1#att27" order="ascending"/>
+      <SortAttribute attribute="ent1#att4" order="ascending"/>
+      <SortAttribute attribute="ent1#att50" order="ascending"/>
+      <SortAttribute attribute="ent1#att5" order="ascending"/>
     </PowerIndexUnit>
     <EntryUnit id="mov1#mpkg3#hym19#page87#enu57" name="Filtri" linkOrder="mov1#mpkg3#hym19#page87#enu57#ln349 mov1#mpkg3#hym19#page87#enu57#ln350 mov1#mpkg3#hym19#page87#enu57#ln351" gr:showAllParts="true" gr:x="0" gr:y="170" fieldOrder="mov1#mpkg3#hym19#page87#enu57#fld256 mov1#mpkg3#hym19#page87#enu57#fld257 mov1#mpkg3#hym19#page87#enu57#fld258 mov1#mpkg3#hym19#page87#enu57#sfld40">
       <Field id="mov1#mpkg3#hym19#page87#enu57#fld256" name="Nome" ajaxAutocompleteEnabled="true" ajaxAutocompleteLink="mov1#mpkg3#hym19#page87#enu57#ln350" ajaxAutocompleteIndicator="true" ajaxAutocompleteMinChars="2" type="string" modifiable="true"/>
@@ -102,16 +110,6 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#mpkg3#hym19#page87#pwu34">
-          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34#ln348"/>
-          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34ent1#att2"/>
-          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34ent1#att8"/>
-          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34ent1#att9"/>
-          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34ent1#att46"/>
-          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34First"/>
-          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34Previous"/>
-          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34Block"/>
-          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34Next"/>
-          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34Last"/>
           <layout:Attribute label="Nome" attribute="ent1#att46"/>
           <layout:Attribute label="Foto" attribute="ent1#att3">
             <layout:LayoutParameter name="image-width" value="100" type="attribute"/>
@@ -120,6 +118,17 @@
           <layout:Attribute label="Prezzo" attribute="ent1#att2"/>
           <layout:Attribute label="Cilindrata" attribute="ent1#att9"/>
           <layout:Attribute label="Alimentazione" attribute="ent1#att8"/>
+          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34#ln348"/>
+          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34ent1#att2"/>
+          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34ent1#att8"/>
+          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34ent1#att9"/>
+          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34ent1#att46"/>
+          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34ent1#att3"/>
+          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34First"/>
+          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34Previous"/>
+          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34Block"/>
+          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34Next"/>
+          <layout:Link link="mov1#mpkg3#hym19#page87#pwu34Last"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

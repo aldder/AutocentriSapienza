@@ -43,6 +43,7 @@
         <LinkParameter id="mov1#mpkg5#hym2#page44#enu26#ln80#par210" name="Cilindrata_cilindrata" source="mov1#mpkg5#hym2#page44#enu26#fld4" target="mov1#mpkg5#hym2#miu41.mov2#mpkg38#mpkg41#opm84#icu87#icp38"/>
         <LinkParameter id="mov1#mpkg5#hym2#page44#enu26#ln80#par211" name="Kilometri_kilometri" source="mov1#mpkg5#hym2#page44#enu26#fld5" target="mov1#mpkg5#hym2#miu41.mov2#mpkg38#mpkg41#opm84#icu87#icp39"/>
         <LinkParameter id="mov1#mpkg5#hym2#page44#enu26#ln80#par212" name="Usato_usato" source="mov1#mpkg5#hym2#page44#enu26#fld36" target="mov1#mpkg5#hym2#miu41.mov2#mpkg38#mpkg41#opm84#icu87#icp40"/>
+        <LinkParameter id="mov1#mpkg5#hym2#page44#enu26#ln80#par333" name="quantita_PASSING_quantit&#224;" sourceLinkParameter="mov1#mpkg5#hym2#page43#pwu17#ln78#par330" target="mov1#mpkg5#hym2#miu41.mov2#mpkg38#mpkg41#opm84#icu87#icp106"/>
       </Link>
       <Field id="mov1#mpkg5#hym2#page44#enu26#fld4" name="Cilindrata" type="string" modifiable="true" preloaded="true"/>
       <Field id="mov1#mpkg5#hym2#page44#enu26#fld3" name="Alimentazione" type="string" modifiable="true" preloaded="true"/>

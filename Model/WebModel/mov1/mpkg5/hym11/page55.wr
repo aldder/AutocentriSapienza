@@ -25,16 +25,11 @@
       <SortAttribute attribute="ent1#att9" order="ascending"/>
       <SortAttribute attribute="ent1#att10" order="ascending"/>
       <SortAttribute attribute="ent1#att50" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att1" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att46" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att2" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att7" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att4" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att6" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att8" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att9" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att10" order="ascending"/>
-      <DefaultSortAttribute attribute="ent1#att50" order="ascending"/>
+      <SortAttribute attribute="ent1#att30" order="ascending"/>
+      <SortAttribute attribute="ent1#att3" order="ascending"/>
+      <SortAttribute attribute="ent1#att27" order="ascending"/>
+      <SortAttribute attribute="ent1#att5" order="ascending"/>
+      <DefaultSortAttribute attribute="ent1#att1" order="descending"/>
     </PowerIndexUnit>
     <EntryUnit id="mov1#mpkg5#hym11#page55#enu34" name="Autovettura" linkOrder="mov1#mpkg5#hym11#page55#enu34#ln148 mov1#mpkg5#hym11#page55#enu34#ln149" gr:x="25" gr:y="0">
       <Field id="mov1#mpkg5#hym11#page55#enu34#fld212" name="Autovettura" ajaxAutocompleteEnabled="true" ajaxAutocompleteLink="mov1#mpkg5#hym11#page55#enu34#ln148" ajaxAutocompleteIndicator="true" ajaxAutocompleteMinChars="2" type="string" modifiable="true"/>
