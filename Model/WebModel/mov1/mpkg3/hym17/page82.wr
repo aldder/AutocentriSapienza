@@ -18,16 +18,56 @@
         <LinkParameter id="mov1#mpkg3#hym17#page82#enu53#ln330#par1071" name="Key [oid]_KeyCondition13 [oid]" target="mov1#mpkg3#hym17#miu120.mov2#mpkg22#mpkg27#opm54#icu56#icp275" sourceLinkParameter="mov1#mpkg3#hym17#page83#pwu33#ln332#par51"/>
         <LinkParameter id="mov1#mpkg3#hym17#page82#enu53#ln330#par53" name="Key [oid]_id_autovettura" source="key.ent1#att1" target="mov1#mpkg3#hym17#miu120.mov2#mpkg22#mpkg27#opm54#icu56#icp3"/>
       </Link>
-      <Field id="mov1#mpkg3#hym17#page82#enu53#fld6" name="Nome" type="string" modifiable="true" attribute="ent1#att46"/>
-      <Field id="mov1#mpkg3#hym17#page82#enu53#fld7" name="Foto" type="blob" modifiable="true" contentType="image" attribute="ent1#att3"/>
-      <Field id="mov1#mpkg3#hym17#page82#enu53#fld8" name="Prezzo" type="float" modifiable="true" attribute="ent1#att2"/>
-      <Field id="mov1#mpkg3#hym17#page82#enu53#fld14" name="Anno" type="date" modifiable="true" attribute="ent1#att7"/>
-      <Field id="mov1#mpkg3#hym17#page82#enu53#fld15" name="Kilometri" type="integer" modifiable="true" attribute="ent1#att6"/>
-      <Field id="mov1#mpkg3#hym17#page82#enu53#fld16" name="Alimentazione" type="string" modifiable="true" attribute="ent1#att8"/>
-      <Field id="mov1#mpkg3#hym17#page82#enu53#fld17" name="Cilindrata" type="integer" modifiable="true" attribute="ent1#att9"/>
-      <Field id="mov1#mpkg3#hym17#page82#enu53#fld18" name="Porte" type="integer" modifiable="true" attribute="ent1#att10"/>
-      <Field id="mov1#mpkg3#hym17#page82#enu53#fld19" name="Descrizione" type="text" modifiable="true" attribute="ent1#att11"/>
-      <Field id="mov1#mpkg3#hym17#page82#enu53#fld48" name="Targa" type="string" modifiable="true" attribute="ent1#att30"/>
+      <Field id="mov1#mpkg3#hym17#page82#enu53#fld6" name="Nome" type="string" modifiable="true" attribute="ent1#att46">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym17#page82#enu53#fld6#mnd49" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg3#hym17#page82#enu53#fld7" name="Foto" type="blob" modifiable="true" contentType="image" attribute="ent1#att3">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym17#page82#enu53#fld7#mnd47" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg3#hym17#page82#enu53#fld8" name="Prezzo" type="float" modifiable="true" attribute="ent1#att2">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym17#page82#enu53#fld8#mnd51" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg3#hym17#page82#enu53#fld14" name="Anno" type="date" modifiable="true" attribute="ent1#att7">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym17#page82#enu53#fld14#mnd44" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg3#hym17#page82#enu53#fld15" name="Kilometri" type="integer" modifiable="true" attribute="ent1#att6">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym17#page82#enu53#fld15#mnd48" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg3#hym17#page82#enu53#fld16" name="Alimentazione" type="string" modifiable="true" attribute="ent1#att8">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym17#page82#enu53#fld16#mnd43" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg3#hym17#page82#enu53#fld17" name="Cilindrata" type="integer" modifiable="true" attribute="ent1#att9">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym17#page82#enu53#fld17#mnd45" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg3#hym17#page82#enu53#fld18" name="Porte" type="integer" modifiable="true" attribute="ent1#att10">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym17#page82#enu53#fld18#mnd50" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg3#hym17#page82#enu53#fld19" name="Descrizione" type="text" modifiable="true" attribute="ent1#att11">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym17#page82#enu53#fld19#mnd46" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg3#hym17#page82#enu53#fld48" name="Targa" type="string" modifiable="true" attribute="ent1#att30">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym17#page82#enu53#fld48#mnd52" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

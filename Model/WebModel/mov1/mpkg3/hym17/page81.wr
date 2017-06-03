@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg3#hym17#page81" name="Inserisci annuncio di vendita" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="670" gr:y="5" layout:frameLayout="None">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg3#hym17#page81" name="Inserisci annuncio di vendita" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="675" gr:y="5" layout:frameLayout="None">
   <ContentUnits>
     <EntryUnit id="mov1#mpkg3#hym17#page81#enu52" name="Inserisci annuncio" linkOrder="mov1#mpkg3#hym17#page81#enu52#ln328" gr:showAllParts="false" gr:x="0" gr:y="0" entity="ent10" fieldOrder="mov1#mpkg3#hym17#page81#enu52#fld237 mov1#mpkg3#hym17#page81#enu52#fld231 mov1#mpkg3#hym17#page81#enu52#fld230 mov1#mpkg3#hym17#page81#enu52#fld232 mov1#mpkg3#hym17#page81#enu52#fld238 mov1#mpkg3#hym17#page81#enu52#fld233 mov1#mpkg3#hym17#page81#enu52#fld234 mov1#mpkg3#hym17#page81#enu52#fld235 mov1#mpkg3#hym17#page81#enu52#fld47 mov1#mpkg3#hym17#page81#enu52#fld236">
       <Field id="mov1#mpkg3#hym17#page81#enu52#fld230" name="Prezzo" type="float" modifiable="true">
@@ -63,7 +63,12 @@
         <LinkParameter id="mov1#mpkg3#hym17#page81#enu52#ln328#par283" name="Prezzo_prezzo" source="mov1#mpkg3#hym17#page81#enu52#fld230" target="mov1#mpkg3#hym17#miu121.mov2#mpkg22#mpkg27#opm52#icu54#icp66"/>
         <LinkParameter id="mov1#mpkg3#hym17#page81#enu52#ln328#par284" name="Targa_targa" source="mov1#mpkg3#hym17#page81#enu52#fld47" target="mov1#mpkg3#hym17#miu121.mov2#mpkg22#mpkg27#opm52#icu54#icp67"/>
       </Link>
-      <Field id="mov1#mpkg3#hym17#page81#enu52#fld47" name="Targa" type="string" modifiable="true"/>
+      <Field id="mov1#mpkg3#hym17#page81#enu52#fld47" name="Targa" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg3#hym17#page81#enu52#fld47#mnd53" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <CollectionValidationRule id="mov1#mpkg3#hym17#page81#enu52#fld47#clc6" name="Unique" predicate="notIn" entity="ent1" attribute="ent1#att30" errorMessage="valore gia' presente."/>
+        </VRules>
+      </Field>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
