@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg3#hym18#page84" name="Area personale" landmark="true" layout:layoutManager="grid" gr:x="350" gr:y="0">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg3#hym18#page84" name="Area personale" landmark="true" layout:layoutManager="grid" gr:x="325" gr:y="0">
   <ContentUnits>
-    <EntryUnit id="mov1#mpkg3#hym18#page84#enu54" name="Cambia password" linkOrder="mov1#mpkg3#hym18#page84#enu54#ln339" gr:x="125" gr:y="0" entity="User" fieldOrder="mov1#mpkg3#hym18#page84#enu54#fld248 mov1#mpkg3#hym18#page84#enu54#fld249">
+    <EntryUnit id="mov1#mpkg3#hym18#page84#enu54" name="Cambia password" linkOrder="mov1#mpkg3#hym18#page84#enu54#ln339" gr:x="150" gr:y="0" entity="User" fieldOrder="mov1#mpkg3#hym18#page84#enu54#fld248 mov1#mpkg3#hym18#page84#enu54#fld249">
       <Field id="mov1#mpkg3#hym18#page84#enu54#fld248" name="Inserisci nuova password" type="password" modifiable="true" attribute="password" preloaded="false">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg3#hym18#page84#enu54#fld248#mnd211" name="Mandatory" errorMessage="campo obbligatorio"/>
@@ -18,13 +18,13 @@
         <LinkParameter id="mov1#mpkg3#hym18#page84#enu54#ln339#par1090" name="Utente Object_Utente Object" source="entityBean" target="mov1#mpkg3#hym18#miu126.mov2#mpkg22#mpkg24#opm47#icu49#icp236"/>
       </Link>
     </EntryUnit>
-    <GetUnit id="mov1#mpkg3#hym18#page84#gtu12" name="utente" gr:x="0" gr:y="5" contextParameters="UserCtxParam">
+    <GetUnit id="mov1#mpkg3#hym18#page84#gtu12" name="UtenteCorrente" gr:x="0" gr:y="5" contextParameters="UserCtxParam">
       <Link id="mov1#mpkg3#hym18#page84#gtu12#ln340" name="Flow160" to="mov1#mpkg3#hym18#page84#enu54" type="transport" validate="true">
         <LinkParameter id="mov1#mpkg3#hym18#page84#gtu12#ln340#par1086" name="UserCtxParam.oid_Key Condition [oid]" source="mov1#mpkg3#hym18#page84#gtu12.UserCtxParam" target="mov1#mpkg3#hym18#page84#enu54.userOID"/>
       </Link>
     </GetUnit>
-    <MultiMessageUnit id="mov1#mpkg3#hym18#page84#mssu61" name="OkMessage" gr:x="160" gr:y="95"/>
-    <MultiMessageUnit id="mov1#mpkg3#hym18#page84#mssu62" name="KoMessage" gr:x="160" gr:y="160"/>
+    <MultiMessageUnit id="mov1#mpkg3#hym18#page84#mssu61" name="OkMessage" gr:x="185" gr:y="95"/>
+    <MultiMessageUnit id="mov1#mpkg3#hym18#page84#mssu62" name="KoMessage" gr:x="185" gr:y="160"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>

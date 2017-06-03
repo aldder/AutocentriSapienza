@@ -1,10 +1,10 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg3#hym17#page83" name="Gestione annunci" landmark="true" layout:layoutManager="grid" gr:x="300" gr:y="5">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg3#hym17#page83" name="Gestione annunci" landmark="true" layout:layoutManager="grid" gr:x="295" gr:y="5">
   <ContentUnits>
-    <MultiMessageUnit id="mov1#mpkg3#hym17#page83#mssu46" name="Inserisci" linkOrder="mov1#mpkg3#hym17#page83#mssu46#ln331" gr:x="175" gr:y="5">
+    <MultiMessageUnit id="mov1#mpkg3#hym17#page83#mssu46" name="Inserisci" linkOrder="mov1#mpkg3#hym17#page83#mssu46#ln331" gr:x="180" gr:y="5">
       <Message xml:space="preserve">Clicca per inserire un annuncio di vendita della tua auto.</Message>
       <Link id="mov1#mpkg3#hym17#page83#mssu46#ln331" name="Inserisci annuncio" to="mov1#mpkg3#hym17#page81#enu52" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserisci annuncio di vendita"/>
     </MultiMessageUnit>
-    <PowerIndexUnit id="mov1#mpkg3#hym17#page83#pwu33" name="Annunci" linkOrder="mov1#mpkg3#hym17#page83#pwu33#ln332" gr:showAllParts="false" gr:x="0" gr:y="110" sortable="true" checkable="false" useCountQuery="false" entity="ent10" blockFactor="10" displayAttributes="rel3#role5.ent1#att46 rel3#role5.ent1#att30 rel3#role5.ent1#att2 rel3#role5.ent1#att7 rel3#role5.ent1#att6 rel3#role5.ent1#att8 rel3#role5.ent1#att9 rel3#role5.ent1#att10">
+    <PowerIndexUnit id="mov1#mpkg3#hym17#page83#pwu33" name="Annunci" linkOrder="mov1#mpkg3#hym17#page83#pwu33#ln332" gr:showAllParts="false" gr:x="5" gr:y="110" sortable="true" checkable="false" useCountQuery="false" entity="ent10" blockFactor="10" displayAttributes="rel3#role5.ent1#att46 rel3#role5.ent1#att30 rel3#role5.ent1#att2 rel3#role5.ent1#att7 rel3#role5.ent1#att6 rel3#role5.ent1#att8 rel3#role5.ent1#att9 rel3#role5.ent1#att10">
       <Link id="mov1#mpkg3#hym17#page83#pwu33#ln332" name="Visualizza" to="mov1#mpkg3#hym17#page82#enu53" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli annuncio">
         <LinkParameter id="mov1#mpkg3#hym17#page83#pwu33#ln332#par40" name="AnnuncioToAutovettura.oid_Key Condition [oid]" source="data[].rel3#role5_ent1#att1" target="mov1#mpkg3#hym17#page82#enu53.ent1#att1"/>
         <LinkParameter id="mov1#mpkg3#hym17#page83#pwu33#ln332#par51" name="oid_PASSING" source="data[].ent10#att35" passing="true"/>
@@ -23,13 +23,13 @@
       <SortAttribute attribute="rel3#role5.ent1#att30" order="ascending"/>
       <DefaultSortAttribute attribute="ent10#att35" order="descending"/>
     </PowerIndexUnit>
-    <GetUnit id="mov1#mpkg3#hym17#page83#gtu10" name="utente" gr:x="10" gr:y="0" contextParameters="UserCtxParam">
+    <GetUnit id="mov1#mpkg3#hym17#page83#gtu10" name="UtenteCorrente" gr:x="0" gr:y="0" contextParameters="UserCtxParam">
       <Link id="mov1#mpkg3#hym17#page83#gtu10#ln333" name="Flow162" to="mov1#mpkg3#hym17#page83#pwu33" type="transport" validate="true">
         <LinkParameter id="mov1#mpkg3#hym17#page83#gtu10#ln333#par1048" name="UserCtxParam.oid_utente2annuncio [oid]" source="mov1#mpkg3#hym17#page83#gtu10.UserCtxParam" target="mov1#mpkg3#hym17#page83#pwu33#su37#rcond20.userOID"/>
       </Link>
     </GetUnit>
-    <MultiMessageUnit id="mov1#mpkg3#hym17#page83#mssu47" name="OkMessage" gr:x="150" gr:y="95"/>
-    <MultiMessageUnit id="mov1#mpkg3#hym17#page83#mssu48" name="KoMessage" gr:x="150" gr:y="160"/>
+    <MultiMessageUnit id="mov1#mpkg3#hym17#page83#mssu47" name="OkMessage" gr:x="155" gr:y="95"/>
+    <MultiMessageUnit id="mov1#mpkg3#hym17#page83#mssu48" name="KoMessage" gr:x="155" gr:y="160"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>

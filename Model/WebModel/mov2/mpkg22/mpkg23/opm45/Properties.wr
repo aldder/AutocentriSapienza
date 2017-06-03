@@ -10,6 +10,7 @@
       <OKLink id="mov2#mpkg22#mpkg23#opm45#icu47#oln47" name="OKFlow104" to="mov2#mpkg22#mpkg23#opm45#seu17">
         <LinkParameter id="mov2#mpkg22#mpkg23#opm45#icu47#oln47#par66" name="data_data" source="mov2#mpkg22#mpkg23#opm45#icu47#icp95" target="mov2#mpkg22#mpkg23#opm45#seu17#su7#acond21"/>
         <LinkParameter id="mov2#mpkg22#mpkg23#opm45#icu47#oln47#par67" name="id_orario_ora" source="mov2#mpkg22#mpkg23#opm45#icu47#icp94" target="mov2#mpkg22#mpkg23#opm45#seu17#su7#acond23"/>
+        <LinkParameter id="mov2#mpkg22#mpkg23#opm45#icu47#oln47#par2" name="id_appuntamento_KeyCondition14 [oid (not in)]" source="mov2#mpkg22#mpkg23#opm45#icu47#icp146" target="mov2#mpkg22#mpkg23#opm45#seu17#su7#kcond14.ent2#att12"/>
       </OKLink>
       <Link id="mov2#mpkg22#mpkg23#opm45#icu47#ln27" name="Flow123" to="mov2#mpkg22#mpkg23#opm45#seu19" type="transport" validate="true" gr:bendpoints="148,88,-372,98;495,70,-79,124">
         <LinkParameter id="mov2#mpkg22#mpkg23#opm45#icu47#ln27#par69" name="id_appuntamento_appuntamento2notifica [oid]" source="mov2#mpkg22#mpkg23#opm45#icu47#icp146" target="mov2#mpkg22#mpkg23#opm45#seu19#su39#rcond10.ent2#att12"/>
@@ -33,10 +34,11 @@
         <LinkParameter id="mov2#mpkg22#mpkg23#opm45#icu47#ln31#par257" name="id_utente_Utente.oid(AppuntamentoToUtente)" source="mov2#mpkg22#mpkg23#opm45#icu47#icp96" target="mov2#mpkg22#mpkg23#opm45#mfu1.rel6#role12.userOID"/>
       </Link>
     </InputCollectorUnit>
-    <SelectorUnit id="mov2#mpkg22#mpkg23#opm45#seu17" name="AppData&amp;Ora" gr:x="515" gr:y="285" entity="ent2" distinctAttributes="ent2#att12 ent2#att13 ent2#att14">
+    <SelectorUnit id="mov2#mpkg22#mpkg23#opm45#seu17" name="AppData&amp;Ora" gr:x="515" gr:y="280" entity="ent2" distinctAttributes="ent2#att12 ent2#att13 ent2#att14">
       <Selector id="mov2#mpkg22#mpkg23#opm45#seu17#su7" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#mpkg22#mpkg23#opm45#seu17#su7#acond21" name="data" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att13"/>
         <AttributesCondition id="mov2#mpkg22#mpkg23#opm45#seu17#su7#acond23" name="ora" predicate="eq" booleanOperator="or" implied="false" attributes="rel17#role33.ent15#att65"/>
+        <KeyCondition id="mov2#mpkg22#mpkg23#opm45#seu17#su7#kcond14" name="KeyCondition14" predicate="notIn" implied="false"/>
       </Selector>
       <OKLink id="mov2#mpkg22#mpkg23#opm45#seu17#oln64" name="OKFlow19" to="mov2#mpkg22#mpkg23#opm45#inn5">
         <LinkParameter id="mov2#mpkg22#mpkg23#opm45#seu17#oln64#par445" name="oid_Input" source="ent2#att12Array" target="mov2#mpkg22#mpkg23#opm45#inn5.isnotnull"/>
