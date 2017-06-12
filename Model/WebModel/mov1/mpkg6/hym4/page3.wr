@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym4#page3" name="Inserisci autovettura" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" layout:frameLayout="None" gr:x="750" gr:y="150">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym4#page3" name="Inserisci autovettura" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" layout:frameLayout="None" gr:x="750" gr:y="135">
   <ContentUnits>
     <EntryUnit id="mov1#mpkg6#hym4#page3#enu2" name="Inserisci autovettura" ajaxEnableExpandedLinks="false" gr:x="0" gr:y="0" entity="ent1" fieldOrder="mov1#mpkg6#hym4#page3#enu2#fld30 mov1#mpkg6#hym4#page3#enu2#fld29 mov1#mpkg6#hym4#page3#enu2#fld31 mov1#mpkg6#hym4#page3#enu2#fld34 mov1#mpkg6#hym4#page3#enu2#fld68 mov1#mpkg6#hym4#page3#enu2#fld69 mov1#mpkg6#hym4#page3#enu2#fld70 mov1#mpkg6#hym4#page3#enu2#fld72 mov1#mpkg6#hym4#page3#enu2#fld73" linkOrder="mov1#mpkg6#hym4#page3#enu2#ln44">
       <Field id="mov1#mpkg6#hym4#page3#enu2#fld29" name="Nome" type="string" modifiable="true" attribute="ent1#att46">
@@ -50,14 +50,11 @@
         <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par372" name="Nome_nome" source="mov1#mpkg6#hym4#page3#enu2#fld29" target="mov1#mpkg6#hym4#cru6.ent1#att46"/>
         <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par374" name="1_officina" sourceValue="1" target="mov1#mpkg6#hym4#cru6.ent1#att5"/>
         <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par375" name="Numero di porte_porte" source="mov1#mpkg6#hym4#page3#enu2#fld72" target="mov1#mpkg6#hym4#cru6.ent1#att10"/>
-        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par376" name="Prezzo_prezzo" source="mov1#mpkg6#hym4#page3#enu2#fld32" target="mov1#mpkg6#hym4#cru6.ent1#att2"/>
         <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par377" name="Targa_targa" source="mov1#mpkg6#hym4#page3#enu2#fld30" target="mov1#mpkg6#hym4#cru6.ent1#att30"/>
         <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par378" name="1_usato" sourceValue="1" target="mov1#mpkg6#hym4#cru6.ent1#att4"/>
         <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par429" name="AppuntamentoToTipologia.oid_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#inn6#kln16#par423" passing="true"/>
         <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par430" name="AppuntamentoToUtente.oid_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#inn6#kln16#par424" passing="true"/>
-        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par431" name="data_inizio_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#inn6#kln16#par425" passing="true"/>
         <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par432" name="descrizione_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#inn6#kln16#par426" passing="true"/>
-        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par433" name="id_appuntamento_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#inn6#kln16#par427" passing="true"/>
       </Link>
     </EntryUnit>
   </ContentUnits>
