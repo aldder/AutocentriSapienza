@@ -27,7 +27,7 @@
         <RelationshipRoleCondition id="mov1#mpkg6#hym9#seu8#su11#rcond28" name="utente2intervento2auto" predicate="in" implied="false" role="rel4#role7.rel9#role18"/>
         <AttributesCondition id="mov1#mpkg6#hym9#seu8#su11#acond3" name="targa" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att30" ignoreCase="true"/>
       </Selector>
-      <OKLink id="mov1#mpkg6#hym9#seu8#oln49" name="OKFlow49" to="mov1#mpkg6#hym9#page69#enu50" gr:bendpoints="-125,91,180,-14">
+      <OKLink id="mov1#mpkg6#hym9#seu8#oln49" name="OKFlow49" to="mov1#mpkg6#hym9#page69#enu50" gr:bendpoints="-119,104,186,-1">
         <LinkParameter id="mov1#mpkg6#hym9#seu8#oln49#par267" name="nome_Autovettura" source="ent1#att46Array" target="mov1#mpkg6#hym9#page69#enu50#fld25_slot"/>
         <LinkParameter id="mov1#mpkg6#hym9#seu8#oln49#par268" name="oid_PASSING" source="ent1#att1Array" passing="true"/>
       </OKLink>

@@ -86,7 +86,7 @@
         <layout:Unit unitId="mov1#mpkg6#hym9#page68#enu49">
           <layout:Link link="mov1#mpkg6#hym9#page68#enu49#ln294"/>
           <layout:Link link="mov1#mpkg6#hym9#page68#enu49#ln296"/>
-          <layout:Link link="mov1#mpkg6#hym9#page68#enu49#ln41" styleClass="pull-right">
+          <layout:Link link="mov1#mpkg6#hym9#page68#enu49#ln41" styleClass="pull-right" layout:linkVisibilityCondition="mov1#mpkg6#hym9#page68#cexpr3">
             <layout:LayoutParameter name="btn-style" value="info" type="link"/>
           </layout:Link>
           <layout:Field field="mov1#mpkg6#hym9#page68#enu49#fld27"/>
@@ -110,4 +110,9 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <ConditionExpression id="mov1#mpkg6#hym9#page68#cexpr3" name="checkData">
+    <TextValue xml:space="preserve">def now = new Date()
+return data_app &lt;= now</TextValue>
+  </ConditionExpression>
+  <Variable id="mov1#mpkg6#hym9#page68#var4" name="data_app" type="date" unitId="mov1#mpkg6#hym9#page68#enu49" parameter="mov1#mpkg6#hym9#page68#enu49#fld185"/>
 </Page>

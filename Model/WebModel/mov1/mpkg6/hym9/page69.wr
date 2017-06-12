@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym9#page69" name="Gestione appuntamenti" landmark="true" ajaxEnabled="true" gr:x="495" gr:y="0">
   <ContentUnits>
-    <EventCalendarUnit id="mov1#mpkg6#hym9#page69#ecu3" name="Calendario" linkOrder="mov1#mpkg6#hym9#page69#ecu3#ln300" gr:x="10" gr:y="220" entityBased="true" entity="ent2" dateAttribute="ent2#att13" years="1" displayAttributes="rel17#role33.ent15#att66 rel6#role12.userName rel7#role14.ent3#att16">
+    <EventCalendarUnit id="mov1#mpkg6#hym9#page69#ecu3" name="Calendario" gr:x="10" gr:y="220" entityBased="true" entity="ent2" dateAttribute="ent2#att13" years="1" displayAttributes="rel17#role33.ent15#att66 rel6#role12.userName rel7#role14.ent3#att16" linkOrder="mov1#mpkg6#hym9#page69#ecu3#ln300">
       <Link id="mov1#mpkg6#hym9#page69#ecu3#ln300" name="Flow105" to="mov1#mpkg6#hym9#page68#enu49" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="500" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli appuntamento">
         <LinkParameter id="mov1#mpkg6#hym9#page69#ecu3#ln300#par1862" name="oid_Key Condition [oid]" source="date[].data[].ent2#att12" target="mov1#mpkg6#hym9#page68#enu49.ent2#att12"/>
         <LinkParameter id="mov1#mpkg6#hym9#page69#ecu3#ln300#par1864" name="AppuntamentoToOrario.oid_AppuntamentoToOrario - Preselection" source="date[].data[].rel17#role33_ent15#att65" target="mov1#mpkg6#hym9#page68#enu49#sfld29_presel"/>
@@ -31,7 +31,7 @@
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page69#enu50#sfld31#mnd153" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
       </SelectionField>
-      <SelectionField id="mov1#mpkg6#hym9#page69#enu50#sfld32" name="Utente" type="string" role="rel6#role12" ajaxEventEnabled="true" ajaxEventLink="mov1#mpkg6#hym9#page69#enu50#ln32" ajaxEventIndicator="true">
+      <SelectionField id="mov1#mpkg6#hym9#page69#enu50#sfld32" name="Utente" type="string" role="rel6#role12" ajaxEventEnabled="false" ajaxEventLink="mov1#mpkg6#hym9#page69#enu50#ln32" ajaxEventIndicator="true">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page69#enu50#sfld32#mnd4" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
@@ -45,7 +45,7 @@
         <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln302#par288" name="Utente_id_utente" source="mov1#mpkg6#hym9#page69#enu50#sfld32" target="mov1#mpkg6#hym9#miu94.mov2#mpkg22#mpkg23#opm36#icu46#icp89"/>
         <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln302#par289" name="Targa_targa" source="mov1#mpkg6#hym9#page69#enu50#fld24" target="mov1#mpkg6#hym9#miu94.mov2#mpkg22#mpkg23#opm36#icu46#icp4"/>
       </Link>
-      <Field id="mov1#mpkg6#hym9#page69#enu50#fld24" name="Targa" type="string" modifiable="true" attribute="ent2#att26" ajaxEventEnabled="true" ajaxEventLink="mov1#mpkg6#hym9#page69#enu50#ln32" ajaxEventIndicator="true">
+      <Field id="mov1#mpkg6#hym9#page69#enu50#fld24" name="Targa" type="string" modifiable="true" attribute="ent2#att26" ajaxEventEnabled="true" ajaxEventLink="mov1#mpkg6#hym9#page69#enu50#ln32" ajaxEventIndicator="true" ajaxAutocompleteEnabled="false">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page69#enu50#fld24#mnd3" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
@@ -69,7 +69,7 @@
         <LinkParameter id="mov1#mpkg6#hym9#page69#seu108#ln304#par1874" name="oid_Ora [output]" source="ent15#att65Array" target="mov1#mpkg6#hym9#page69#enu50#sfld31_output"/>
       </Link>
     </SelectorUnit>
-    <PowerIndexUnit id="mov1#mpkg6#hym9#page69#pwu27" name="Appuntamenti di oggi" linkOrder="mov1#mpkg6#hym9#page69#pwu27#ln305" gr:x="115" gr:y="215" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att13 rel6#role12.userName ent2#att26 rel17#role33.ent15#att66 rel7#role14.ent3#att16" blockFactor="5">
+    <PowerIndexUnit id="mov1#mpkg6#hym9#page69#pwu27" name="Appuntamenti di oggi" gr:x="115" gr:y="215" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att13 rel6#role12.userName ent2#att26 rel17#role33.ent15#att66 rel7#role14.ent3#att16" blockFactor="5" linkOrder="mov1#mpkg6#hym9#page69#pwu27#ln305">
       <Selector id="mov1#mpkg6#hym9#page69#pwu27#su200" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov1#mpkg6#hym9#page69#pwu27#su200#acond90" name="data" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att13"/>
         <AttributesCondition id="mov1#mpkg6#hym9#page69#pwu27#su200#acond12" name="AttCondition12" predicate="null" booleanOperator="or" implied="false" attributes="rel10#role19.ent8#att31"/>

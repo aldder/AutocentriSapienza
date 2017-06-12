@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym4#page3" name="Inserisci autovettura" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" layout:frameLayout="None" gr:x="750" gr:y="150">
   <ContentUnits>
-    <EntryUnit id="mov1#mpkg6#hym4#page3#enu2" name="Inserisci autovettura" ajaxEnableExpandedLinks="false" gr:x="0" gr:y="0" entity="ent1" fieldOrder="mov1#mpkg6#hym4#page3#enu2#fld30 mov1#mpkg6#hym4#page3#enu2#fld29 mov1#mpkg6#hym4#page3#enu2#fld31 mov1#mpkg6#hym4#page3#enu2#fld32 mov1#mpkg6#hym4#page3#enu2#fld34 mov1#mpkg6#hym4#page3#enu2#fld68 mov1#mpkg6#hym4#page3#enu2#fld69 mov1#mpkg6#hym4#page3#enu2#fld70 mov1#mpkg6#hym4#page3#enu2#fld72 mov1#mpkg6#hym4#page3#enu2#fld73" linkOrder="mov1#mpkg6#hym4#page3#enu2#ln44">
+    <EntryUnit id="mov1#mpkg6#hym4#page3#enu2" name="Inserisci autovettura" ajaxEnableExpandedLinks="false" gr:x="0" gr:y="0" entity="ent1" fieldOrder="mov1#mpkg6#hym4#page3#enu2#fld30 mov1#mpkg6#hym4#page3#enu2#fld29 mov1#mpkg6#hym4#page3#enu2#fld31 mov1#mpkg6#hym4#page3#enu2#fld34 mov1#mpkg6#hym4#page3#enu2#fld68 mov1#mpkg6#hym4#page3#enu2#fld69 mov1#mpkg6#hym4#page3#enu2#fld70 mov1#mpkg6#hym4#page3#enu2#fld72 mov1#mpkg6#hym4#page3#enu2#fld73" linkOrder="mov1#mpkg6#hym4#page3#enu2#ln44">
       <Field id="mov1#mpkg6#hym4#page3#enu2#fld29" name="Nome" type="string" modifiable="true" attribute="ent1#att46">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym4#page3#enu2#fld29#mnd8" name="Mandatory" errorMessage="campo obbligatorio"/>
@@ -13,7 +13,6 @@
         </VRules>
       </Field>
       <Field id="mov1#mpkg6#hym4#page3#enu2#fld31" name="Foto" type="blob" modifiable="true" contentType="image" attribute="ent1#att3"/>
-      <Field id="mov1#mpkg6#hym4#page3#enu2#fld32" name="Prezzo" type="float" modifiable="true" attribute="ent1#att2"/>
       <Field id="mov1#mpkg6#hym4#page3#enu2#fld34" name="Anno di immatricolazione" type="date" modifiable="true" attribute="ent1#att7">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym4#page3#enu2#fld34#mnd10" name="Mandatory" errorMessage="campo obbligatorio"/>
@@ -66,17 +65,16 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#mpkg6#hym4#page3#enu2">
+          <layout:Link link="mov1#mpkg6#hym4#page3#enu2#ln44"/>
           <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld30"/>
           <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld29"/>
           <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld31"/>
-          <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld32"/>
           <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld34"/>
           <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld68"/>
           <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld69"/>
           <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld70"/>
           <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld72"/>
           <layout:Field field="mov1#mpkg6#hym4#page3#enu2#fld73"/>
-          <layout:Link link="mov1#mpkg6#hym4#page3#enu2#ln44"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

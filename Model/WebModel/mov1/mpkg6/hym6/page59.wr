@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym6#page59" name="Inserisci autovettura" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="540" gr:y="-65" layout:frameLayout="None">
   <ContentUnits>
-    <EntryUnit id="mov1#mpkg6#hym6#page59#enu42" name="Inserisci autovettura" linkOrder="mov1#mpkg6#hym6#page59#enu42#ln251 mov1#mpkg6#hym6#page59#enu42#ln50" gr:x="0" gr:y="0" entity="ent1" fieldOrder="mov1#mpkg6#hym6#page59#enu42#fld50 mov1#mpkg6#hym6#page59#enu42#fld49 mov1#mpkg6#hym6#page59#enu42#fld51 mov1#mpkg6#hym6#page59#enu42#fld52 mov1#mpkg6#hym6#page59#enu42#fld53 mov1#mpkg6#hym6#page59#enu42#fld54 mov1#mpkg6#hym6#page59#enu42#fld55 mov1#mpkg6#hym6#page59#enu42#fld56 mov1#mpkg6#hym6#page59#enu42#fld57 mov1#mpkg6#hym6#page59#enu42#fld58" ajaxEnableExpandedLinks="false">
+    <EntryUnit id="mov1#mpkg6#hym6#page59#enu42" name="Inserisci autovettura" linkOrder="mov1#mpkg6#hym6#page59#enu42#ln251 mov1#mpkg6#hym6#page59#enu42#ln50" gr:x="0" gr:y="0" entity="ent1" fieldOrder="mov1#mpkg6#hym6#page59#enu42#fld50 mov1#mpkg6#hym6#page59#enu42#fld49 mov1#mpkg6#hym6#page59#enu42#fld51 mov1#mpkg6#hym6#page59#enu42#fld53 mov1#mpkg6#hym6#page59#enu42#fld54 mov1#mpkg6#hym6#page59#enu42#fld55 mov1#mpkg6#hym6#page59#enu42#fld56 mov1#mpkg6#hym6#page59#enu42#fld57 mov1#mpkg6#hym6#page59#enu42#fld58" ajaxEnableExpandedLinks="false">
       <Link id="mov1#mpkg6#hym6#page59#enu42#ln251" name="Inserisci" to="mov1#mpkg6#hym6#miu69" type="normal" validate="true">
         <LinkParameter id="mov1#mpkg6#hym6#page59#enu42#ln251#par590" name="Alimentazione_alimentazione" source="mov1#mpkg6#hym6#page59#enu42#fld55" target="mov1#mpkg6#hym6#miu69.mov2#mpkg31#mpkg1#opm7#icu19#icp141"/>
         <LinkParameter id="mov1#mpkg6#hym6#page59#enu42#ln251#par591" name="Anno di immatricolazione_anno" source="mov1#mpkg6#hym6#page59#enu42#fld53" target="mov1#mpkg6#hym6#miu69.mov2#mpkg31#mpkg1#opm7#icu19#icp142"/>
@@ -27,7 +27,6 @@
         </VRules>
       </Field>
       <Field id="mov1#mpkg6#hym6#page59#enu42#fld51" name="Foto" type="blob" modifiable="true" contentType="image" attribute="ent1#att3" preloaded="true"/>
-      <Field id="mov1#mpkg6#hym6#page59#enu42#fld52" name="Prezzo" type="float" modifiable="true" attribute="ent1#att2" preloaded="true"/>
       <Field id="mov1#mpkg6#hym6#page59#enu42#fld53" name="Anno di immatricolazione" type="date" modifiable="true" attribute="ent1#att7" preloaded="true">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym6#page59#enu42#fld53#mnd17" name="Mandatory" errorMessage="campo obbligatorio"/>
@@ -68,7 +67,6 @@
           <layout:Field field="mov1#mpkg6#hym6#page59#enu42#fld50"/>
           <layout:Field field="mov1#mpkg6#hym6#page59#enu42#fld49"/>
           <layout:Field field="mov1#mpkg6#hym6#page59#enu42#fld51"/>
-          <layout:Field field="mov1#mpkg6#hym6#page59#enu42#fld52"/>
           <layout:Field field="mov1#mpkg6#hym6#page59#enu42#fld53"/>
           <layout:Field field="mov1#mpkg6#hym6#page59#enu42#fld54"/>
           <layout:Field field="mov1#mpkg6#hym6#page59#enu42#fld55"/>

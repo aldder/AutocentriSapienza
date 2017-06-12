@@ -4,7 +4,7 @@
     <ModuleInstanceUnit gr:x="0" gr:y="125" id="sv4#area3#miu68" moduleId="mov1#mpkg6#hym6" landmark="true"/>
     <ModuleInstanceUnit gr:x="330" gr:y="0" id="sv4#area3#miu78" moduleId="mov1#mpkg6#hym7" landmark="true"/>
     <ModuleInstanceUnit gr:x="340" gr:y="120" id="sv4#area3#miu85" moduleId="mov1#mpkg6#hym8" landmark="true"/>
-    <ModuleInstanceUnit gr:x="10" gr:y="225" id="sv4#area3#miu93" moduleId="mov1#mpkg6#hym9" landmark="true"/>
+    <ModuleInstanceUnit gr:x="10" gr:y="225" id="sv4#area3#miu93" landmark="true" moduleId="mov1#mpkg6#hym9"/>
   </OperationUnits>
   <layout:LayoutParameter name="link-style" value="button" type="link"/>
 </Area>
