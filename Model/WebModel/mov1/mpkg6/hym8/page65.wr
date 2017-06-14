@@ -20,16 +20,10 @@
       <SortAttribute attribute="ent8#att29" order="ascending"/>
       <DefaultSortAttribute attribute="ent8#att31" order="descending"/>
     </PowerIndexUnit>
-    <PowerIndexUnit id="mov1#mpkg6#hym8#page65#pwu26" name="Interventi completati" linkOrder="mov1#mpkg6#hym8#page65#pwu26#ln278" gr:x="175" gr:y="70" sortable="true" checkable="false" useCountQuery="false" entity="ent8" displayAttributes="ent8#att31 ent8#att32 ent8#att29 rel4#role8.userName rel9#role18.ent1#att46 rel9#role18.ent1#att30 rel5#role10.ent3#att16 ent8#att33" blockFactor="10">
+    <PowerIndexUnit id="mov1#mpkg6#hym8#page65#pwu26" name="Interventi completati" gr:x="175" gr:y="70" sortable="true" checkable="false" useCountQuery="false" entity="ent8" displayAttributes="ent8#att31 ent8#att32 ent8#att29 rel4#role8.userName rel9#role18.ent1#att46 rel9#role18.ent1#att30 rel5#role10.ent3#att16 ent8#att33" blockFactor="10">
       <Selector id="mov1#mpkg6#hym8#page65#pwu26#su195" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov1#mpkg6#hym8#page65#pwu26#su195#acond88" name="stato" predicate="eq" booleanOperator="or" implied="false" attributes="ent8#att33" value="1"/>
       </Selector>
-      <Link id="mov1#mpkg6#hym8#page65#pwu26#ln278" name="Visualizza" to="mov1#mpkg6#hym8#page66#enu47" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli intervento">
-        <LinkParameter id="mov1#mpkg6#hym8#page65#pwu26#ln278#par1745" name="InterventoToAppuntamento.oid_Appuntamento - Preselection" source="data[].rel10#role20_ent2#att12" target="mov1#mpkg6#hym8#page66#enu47#sfld25_presel"/>
-        <LinkParameter id="mov1#mpkg6#hym8#page65#pwu26#ln278#par1747" name="oid_Key Condition [oid]" source="data[].ent8#att31" target="mov1#mpkg6#hym8#page66#enu47.ent8#att31"/>
-        <LinkParameter id="mov1#mpkg6#hym8#page65#pwu26#ln278#par523" name="InterventoToAutovettura.targa_Autovettura" source="data[].rel9#role18$ent1#att30" target="mov1#mpkg6#hym8#page66#enu47#fld79_slot"/>
-        <LinkParameter id="mov1#mpkg6#hym8#page65#pwu26#ln278#par526" name="InterventoToUtente.nome_utente_Utente" source="data[].rel4#role8$userName" target="mov1#mpkg6#hym8#page66#enu47#fld78_slot"/>
-      </Link>
       <SortAttribute attribute="ent8#att31" order="ascending"/>
       <SortAttribute attribute="ent8#att32" order="ascending"/>
       <SortAttribute attribute="ent8#att33" order="ascending"/>
@@ -150,7 +144,6 @@
           <layout:Attribute attribute="rel9#role18.ent1#att30" label="Targa"/>
           <layout:Attribute attribute="rel5#role10.ent3#att16" label="Tipologia"/>
           <layout:Attribute label="Completato" attribute="ent8#att33"/>
-          <layout:Link link="mov1#mpkg6#hym8#page65#pwu26#ln278"/>
           <layout:Link link="mov1#mpkg6#hym8#page65#pwu26ent8#att31"/>
           <layout:Link link="mov1#mpkg6#hym8#page65#pwu26ent8#att32"/>
           <layout:Link link="mov1#mpkg6#hym8#page65#pwu26ent8#att33"/>

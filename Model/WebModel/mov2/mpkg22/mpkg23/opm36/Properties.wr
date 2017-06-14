@@ -63,8 +63,5 @@
       <KOLink id="mov2#mpkg22#mpkg23#opm36#cru7#kln56" name="KOFlow35" to="mov2#mpkg22#mpkg23#opm36#kocu39"/>
     </CreateUnit>
     <KOCollectorUnit id="mov2#mpkg22#mpkg23#opm36#kocu39" name="KO Port10" gr:x="1235" gr:y="125"/>
-    <SelectorUnit gr:x="260" gr:y="185" id="mov2#mpkg22#mpkg23#opm36#seu4" name="SelectIntervento" entity="ent8">
-      <Selector id="mov2#mpkg22#mpkg23#opm36#seu4#su35" defaultPolicy="fill" booleanOperator="and"/>
-    </SelectorUnit>
   </OperationUnits>
 </OperationModule>

@@ -1,7 +1,7 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym8#page66" name="Dettagli intervento" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="430" gr:y="445" layout:frameLayout="None">
   <ContentUnits>
     <EntryUnit id="mov1#mpkg6#hym8#page66#enu47" name="Dettagli intervento" linkOrder="mov1#mpkg6#hym8#page66#enu47#ln282 mov1#mpkg6#hym8#page66#enu47#ln280 mov1#mpkg6#hym8#page66#enu47#ln281" gr:x="110" gr:y="0" entity="ent8" fieldOrder="mov1#mpkg6#hym8#page66#enu47#fld78 mov1#mpkg6#hym8#page66#enu47#fld79 mov1#mpkg6#hym8#page66#enu47#fld177 mov1#mpkg6#hym8#page66#enu47#sfld25 mov1#mpkg6#hym8#page66#enu47#fld178 mov1#mpkg6#hym8#page66#enu47#fld179">
-      <Field id="mov1#mpkg6#hym8#page66#enu47#fld177" name="Data inizio" type="date" modifiable="true" attribute="ent8#att32">
+      <Field id="mov1#mpkg6#hym8#page66#enu47#fld177" name="Data inizio" type="date" modifiable="false" attribute="ent8#att32">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym8#page66#enu47#fld177#mnd225" name="Mandatory" errorMessage="campo obbligatorio"/>
           <TypeValidationRule id="mov1#mpkg6#hym8#page66#enu47#fld177#tvr18" name="Type Validation" type="date" errorMessage="valore non corretto"/>

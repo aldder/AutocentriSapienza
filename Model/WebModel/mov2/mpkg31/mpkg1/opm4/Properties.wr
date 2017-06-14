@@ -27,7 +27,6 @@
       <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm4#icu16#icp134" name="nome"/>
       <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm4#icu16#icp135" name="officina"/>
       <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm4#icu16#icp136" name="porte"/>
-      <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm4#icu16#icp137" name="prezzo"/>
       <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm4#icu16#icp138" name="targa"/>
       <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm4#icu16#icp139" name="usato"/>
       <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm4#icu16#icp140" name="id_auto"/>

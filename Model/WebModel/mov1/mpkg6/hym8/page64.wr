@@ -35,7 +35,7 @@
           <MandatoryValidationRule id="mov1#mpkg6#hym8#page64#enu46#sfld5#mnd33" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
       </SelectionField>
-      <Link id="mov1#mpkg6#hym8#page64#enu46#ln60" name="Nuovo utente" to="mov1#mpkg6#hym8#page4" automaticCoupling="true" type="normal" validate="true" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserisci utente" ajaxWindowWidth="600" ajaxWindowHeight="400" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+      <Link id="mov1#mpkg6#hym8#page64#enu46#ln60" name="Nuovo utente" to="mov1#mpkg6#hym8#page4" automaticCoupling="true" type="normal" validate="false" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserisci utente" ajaxWindowWidth="600" ajaxWindowHeight="400" ajaxWindowClosable="true" ajaxWindowModal="true"/>
     </EntryUnit>
     <SelectorUnit id="mov1#mpkg6#hym8#page64#seu98" name="Tipologia" gr:x="115" gr:y="0" entity="ent3">
       <Link id="mov1#mpkg6#hym8#page64#seu98#ln276" name="Flow184" to="mov1#mpkg6#hym8#page64#enu46" type="transport" validate="true">

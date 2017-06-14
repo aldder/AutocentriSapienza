@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym6#page61" name="Dettagli autovettura" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="540" gr:y="410" layout:frameLayout="None">
   <ContentUnits>
-    <EntryUnit id="mov1#mpkg6#hym6#page61#enu43" name="Dettagli autovettura" linkOrder="mov1#mpkg6#hym6#page61#enu43#ln255 mov1#mpkg6#hym6#page61#enu43#ln254" gr:x="0" gr:y="0" entity="ent1" fieldOrder="mov1#mpkg6#hym6#page61#enu43#fld60 mov1#mpkg6#hym6#page61#enu43#fld59 mov1#mpkg6#hym6#page61#enu43#fld61 mov1#mpkg6#hym6#page61#enu43#fld62 mov1#mpkg6#hym6#page61#enu43#fld63 mov1#mpkg6#hym6#page61#enu43#fld64 mov1#mpkg6#hym6#page61#enu43#fld65 mov1#mpkg6#hym6#page61#enu43#fld66 mov1#mpkg6#hym6#page61#enu43#fld67 mov1#mpkg6#hym6#page61#enu43#fld71">
+    <EntryUnit id="mov1#mpkg6#hym6#page61#enu43" name="Dettagli autovettura" linkOrder="mov1#mpkg6#hym6#page61#enu43#ln255 mov1#mpkg6#hym6#page61#enu43#ln254" gr:x="0" gr:y="0" entity="ent1" fieldOrder="mov1#mpkg6#hym6#page61#enu43#fld60 mov1#mpkg6#hym6#page61#enu43#fld59 mov1#mpkg6#hym6#page61#enu43#fld61 mov1#mpkg6#hym6#page61#enu43#fld63 mov1#mpkg6#hym6#page61#enu43#fld64 mov1#mpkg6#hym6#page61#enu43#fld65 mov1#mpkg6#hym6#page61#enu43#fld66 mov1#mpkg6#hym6#page61#enu43#fld67 mov1#mpkg6#hym6#page61#enu43#fld71">
       <Link id="mov1#mpkg6#hym6#page61#enu43#ln254" name="Rimuovi autovettura" to="mov1#mpkg6#hym6#miu70" type="normal" validate="true">
         <LinkParameter id="mov1#mpkg6#hym6#page61#enu43#ln254#par603" name="Key [oid]_KeyCondition51 [oid]" source="key.ent1#att1" target="mov1#mpkg6#hym6#miu70.mov2#mpkg31#mpkg1#opm5#icu17#icp113"/>
       </Link>
@@ -16,7 +16,6 @@
         <LinkParameter id="mov1#mpkg6#hym6#page61#enu43#ln255#par462" name="Nome_nome" source="mov1#mpkg6#hym6#page61#enu43#fld59" target="mov1#mpkg6#hym6#miu71.mov2#mpkg31#mpkg1#opm4#icu16#icp134"/>
         <LinkParameter id="mov1#mpkg6#hym6#page61#enu43#ln255#par463" name="1_officina" sourceValue="1" target="mov1#mpkg6#hym6#miu71.mov2#mpkg31#mpkg1#opm4#icu16#icp135"/>
         <LinkParameter id="mov1#mpkg6#hym6#page61#enu43#ln255#par464" name="Numero di porte_porte" source="mov1#mpkg6#hym6#page61#enu43#fld67" target="mov1#mpkg6#hym6#miu71.mov2#mpkg31#mpkg1#opm4#icu16#icp136"/>
-        <LinkParameter id="mov1#mpkg6#hym6#page61#enu43#ln255#par465" name="Prezzo_prezzo" source="mov1#mpkg6#hym6#page61#enu43#fld62" target="mov1#mpkg6#hym6#miu71.mov2#mpkg31#mpkg1#opm4#icu16#icp137"/>
         <LinkParameter id="mov1#mpkg6#hym6#page61#enu43#ln255#par466" name="Targa_targa" source="mov1#mpkg6#hym6#page61#enu43#fld60" target="mov1#mpkg6#hym6#miu71.mov2#mpkg31#mpkg1#opm4#icu16#icp138"/>
         <LinkParameter id="mov1#mpkg6#hym6#page61#enu43#ln255#par467" name="1_usato" sourceValue="1" target="mov1#mpkg6#hym6#miu71.mov2#mpkg31#mpkg1#opm4#icu16#icp139"/>
       </Link>
@@ -31,7 +30,6 @@
         </VRules>
       </Field>
       <Field id="mov1#mpkg6#hym6#page61#enu43#fld61" name="Foto" type="blob" modifiable="true" contentType="image" attribute="ent1#att3"/>
-      <Field id="mov1#mpkg6#hym6#page61#enu43#fld62" name="Prezzo" type="float" modifiable="true" attribute="ent1#att2"/>
       <Field id="mov1#mpkg6#hym6#page61#enu43#fld63" name="Anno di immatricolazione" type="date" modifiable="true" attribute="ent1#att7">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym6#page61#enu43#fld63#mnd24" name="Mandatory" errorMessage="campo obbligatorio"/>
@@ -69,7 +67,6 @@
           <layout:Field field="mov1#mpkg6#hym6#page61#enu43#fld60"/>
           <layout:Field field="mov1#mpkg6#hym6#page61#enu43#fld59"/>
           <layout:Field field="mov1#mpkg6#hym6#page61#enu43#fld61"/>
-          <layout:Field field="mov1#mpkg6#hym6#page61#enu43#fld62"/>
           <layout:Field field="mov1#mpkg6#hym6#page61#enu43#fld63"/>
           <layout:Field field="mov1#mpkg6#hym6#page61#enu43#fld64"/>
           <layout:Field field="mov1#mpkg6#hym6#page61#enu43#fld65"/>
