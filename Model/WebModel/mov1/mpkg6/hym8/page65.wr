@@ -36,7 +36,7 @@
     </PowerIndexUnit>
     <MultiMessageUnit id="mov1#mpkg6#hym8#page65#mssu56" name="Inserisci" linkOrder="mov1#mpkg6#hym8#page65#mssu56#ln279" gr:x="135" gr:y="0">
       <Message xml:space="preserve">Clicca per inserire un nuovo intervento.</Message>
-      <Link id="mov1#mpkg6#hym8#page65#mssu56#ln279" name="Inserisci" to="mov1#mpkg6#hym8#page64#enu46" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserisci intervento"/>
+      <Link id="mov1#mpkg6#hym8#page65#mssu56#ln279" name="Inserisci" to="mov1#mpkg6#hym8#page64#enu46" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowWidth="700" ajaxWindowHeight="500" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserisci intervento"/>
     </MultiMessageUnit>
     <MultiMessageUnit id="mov1#mpkg6#hym8#page65#mssu57" name="KoMessage" gr:x="350" gr:y="100"/>
     <MultiMessageUnit id="mov1#mpkg6#hym8#page65#mssu58" name="OkMessage" gr:x="350" gr:y="35"/>

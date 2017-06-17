@@ -1,0 +1,61 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym9#page6" name="Inserisci utente" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="985" gr:y="55">
+  <ContentUnits>
+    <EntryUnit id="mov1#mpkg6#hym9#page6#enu7" name="Inserisci utente" linkOrder="mov1#mpkg6#hym9#page6#enu7#ln69" gr:x="0" gr:y="0" entity="User" fieldOrder="mov1#mpkg6#hym9#page6#enu7#fld94 mov1#mpkg6#hym9#page6#enu7#fld95 mov1#mpkg6#hym9#page6#enu7#fld96 mov1#mpkg6#hym9#page6#enu7#fld97">
+      <Field id="mov1#mpkg6#hym9#page6#enu7#fld94" name="Nome Utente" type="string" modifiable="true" attribute="userName">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym9#page6#enu7#fld94#mnd69" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <CollectionValidationRule id="mov1#mpkg6#hym9#page6#enu7#fld94#clc13" name="Unique" predicate="notIn" entity="User" attribute="userName" errorMessage="valore gi&#224; presente"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym9#page6#enu7#fld95" name="Email" type="string" modifiable="true" attribute="email">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym9#page6#enu7#fld95#mnd70" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <EMailValidationRule id="mov1#mpkg6#hym9#page6#enu7#fld95#email4" name="EMail" errorMessage="formato non corretto"/>
+          <CollectionValidationRule id="mov1#mpkg6#hym9#page6#enu7#fld95#clc18" name="Unique" predicate="notIn" entity="User" attribute="email" errorMessage="valore gia' presente"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym9#page6#enu7#fld96" name="Password" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg6#hym9#page6#enu7#fld96#mnd71" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg6#hym9#page6#enu7#fld97" name="Conferma Password" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <CompareValidationRule id="mov1#mpkg6#hym9#page6#enu7#fld97#cmp11" name="Compare" predicate="eq" valueField="mov1#mpkg6#hym9#page6#enu7#fld96" errorMessage="la password non coincide"/>
+          <MandatoryValidationRule id="mov1#mpkg6#hym9#page6#enu7#fld97#mnd72" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Link id="mov1#mpkg6#hym9#page6#enu7#ln69" name="Inserisci utente" to="mov1#mpkg6#hym9#miu8" type="normal" validate="true">
+        <LinkParameter id="mov1#mpkg6#hym9#page6#enu7#ln69#par421" name="Email_email" source="mov1#mpkg6#hym9#page6#enu7#fld95" target="mov1#mpkg6#hym9#miu8.mov2#mpkg29#mpkg30#opm57#icu59#icp287"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page6#enu7#ln69#par422" name="4_Group.oid(defaultGroup)" target="mov1#mpkg6#hym9#miu8.mov2#mpkg29#mpkg30#opm57#icu59#icp283" sourceValue="4"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page6#enu7#ln69#par425" name="4_Group.oid(groups)" target="mov1#mpkg6#hym9#miu8.mov2#mpkg29#mpkg30#opm57#icu59#icp284" sourceValue="4"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page6#enu7#ln69#par427" name="Nome Utente_nome_utente" source="mov1#mpkg6#hym9#page6#enu7#fld94" target="mov1#mpkg6#hym9#miu8.mov2#mpkg29#mpkg30#opm57#icu59#icp281"/>
+        <LinkParameter id="mov1#mpkg6#hym9#page6#enu7#ln69#par428" name="Password_password" source="mov1#mpkg6#hym9#page6#enu7#fld96" target="mov1#mpkg6#hym9#miu8.mov2#mpkg29#mpkg30#opm57#icu59#icp282"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg6#hym9#page6#enu7">
+          <layout:Field field="mov1#mpkg6#hym9#page6#enu7#fld94"/>
+          <layout:Field field="mov1#mpkg6#hym9#page6#enu7#fld95"/>
+          <layout:Field field="mov1#mpkg6#hym9#page6#enu7#fld96"/>
+          <layout:Field field="mov1#mpkg6#hym9#page6#enu7#fld97"/>
+          <layout:Link link="mov1#mpkg6#hym9#page6#enu7#ln69"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

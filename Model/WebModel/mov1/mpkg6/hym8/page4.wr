@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym8#page4" name="Inserisci utente" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="855" gr:y="-115">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym8#page4" name="Inserisci utente" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="870" gr:y="-115">
   <ContentUnits>
     <EntryUnit id="mov1#mpkg6#hym8#page4#enu3" name="Inserisci utente" gr:x="0" gr:y="0" entity="User" fieldOrder="mov1#mpkg6#hym8#page4#enu3#fld74 mov1#mpkg6#hym8#page4#enu3#fld75 mov1#mpkg6#hym8#page4#enu3#fld76 mov1#mpkg6#hym8#page4#enu3#fld77" linkOrder="mov1#mpkg6#hym8#page4#enu3#ln63">
       <Field id="mov1#mpkg6#hym8#page4#enu3#fld74" name="Nome Utente" type="string" modifiable="true" attribute="userName">
@@ -11,7 +11,7 @@
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym8#page4#enu3#fld75#mnd35" name="Mandatory" errorMessage="campo obbligatorio"/>
           <EMailValidationRule id="mov1#mpkg6#hym8#page4#enu3#fld75#email1" name="EMail" errorMessage="formato non corretto"/>
-          <CollectionValidationRule id="mov1#mpkg6#hym8#page4#enu3#fld75#clc5" name="Unique" predicate="notIn" entity="User" attribute="email" errorMessage="valore gi&#224; presente"/>
+          <CollectionValidationRule id="mov1#mpkg6#hym8#page4#enu3#fld75#clc5" name="Unique" predicate="notIn" entity="User" attribute="email" errorMessage="valore gia' presente"/>
         </VRules>
       </Field>
       <Field id="mov1#mpkg6#hym8#page4#enu3#fld76" name="Password" type="password" modifiable="true" attribute="password">

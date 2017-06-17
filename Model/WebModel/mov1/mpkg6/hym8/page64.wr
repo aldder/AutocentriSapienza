@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym8#page64" name="Inserisci intervento" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="510" gr:y="-115" layout:frameLayout="None">
   <ContentUnits>
-    <EntryUnit id="mov1#mpkg6#hym8#page64#enu46" name="Inserisci intervento" linkOrder="mov1#mpkg6#hym8#page64#enu46#ln274 mov1#mpkg6#hym8#page64#enu46#ln60" gr:x="70" gr:y="105" entity="ent8" fieldOrder="mov1#mpkg6#hym8#page64#enu46#sfld5 mov1#mpkg6#hym8#page64#enu46#sfld22 mov1#mpkg6#hym8#page64#enu46#fld175 mov1#mpkg6#hym8#page64#enu46#sfld23 mov1#mpkg6#hym8#page64#enu46#fld176">
+    <EntryUnit id="mov1#mpkg6#hym8#page64#enu46" name="Inserisci intervento" linkOrder="mov1#mpkg6#hym8#page64#enu46#ln274 mov1#mpkg6#hym8#page64#enu46#ln60 mov1#mpkg6#hym8#page64#enu46#ln20" gr:x="70" gr:y="105" entity="ent8" fieldOrder="mov1#mpkg6#hym8#page64#enu46#sfld5 mov1#mpkg6#hym8#page64#enu46#sfld22 mov1#mpkg6#hym8#page64#enu46#fld175 mov1#mpkg6#hym8#page64#enu46#sfld23 mov1#mpkg6#hym8#page64#enu46#fld176">
       <Field id="mov1#mpkg6#hym8#page64#enu46#fld175" name="Data inizio" type="date" modifiable="true" attribute="ent8#att32">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym8#page64#enu46#fld175#mnd220" name="Mandatory" errorMessage="campo obbligatorio"/>
@@ -35,7 +35,8 @@
           <MandatoryValidationRule id="mov1#mpkg6#hym8#page64#enu46#sfld5#mnd33" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
       </SelectionField>
-      <Link id="mov1#mpkg6#hym8#page64#enu46#ln60" name="Nuovo utente" to="mov1#mpkg6#hym8#page4" automaticCoupling="true" type="normal" validate="false" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserisci utente" ajaxWindowWidth="600" ajaxWindowHeight="400" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+      <Link id="mov1#mpkg6#hym8#page64#enu46#ln60" name="Nuovo utente" to="mov1#mpkg6#hym8#page4" type="normal" validate="false" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserisci utente" ajaxWindowWidth="600" ajaxWindowHeight="400" ajaxWindowClosable="true" ajaxWindowModal="true"/>
+      <Link id="mov1#mpkg6#hym8#page64#enu46#ln20" name="Nuova autovettura" to="mov1#mpkg6#hym8#page5" type="normal" validate="false" ajaxOpenWindow="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserisci autovettura" ajaxWindowWidth="700" ajaxWindowHeight="600" ajaxWindowClosable="true" ajaxWindowModal="true"/>
     </EntryUnit>
     <SelectorUnit id="mov1#mpkg6#hym8#page64#seu98" name="Tipologia" gr:x="115" gr:y="0" entity="ent3">
       <Link id="mov1#mpkg6#hym8#page64#seu98#ln276" name="Flow184" to="mov1#mpkg6#hym8#page64#enu46" type="transport" validate="true">
@@ -72,7 +73,12 @@
           <layout:Field field="mov1#mpkg6#hym8#page64#enu46#sfld23"/>
           <layout:Field field="mov1#mpkg6#hym8#page64#enu46#fld176"/>
           <layout:Link link="mov1#mpkg6#hym8#page64#enu46#ln274"/>
-          <layout:Link link="mov1#mpkg6#hym8#page64#enu46#ln60"/>
+          <layout:Link link="mov1#mpkg6#hym8#page64#enu46#ln60">
+            <layout:LayoutParameter name="btn-style" value="info" type="link"/>
+          </layout:Link>
+          <layout:Link link="mov1#mpkg6#hym8#page64#enu46#ln20">
+            <layout:LayoutParameter name="btn-style" value="info" type="link"/>
+          </layout:Link>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
