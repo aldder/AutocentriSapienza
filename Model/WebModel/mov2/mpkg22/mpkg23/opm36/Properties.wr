@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg22#mpkg23#opm36" name="InserimentoAppuntamento" gr:x="0" gr:y="0">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg22#mpkg23#opm36#icu46" gr:x="70" gr:y="-30">
+    <InputCollectorUnit id="mov2#mpkg22#mpkg23#opm36#icu46" gr:x="40" gr:y="125">
       <InputCollectorParameter id="mov2#mpkg22#mpkg23#opm36#icu46#icp89" name="id_utente"/>
       <InputCollectorParameter id="mov2#mpkg22#mpkg23#opm36#icu46#icp90" name="id_orario"/>
       <InputCollectorParameter id="mov2#mpkg22#mpkg23#opm36#icu46#icp91" name="data"/>
@@ -29,17 +29,17 @@
       <InputCollectorParameter id="mov2#mpkg22#mpkg23#opm36#icu46#icp41" name="id_auto"/>
       <InputCollectorParameter id="mov2#mpkg22#mpkg23#opm36#icu46#icp107" name="autovettura"/>
     </InputCollectorUnit>
-    <OKCollectorUnit id="mov2#mpkg22#mpkg23#opm36#okcu44" name="OK Port12" gr:x="1235" gr:y="-15"/>
-    <DatesFunctionUnit id="mov2#mpkg22#mpkg23#opm36#dfu6" name="Data notifica" gr:x="895" gr:y="25" mode="removeDaysFromDate(s)">
+    <OKCollectorUnit id="mov2#mpkg22#mpkg23#opm36#okcu44" name="OK Port12" gr:x="1195" gr:y="140"/>
+    <DatesFunctionUnit id="mov2#mpkg22#mpkg23#opm36#dfu6" name="Data notifica" gr:x="855" gr:y="180" mode="removeDaysFromDate(s)">
       <OKLink id="mov2#mpkg22#mpkg23#opm36#dfu6#oln56" name="OKFlow16" to="mov2#mpkg22#mpkg23#opm36#cru7">
         <LinkParameter id="mov2#mpkg22#mpkg23#opm36#dfu6#oln56#par373" name="Result Date(s)_data_notifica" source="resultDates" target="mov2#mpkg22#mpkg23#opm36#cru7.ent4#att19"/>
       </OKLink>
     </DatesFunctionUnit>
-    <IsNotNullUnit id="mov2#mpkg22#mpkg23#opm36#inn4" name="Is Not Null" gr:x="560" gr:y="30">
+    <IsNotNullUnit id="mov2#mpkg22#mpkg23#opm36#inn4" name="Is Not Null" gr:x="520" gr:y="185">
       <KOLink id="mov2#mpkg22#mpkg23#opm36#inn4#kln13" name="KOFlow5" to="mov2#mpkg22#mpkg23#opm36#cru3"/>
       <OKLink id="mov2#mpkg22#mpkg23#opm36#inn4#oln58" name="OKFlow280" to="mov2#mpkg22#mpkg23#opm36#kocu39" gr:bendpoints="78,95,-662,-10"/>
     </IsNotNullUnit>
-    <SelectorUnit id="mov2#mpkg22#mpkg23#opm36#seu16" name="AppData&amp;Ora" gr:x="345" gr:y="10" entity="ent2" distinctAttributes="ent2#att12 ent2#att13 ent2#att14">
+    <SelectorUnit id="mov2#mpkg22#mpkg23#opm36#seu16" name="AppData&amp;Ora" gr:x="315" gr:y="165" entity="ent2" distinctAttributes="ent2#att12 ent2#att13 ent2#att14">
       <Selector id="mov2#mpkg22#mpkg23#opm36#seu16#su6" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#mpkg22#mpkg23#opm36#seu16#su6#acond19" name="data" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att13"/>
         <AttributesCondition id="mov2#mpkg22#mpkg23#opm36#seu16#su6#acond20" name="ora" predicate="eq" booleanOperator="or" implied="false" attributes="rel17#role33.ent15#att65"/>
@@ -48,7 +48,7 @@
         <LinkParameter id="mov2#mpkg22#mpkg23#opm36#seu16#oln59#par404" name="oid_Input" source="ent2#att12Array" target="mov2#mpkg22#mpkg23#opm36#inn4.isnotnull"/>
       </OKLink>
     </SelectorUnit>
-    <CreateUnit id="mov2#mpkg22#mpkg23#opm36#cru3" name="Create appuntamento" gr:x="695" gr:y="20" entity="ent2" linkOrder="mov2#mpkg22#mpkg23#opm36#cru3#ln26">
+    <CreateUnit id="mov2#mpkg22#mpkg23#opm36#cru3" name="Create appuntamento" gr:x="655" gr:y="175" entity="ent2" linkOrder="mov2#mpkg22#mpkg23#opm36#cru3#ln26">
       <OKLink id="mov2#mpkg22#mpkg23#opm36#cru3#oln60" name="OKFlow13" to="mov2#mpkg22#mpkg23#opm36#dfu6">
         <LinkParameter id="mov2#mpkg22#mpkg23#opm36#cru3#oln60#par412" name="data_intervento_Date(s)" source="ent2#att13Array" target="mov2#mpkg22#mpkg23#opm36#dfu6.dateArray"/>
         <LinkParameter id="mov2#mpkg22#mpkg23#opm36#cru3#oln60#par413" name="7_Number(s) Of Days" target="mov2#mpkg22#mpkg23#opm36#dfu6.numberOfDaysArray" sourceValue="7"/>
@@ -58,10 +58,10 @@
         <LinkParameter id="mov2#mpkg22#mpkg23#opm36#cru3#ln26#par65" name="oid_Appuntamento.oid(NotificaToAppuntamento)" source="ent2#att12Array" target="mov2#mpkg22#mpkg23#opm36#cru7.rel8#role16.ent2#att12"/>
       </Link>
     </CreateUnit>
-    <CreateUnit id="mov2#mpkg22#mpkg23#opm36#cru7" name="Create notifica" gr:x="1065" gr:y="20" entity="ent4">
+    <CreateUnit id="mov2#mpkg22#mpkg23#opm36#cru7" name="Create notifica" gr:x="1025" gr:y="175" entity="ent4">
       <OKLink id="mov2#mpkg22#mpkg23#opm36#cru7#oln61" name="OKFlow310" to="mov2#mpkg22#mpkg23#opm36#okcu44"/>
       <KOLink id="mov2#mpkg22#mpkg23#opm36#cru7#kln56" name="KOFlow35" to="mov2#mpkg22#mpkg23#opm36#kocu39"/>
     </CreateUnit>
-    <KOCollectorUnit id="mov2#mpkg22#mpkg23#opm36#kocu39" name="KO Port10" gr:x="1235" gr:y="125"/>
+    <KOCollectorUnit id="mov2#mpkg22#mpkg23#opm36#kocu39" name="KO Port10" gr:x="1195" gr:y="280"/>
   </OperationUnits>
 </OperationModule>

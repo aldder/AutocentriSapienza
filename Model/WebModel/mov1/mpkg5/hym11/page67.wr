@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg5#hym11#page67" name="Storico Acquisti" landmark="true" gr:x="500" gr:y="-60">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg5#hym11#page67" name="Storico Acquisti" landmark="true" gr:x="295" gr:y="150">
   <ContentUnits>
     <MultiMessageUnit id="mov1#mpkg5#hym11#page67#mssu33" name="Inserisci" linkOrder="mov1#mpkg5#hym11#page67#mssu33#ln151" gr:x="190" gr:y="0">
       <Link id="mov1#mpkg5#hym11#page67#mssu33#ln151" name="Inserisci" to="mov1#mpkg5#hym11#page55" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxReplaceWindow="false" ajaxWindowWidth="800" ajaxWindowHeight="750" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowShowEffect="Effect.BlindDown" ajaxWindowUseTitle="true" ajaxWindowTitle="Seleziona autovettura"/>

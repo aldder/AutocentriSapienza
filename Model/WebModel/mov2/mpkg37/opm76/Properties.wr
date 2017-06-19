@@ -1,14 +1,14 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg37#opm76" name="InvioNotificheAppuntamento" gr:x="0" gr:y="0">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg37#opm76#icu79" gr:x="10" gr:y="10">
+    <InputCollectorUnit id="mov2#mpkg37#opm76#icu79" gr:x="10" gr:y="85">
       <OKLink id="mov2#mpkg37#opm76#icu79#oln377" name="OKFlow35" to="mov2#mpkg37#opm76#tmu3"/>
     </InputCollectorUnit>
-    <LoopUnit id="mov2#mpkg37#opm76#lpu2" name="Loop" gr:x="635" gr:y="20">
+    <LoopUnit id="mov2#mpkg37#opm76#lpu2" name="Loop" gr:x="635" gr:y="95">
       <OKLink id="mov2#mpkg37#opm76#lpu2#oln378" name="OKFlow125" to="mov2#mpkg37#opm76#seu66" code="next">
         <LinkParameter id="mov2#mpkg37#opm76#lpu2#oln378#par1338" name="Next Element_KeyCondition14 [oid]" source="next" target="mov2#mpkg37#opm76#seu66#su151#kcond86.ent4#att18"/>
       </OKLink>
     </LoopUnit>
-    <SelectorUnit id="mov2#mpkg37#opm76#seu63" name="SelectAppuntamento" gr:x="975" gr:y="155" entity="ent2">
+    <SelectorUnit id="mov2#mpkg37#opm76#seu63" name="SelectAppuntamento" gr:x="975" gr:y="230" entity="ent2">
       <Selector id="mov2#mpkg37#opm76#seu63#su139" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg37#opm76#seu63#su139#kcond76" name="KeyCondition61" predicate="in" implied="false"/>
       </Selector>
@@ -16,7 +16,7 @@
         <LinkParameter id="mov2#mpkg37#opm76#seu63#oln379#par1339" name="data_intervento_data" source="ent2#att13Array" target="mov2#mpkg37#opm76#mlu8.data"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit id="mov2#mpkg37#opm76#seu64" name="SelectNotifiche" gr:x="410" gr:y="-5" entity="ent4" distinctAttributes="ent4#att18 ent4#att19 ent4#att20 ent4#att28">
+    <SelectorUnit id="mov2#mpkg37#opm76#seu64" name="SelectNotifiche" gr:x="410" gr:y="70" entity="ent4" distinctAttributes="ent4#att18 ent4#att19 ent4#att20 ent4#att28">
       <OKLink id="mov2#mpkg37#opm76#seu64#oln380" name="OKFlow74" to="mov2#mpkg37#opm76#lpu2">
         <LinkParameter id="mov2#mpkg37#opm76#seu64#oln380#par1340" name="oid_Input Array" source="ent4#att18Array" target="mov2#mpkg37#opm76#lpu2.array"/>
       </OKLink>
@@ -26,7 +26,7 @@
         <AttributesCondition id="mov2#mpkg37#opm76#seu64#su147#acond61" name="stato" predicate="eq" booleanOperator="or" implied="false" attributes="ent4#att28" value="1"/>
       </Selector>
     </SelectorUnit>
-    <MailUnit id="mov2#mpkg37#opm76#mlu8" name="NotificaAppuntamento" gr:x="1170" gr:y="170" format="plainText" smtpServer="smtp1">
+    <MailUnit id="mov2#mpkg37#opm76#mlu8" name="NotificaAppuntamento" gr:x="1170" gr:y="245" format="plainText" smtpServer="smtp1">
       <Placeholder id="mov2#mpkg37#opm76#mlu8#ph8" name="tipologia"/>
       <Placeholder id="mov2#mpkg37#opm76#mlu8#ph17" name="utente"/>
       <Placeholder id="mov2#mpkg37#opm76#mlu8#ph18" name="descrizione"/>
@@ -41,7 +41,7 @@ Descrizione intervento:
 $$descrizione$$</BodyTemplate>
       <SubjectTemplate xml:space="preserve">Notifica appuntamento presso l'officina</SubjectTemplate>
     </MailUnit>
-    <ParameterCollectorUnit id="mov2#mpkg37#opm76#pcu12" name="Parameter Collector" gr:x="775" gr:y="135">
+    <ParameterCollectorUnit id="mov2#mpkg37#opm76#pcu12" name="Parameter Collector" gr:x="775" gr:y="210">
       <CollectorParameter id="mov2#mpkg37#opm76#pcu12#pcp54" name="id_notifica"/>
       <CollectorParameter id="mov2#mpkg37#opm76#pcu12#pcp67" name="id_appuntamento"/>
       <CollectorParameter id="mov2#mpkg37#opm76#pcu12#pcp68" name="nome_utente"/>
@@ -58,12 +58,12 @@ $$descrizione$$</BodyTemplate>
         <LinkParameter id="mov2#mpkg37#opm76#pcu12#oln382#par1345" name="id_appuntamento_KeyCondition61 [oid]" source="mov2#mpkg37#opm76#pcu12#pcp67" target="mov2#mpkg37#opm76#seu63#su139#kcond76.ent2#att12"/>
       </OKLink>
     </ParameterCollectorUnit>
-    <TimeUnit id="mov2#mpkg37#opm76#tmu3" name="Today" gr:x="300" gr:y="20">
+    <TimeUnit id="mov2#mpkg37#opm76#tmu3" name="Today" gr:x="300" gr:y="95">
       <OKLink id="mov2#mpkg37#opm76#tmu3#oln383" name="OKFlow146" to="mov2#mpkg37#opm76#seu64">
         <LinkParameter id="mov2#mpkg37#opm76#tmu3#oln383#par1346" name="Current/Input Date_data" source="currentDate" target="mov2#mpkg37#opm76#seu64#su147#acond55"/>
       </OKLink>
     </TimeUnit>
-    <SelectorUnit id="mov2#mpkg37#opm76#seu65" name="SelectTipologia" gr:x="610" gr:y="395" entity="ent3">
+    <SelectorUnit id="mov2#mpkg37#opm76#seu65" name="SelectTipologia" gr:x="610" gr:y="470" entity="ent3">
       <Selector id="mov2#mpkg37#opm76#seu65#su150" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg37#opm76#seu65#su150#kcond85" name="KeyCondition58" predicate="in" implied="false"/>
       </Selector>
@@ -71,7 +71,7 @@ $$descrizione$$</BodyTemplate>
         <LinkParameter id="mov2#mpkg37#opm76#seu65#oln384#par1347" name="nome_tipologia" source="ent3#att16Array" target="mov2#mpkg37#opm76#pcu12#pcp69"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit id="mov2#mpkg37#opm76#seu66" name="SelectNotifica" gr:x="615" gr:y="140" entity="ent4">
+    <SelectorUnit id="mov2#mpkg37#opm76#seu66" name="SelectNotifica" gr:x="615" gr:y="215" entity="ent4">
       <Selector id="mov2#mpkg37#opm76#seu66#su151" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg37#opm76#seu66#su151#kcond86" name="KeyCondition14" predicate="in" implied="false"/>
       </Selector>
@@ -85,7 +85,7 @@ $$descrizione$$</BodyTemplate>
         <LinkParameter id="mov2#mpkg37#opm76#seu66#ln212#par1352" name="NotificaToAppuntamento.oid_id_appuntamento" source="rel8#role16_ent2#att12Array" target="mov2#mpkg37#opm76#pcu12#pcp67"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit id="mov2#mpkg37#opm76#seu67" name="SelectUtente" gr:x="615" gr:y="270" entity="User">
+    <SelectorUnit id="mov2#mpkg37#opm76#seu67" name="SelectUtente" gr:x="615" gr:y="345" entity="User">
       <Selector id="mov2#mpkg37#opm76#seu67#su152" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg37#opm76#seu67#su152#kcond92" name="KeyCondition15" predicate="in" implied="false"/>
       </Selector>

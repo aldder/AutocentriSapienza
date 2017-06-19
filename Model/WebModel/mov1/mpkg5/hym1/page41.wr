@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg5#hym1#page41" name="Dettagli autovettura" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="350" gr:y="310" layout:frameLayout="None">
   <ContentUnits>
-    <EntryUnit id="mov1#mpkg5#hym1#page41#enu24" name="Autovettura" linkOrder="mov1#mpkg5#hym1#page41#enu24#ln62 mov1#mpkg5#hym1#page41#enu24#ln61" gr:x="0" gr:y="0" entity="ent1" fieldOrder="mov1#mpkg5#hym1#page41#enu24#fld133 mov1#mpkg5#hym1#page41#enu24#fld124 mov1#mpkg5#hym1#page41#enu24#fld119 mov1#mpkg5#hym1#page41#enu24#fld125 mov1#mpkg5#hym1#page41#enu24#fld127 mov1#mpkg5#hym1#page41#enu24#fld128 mov1#mpkg5#hym1#page41#enu24#fld129 mov1#mpkg5#hym1#page41#enu24#fld130 mov1#mpkg5#hym1#page41#enu24#fld131 mov1#mpkg5#hym1#page41#enu24#fld134 mov1#mpkg5#hym1#page41#enu24#fld2 mov1#mpkg5#hym1#page41#enu24#fld132">
+    <EntryUnit id="mov1#mpkg5#hym1#page41#enu24" name="Autovettura" linkOrder="mov1#mpkg5#hym1#page41#enu24#ln62 mov1#mpkg5#hym1#page41#enu24#ln61" gr:x="0" gr:y="0" entity="ent1" fieldOrder="mov1#mpkg5#hym1#page41#enu24#fld133 mov1#mpkg5#hym1#page41#enu24#fld124 mov1#mpkg5#hym1#page41#enu24#fld119 mov1#mpkg5#hym1#page41#enu24#fld125 mov1#mpkg5#hym1#page41#enu24#fld127 mov1#mpkg5#hym1#page41#enu24#fld128 mov1#mpkg5#hym1#page41#enu24#fld129 mov1#mpkg5#hym1#page41#enu24#fld130 mov1#mpkg5#hym1#page41#enu24#fld131 mov1#mpkg5#hym1#page41#enu24#fld134 mov1#mpkg5#hym1#page41#enu24#fld2 mov1#mpkg5#hym1#page41#enu24#fld24 mov1#mpkg5#hym1#page41#enu24#fld132">
       <Field id="mov1#mpkg5#hym1#page41#enu24#fld119" name="Prezzo" type="float" modifiable="true" attribute="ent1#att2">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg5#hym1#page41#enu24#fld119#mnd96" name="Mandatory" errorMessage="campo obbligatorio"/>
@@ -78,12 +78,15 @@
         <LinkParameter id="mov1#mpkg5#hym1#page41#enu24#ln62#par203" name="Prezzo_prezzo" source="mov1#mpkg5#hym1#page41#enu24#fld119" target="mov1#mpkg5#hym1#miu37.mov2#mpkg38#mpkg40#opm81#icu84#icp31"/>
         <LinkParameter id="mov1#mpkg5#hym1#page41#enu24#ln62#par204" name="Targa_targa" source="mov1#mpkg5#hym1#page41#enu24#fld2" target="mov1#mpkg5#hym1#miu37.mov2#mpkg38#mpkg40#opm81#icu84#icp32"/>
         <LinkParameter id="mov1#mpkg5#hym1#page41#enu24#ln62#par205" name="Usato_usato" source="mov1#mpkg5#hym1#page41#enu24#fld125" target="mov1#mpkg5#hym1#miu37.mov2#mpkg38#mpkg40#opm81#icu84#icp33"/>
+        <LinkParameter id="mov1#mpkg5#hym1#page41#enu24#ln62#par266" name="0_officina" sourceValue="0" target="mov1#mpkg5#hym1#miu37.mov2#mpkg38#mpkg40#opm81#icu84#icp99"/>
+        <LinkParameter id="mov1#mpkg5#hym1#page41#enu24#ln62#par268" name="disponibilit&#224;_disponibilit&#224;" source="mov1#mpkg5#hym1#page41#enu24#fld24" target="mov1#mpkg5#hym1#miu37.mov2#mpkg38#mpkg40#opm81#icu84#icp59"/>
       </Link>
       <Field id="mov1#mpkg5#hym1#page41#enu24#fld2" name="Targa" type="string" modifiable="true" attribute="ent1#att30">
         <VRules>
           <CollectionValidationRule id="mov1#mpkg5#hym1#page41#enu24#fld2#clc2" name="Unique" predicate="notIn" ignoreCase="true" entity="ent1" attribute="ent1#att30"/>
         </VRules>
       </Field>
+      <Field id="mov1#mpkg5#hym1#page41#enu24#fld24" name="Disponibilit&#224;" type="integer" modifiable="true" attribute="ent1#att27"/>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -103,6 +106,7 @@
           <layout:Field field="mov1#mpkg5#hym1#page41#enu24#fld131"/>
           <layout:Field field="mov1#mpkg5#hym1#page41#enu24#fld134"/>
           <layout:Field field="mov1#mpkg5#hym1#page41#enu24#fld2"/>
+          <layout:Field field="mov1#mpkg5#hym1#page41#enu24#fld24"/>
           <layout:Field field="mov1#mpkg5#hym1#page41#enu24#fld132"/>
         </layout:Unit>
       </layout:Cell>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg5#hym11#page70" name="SuggAutovettura" ignoreMasterPage="true" layout:pageLayout="WRDefault/Autocomplete" gr:x="640" gr:y="-210">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg5#hym11#page70" name="SuggAutovettura" ignoreMasterPage="true" layout:pageLayout="WRDefault/Autocomplete" gr:x="435" gr:y="-5">
   <ContentUnits>
     <IndexUnit id="mov1#mpkg5#hym11#page70#inu7" name="SuggAutovettura" gr:x="0" gr:y="0" entity="ent1" displayAttributes="ent1#att46" distinct="true">
       <Selector id="mov1#mpkg5#hym11#page70#inu7#su19" defaultPolicy="fill" booleanOperator="and">

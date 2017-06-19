@@ -3,12 +3,6 @@
     <InputCollectorUnit gr:x="-15" gr:y="210" id="mov1#mpkg6#hym6#icu91" name="Input Port">
       <OKLink id="mov1#mpkg6#hym6#icu91#oln462" to="mov1#mpkg6#hym6#page60" name="Landmark"/>
     </InputCollectorUnit>
-    <ModuleInstanceUnit id="mov1#mpkg6#hym6#miu69" gr:x="750" gr:y="110" moduleId="mov2#mpkg31#mpkg1#opm7">
-      <OKLink id="mov1#mpkg6#hym6#miu69#oln463" name="OKFlow111" to="mov1#mpkg6#hym6#page60"/>
-      <KOLink id="mov1#mpkg6#hym6#miu69#kln202" name="KOFlow103" to="mov1#mpkg6#hym6#page60#mssu52">
-        <LinkParameter id="mov1#mpkg6#hym6#miu69#kln202#par1630" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg6#hym6#page60#mssu52.shownMessages" sourceValue="Si e' verificato un errore."/>
-      </KOLink>
-    </ModuleInstanceUnit>
     <ModuleInstanceUnit id="mov1#mpkg6#hym6#miu70" gr:x="795" gr:y="350" moduleId="mov2#mpkg31#mpkg1#opm5">
       <OKLink id="mov1#mpkg6#hym6#miu70#oln464" name="OKFlow113" to="mov1#mpkg6#hym6#page60"/>
       <KOLink id="mov1#mpkg6#hym6#miu70#kln203" name="KOFlow105" to="mov1#mpkg6#hym6#page60#mssu52">
@@ -21,30 +15,5 @@
         <LinkParameter id="mov1#mpkg6#hym6#miu71#kln204#par1641" name="Si e' verificato un errore._Shown Messages" target="mov1#mpkg6#hym6#page60#mssu52.shownMessages" sourceValue="Si e' verificato un errore."/>
       </KOLink>
     </ModuleInstanceUnit>
-    <SelectorUnit gr:x="805" gr:y="-125" id="mov1#mpkg6#hym6#seu21" name="SelectStorico" entity="ent7">
-      <Selector id="mov1#mpkg6#hym6#seu21#su61" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="mov1#mpkg6#hym6#seu21#su61#acond52" name="targa" predicate="eq" booleanOperator="or" implied="false" attributes="rel19#role37.ent1#att30" ignoreCase="true"/>
-      </Selector>
-      <OKLink id="mov1#mpkg6#hym6#seu21#oln87" name="OKFlow87" to="mov1#mpkg6#hym6#seu22">
-        <LinkParameter id="mov1#mpkg6#hym6#seu21#oln87#par548" name="oid_KeyCondition21 [oid]" source="rel19#role37_ent1#att1Array" target="mov1#mpkg6#hym6#seu22#su62#kcond21.ent1#att1"/>
-      </OKLink>
-    </SelectorUnit>
-    <SelectorUnit gr:x="890" gr:y="0" id="mov1#mpkg6#hym6#seu22" name="SelectAuto" entity="ent1">
-      <Selector id="mov1#mpkg6#hym6#seu22#su62" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="mov1#mpkg6#hym6#seu22#su62#kcond21" name="KeyCondition21" predicate="in" implied="false"/>
-        <AttributesCondition id="mov1#mpkg6#hym6#seu22#su62#acond54" name="notCatalogo" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att50" ignoreCase="false" value="0"/>
-      </Selector>
-      <OKLink id="mov1#mpkg6#hym6#seu22#oln89" name="OKFlow89" to="mov1#mpkg6#hym6#page59#enu42">
-        <LinkParameter id="mov1#mpkg6#hym6#seu22#oln89#par549" name="anno_Anno di immatricolazione" source="ent1#att7Array" target="mov1#mpkg6#hym6#page59#enu42#fld53_slot"/>
-        <LinkParameter id="mov1#mpkg6#hym6#seu22#oln89#par550" name="cilindrata_Cilindrata" source="ent1#att9Array" target="mov1#mpkg6#hym6#page59#enu42#fld56_slot"/>
-        <LinkParameter id="mov1#mpkg6#hym6#seu22#oln89#par551" name="descrizione_Descrizione" source="ent1#att11Array" target="mov1#mpkg6#hym6#page59#enu42#fld58_slot"/>
-        <LinkParameter id="mov1#mpkg6#hym6#seu22#oln89#par552" name="foto_Foto" source="ent1#att3Array" target="mov1#mpkg6#hym6#page59#enu42#fld51_slot"/>
-        <LinkParameter id="mov1#mpkg6#hym6#seu22#oln89#par554" name="kilometri_Kilometri" source="ent1#att6Array" target="mov1#mpkg6#hym6#page59#enu42#fld54_slot"/>
-        <LinkParameter id="mov1#mpkg6#hym6#seu22#oln89#par555" name="nome_Nome" source="ent1#att46Array" target="mov1#mpkg6#hym6#page59#enu42#fld49_slot"/>
-        <LinkParameter id="mov1#mpkg6#hym6#seu22#oln89#par556" name="porte_Numero di porte" source="ent1#att10Array" target="mov1#mpkg6#hym6#page59#enu42#fld57_slot"/>
-        <LinkParameter id="mov1#mpkg6#hym6#seu22#oln89#par557" name="prezzo_Prezzo" source="ent1#att2Array" target="mov1#mpkg6#hym6#page59#enu42#fld52_slot"/>
-        <LinkParameter id="mov1#mpkg6#hym6#seu22#oln89#par558" name="alimentazione_Alimentazione" source="ent1#att8Array" target="mov1#mpkg6#hym6#page59#enu42#fld55_slot"/>
-      </OKLink>
-    </SelectorUnit>
   </OperationUnits>
 </HybridModule>

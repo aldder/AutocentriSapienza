@@ -23,10 +23,6 @@
       <SortAttribute attribute="ent1#att27" order="ascending"/>
       <DefaultSortAttribute attribute="ent1#att1" order="descending"/>
     </PowerIndexUnit>
-    <MultiMessageUnit id="mov1#mpkg6#hym6#page60#mssu51" name="Inserisci" gr:x="130" gr:y="15" linkOrder="mov1#mpkg6#hym6#page60#mssu51#ln43">
-      <Message xml:space="preserve">Clicca per inserire una nuova autovettura cliente.</Message>
-      <Link id="mov1#mpkg6#hym6#page60#mssu51#ln43" name="Inserisci" to="mov1#mpkg6#hym6#page59" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxReplaceWindow="false" ajaxWindowUseTitle="true" ajaxWindowTitle="Seleziona autovettura" ajaxWindowWidth="800" ajaxWindowHeight="750" ajaxWindowClosable="true" ajaxWindowModal="true"/>
-    </MultiMessageUnit>
     <MultiMessageUnit id="mov1#mpkg6#hym6#page60#mssu52" name="KoMessage" gr:x="155" gr:y="150"/>
     <MultiMessageUnit id="mov1#mpkg6#hym6#page60#mssu53" name="OkMessage" gr:x="155" gr:y="85"/>
   </ContentUnits>
@@ -68,11 +64,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="mov1#mpkg6#hym6#page60#mssu51">
-          <layout:Link link="mov1#mpkg6#hym6#page60#mssu51#ln43"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

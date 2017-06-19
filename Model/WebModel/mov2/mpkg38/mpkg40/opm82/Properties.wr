@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg38#mpkg40#opm82" name="CancellazioneAutovettura" gr:x="0" gr:y="110">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg38#mpkg40#opm82#icu85" gr:x="-35" gr:y="65" linkOrder="mov2#mpkg38#mpkg40#opm82#icu85#ln15 mov2#mpkg38#mpkg40#opm82#icu85#ln16">
+    <InputCollectorUnit id="mov2#mpkg38#mpkg40#opm82#icu85" gr:x="50" gr:y="175" linkOrder="mov2#mpkg38#mpkg40#opm82#icu85#ln15 mov2#mpkg38#mpkg40#opm82#icu85#ln16">
       <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm82#icu85#icp411" name="id_auto"/>
       <OKLink id="mov2#mpkg38#mpkg40#opm82#icu85#oln419" name="Elimina Autovettura" to="mov2#mpkg38#mpkg40#opm82#dlu39">
         <LinkParameter id="mov2#mpkg38#mpkg40#opm82#icu85#oln419#par1485" name="Key [oid]_RoleCondition10 [oid]" source="mov2#mpkg38#mpkg40#opm82#icu85#icp411" target="mov2#mpkg38#mpkg40#opm82#dlu39#su176#rcond26.ent1#att1"/>
@@ -12,28 +12,28 @@
         <LinkParameter id="mov2#mpkg38#mpkg40#opm82#icu85#ln16#par115" name="id_auto_KeyCondition14 [oid]" source="mov2#mpkg38#mpkg40#opm82#icu85#icp411" target="mov2#mpkg38#mpkg40#opm82#dlu40#su177#kcond106.ent1#att1"/>
       </Link>
     </InputCollectorUnit>
-    <OKCollectorUnit id="mov2#mpkg38#mpkg40#opm82#okcu79" name="OK Port20" gr:x="925" gr:y="65"/>
-    <DeleteUnit id="mov2#mpkg38#mpkg40#opm82#dlu38" name="Cancellazione acquistiP" gr:x="480" gr:y="60" entity="ent6">
+    <OKCollectorUnit id="mov2#mpkg38#mpkg40#opm82#okcu79" name="OK Port20" gr:x="1010" gr:y="175"/>
+    <DeleteUnit id="mov2#mpkg38#mpkg40#opm82#dlu38" name="Cancellazione acquistiP" gr:x="565" gr:y="170" entity="ent6">
       <Selector id="mov2#mpkg38#mpkg40#opm82#dlu38#su175" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="mov2#mpkg38#mpkg40#opm82#dlu38#su175#rcond25" name="autovettura2acquisto" predicate="in" implied="false" role="rel18#role36"/>
       </Selector>
       <OKLink id="mov2#mpkg38#mpkg40#opm82#dlu38#oln420" name="OKFlow35" to="mov2#mpkg38#mpkg40#opm82#dlu40"/>
       <KOLink id="mov2#mpkg38#mpkg40#opm82#dlu38#kln179" name="KOFlow64" to="mov2#mpkg38#mpkg40#opm82#kocu72" gr:bendpoints="161,61,-309,-24"/>
     </DeleteUnit>
-    <DeleteUnit id="mov2#mpkg38#mpkg40#opm82#dlu39" name="Cancellazione preferiti" gr:x="275" gr:y="60" entity="ent5">
+    <DeleteUnit id="mov2#mpkg38#mpkg40#opm82#dlu39" name="Cancellazione preferiti" gr:x="360" gr:y="170" entity="ent5">
       <Selector id="mov2#mpkg38#mpkg40#opm82#dlu39#su176" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="mov2#mpkg38#mpkg40#opm82#dlu39#su176#rcond26" name="autovettura2preferito" predicate="in" implied="false" role="rel20#role40"/>
       </Selector>
       <OKLink id="mov2#mpkg38#mpkg40#opm82#dlu39#oln421" name="OKFlow28" to="mov2#mpkg38#mpkg40#opm82#dlu38"/>
       <KOLink id="mov2#mpkg38#mpkg40#opm82#dlu39#kln180" name="KOFlow63" to="mov2#mpkg38#mpkg40#opm82#kocu72" gr:bendpoints="126,87,-554,2"/>
     </DeleteUnit>
-    <DeleteUnit id="mov2#mpkg38#mpkg40#opm82#dlu40" name="CancellazioneAuto" gr:x="695" gr:y="60" entity="ent1">
+    <DeleteUnit id="mov2#mpkg38#mpkg40#opm82#dlu40" name="CancellazioneAuto" gr:x="780" gr:y="170" entity="ent1">
       <Selector id="mov2#mpkg38#mpkg40#opm82#dlu40#su177" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg38#mpkg40#opm82#dlu40#su177#kcond106" name="KeyCondition14" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="mov2#mpkg38#mpkg40#opm82#dlu40#oln422" name="OKFlow29" to="mov2#mpkg38#mpkg40#opm82#okcu79"/>
       <KOLink id="mov2#mpkg38#mpkg40#opm82#dlu40#kln181" name="KOFlow65" to="mov2#mpkg38#mpkg40#opm82#kocu72"/>
     </DeleteUnit>
-    <KOCollectorUnit id="mov2#mpkg38#mpkg40#opm82#kocu72" name="KO Port18" gr:x="925" gr:y="150"/>
+    <KOCollectorUnit id="mov2#mpkg38#mpkg40#opm82#kocu72" name="KO Port18" gr:x="1010" gr:y="260"/>
   </OperationUnits>
 </OperationModule>

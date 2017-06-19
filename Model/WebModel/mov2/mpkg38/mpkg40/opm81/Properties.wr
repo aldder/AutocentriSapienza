@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg38#mpkg40#opm81" name="ModificaAutovettura" gr:x="0" gr:y="55">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg38#mpkg40#opm81#icu84" gr:x="225" gr:y="-65">
+    <InputCollectorUnit id="mov2#mpkg38#mpkg40#opm81#icu84" gr:x="220" gr:y="115">
       <Link id="mov2#mpkg38#mpkg40#opm81#icu84#ln66" name="Flow66" to="mov2#mpkg38#mpkg40#opm81#mlu9" type="transport" validate="true" gr:bendpoints="225,-95,-460,-95;559,-98,-126,-98">
         <LinkParameter id="mov2#mpkg38#mpkg40#opm81#icu84#ln66#par316" name="nome_autovettura" source="mov2#mpkg38#mpkg40#opm81#icu84#icp29" target="mov2#mpkg38#mpkg40#opm81#mlu9.autovettura"/>
       </Link>
@@ -17,7 +17,7 @@
       <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm81#icu84#icp31" name="prezzo"/>
       <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm81#icu84#icp32" name="targa"/>
       <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm81#icu84#icp33" name="usato"/>
-      <OKLink id="mov2#mpkg38#mpkg40#opm81#icu84#oln32" name="OKFlow32" to="mov2#mpkg38#mpkg40#opm81#mfu36">
+      <OKLink id="mov2#mpkg38#mpkg40#opm81#icu84#oln32" name="OKFlow32" to="mov2#mpkg38#mpkg40#opm81#mfu36" automaticCoupling="false">
         <LinkParameter id="mov2#mpkg38#mpkg40#opm81#icu84#oln32#par143" name="alimentazione_alimentazione" source="mov2#mpkg38#mpkg40#opm81#icu84#icp22" target="mov2#mpkg38#mpkg40#opm81#mfu36.ent1#att8"/>
         <LinkParameter id="mov2#mpkg38#mpkg40#opm81#icu84#oln32#par144" name="anno_anno" source="mov2#mpkg38#mpkg40#opm81#icu84#icp23" target="mov2#mpkg38#mpkg40#opm81#mfu36.ent1#att7"/>
         <LinkParameter id="mov2#mpkg38#mpkg40#opm81#icu84#oln32#par145" name="catalogo_catalogo" source="mov2#mpkg38#mpkg40#opm81#icu84#icp24" target="mov2#mpkg38#mpkg40#opm81#mfu36.ent1#att50"/>
@@ -32,11 +32,13 @@
         <LinkParameter id="mov2#mpkg38#mpkg40#opm81#icu84#oln32#par154" name="targa_targa" source="mov2#mpkg38#mpkg40#opm81#icu84#icp32" target="mov2#mpkg38#mpkg40#opm81#mfu36.ent1#att30"/>
         <LinkParameter id="mov2#mpkg38#mpkg40#opm81#icu84#oln32#par155" name="usato_usato" source="mov2#mpkg38#mpkg40#opm81#icu84#icp33" target="mov2#mpkg38#mpkg40#opm81#mfu36.ent1#att4"/>
         <LinkParameter id="mov2#mpkg38#mpkg40#opm81#icu84#oln32#par311" name="0_officina" target="mov2#mpkg38#mpkg40#opm81#mfu36.ent1#att5" source="mov2#mpkg38#mpkg40#opm81#icu84#icp99"/>
+        <LinkParameter id="mov2#mpkg38#mpkg40#opm81#icu84#oln32#par267" name="disponibilit&#224;" source="mov2#mpkg38#mpkg40#opm81#icu84#icp59" target="mov2#mpkg38#mpkg40#opm81#mfu36.ent1#att27"/>
       </OKLink>
       <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm81#icu84#icp99" name="officina"/>
+      <InputCollectorParameter id="mov2#mpkg38#mpkg40#opm81#icu84#icp59" name="disponibilit&#224;"/>
     </InputCollectorUnit>
-    <OKCollectorUnit id="mov2#mpkg38#mpkg40#opm81#okcu78" name="OK Port19" gr:x="1190" gr:y="-10"/>
-    <SelectorUnit id="mov2#mpkg38#mpkg40#opm81#seu85" name="utenti" gr:x="750" gr:y="25" entity="User">
+    <OKCollectorUnit id="mov2#mpkg38#mpkg40#opm81#okcu78" name="OK Port19" gr:x="1185" gr:y="190"/>
+    <SelectorUnit id="mov2#mpkg38#mpkg40#opm81#seu85" name="utenti" gr:x="745" gr:y="225" entity="User">
       <Selector id="mov2#mpkg38#mpkg40#opm81#seu85#su173" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="mov2#mpkg38#mpkg40#opm81#seu85#su173#rcond24" name="autovettura2preferito" predicate="in" implied="false" role="rel20#role40.rel1#role1"/>
       </Selector>
@@ -45,7 +47,7 @@
         <LinkParameter id="mov2#mpkg38#mpkg40#opm81#seu85#ln220#par1482" name="nome_utente_utente" source="userNameArray" target="mov2#mpkg38#mpkg40#opm81#mlu9.utente"/>
       </Link>
     </SelectorUnit>
-    <ModifyUnit id="mov2#mpkg38#mpkg40#opm81#mfu36" name="ModificaAuto" gr:x="580" gr:y="25" entity="ent1">
+    <ModifyUnit id="mov2#mpkg38#mpkg40#opm81#mfu36" name="ModificaAuto" gr:x="575" gr:y="225" entity="ent1">
       <Selector id="mov2#mpkg38#mpkg40#opm81#mfu36#su174" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg38#mpkg40#opm81#mfu36#su174#kcond105" name="KeyCondition15" predicate="in" implied="false"/>
       </Selector>
@@ -54,7 +56,7 @@
       </OKLink>
       <KOLink id="mov2#mpkg38#mpkg40#opm81#mfu36#kln177" name="KOFlow60" to="mov2#mpkg38#mpkg40#opm81#kocu71" gr:bendpoints="222,130,-423,0"/>
     </ModifyUnit>
-    <MailUnit id="mov2#mpkg38#mpkg40#opm81#mlu9" name="Notifica Modifica" gr:x="975" gr:y="40" format="plainText" smtpServer="smtp1">
+    <MailUnit id="mov2#mpkg38#mpkg40#opm81#mlu9" name="Notifica Modifica" gr:x="970" gr:y="240" format="plainText" smtpServer="smtp1">
       <BodyTemplate xml:space="preserve">Ciao $$utente$$.
 
 Ci sono delle novit&#224; nel nostro catalogo per l'autovettura presente tra i tuoi preferiti:
@@ -68,6 +70,6 @@ Vieni a vederle sul nostro sito!</BodyTemplate>
       <Placeholder id="mov2#mpkg38#mpkg40#opm81#mlu9#ph21" name="autovettura"/>
       <SubjectTemplate xml:space="preserve">Ci sono delle novit&#224;!</SubjectTemplate>
     </MailUnit>
-    <KOCollectorUnit id="mov2#mpkg38#mpkg40#opm81#kocu71" name="KO Port17" gr:x="1190" gr:y="160"/>
+    <KOCollectorUnit id="mov2#mpkg38#mpkg40#opm81#kocu71" name="KO Port17" gr:x="1185" gr:y="360"/>
   </OperationUnits>
 </OperationModule>

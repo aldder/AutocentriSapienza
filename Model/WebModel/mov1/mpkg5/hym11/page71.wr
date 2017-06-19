@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg5#hym11#page71" name="Dettagli acquisto" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="540" gr:y="200" layout:frameLayout="None">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg5#hym11#page71" name="Dettagli acquisto" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="335" gr:y="410" layout:frameLayout="None">
   <ContentUnits>
     <EntryUnit id="mov1#mpkg5#hym11#page71#enu36" name="Dettagli acquisto" linkOrder="mov1#mpkg5#hym11#page71#enu36#ln153 mov1#mpkg5#hym11#page71#enu36#ln154" gr:x="45" gr:y="0" entity="ent7" fieldOrder="mov1#mpkg5#hym11#page71#enu36#fld44 mov1#mpkg5#hym11#page71#enu36#fld43 mov1#mpkg5#hym11#page71#enu36#fld45 mov1#mpkg5#hym11#page71#enu36#fld46 mov1#mpkg5#hym11#page71#enu36#fld218 mov1#mpkg5#hym11#page71#enu36#fld220">
       <Field id="mov1#mpkg5#hym11#page71#enu36#fld218" name="Data" type="date" modifiable="true" attribute="ent7#att48">

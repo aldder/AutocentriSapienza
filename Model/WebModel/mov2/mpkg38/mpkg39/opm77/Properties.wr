@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg38#mpkg39#opm77" name="CancellazioneStoricoAcquisti" gr:x="0" gr:y="110">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg38#mpkg39#opm77#icu80" gr:x="-15" gr:y="50" linkOrder="mov2#mpkg38#mpkg39#opm77#icu80#ln23">
+    <InputCollectorUnit id="mov2#mpkg38#mpkg39#opm77#icu80" gr:x="25" gr:y="260" linkOrder="mov2#mpkg38#mpkg39#opm77#icu80#ln23">
       <InputCollectorParameter id="mov2#mpkg38#mpkg39#opm77#icu80#icp353" name="id_acquisto"/>
       <OKLink id="mov2#mpkg38#mpkg39#opm77#icu80#oln387" name="Elimina acquisto" to="mov2#mpkg38#mpkg39#opm77#dlu35">
         <LinkParameter id="mov2#mpkg38#mpkg39#opm77#icu80#oln387#par1356" name="Key [oid]_storico" source="mov2#mpkg38#mpkg39#opm77#icu80#icp353" target="mov2#mpkg38#mpkg39#opm77#dlu35#su153#acond62"/>
@@ -16,23 +16,23 @@
         <LinkParameter id="mov2#mpkg38#mpkg39#opm77#icu80#ln23#par242" name="$$NULL$$_targa" sourceValue="$$NULL$$" target="mov2#mpkg38#mpkg39#opm77#mfu6.ent1#att30"/>
       </Link>
     </InputCollectorUnit>
-    <OKCollectorUnit id="mov2#mpkg38#mpkg39#opm77#okcu74" name="OK Port18" gr:x="920" gr:y="0"/>
-    <DeleteUnit id="mov2#mpkg38#mpkg39#opm77#dlu35" name="EliminaNotifiche" gr:x="265" gr:y="45" entity="ent4">
+    <OKCollectorUnit id="mov2#mpkg38#mpkg39#opm77#okcu74" name="OK Port18" gr:x="960" gr:y="210"/>
+    <DeleteUnit id="mov2#mpkg38#mpkg39#opm77#dlu35" name="EliminaNotifiche" gr:x="305" gr:y="255" entity="ent4">
       <Selector id="mov2#mpkg38#mpkg39#opm77#dlu35#su153" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov2#mpkg38#mpkg39#opm77#dlu35#su153#acond62" name="storico" predicate="eq" booleanOperator="or" implied="false" attributes="rel15#role30.ent7#att24"/>
       </Selector>
       <OKLink id="mov2#mpkg38#mpkg39#opm77#dlu35#oln388" name="OKFlow88" to="mov2#mpkg38#mpkg39#opm77#dlu36"/>
       <KOLink id="mov2#mpkg38#mpkg39#opm77#dlu35#kln53" name="KOFlow53" to="mov2#mpkg38#mpkg39#opm77#kocu2" gr:bendpoints="154,78,-301,43;295,78,-160,43"/>
     </DeleteUnit>
-    <DeleteUnit id="mov2#mpkg38#mpkg39#opm77#dlu36" name="EliminaStorico" gr:x="475" gr:y="45" entity="ent7">
+    <DeleteUnit id="mov2#mpkg38#mpkg39#opm77#dlu36" name="EliminaStorico" gr:x="515" gr:y="255" entity="ent7">
       <Selector id="mov2#mpkg38#mpkg39#opm77#dlu36#su154" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg38#mpkg39#opm77#dlu36#su154#kcond94" name="KeyCondition46" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="mov2#mpkg38#mpkg39#opm77#dlu36#oln389" name="OKFlow89" to="mov2#mpkg38#mpkg39#opm77#mfu6"/>
       <KOLink id="mov2#mpkg38#mpkg39#opm77#dlu36#kln52" name="KOFlow52" to="mov2#mpkg38#mpkg39#opm77#kocu2" gr:bendpoints="119,59,-381,24;259,61,-241,26"/>
     </DeleteUnit>
-    <KOCollectorUnit gr:x="920" gr:y="85" id="mov2#mpkg38#mpkg39#opm77#kocu2" name="KO Port2"/>
-    <ModifyUnit gr:x="655" gr:y="45" id="mov2#mpkg38#mpkg39#opm77#mfu6" name="ModificaAuto" entity="ent1">
+    <KOCollectorUnit gr:x="960" gr:y="295" id="mov2#mpkg38#mpkg39#opm77#kocu2" name="KO Port2"/>
+    <ModifyUnit gr:x="695" gr:y="255" id="mov2#mpkg38#mpkg39#opm77#mfu6" name="ModificaAuto" entity="ent1">
       <Selector id="mov2#mpkg38#mpkg39#opm77#mfu6#su23" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg38#mpkg39#opm77#mfu6#su23#kcond17" name="KeyCondition17" predicate="in" implied="false"/>
       </Selector>
