@@ -1,6 +1,6 @@
 <HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="220" id="mov1#mpkg6#hym9" name="Gestione Appuntamenti" landmarks="mov1#mpkg6#hym9#page69">
   <OperationUnits>
-    <InputCollectorUnit gr:x="-35" gr:y="265" id="mov1#mpkg6#hym9#icu94" name="Input Port">
+    <InputCollectorUnit gr:x="55" gr:y="225" id="mov1#mpkg6#hym9#icu94" name="Input Port">
       <OKLink id="mov1#mpkg6#hym9#icu94#oln497" to="mov1#mpkg6#hym9#page69" name="Landmark"/>
     </InputCollectorUnit>
     <ModuleInstanceUnit id="mov1#mpkg6#hym9#miu94" gr:x="1065" gr:y="385" moduleId="mov2#mpkg22#mpkg23#opm36">
@@ -33,7 +33,7 @@
         <LinkParameter id="mov1#mpkg6#hym9#miu8#kln44#par526" name="Si e' verificato un errore._Shown Messages" sourceValue="Si e' verificato un errore." target="mov1#mpkg6#hym9#page69#mssu59.shownMessages"/>
       </KOLink>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit id="mov1#mpkg6#hym9#miu10" gr:x="1215" gr:y="210" action="true" moduleId="mov2#mpkg38#mpkg40#opm80">
+    <ModuleInstanceUnit id="mov1#mpkg6#hym9#miu10" gr:x="1210" gr:y="215" action="true" moduleId="mov2#mpkg38#mpkg40#opm80">
       <OKLink id="mov1#mpkg6#hym9#miu10#oln143" name="OKFlow143" to="mov1#mpkg6#hym9#page69" gr:bendpoints="-214,61,481,21"/>
       <KOLink id="mov1#mpkg6#hym9#miu10#kln45" name="KOFlow45" to="mov1#mpkg6#hym9#page69#mssu59">
         <LinkParameter id="mov1#mpkg6#hym9#miu10#kln45#par529" name="Si e' verificato un errore._Shown Messages" sourceValue="Si e' verificato un errore." target="mov1#mpkg6#hym9#page69#mssu59.shownMessages"/>

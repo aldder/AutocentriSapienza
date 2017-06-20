@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym9#page68" name="Dettagli appuntamento" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="345" gr:y="535" layout:frameLayout="None">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym9#page68" name="Dettagli appuntamento" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="325" gr:y="510" layout:frameLayout="None">
   <ContentUnits>
     <EntryUnit id="mov1#mpkg6#hym9#page68#enu49" name="Dettagli appuntamento" linkOrder="mov1#mpkg6#hym9#page68#enu49#ln294 mov1#mpkg6#hym9#page68#enu49#ln296 mov1#mpkg6#hym9#page68#enu49#ln41" gr:x="125" gr:y="55" entity="ent2" fieldOrder="mov1#mpkg6#hym9#page68#enu49#fld27 mov1#mpkg6#hym9#page68#enu49#fld26 mov1#mpkg6#hym9#page68#enu49#fld185 mov1#mpkg6#hym9#page68#enu49#sfld29 mov1#mpkg6#hym9#page68#enu49#sfld27 mov1#mpkg6#hym9#page68#enu49#fld186">
       <Field id="mov1#mpkg6#hym9#page68#enu49#fld185" name="Data" type="date" modifiable="true" attribute="ent2#att13">

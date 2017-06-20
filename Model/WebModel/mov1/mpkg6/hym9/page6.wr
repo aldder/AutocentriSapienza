@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym9#page6" name="Inserisci utente" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="985" gr:y="55">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym9#page6" name="Inserisci utente" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="995" gr:y="50">
   <ContentUnits>
     <EntryUnit id="mov1#mpkg6#hym9#page6#enu7" name="Inserisci utente" linkOrder="mov1#mpkg6#hym9#page6#enu7#ln69" gr:x="0" gr:y="0" entity="User" fieldOrder="mov1#mpkg6#hym9#page6#enu7#fld94 mov1#mpkg6#hym9#page6#enu7#fld95 mov1#mpkg6#hym9#page6#enu7#fld96 mov1#mpkg6#hym9#page6#enu7#fld97">
       <Field id="mov1#mpkg6#hym9#page6#enu7#fld94" name="Nome Utente" type="string" modifiable="true" attribute="userName">

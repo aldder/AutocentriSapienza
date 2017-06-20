@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym9#page69" name="Gestione appuntamenti" landmark="true" ajaxEnabled="true" gr:x="360" gr:y="70">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym9#page69" name="Gestione appuntamenti" landmark="true" ajaxEnabled="true" gr:x="325" gr:y="55">
   <ContentUnits>
     <EventCalendarUnit id="mov1#mpkg6#hym9#page69#ecu3" name="Calendario" gr:x="10" gr:y="260" entityBased="true" entity="ent2" dateAttribute="ent2#att13" years="1" displayAttributes="rel17#role33.ent15#att66 rel6#role12.userName rel7#role14.ent3#att16" linkOrder="mov1#mpkg6#hym9#page69#ecu3#ln300">
       <Link id="mov1#mpkg6#hym9#page69#ecu3#ln300" name="Flow105" to="mov1#mpkg6#hym9#page68#enu49" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="500" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Dettagli appuntamento">
@@ -13,7 +13,7 @@
     <SelectorUnit id="mov1#mpkg6#hym9#page69#seu106" name="Appuntamenti" gr:x="0" gr:y="145" entity="ent2">
       <Link id="mov1#mpkg6#hym9#page69#seu106#ln301" name="Flow3" to="mov1#mpkg6#hym9#page69#ecu3" type="transport" validate="true"/>
     </SelectorUnit>
-    <EntryUnit id="mov1#mpkg6#hym9#page69#enu50" name="Nuovo appuntamento" linkOrder="mov1#mpkg6#hym9#page69#enu50#ln302 mov1#mpkg6#hym9#page69#enu50#ln74 mov1#mpkg6#hym9#page69#enu50#ln75" ajaxEnableExpandedLinks="false" gr:x="305" gr:y="150" entity="ent2" fieldOrder="mov1#mpkg6#hym9#page69#enu50#sfld32 mov1#mpkg6#hym9#page69#enu50#sfld2 mov1#mpkg6#hym9#page69#enu50#fld187 mov1#mpkg6#hym9#page69#enu50#sfld31 mov1#mpkg6#hym9#page69#enu50#sfld30 mov1#mpkg6#hym9#page69#enu50#fld188">
+    <EntryUnit id="mov1#mpkg6#hym9#page69#enu50" name="Nuovo appuntamento" linkOrder="mov1#mpkg6#hym9#page69#enu50#ln302 mov1#mpkg6#hym9#page69#enu50#ln74 mov1#mpkg6#hym9#page69#enu50#ln75 mov1#mpkg6#hym9#page69#enu50#ln13" ajaxEnableExpandedLinks="false" gr:x="305" gr:y="150" entity="ent2" fieldOrder="mov1#mpkg6#hym9#page69#enu50#sfld32 mov1#mpkg6#hym9#page69#enu50#sfld2 mov1#mpkg6#hym9#page69#enu50#fld187 mov1#mpkg6#hym9#page69#enu50#sfld31 mov1#mpkg6#hym9#page69#enu50#sfld30 mov1#mpkg6#hym9#page69#enu50#fld188">
       <Field id="mov1#mpkg6#hym9#page69#enu50#fld187" name="Data" ajaxEventEnabled="false" type="date" modifiable="true" attribute="ent2#att13">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page69#enu50#fld187#mnd151" name="Mandatory" errorMessage="campo obbligatorio"/>
@@ -31,7 +31,7 @@
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page69#enu50#sfld31#mnd153" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
       </SelectionField>
-      <SelectionField id="mov1#mpkg6#hym9#page69#enu50#sfld32" name="Utente" type="string" role="rel6#role12" ajaxEventEnabled="false" ajaxEventIndicator="true">
+      <SelectionField id="mov1#mpkg6#hym9#page69#enu50#sfld32" name="Utente" type="string" role="rel6#role12" ajaxEventEnabled="true" ajaxEventIndicator="true" ajaxEventLink="mov1#mpkg6#hym9#page69#enu50#ln13">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page69#enu50#sfld32#mnd4" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
@@ -51,14 +51,17 @@
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page69#enu50#sfld2#mnd80" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
       </SelectionField>
+      <Link id="mov1#mpkg6#hym9#page69#enu50#ln13" name="Flow13" to="mov1#mpkg6#hym9#page69#seu4" type="normal" validate="false" gr:bendpoints="53,-63,-32,82">
+        <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln13#par269" name="Utente_utente2storico2auto [oid]" source="mov1#mpkg6#hym9#page69#enu50#sfld32" target="mov1#mpkg6#hym9#page69#seu4#su35#rcond1.userOID"/>
+      </Link>
     </EntryUnit>
-    <SelectorUnit id="mov1#mpkg6#hym9#page69#seu107" name="Tipologia" gr:x="160" gr:y="0" entity="ent3">
+    <SelectorUnit id="mov1#mpkg6#hym9#page69#seu107" name="Tipologia" gr:x="135" gr:y="0" entity="ent3">
       <Link id="mov1#mpkg6#hym9#page69#seu107#ln303" name="Flow4" to="mov1#mpkg6#hym9#page69#enu50" type="transport" validate="true">
         <LinkParameter id="mov1#mpkg6#hym9#page69#seu107#ln303#par1871" name="nome_Tipologia [label]" source="ent3#att16Array" target="mov1#mpkg6#hym9#page69#enu50#sfld30_label"/>
         <LinkParameter id="mov1#mpkg6#hym9#page69#seu107#ln303#par1872" name="oid_Tipologia [output]" source="ent3#att15Array" target="mov1#mpkg6#hym9#page69#enu50#sfld30_output"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit id="mov1#mpkg6#hym9#page69#seu108" name="Orario" gr:x="245" gr:y="0" entity="ent15">
+    <SelectorUnit id="mov1#mpkg6#hym9#page69#seu108" name="Orario" gr:x="220" gr:y="0" entity="ent15">
       <Link id="mov1#mpkg6#hym9#page69#seu108#ln304" name="Flow25" to="mov1#mpkg6#hym9#page69#enu50" type="transport" validate="true">
         <LinkParameter id="mov1#mpkg6#hym9#page69#seu108#ln304#par1873" name="ora_Ora [label]" source="ent15#att66Array" target="mov1#mpkg6#hym9#page69#enu50#sfld31_label"/>
         <LinkParameter id="mov1#mpkg6#hym9#page69#seu108#ln304#par1874" name="oid_Ora [output]" source="ent15#att65Array" target="mov1#mpkg6#hym9#page69#enu50#sfld31_output"/>
@@ -84,7 +87,7 @@
       <SortAttribute attribute="ent2#att26" order="ascending"/>
       <DefaultSortAttribute attribute="ent2#att12" order="descending"/>
     </PowerIndexUnit>
-    <SelectorUnit id="mov1#mpkg6#hym9#page69#seu109" name="Utente" gr:x="320" gr:y="0" entity="User">
+    <SelectorUnit id="mov1#mpkg6#hym9#page69#seu109" name="Utente" gr:x="295" gr:y="0" entity="User">
       <Link id="mov1#mpkg6#hym9#page69#seu109#ln306" name="Flow101" to="mov1#mpkg6#hym9#page69#enu50" type="transport" validate="true">
         <LinkParameter id="mov1#mpkg6#hym9#page69#seu109#ln306#par1879" name="nome_utente_Utente [label]" source="userNameArray" target="mov1#mpkg6#hym9#page69#enu50#sfld32_label"/>
         <LinkParameter id="mov1#mpkg6#hym9#page69#seu109#ln306#par1880" name="oid_Utente [output]" source="userOIDArray" target="mov1#mpkg6#hym9#page69#enu50#sfld32_output"/>
@@ -100,9 +103,10 @@
     </TimeUnit>
     <MultiMessageUnit id="mov1#mpkg6#hym9#page69#mssu59" name="KoMessage" gr:x="415" gr:y="315"/>
     <MultiMessageUnit id="mov1#mpkg6#hym9#page69#mssu60" name="OkMessage" gr:x="415" gr:y="250"/>
-    <SelectorUnit gr:x="435" gr:y="0" id="mov1#mpkg6#hym9#page69#seu4" name="Autovettura" entity="ent1">
-      <Selector id="mov1#mpkg6#hym9#page69#seu4#su35" defaultPolicy="fill" booleanOperator="and">
+    <SelectorUnit gr:x="410" gr:y="0" id="mov1#mpkg6#hym9#page69#seu4" name="Autovettura" entity="ent1">
+      <Selector id="mov1#mpkg6#hym9#page69#seu4#su35" defaultPolicy="fill" booleanOperator="or">
         <AttributesCondition id="mov1#mpkg6#hym9#page69#seu4#su35#acond24" name="officina" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att5" value="1"/>
+        <RelationshipRoleCondition id="mov1#mpkg6#hym9#page69#seu4#su35#rcond1" name="utente2storico2auto" predicate="in" implied="false" role="rel12#role24.rel19#role37"/>
       </Selector>
       <Link id="mov1#mpkg6#hym9#page69#seu4#ln76" name="Flow76" to="mov1#mpkg6#hym9#page69#enu50" type="transport" validate="true">
         <LinkParameter id="mov1#mpkg6#hym9#page69#seu4#ln76#par530" name="targa_Autovettura [label]" source="ent1#att30Array" target="mov1#mpkg6#hym9#page69#enu50#sfld2_label"/>
@@ -249,6 +253,12 @@
         <layout:Cell>
           <layout:Unit unitId="mov1#mpkg6#hym9#page69#enu50">
             <layout:LayoutParameter name="show-label" value="top" type="unit"/>
+            <layout:Field field="mov1#mpkg6#hym9#page69#enu50#sfld32"/>
+            <layout:Field field="mov1#mpkg6#hym9#page69#enu50#sfld2"/>
+            <layout:Field field="mov1#mpkg6#hym9#page69#enu50#fld187"/>
+            <layout:Field field="mov1#mpkg6#hym9#page69#enu50#sfld31"/>
+            <layout:Field field="mov1#mpkg6#hym9#page69#enu50#sfld30"/>
+            <layout:Field field="mov1#mpkg6#hym9#page69#enu50#fld188"/>
             <layout:Link link="mov1#mpkg6#hym9#page69#enu50#ln302"/>
             <layout:Link link="mov1#mpkg6#hym9#page69#enu50#ln74">
               <layout:LayoutParameter name="btn-style" value="info" type="link"/>
@@ -256,12 +266,7 @@
             <layout:Link link="mov1#mpkg6#hym9#page69#enu50#ln75">
               <layout:LayoutParameter name="btn-style" value="info" type="link"/>
             </layout:Link>
-            <layout:Field field="mov1#mpkg6#hym9#page69#enu50#sfld32"/>
-            <layout:Field field="mov1#mpkg6#hym9#page69#enu50#sfld2"/>
-            <layout:Field field="mov1#mpkg6#hym9#page69#enu50#fld187"/>
-            <layout:Field field="mov1#mpkg6#hym9#page69#enu50#sfld31"/>
-            <layout:Field field="mov1#mpkg6#hym9#page69#enu50#sfld30"/>
-            <layout:Field field="mov1#mpkg6#hym9#page69#enu50#fld188"/>
+            <layout:Link link="mov1#mpkg6#hym9#page69#enu50#ln13"/>
           </layout:Unit>
         </layout:Cell>
       </layout:Row>
