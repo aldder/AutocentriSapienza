@@ -38,6 +38,7 @@
         <LinkParameter id="mov1#mpkg6#hym4#inn6#kln16#par423" name="AppuntamentoToTipologia.oid_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#seu10#oln57#par417" passing="true"/>
         <LinkParameter id="mov1#mpkg6#hym4#inn6#kln16#par424" name="AppuntamentoToUtente.oid_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#seu10#oln57#par418" passing="true"/>
         <LinkParameter id="mov1#mpkg6#hym4#inn6#kln16#par426" name="descrizione_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#seu10#oln57#par420" passing="true"/>
+        <LinkParameter id="mov1#mpkg6#hym4#inn6#kln16#par270" name="data_inizio_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#seu10#oln57#par179" passing="true"/>
       </KOLink>
     </IsNotNullUnit>
     <CreateUnit gr:x="1150" gr:y="170" id="mov1#mpkg6#hym4#cru4" name="InsertIntervento" entity="ent8">
@@ -51,6 +52,7 @@
         <LinkParameter id="mov1#mpkg6#hym4#cru6#oln86#par448" name="0_stato" sourceValue="0" target="mov1#mpkg6#hym4#cru4.ent8#att33"/>
         <LinkParameter id="mov1#mpkg6#hym4#cru6#oln86#par468" name="AppuntamentoToTipologia.oid_PASSING_Tipologia.oid(InterventoToTipologia)" sourceLinkParameter="mov1#mpkg6#hym4#page3#enu2#ln44#par429" target="mov1#mpkg6#hym4#cru4.rel5#role10.ent3#att15"/>
         <LinkParameter id="mov1#mpkg6#hym4#cru6#oln86#par470" name="AppuntamentoToUtente.oid_PASSING_Utente.oid(InterventoToUtente)" sourceLinkParameter="mov1#mpkg6#hym4#page3#enu2#ln44#par430" target="mov1#mpkg6#hym4#cru4.rel4#role8.userOID"/>
+        <LinkParameter id="mov1#mpkg6#hym4#cru6#oln86#par547" name="data_inizio_PASSING_data_inizio" sourceLinkParameter="mov1#mpkg6#hym4#page3#enu2#ln44#par289" target="mov1#mpkg6#hym4#cru4.ent8#att32"/>
       </OKLink>
       <KOLink id="mov1#mpkg6#hym4#cru6#kln24" name="KOFlow24" to="mov1#mpkg6#hym4#kocu1" gr:bendpoints="163,101,-307,-13"/>
     </CreateUnit>

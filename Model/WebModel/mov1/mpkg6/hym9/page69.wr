@@ -52,7 +52,7 @@
           <MandatoryValidationRule id="mov1#mpkg6#hym9#page69#enu50#sfld2#mnd80" name="Mandatory" errorMessage="campo obbligatorio"/>
         </VRules>
       </SelectionField>
-      <Link id="mov1#mpkg6#hym9#page69#enu50#ln13" name="Flow13" to="mov1#mpkg6#hym9#page69#seu4" type="normal" validate="false" gr:bendpoints="53,-63,-32,82">
+      <Link id="mov1#mpkg6#hym9#page69#enu50#ln13" name="Flow13" to="mov1#mpkg6#hym9#page69#seu4" type="normal" validate="false" gr:bendpoints="18,-65,33,75">
         <LinkParameter id="mov1#mpkg6#hym9#page69#enu50#ln13#par269" name="Utente_utente2storico2auto [oid]" source="mov1#mpkg6#hym9#page69#enu50#sfld32" target="mov1#mpkg6#hym9#page69#seu4#su35#rcond1.userOID"/>
       </Link>
       <Field id="mov1#mpkg6#hym9#page69#enu50#fld25" name="Targa" type="string" preloaded="true" modifiable="true" hidden="true"/>
@@ -113,7 +113,7 @@
         <AttributesCondition id="mov1#mpkg6#hym9#page69#seu4#su35#acond24" name="officina" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att5" value="1"/>
         <RelationshipRoleCondition id="mov1#mpkg6#hym9#page69#seu4#su35#rcond1" name="utente2storico2auto" predicate="in" implied="false" role="rel12#role24.rel19#role37"/>
       </Selector>
-      <Link id="mov1#mpkg6#hym9#page69#seu4#ln76" name="Flow76" to="mov1#mpkg6#hym9#page69#enu50" type="transport" validate="true" gr:bendpoints="-17,75,-32,-65">
+      <Link id="mov1#mpkg6#hym9#page69#seu4#ln76" name="Flow76" to="mov1#mpkg6#hym9#page69#enu50" type="transport" validate="true">
         <LinkParameter id="mov1#mpkg6#hym9#page69#seu4#ln76#par530" name="targa_Autovettura [label]" source="ent1#att30Array" target="mov1#mpkg6#hym9#page69#enu50#sfld2_label"/>
         <LinkParameter id="mov1#mpkg6#hym9#page69#seu4#ln76#par532" name="oid_Autovettura [output]" source="ent1#att1Array" target="mov1#mpkg6#hym9#page69#enu50#sfld2_output"/>
       </Link>

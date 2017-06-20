@@ -55,6 +55,7 @@
         <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par429" name="AppuntamentoToTipologia.oid_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#inn6#kln16#par423" passing="true"/>
         <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par430" name="AppuntamentoToUtente.oid_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#inn6#kln16#par424" passing="true"/>
         <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par432" name="descrizione_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#inn6#kln16#par426" passing="true"/>
+        <LinkParameter id="mov1#mpkg6#hym4#page3#enu2#ln44#par289" name="data_inizio_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#inn6#kln16#par270" passing="true"/>
       </Link>
     </EntryUnit>
   </ContentUnits>
