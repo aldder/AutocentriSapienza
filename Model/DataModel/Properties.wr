@@ -226,7 +226,7 @@
     <RelationshipRole1 id="rel19#role37" name="StoricoAcquistoToAutovettura" maxCard="1">
       <db:JoinColumn attribute="ent7#att24" name="oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel19#role38" name="AutovetturaToStoricoAcquisto" maxCard="N">
+    <RelationshipRole2 id="rel19#role38" name="AutovetturaToStoricoAcquisto" maxCard="1">
       <db:JoinColumn attribute="ent1#att1" name="autovettura_oid"/>
     </RelationshipRole2>
   </Relationship>
@@ -242,7 +242,7 @@
     <RelationshipRole1 id="rel3#role5" name="AnnuncioToAutovettura" maxCard="1">
       <db:JoinColumn attribute="ent10#att35" name="oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel3#role6" name="AutovetturaToAnnuncio" maxCard="N">
+    <RelationshipRole2 id="rel3#role6" name="AutovetturaToAnnuncio" maxCard="1">
       <db:JoinColumn attribute="ent1#att1" name="autovettura_oid"/>
     </RelationshipRole2>
   </Relationship>

@@ -1,6 +1,6 @@
 <HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="275" id="mov1#mpkg6#hym4" name="Presa in consegna">
   <OperationUnits>
-    <InputCollectorUnit gr:x="-215" gr:y="170" id="mov1#mpkg6#hym4#icu6">
+    <InputCollectorUnit gr:x="-220" gr:y="170" id="mov1#mpkg6#hym4#icu6">
       <OKLink id="mov1#mpkg6#hym4#icu6#oln52" name="OKFlow52" to="mov1#mpkg6#hym4#seu14">
         <LinkParameter id="mov1#mpkg6#hym4#icu6#oln52#par414" name="data_inizio_PASSING" source="mov1#mpkg6#hym4#icu6#icp81" passing="true"/>
         <LinkParameter id="mov1#mpkg6#hym4#icu6#oln52#par415" name="id_appuntamento_PASSING" source="mov1#mpkg6#hym4#icu6#icp80" passing="true"/>
@@ -9,7 +9,7 @@
       <InputCollectorParameter id="mov1#mpkg6#hym4#icu6#icp80" name="id_appuntamento"/>
       <InputCollectorParameter id="mov1#mpkg6#hym4#icu6#icp81" name="data_inizio"/>
     </InputCollectorUnit>
-    <SelectorUnit gr:x="380" gr:y="165" id="mov1#mpkg6#hym4#seu10" name="SelectAppuntamento2Auto" entity="ent2">
+    <SelectorUnit gr:x="370" gr:y="165" id="mov1#mpkg6#hym4#seu10" name="SelectAppuntamento2Auto" entity="ent2">
       <Selector id="mov1#mpkg6#hym4#seu10#su31" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov1#mpkg6#hym4#seu10#su31#kcond23" name="KeyCondition23" predicate="in" implied="false"/>
       </Selector>
@@ -25,7 +25,7 @@
         <LinkParameter id="mov1#mpkg6#hym4#seu10#ln40#par340" name="targa_Targa" source="ent2#att26Array" target="mov1#mpkg6#hym4#page3#enu2#fld30_slot"/>
       </Link>
     </SelectorUnit>
-    <IsNotNullUnit gr:x="615" gr:y="180" id="mov1#mpkg6#hym4#inn6" name="Is Not Null">
+    <IsNotNullUnit gr:x="600" gr:y="180" id="mov1#mpkg6#hym4#inn6" name="Is Not Null">
       <OKLink id="mov1#mpkg6#hym4#inn6#oln62" name="OKFlow62" to="mov1#mpkg6#hym4#cru4" gr:bendpoints="150,-108,-600,-113;480,-108,-110,-108">
         <LinkParameter id="mov1#mpkg6#hym4#inn6#oln62#par476" name="descrizione_PASSING_descrizione" sourceLinkParameter="mov1#mpkg6#hym4#seu10#oln57#par420" target="mov1#mpkg6#hym4#cru4.ent8#att55"/>
         <LinkParameter id="mov1#mpkg6#hym4#inn6#oln62#par477" name="0_stato" sourceValue="0" target="mov1#mpkg6#hym4#cru4.ent8#att33"/>
@@ -41,11 +41,11 @@
         <LinkParameter id="mov1#mpkg6#hym4#inn6#kln16#par270" name="data_inizio_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#seu10#oln57#par179" passing="true"/>
       </KOLink>
     </IsNotNullUnit>
-    <CreateUnit gr:x="1150" gr:y="170" id="mov1#mpkg6#hym4#cru4" name="InsertIntervento" entity="ent8">
+    <CreateUnit gr:x="1095" gr:y="170" id="mov1#mpkg6#hym4#cru4" name="InsertIntervento" entity="ent8">
       <KOLink id="mov1#mpkg6#hym4#cru4#kln21" name="KOFlow21" to="mov1#mpkg6#hym4#kocu1" gr:bendpoints="92,69,-308,-31"/>
       <OKLink id="mov1#mpkg6#hym4#cru4#oln144" name="OKFlow144" to="mov1#mpkg6#hym4#okcu1"/>
     </CreateUnit>
-    <CreateUnit gr:x="990" gr:y="170" id="mov1#mpkg6#hym4#cru6" name="InsertAuto" entity="ent1">
+    <CreateUnit gr:x="955" gr:y="170" id="mov1#mpkg6#hym4#cru6" name="InsertAuto" entity="ent1">
       <OKLink id="mov1#mpkg6#hym4#cru6#oln86" name="OKFlow86" to="mov1#mpkg6#hym4#cru4">
         <LinkParameter id="mov1#mpkg6#hym4#cru6#oln86#par379" name="oid_Autovettura.oid(InterventoToAutovettura)" source="ent1#att1Array" target="mov1#mpkg6#hym4#cru4.rel9#role18.ent1#att1"/>
         <LinkParameter id="mov1#mpkg6#hym4#cru6#oln86#par447" name="descrizione_PASSING_descrizione" sourceLinkParameter="mov1#mpkg6#hym4#page3#enu2#ln44#par432" target="mov1#mpkg6#hym4#cru4.ent8#att55"/>
@@ -56,8 +56,8 @@
       </OKLink>
       <KOLink id="mov1#mpkg6#hym4#cru6#kln24" name="KOFlow24" to="mov1#mpkg6#hym4#kocu1" gr:bendpoints="163,101,-307,-13"/>
     </CreateUnit>
-    <KOCollectorUnit gr:x="1395" gr:y="285" id="mov1#mpkg6#hym4#kocu1" name="KO Port1"/>
-    <OKCollectorUnit gr:x="1395" gr:y="85" id="mov1#mpkg6#hym4#okcu1" name="OK Port1"/>
+    <KOCollectorUnit gr:x="1275" gr:y="285" id="mov1#mpkg6#hym4#kocu1" name="KO Port1"/>
+    <OKCollectorUnit gr:x="1275" gr:y="85" id="mov1#mpkg6#hym4#okcu1" name="OK Port1"/>
     <SelectorUnit gr:x="55" gr:y="165" id="mov1#mpkg6#hym4#seu14" name="SelectIntervento" entity="ent8">
       <Selector id="mov1#mpkg6#hym4#seu14#su55" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="mov1#mpkg6#hym4#seu14#su55#rcond2" name="appuntamento2intervento" predicate="in" implied="false" role="rel10#role19"/>
@@ -68,7 +68,7 @@
         <LinkParameter id="mov1#mpkg6#hym4#seu14#oln31#par176" name="id_appuntamento_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#icu6#oln52#par415" passing="true"/>
       </OKLink>
     </SelectorUnit>
-    <IsNotNullUnit gr:x="240" gr:y="180" id="mov1#mpkg6#hym4#inn11" name="Is Not Null">
+    <IsNotNullUnit gr:x="235" gr:y="180" id="mov1#mpkg6#hym4#inn11" name="Is Not Null">
       <KOLink id="mov1#mpkg6#hym4#inn11#kln41" name="KOFlow41" to="mov1#mpkg6#hym4#seu10">
         <LinkParameter id="mov1#mpkg6#hym4#inn11#kln41#par177" name="id_appuntamento_PASSING_KeyCondition23 [oid]" sourceLinkParameter="mov1#mpkg6#hym4#seu14#oln31#par176" target="mov1#mpkg6#hym4#seu10#su31#kcond23.ent2#att12"/>
         <LinkParameter id="mov1#mpkg6#hym4#inn11#kln41#par178" name="data_inizio_PASSING" sourceLinkParameter="mov1#mpkg6#hym4#seu14#oln31#par175" passing="true"/>
