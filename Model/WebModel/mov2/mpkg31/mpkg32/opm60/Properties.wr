@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg31#mpkg32#opm60" name="InserimentoTipologiaIntervento" gr:x="0" gr:y="0">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg31#mpkg32#opm60#icu62" gr:x="10" gr:y="15">
+    <InputCollectorUnit id="mov2#mpkg31#mpkg32#opm60#icu62" gr:x="105" gr:y="220">
       <OKLink id="mov2#mpkg31#mpkg32#opm60#icu62#oln114" name="Inserisci" to="mov2#mpkg31#mpkg32#opm60#seu40">
         <LinkParameter id="mov2#mpkg31#mpkg32#opm60#icu62#oln114#par250" name="nome_nome" source="mov2#mpkg31#mpkg32#opm60#icu62#icp50" target="mov2#mpkg31#mpkg32#opm60#seu40#su89#acond30"/>
       </OKLink>
@@ -13,13 +13,13 @@
       <InputCollectorParameter id="mov2#mpkg31#mpkg32#opm60#icu62#icp50" name="nome"/>
       <InputCollectorParameter id="mov2#mpkg31#mpkg32#opm60#icu62#icp51" name="ripetizione"/>
     </InputCollectorUnit>
-    <OKCollectorUnit id="mov2#mpkg31#mpkg32#opm60#okcu59" name="OK Port26" gr:x="830" gr:y="-20"/>
-    <CreateUnit id="mov2#mpkg31#mpkg32#opm60#cru24" name="Inserimento" gr:x="625" gr:y="30" entity="ent3">
+    <OKCollectorUnit id="mov2#mpkg31#mpkg32#opm60#okcu59" name="OK Port26" gr:x="925" gr:y="185"/>
+    <CreateUnit id="mov2#mpkg31#mpkg32#opm60#cru24" name="Inserimento" gr:x="720" gr:y="235" entity="ent3">
       <OKLink id="mov2#mpkg31#mpkg32#opm60#cru24#oln115" name="OKFlow7" to="mov2#mpkg31#mpkg32#opm60#okcu59"/>
       <KOLink id="mov2#mpkg31#mpkg32#opm60#cru24#kln144" name="KOFlow94" to="mov2#mpkg31#mpkg32#opm60#kocu53"/>
     </CreateUnit>
-    <KOCollectorUnit id="mov2#mpkg31#mpkg32#opm60#kocu53" name="KO Port24" gr:x="830" gr:y="85"/>
-    <SelectorUnit id="mov2#mpkg31#mpkg32#opm60#seu40" name="SelectTipologia" gr:x="295" gr:y="25" entity="ent3">
+    <KOCollectorUnit id="mov2#mpkg31#mpkg32#opm60#kocu53" name="KO Port24" gr:x="925" gr:y="290"/>
+    <SelectorUnit id="mov2#mpkg31#mpkg32#opm60#seu40" name="SelectTipologia" gr:x="390" gr:y="230" entity="ent3">
       <OKLink id="mov2#mpkg31#mpkg32#opm60#seu40#oln116" name="OKFlow362" to="mov2#mpkg31#mpkg32#opm60#inn15">
         <LinkParameter id="mov2#mpkg31#mpkg32#opm60#seu40#oln116#par1202" name="oid_Input" source="ent3#att15Array" target="mov2#mpkg31#mpkg32#opm60#inn15.isnotnull"/>
       </OKLink>
@@ -27,7 +27,7 @@
         <AttributesCondition id="mov2#mpkg31#mpkg32#opm60#seu40#su89#acond30" name="nome" predicate="eq" booleanOperator="or" implied="false" attributes="ent3#att16"/>
       </Selector>
     </SelectorUnit>
-    <IsNotNullUnit id="mov2#mpkg31#mpkg32#opm60#inn15" name="Is Not Null" gr:x="470" gr:y="40">
+    <IsNotNullUnit id="mov2#mpkg31#mpkg32#opm60#inn15" name="Is Not Null" gr:x="565" gr:y="245">
       <KOLink id="mov2#mpkg31#mpkg32#opm60#inn15#kln145" name="KOFlow129" to="mov2#mpkg31#mpkg32#opm60#cru24"/>
       <OKLink id="mov2#mpkg31#mpkg32#opm60#inn15#oln117" name="OKFlow363" to="mov2#mpkg31#mpkg32#opm60#kocu53" gr:bendpoints="80,55,-346,0"/>
     </IsNotNullUnit>

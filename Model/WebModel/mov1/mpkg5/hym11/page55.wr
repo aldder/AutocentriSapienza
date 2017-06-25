@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg5#hym11#page55" name="Seleziona autovettura" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" ajaxEnabled="false" gr:x="660" gr:y="0" layout:frameLayout="None">
   <ContentUnits>
-    <PowerIndexUnit id="mov1#mpkg5#hym11#page55#pwu21" name="Seleziona l'autovettura" linkOrder="mov1#mpkg5#hym11#page55#pwu21#ln147" gr:x="0" gr:y="100" sortable="true" checkable="false" useCountQuery="false" entity="ent1" blockFactor="10" displayAttributes="ent1#att1 ent1#att46 ent1#att2 ent1#att4 ent1#att6">
+    <PowerIndexUnit id="mov1#mpkg5#hym11#page55#pwu21" name="Seleziona l'autovettura" linkOrder="mov1#mpkg5#hym11#page55#pwu21#ln147" gr:x="0" gr:y="100" sortable="true" checkable="false" useCountQuery="false" entity="ent1" blockFactor="10" displayAttributes="ent1#att1 ent1#att46 ent1#att2 ent1#att4 ent1#att6 ent1#att27">
       <Link id="mov1#mpkg5#hym11#page55#pwu21#ln147" name="Seleziona" to="mov1#mpkg5#hym11#page54#enu33" type="normal" validate="true" ajaxEnabled="false" ajaxOpenWindow="true" ajaxReplaceWindow="true" ajaxWindowWidth="800" ajaxWindowHeight="550" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserisci acquisto">
         <LinkParameter id="mov1#mpkg5#hym11#page55#pwu21#ln147#par685" name="oid_Codice autovettura" source="data[].ent1#att1" target="mov1#mpkg5#hym11#page54#enu33#fld211_slot"/>
         <LinkParameter id="mov1#mpkg5#hym11#page55#pwu21#ln147#par686" name="nome_Autovettura" source="data[].ent1#att46" target="mov1#mpkg5#hym11#page54#enu33#fld210_slot"/>
@@ -10,6 +10,7 @@
         <LinkParameter id="mov1#mpkg5#hym11#page55#pwu21#ln147#par223" name="kilometri_Kilometri" source="data[].ent1#att6" target="mov1#mpkg5#hym11#page54#enu33#fld40_slot"/>
         <LinkParameter id="mov1#mpkg5#hym11#page55#pwu21#ln147#par224" name="prezzo_Prezzo" source="data[].ent1#att2" target="mov1#mpkg5#hym11#page54#enu33#fld41_slot"/>
         <LinkParameter id="mov1#mpkg5#hym11#page55#pwu21#ln147#par225" name="usato_Usato" source="data[].ent1#att4" target="mov1#mpkg5#hym11#page54#enu33#fld42_slot"/>
+        <LinkParameter id="mov1#mpkg5#hym11#page55#pwu21#ln147#par555" name="targa_Targa" source="data[].ent1#att30" target="mov1#mpkg5#hym11#page54#enu33#fld208_slot"/>
       </Link>
       <Selector id="mov1#mpkg5#hym11#page55#pwu21#su16" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov1#mpkg5#hym11#page55#pwu21#su16#acond58" name="nome" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att46" ignoreCase="true"/>
@@ -68,12 +69,14 @@
           <layout:Attribute label="Prezzo" attribute="ent1#att2"/>
           <layout:Attribute label="Usato" attribute="ent1#att4"/>
           <layout:Attribute label="Kilometri" attribute="ent1#att6"/>
+          <layout:Attribute attribute="ent1#att27" label="Disp."/>
           <layout:Link link="mov1#mpkg5#hym11#page55#pwu21#ln147"/>
           <layout:Link link="mov1#mpkg5#hym11#page55#pwu21ent1#att1"/>
           <layout:Link link="mov1#mpkg5#hym11#page55#pwu21ent1#att46"/>
           <layout:Link link="mov1#mpkg5#hym11#page55#pwu21ent1#att2"/>
           <layout:Link link="mov1#mpkg5#hym11#page55#pwu21ent1#att4"/>
           <layout:Link link="mov1#mpkg5#hym11#page55#pwu21ent1#att6"/>
+          <layout:Link link="mov1#mpkg5#hym11#page55#pwu21ent1#att27"/>
           <layout:Link link="mov1#mpkg5#hym11#page55#pwu21First"/>
           <layout:Link link="mov1#mpkg5#hym11#page55#pwu21Previous"/>
           <layout:Link link="mov1#mpkg5#hym11#page55#pwu21Block"/>

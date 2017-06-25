@@ -10,10 +10,8 @@
         <LinkParameter id="mov2#mpkg38#mpkg39#opm77#icu80#ln172#par779" name="id_acquisto_KeyCondition46 [oid]" source="mov2#mpkg38#mpkg39#opm77#icu80#icp353" target="mov2#mpkg38#mpkg39#opm77#dlu36#su154#kcond94.ent7#att24"/>
       </Link>
       <InputCollectorParameter id="mov2#mpkg38#mpkg39#opm77#icu80#icp48" name="id_auto"/>
-      <Link id="mov2#mpkg38#mpkg39#opm77#icu80#ln23" name="Flow23" to="mov2#mpkg38#mpkg39#opm77#mfu6" type="transport" validate="true" gr:bendpoints="174,-97,-441,-97;488,-95,-127,-95">
-        <LinkParameter id="mov2#mpkg38#mpkg39#opm77#icu80#ln23#par240" name="1_catalogo" sourceValue="1" target="mov2#mpkg38#mpkg39#opm77#mfu6.ent1#att50"/>
-        <LinkParameter id="mov2#mpkg38#mpkg39#opm77#icu80#ln23#par241" name="id_auto_KeyCondition17 [oid]" source="mov2#mpkg38#mpkg39#opm77#icu80#icp48" target="mov2#mpkg38#mpkg39#opm77#mfu6#su23#kcond17.ent1#att1"/>
-        <LinkParameter id="mov2#mpkg38#mpkg39#opm77#icu80#ln23#par242" name="$$NULL$$_targa" sourceValue="$$NULL$$" target="mov2#mpkg38#mpkg39#opm77#mfu6.ent1#att30"/>
+      <Link id="mov2#mpkg38#mpkg39#opm77#icu80#ln23" name="Flow23" to="mov2#mpkg38#mpkg39#opm77#dlu7" type="transport" validate="true" gr:bendpoints="174,-97,-441,-97;488,-95,-127,-95">
+        <LinkParameter id="mov2#mpkg38#mpkg39#opm77#icu80#ln23#par241" name="id_auto_KeyCondition17 [oid]" source="mov2#mpkg38#mpkg39#opm77#icu80#icp48" target="mov2#mpkg38#mpkg39#opm77#dlu7#su61#kcond33.ent1#att1"/>
       </Link>
     </InputCollectorUnit>
     <OKCollectorUnit id="mov2#mpkg38#mpkg39#opm77#okcu74" name="OK Port18" gr:x="960" gr:y="210"/>
@@ -28,16 +26,16 @@
       <Selector id="mov2#mpkg38#mpkg39#opm77#dlu36#su154" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg38#mpkg39#opm77#dlu36#su154#kcond94" name="KeyCondition46" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="mov2#mpkg38#mpkg39#opm77#dlu36#oln389" name="OKFlow89" to="mov2#mpkg38#mpkg39#opm77#mfu6"/>
+      <OKLink id="mov2#mpkg38#mpkg39#opm77#dlu36#oln389" name="OKFlow89" to="mov2#mpkg38#mpkg39#opm77#dlu7"/>
       <KOLink id="mov2#mpkg38#mpkg39#opm77#dlu36#kln52" name="KOFlow52" to="mov2#mpkg38#mpkg39#opm77#kocu2" gr:bendpoints="119,59,-381,24;259,61,-241,26"/>
     </DeleteUnit>
     <KOCollectorUnit gr:x="960" gr:y="295" id="mov2#mpkg38#mpkg39#opm77#kocu2" name="KO Port2"/>
-    <ModifyUnit gr:x="695" gr:y="255" id="mov2#mpkg38#mpkg39#opm77#mfu6" name="ModificaAuto" entity="ent1">
-      <Selector id="mov2#mpkg38#mpkg39#opm77#mfu6#su23" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="mov2#mpkg38#mpkg39#opm77#mfu6#su23#kcond17" name="KeyCondition17" predicate="in" implied="false"/>
+    <DeleteUnit id="mov2#mpkg38#mpkg39#opm77#dlu7" entity="ent1" gr:x="680" gr:y="255" name="EliminaAuto">
+      <Selector id="mov2#mpkg38#mpkg39#opm77#dlu7#su61" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#mpkg38#mpkg39#opm77#dlu7#su61#kcond33" predicate="in" implied="false" name="KeyCondition17"/>
       </Selector>
-      <OKLink id="mov2#mpkg38#mpkg39#opm77#mfu6#oln40" name="OKFlow40" to="mov2#mpkg38#mpkg39#opm77#okcu74"/>
-      <KOLink id="mov2#mpkg38#mpkg39#opm77#mfu6#kln15" name="KOFlow15" to="mov2#mpkg38#mpkg39#opm77#kocu2"/>
-    </ModifyUnit>
+      <KOLink id="mov2#mpkg38#mpkg39#opm77#dlu7#kln47" name="KOFlow15" to="mov2#mpkg38#mpkg39#opm77#kocu2"/>
+      <OKLink id="mov2#mpkg38#mpkg39#opm77#dlu7#oln168" name="OKFlow40" to="mov2#mpkg38#mpkg39#opm77#okcu74"/>
+    </DeleteUnit>
   </OperationUnits>
 </OperationModule>

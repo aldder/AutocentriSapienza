@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg31#mpkg36#opm72" name="InserimentoIntervento" gr:x="0" gr:y="0">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg31#mpkg36#opm72#icu75" gr:x="-145" gr:y="-50">
+    <InputCollectorUnit id="mov2#mpkg31#mpkg36#opm72#icu75" gr:x="30" gr:y="160">
       <OKLink id="mov2#mpkg31#mpkg36#opm72#icu75#oln346" name="Inserisci" to="mov2#mpkg31#mpkg36#opm72#cru35">
         <LinkParameter id="mov2#mpkg31#mpkg36#opm72#icu75#oln346#par1306" name="In corso_stato" source="mov2#mpkg31#mpkg36#opm72#icu75#icp88" target="mov2#mpkg31#mpkg36#opm72#cru35.ent8#att33"/>
         <LinkParameter id="mov2#mpkg31#mpkg36#opm72#icu75#oln346#par1307" name="Tipologia_Tipologia.oid(InterventoToTipologia)" source="mov2#mpkg31#mpkg36#opm72#icu75#icp83" target="mov2#mpkg31#mpkg36#opm72#cru35.rel5#role10.ent3#att15"/>
@@ -18,11 +18,11 @@
       <InputCollectorParameter id="mov2#mpkg31#mpkg36#opm72#icu75#icp87" name="descrizione"/>
       <InputCollectorParameter id="mov2#mpkg31#mpkg36#opm72#icu75#icp88" name="stato"/>
     </InputCollectorUnit>
-    <OKCollectorUnit id="mov2#mpkg31#mpkg36#opm72#okcu71" name="OK Port39" gr:x="550" gr:y="-60"/>
-    <CreateUnit id="mov2#mpkg31#mpkg36#opm72#cru35" name="InserisciIntervento" gr:x="295" gr:y="0" entity="ent8">
+    <OKCollectorUnit id="mov2#mpkg31#mpkg36#opm72#okcu71" name="OK Port39" gr:x="725" gr:y="150"/>
+    <CreateUnit id="mov2#mpkg31#mpkg36#opm72#cru35" name="InserisciIntervento" gr:x="470" gr:y="210" entity="ent8">
       <OKLink id="mov2#mpkg31#mpkg36#opm72#cru35#oln352" name="OKFlow119" to="mov2#mpkg31#mpkg36#opm72#okcu71"/>
       <KOLink id="mov2#mpkg31#mpkg36#opm72#cru35#kln166" name="KOFlow123" to="mov2#mpkg31#mpkg36#opm72#kocu65"/>
     </CreateUnit>
-    <KOCollectorUnit id="mov2#mpkg31#mpkg36#opm72#kocu65" name="KO Port36" gr:x="550" gr:y="40"/>
+    <KOCollectorUnit id="mov2#mpkg31#mpkg36#opm72#kocu65" name="KO Port36" gr:x="725" gr:y="250"/>
   </OperationUnits>
 </OperationModule>

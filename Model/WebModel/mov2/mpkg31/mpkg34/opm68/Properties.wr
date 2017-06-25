@@ -1,19 +1,19 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg31#mpkg34#opm68" name="CancellazioneOrarioAppuntamento" gr:x="0" gr:y="110">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg31#mpkg34#opm68" name="CancellazioneOrarioLavoro" gr:x="0" gr:y="110">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg31#mpkg34#opm68#icu71" gr:x="0" gr:y="5">
+    <InputCollectorUnit id="mov2#mpkg31#mpkg34#opm68#icu71" gr:x="105" gr:y="165">
       <InputCollectorParameter id="mov2#mpkg31#mpkg34#opm68#icu71#icp326" name="KeyCondition54 [oid]"/>
       <OKLink id="mov2#mpkg31#mpkg34#opm68#icu71#oln251" name="Elimina orario" to="mov2#mpkg31#mpkg34#opm68#dlu31">
         <LinkParameter id="mov2#mpkg31#mpkg34#opm68#icu71#oln251#par1254" name="Key [oid]_KeyCondition54 [oid]" source="mov2#mpkg31#mpkg34#opm68#icu71#icp326" target="mov2#mpkg31#mpkg34#opm68#dlu31#su111#kcond65.ent15#att65"/>
       </OKLink>
     </InputCollectorUnit>
-    <OKCollectorUnit id="mov2#mpkg31#mpkg34#opm68#okcu67" name="OK Port35" gr:x="510" gr:y="-45"/>
-    <DeleteUnit id="mov2#mpkg31#mpkg34#opm68#dlu31" name="Cancellazione" gr:x="300" gr:y="0" entity="ent15">
+    <OKCollectorUnit id="mov2#mpkg31#mpkg34#opm68#okcu67" name="OK Port35" gr:x="615" gr:y="115"/>
+    <DeleteUnit id="mov2#mpkg31#mpkg34#opm68#dlu31" name="Cancellazione" gr:x="405" gr:y="160" entity="ent15">
       <Selector id="mov2#mpkg31#mpkg34#opm68#dlu31#su111" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg31#mpkg34#opm68#dlu31#su111#kcond65" name="KeyCondition54" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="mov2#mpkg31#mpkg34#opm68#dlu31#oln252" name="OKFlow116" to="mov2#mpkg31#mpkg34#opm68#okcu67"/>
       <KOLink id="mov2#mpkg31#mpkg34#opm68#dlu31#kln157" name="KOFlow108" to="mov2#mpkg31#mpkg34#opm68#kocu61"/>
     </DeleteUnit>
-    <KOCollectorUnit id="mov2#mpkg31#mpkg34#opm68#kocu61" name="KO Port32" gr:x="510" gr:y="45"/>
+    <KOCollectorUnit id="mov2#mpkg31#mpkg34#opm68#kocu61" name="KO Port32" gr:x="615" gr:y="205"/>
   </OperationUnits>
 </OperationModule>

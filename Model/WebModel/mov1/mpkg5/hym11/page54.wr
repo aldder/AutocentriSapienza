@@ -7,9 +7,10 @@
           <TypeValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld206#tvr44" name="Type Validation" type="date" errorMessage="valore non corretto"/>
         </VRules>
       </Field>
-      <Field id="mov1#mpkg5#hym11#page54#enu33#fld208" name="Targa" type="string" modifiable="true">
+      <Field id="mov1#mpkg5#hym11#page54#enu33#fld208" name="Targa" type="string" modifiable="true" preloaded="true">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld208#mnd178" name="Mandatory" errorMessage="campo obbligatorio"/>
+          <CollectionValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld208#clc7" name="Unique" predicate="notIn" entity="ent1" attribute="ent1#att30" errorMessage="valore gia' presente."/>
         </VRules>
       </Field>
       <Field id="mov1#mpkg5#hym11#page54#enu33#fld209" name="Descrizione" type="text" modifiable="true" attribute="ent7#att60">
@@ -28,7 +29,7 @@
           <TypeValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld211#tvr43" name="Type Validation" type="integer" errorMessage="valore non corretto"/>
         </VRules>
       </Field>
-      <Link id="mov1#mpkg5#hym11#page54#enu33#ln142" name="Nuovo utente" to="mov1#mpkg5#hym11#page56#enu35" type="normal" validate="false" ajaxEnabled="false" ajaxOpenWindow="true" ajaxReplaceWindow="false" ajaxWindowWidth="600" ajaxWindowHeight="300" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserisci utente"/>
+      <Link id="mov1#mpkg5#hym11#page54#enu33#ln142" name="Nuovo utente" to="mov1#mpkg5#hym11#page56#enu35" type="normal" validate="false" ajaxEnabled="false" ajaxOpenWindow="true" ajaxReplaceWindow="false" ajaxWindowWidth="600" ajaxWindowHeight="400" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Inserisci utente"/>
       <SelectionField id="mov1#mpkg5#hym11#page54#enu33#sfld21" name="Utente" type="string" modifiable="true" role="rel12#role23">
         <VRules>
           <MandatoryValidationRule id="mov1#mpkg5#hym11#page54#enu33#sfld21#mnd179" name="Mandatory" errorMessage="campo obbligatorio"/>
@@ -47,12 +48,36 @@
         <LinkParameter id="mov1#mpkg5#hym11#page54#enu33#ln145#par230" name="Prezzo_prezzo" source="mov1#mpkg5#hym11#page54#enu33#fld41" target="mov1#mpkg5#hym11#miu66.mov2#mpkg38#mpkg39#opm78#icu81#icp46"/>
         <LinkParameter id="mov1#mpkg5#hym11#page54#enu33#ln145#par231" name="Usato_usato" source="mov1#mpkg5#hym11#page54#enu33#fld42" target="mov1#mpkg5#hym11#miu66.mov2#mpkg38#mpkg39#opm78#icu81#icp47"/>
       </Link>
-      <Field id="mov1#mpkg5#hym11#page54#enu33#fld42" name="Usato" type="boolean" preloaded="true" modifiable="true"/>
-      <Field id="mov1#mpkg5#hym11#page54#enu33#fld40" name="Kilometri" type="integer" preloaded="true" modifiable="true"/>
-      <Field id="mov1#mpkg5#hym11#page54#enu33#fld39" name="Cilindrata" type="integer" preloaded="true" modifiable="true"/>
-      <Field id="mov1#mpkg5#hym11#page54#enu33#fld37" name="Alimentazione" type="string" preloaded="true" modifiable="true"/>
-      <Field id="mov1#mpkg5#hym11#page54#enu33#fld38" name="Anno di immatricolazione" type="date" preloaded="true" modifiable="true"/>
-      <Field id="mov1#mpkg5#hym11#page54#enu33#fld41" name="Prezzo" type="decimal" preloaded="true" modifiable="true"/>
+      <Field id="mov1#mpkg5#hym11#page54#enu33#fld42" name="Usato" type="boolean" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld42#mnd21" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg5#hym11#page54#enu33#fld40" name="Kilometri" type="integer" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld40#mnd19" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg5#hym11#page54#enu33#fld39" name="Cilindrata" type="integer" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld39#mnd18" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg5#hym11#page54#enu33#fld37" name="Alimentazione" type="string" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld37#mnd16" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg5#hym11#page54#enu33#fld38" name="Anno di immatricolazione" type="date" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld38#mnd17" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="mov1#mpkg5#hym11#page54#enu33#fld41" name="Prezzo" type="decimal" preloaded="true" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#mpkg5#hym11#page54#enu33#fld41#mnd20" name="Mandatory" errorMessage="campo obbligatorio"/>
+        </VRules>
+      </Field>
     </EntryUnit>
     <SelectorUnit id="mov1#mpkg5#hym11#page54#seu15" name="SelectUtente" gr:x="25" gr:y="0" entity="User">
       <Selector id="mov1#mpkg5#hym11#page54#seu15#su15" defaultPolicy="fill" booleanOperator="and">
@@ -135,7 +160,9 @@
             <layout:Cell/>
           </layout:Row>
           <layout:Row>
-            <layout:Cell colspan="12"/>
+            <layout:Cell colspan="12">
+              <layout:Field unitId="mov1#mpkg5#hym11#page54#enu33" field="mov1#mpkg5#hym11#page54#enu33#fld208" mode="full"/>
+            </layout:Cell>
             <layout:Cell/>
             <layout:Cell/>
             <layout:Cell/>
@@ -150,7 +177,87 @@
           </layout:Row>
           <layout:Row>
             <layout:Cell colspan="12">
-              <layout:Field unitId="mov1#mpkg5#hym11#page54#enu33" field="mov1#mpkg5#hym11#page54#enu33#fld208" mode="full"/>
+              <layout:Field unitId="mov1#mpkg5#hym11#page54#enu33" mode="full" field="mov1#mpkg5#hym11#page54#enu33#fld41"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Field unitId="mov1#mpkg5#hym11#page54#enu33" mode="full" field="mov1#mpkg5#hym11#page54#enu33#fld38"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Field unitId="mov1#mpkg5#hym11#page54#enu33" mode="full" field="mov1#mpkg5#hym11#page54#enu33#fld40"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Field unitId="mov1#mpkg5#hym11#page54#enu33" mode="full" field="mov1#mpkg5#hym11#page54#enu33#fld37"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Field unitId="mov1#mpkg5#hym11#page54#enu33" mode="full" field="mov1#mpkg5#hym11#page54#enu33#fld39"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Field unitId="mov1#mpkg5#hym11#page54#enu33" mode="full" field="mov1#mpkg5#hym11#page54#enu33#fld42"/>
             </layout:Cell>
             <layout:Cell/>
             <layout:Cell/>
@@ -188,146 +295,6 @@
             <layout:Cell/>
             <layout:Cell/>
             <layout:Cell colspan="8"/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-          </layout:Row>
-          <layout:Row>
-            <layout:Cell colspan="12"/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-          </layout:Row>
-          <layout:Row>
-            <layout:Cell colspan="12"/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-          </layout:Row>
-          <layout:Row>
-            <layout:Cell colspan="12"/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-          </layout:Row>
-          <layout:Row>
-            <layout:Cell colspan="12"/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-          </layout:Row>
-          <layout:Row>
-            <layout:Cell colspan="12"/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-          </layout:Row>
-          <layout:Row>
-            <layout:Cell colspan="12"/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-          </layout:Row>
-          <layout:Row>
-            <layout:Cell colspan="12"/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-          </layout:Row>
-          <layout:Row>
-            <layout:Cell colspan="12"/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-          </layout:Row>
-          <layout:Row>
-            <layout:Cell colspan="12"/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-          </layout:Row>
-          <layout:Row>
-            <layout:Cell colspan="12"/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
             <layout:Cell/>
             <layout:Cell/>
             <layout:Cell/>

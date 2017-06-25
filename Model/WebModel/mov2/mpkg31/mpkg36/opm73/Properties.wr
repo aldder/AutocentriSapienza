@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg31#mpkg36#opm73" name="ModificaIntervento" gr:x="0" gr:y="55">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg31#mpkg36#opm73#icu76" gr:x="-110" gr:y="-30">
+    <InputCollectorUnit id="mov2#mpkg31#mpkg36#opm73#icu76" gr:x="35" gr:y="115">
       <OKLink id="mov2#mpkg31#mpkg36#opm73#icu76#oln356" name="Salva modifiche" to="mov2#mpkg31#mpkg36#opm73#mfu33">
         <LinkParameter id="mov2#mpkg31#mpkg36#opm73#icu76#oln356#par1312" name="Descrizione_descrizione" source="mov2#mpkg31#mpkg36#opm73#icu76#icp103" target="mov2#mpkg31#mpkg36#opm73#mfu33.ent8#att55"/>
         <LinkParameter id="mov2#mpkg31#mpkg36#opm73#icu76#oln356#par1313" name="Data_data" source="mov2#mpkg31#mpkg36#opm73#icu76#icp102" target="mov2#mpkg31#mpkg36#opm73#mfu33.ent8#att32"/>
@@ -16,14 +16,14 @@
       <InputCollectorParameter id="mov2#mpkg31#mpkg36#opm73#icu76#icp103" name="descrizione"/>
       <InputCollectorParameter id="mov2#mpkg31#mpkg36#opm73#icu76#icp104" name="stato"/>
     </InputCollectorUnit>
-    <OKCollectorUnit id="mov2#mpkg31#mpkg36#opm73#okcu72" name="OK Port40" gr:x="555" gr:y="-50"/>
-    <ModifyUnit id="mov2#mpkg31#mpkg36#opm73#mfu33" name="ModificaIntervento" gr:x="310" gr:y="0" entity="ent8">
+    <OKCollectorUnit id="mov2#mpkg31#mpkg36#opm73#okcu72" name="OK Port40" gr:x="700" gr:y="95"/>
+    <ModifyUnit id="mov2#mpkg31#mpkg36#opm73#mfu33" name="ModificaIntervento" gr:x="455" gr:y="145" entity="ent8">
       <Selector id="mov2#mpkg31#mpkg36#opm73#mfu33#su120" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg31#mpkg36#opm73#mfu33#su120#kcond70" name="KeyCondition55" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="mov2#mpkg31#mpkg36#opm73#mfu33#oln360" name="OKFlow120" to="mov2#mpkg31#mpkg36#opm73#okcu72"/>
       <KOLink id="mov2#mpkg31#mpkg36#opm73#mfu33#kln167" name="KOFlow124" to="mov2#mpkg31#mpkg36#opm73#kocu66"/>
     </ModifyUnit>
-    <KOCollectorUnit id="mov2#mpkg31#mpkg36#opm73#kocu66" name="KO Port37" gr:x="555" gr:y="55"/>
+    <KOCollectorUnit id="mov2#mpkg31#mpkg36#opm73#kocu66" name="KO Port37" gr:x="700" gr:y="200"/>
   </OperationUnits>
 </OperationModule>

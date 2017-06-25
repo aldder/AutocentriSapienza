@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg31#mpkg1#opm4" name="ModificaAutovetturaOfficina" gr:x="0" gr:y="55">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg31#mpkg1#opm4#icu16" gr:x="210" gr:y="-90">
+    <InputCollectorUnit id="mov2#mpkg31#mpkg1#opm4#icu16" gr:x="270" gr:y="180">
       <OKLink id="mov2#mpkg31#mpkg1#opm4#icu16#oln75" name="OKFlow75" to="mov2#mpkg31#mpkg1#opm4#mfu7">
         <LinkParameter id="mov2#mpkg31#mpkg1#opm4#icu16#oln75#par408" name="alimentazione" source="mov2#mpkg31#mpkg1#opm4#icu16#icp127" target="mov2#mpkg31#mpkg1#opm4#mfu7.ent1#att8"/>
         <LinkParameter id="mov2#mpkg31#mpkg1#opm4#icu16#oln75#par409" name="anno" source="mov2#mpkg31#mpkg1#opm4#icu16#icp128" target="mov2#mpkg31#mpkg1#opm4#mfu7.ent1#att7"/>
@@ -31,14 +31,14 @@
       <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm4#icu16#icp139" name="usato"/>
       <InputCollectorParameter id="mov2#mpkg31#mpkg1#opm4#icu16#icp140" name="id_auto"/>
     </InputCollectorUnit>
-    <OKCollectorUnit id="mov2#mpkg31#mpkg1#opm4#okcu3" name="OK Port30" gr:x="735" gr:y="-60"/>
-    <ModifyUnit id="mov2#mpkg31#mpkg1#opm4#mfu7" name="Modifica" gr:x="555" gr:y="0" entity="ent1">
+    <OKCollectorUnit id="mov2#mpkg31#mpkg1#opm4#okcu3" name="OK Port30" gr:x="795" gr:y="210"/>
+    <ModifyUnit id="mov2#mpkg31#mpkg1#opm4#mfu7" name="Modifica" gr:x="615" gr:y="270" entity="ent1">
       <Selector id="mov2#mpkg31#mpkg1#opm4#mfu7#su25" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg31#mpkg1#opm4#mfu7#su25#kcond18" name="KeyCondition52" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="mov2#mpkg31#mpkg1#opm4#mfu7#oln50" name="OKFlow112" to="mov2#mpkg31#mpkg1#opm4#okcu3"/>
       <KOLink id="mov2#mpkg31#mpkg1#opm4#mfu7#kln17" name="KOFlow101" to="mov2#mpkg31#mpkg1#opm4#kocu5"/>
     </ModifyUnit>
-    <KOCollectorUnit id="mov2#mpkg31#mpkg1#opm4#kocu5" name="KO Port28" gr:x="735" gr:y="55"/>
+    <KOCollectorUnit id="mov2#mpkg31#mpkg1#opm4#kocu5" name="KO Port28" gr:x="795" gr:y="325"/>
   </OperationUnits>
 </OperationModule>

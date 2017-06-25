@@ -1,19 +1,19 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2#mpkg31#mpkg36#opm74" name="CancellazioneIntervento" gr:x="0" gr:y="110">
   <OperationUnits>
-    <InputCollectorUnit id="mov2#mpkg31#mpkg36#opm74#icu77" gr:x="-20" gr:y="5">
+    <InputCollectorUnit id="mov2#mpkg31#mpkg36#opm74#icu77" gr:x="75" gr:y="85">
       <InputCollectorParameter id="mov2#mpkg31#mpkg36#opm74#icu77#icp351" name="KeyCondition57 [oid]"/>
       <OKLink id="mov2#mpkg31#mpkg36#opm74#icu77#oln364" name="Elimina" to="mov2#mpkg31#mpkg36#opm74#dlu34">
         <LinkParameter id="mov2#mpkg31#mpkg36#opm74#icu77#oln364#par1318" name="Key [oid]_KeyCondition57 [oid]" source="mov2#mpkg31#mpkg36#opm74#icu77#icp351" target="mov2#mpkg31#mpkg36#opm74#dlu34#su121#kcond71.ent8#att31"/>
       </OKLink>
     </InputCollectorUnit>
-    <OKCollectorUnit id="mov2#mpkg31#mpkg36#opm74#okcu73" name="OK Port41" gr:x="545" gr:y="-35"/>
-    <DeleteUnit id="mov2#mpkg31#mpkg36#opm74#dlu34" name="RimuoviIntervento" gr:x="300" gr:y="0" entity="ent8">
+    <OKCollectorUnit id="mov2#mpkg31#mpkg36#opm74#okcu73" name="OK Port41" gr:x="640" gr:y="45"/>
+    <DeleteUnit id="mov2#mpkg31#mpkg36#opm74#dlu34" name="RimuoviIntervento" gr:x="395" gr:y="80" entity="ent8">
       <Selector id="mov2#mpkg31#mpkg36#opm74#dlu34#su121" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#mpkg31#mpkg36#opm74#dlu34#su121#kcond71" name="KeyCondition57" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="mov2#mpkg31#mpkg36#opm74#dlu34#oln365" name="OKFlow121" to="mov2#mpkg31#mpkg36#opm74#okcu73"/>
       <KOLink id="mov2#mpkg31#mpkg36#opm74#dlu34#kln168" name="KOFlow125" to="mov2#mpkg31#mpkg36#opm74#kocu67"/>
     </DeleteUnit>
-    <KOCollectorUnit id="mov2#mpkg31#mpkg36#opm74#kocu67" name="KO Port38" gr:x="545" gr:y="50"/>
+    <KOCollectorUnit id="mov2#mpkg31#mpkg36#opm74#kocu67" name="KO Port38" gr:x="640" gr:y="130"/>
   </OperationUnits>
 </OperationModule>

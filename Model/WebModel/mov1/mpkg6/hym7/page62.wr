@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym7#page62" name="Dettagli orario" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="405" gr:y="305" layout:frameLayout="None">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#mpkg6#hym7#page62" name="Dettagli orario" ignoreMasterPage="true" layout:pageLayout="BootstrapStyle/Empty" gr:x="530" gr:y="460" layout:frameLayout="None">
   <ContentUnits>
     <EntryUnit id="mov1#mpkg6#hym7#page62#enu44" name="Dettagli orario" linkOrder="mov1#mpkg6#hym7#page62#enu44#ln264 mov1#mpkg6#hym7#page62#enu44#ln265" gr:x="0" gr:y="0" entity="ent15" fieldOrder="mov1#mpkg6#hym7#page62#enu44#fld173">
       <Field id="mov1#mpkg6#hym7#page62#enu44#fld173" name="Ora" type="time" modifiable="true" attribute="ent15#att66">
